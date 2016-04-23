@@ -1,0 +1,21 @@
+= Opal Compiler for Node.js
+
+Transpile Ruby code to JavaScript in JavaScript!
+
+== Usage
+
+Given a Ruby file named `hello.rb`:
+
+```ruby
+puts "Hello world"
+```
+
+The following code will transpile `hello.rb` to JavaScript:
+
+```javascript
+var Opal = require('opal-runtime').Opal;
+var Builder = require('opal-compiler').Builder;
+
+var builder = Builder.$new();
+var result = builder.$build(require);
+```
