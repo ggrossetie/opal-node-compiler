@@ -17,5 +17,12 @@ var Opal = require('opal-runtime').Opal;
 var Builder = require('opal-compiler').Builder;
 
 var builder = Builder.$new();
-var result = builder.$build(require);
+var result = builder.$build('hello.rb').$to_s();
+console.log(result);
+//(function(Opal) {
+//  var self = Opal.top, $scope = Opal, nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice;
+
+//  Opal.add_stubs(['$puts']);
+//  return self.$puts("Hello world")
+//})(Opal);
 ```
