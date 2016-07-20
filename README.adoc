@@ -13,8 +13,8 @@ puts "Hello world"
 The following code will transpile `hello.rb` to JavaScript:
 
 ```javascript
-var Opal = require('opal-runtime').Opal;
 var Builder = require('opal-compiler').Builder;
+// Opal object will be available on the global scope
 
 var builder = Builder.$new();
 var result = builder.$build('hello.rb').$to_s();
