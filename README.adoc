@@ -1,8 +1,8 @@
-= Opal Compiler for Node.js
+# Opal Compiler for Node.js
 
 Transpile Ruby code to JavaScript in JavaScript!
 
-== Usage
+## Usage
 
 Given a Ruby file named `hello.rb`:
 
