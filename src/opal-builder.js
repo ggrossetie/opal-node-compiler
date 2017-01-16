@@ -26569,7 +26569,7 @@ Opal.modules["opal/paths"] = function(Opal) {
   }
   var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $send = Opal.send;
 
-  Opal.add_stubs(['$expand_path', '$untaint', '$append_paths', '$concat', '$require_paths_for_gem', '$private', '$find_by_name', '$raise', '$each', '$runtime_dependencies', '$+', '$name', '$gem_dir', '$map', '$require_paths', '$<<', '$join', '$extend', '$freeze', '$dup', '$core_dir', '$std_dir', '$use_gem', '$reset_paths!']);
+  Opal.add_stubs(['$expand_path', '$untaint', '$append_paths', '$concat', '$require_paths_for_gem', '$private', '$find_by_name', '$raise', '$each', '$runtime_dependencies', '$+', '$name', '$gem_dir', '$map', '$require_paths', '$<<', '$join', '$extend', '$freeze', '$dup', '$core_dir', '$std_dir', '$!=', '$reset_paths!']);
   return (function($base, $visibility_scopes) {
     var $Opal, self = $Opal = $module($base, 'Opal');
 
@@ -26654,12 +26654,12 @@ if (path == null) path = nil;
       return self.paths.$dup().$freeze()
     }, TMP_Opal_paths_10.$$arity = 0);
     Opal.defs(self, '$reset_paths!', TMP_Opal_reset_paths$B_11 = function() {
-      var self = this;
+      var $a, self = this;
 
       
       self.paths = [self.$core_dir().$untaint(), self.$std_dir().$untaint(), self.$gem_dir().$untaint()];
-      self.$use_gem("ast");
-      self.$use_gem("parser");
+      if ((($a = Opal.const_get($scopes, 'RUBY_ENGINE', true, true)['$!=']("opal")) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
+        nil};
       return nil;
     }, TMP_Opal_reset_paths$B_11.$$arity = 0);
     self['$reset_paths!']();
