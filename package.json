@@ -3,7 +3,7 @@
   "description":  "Opal compiler",
   "keywords":     ["javascript", "opal", "compiler", "ruby"],
   "author":       "Guillaume Grossetie",
-  "version":      "0.11.0-integration3",
+  "version":      "0.11.0-integration4",
   "license":      "MIT",
   "engines":      {
     "node":       ">=4"
@@ -22,7 +22,7 @@
     "url": "git://github.com/asciidoctor/opal-node-compiler.git"
   },
   "dependencies": {
-    "opal-runtime": "0.11.0-integration3"
+    "opal-runtime": "0.11.0-integration4"
   },
   "devDependencies": {
     "jasmine": "^2.4.1",
