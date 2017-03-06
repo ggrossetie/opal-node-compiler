@@ -18921,15 +18921,15 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
   function $rb_plus(lhs, rhs) {
     return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs + rhs : lhs['$+'](rhs);
   }
-  function $rb_gt(lhs, rhs) {
-    return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs > rhs : lhs['$>'](rhs);
+  function $rb_le(lhs, rhs) {
+    return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs <= rhs : lhs['$<='](rhs);
   }
   function $rb_minus(lhs, rhs) {
     return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs - rhs : lhs['$-'](rhs);
   }
   var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $hash2 = Opal.hash2, $send = Opal.send, $gvars = Opal.gvars;
 
-  Opal.add_stubs(['$require', '$handle', '$push', '$to_s', '$type', '$children', '$value', '$recv?', '$wrap', '$join', '$keys', '$gsub', '$even?', '$length', '$+', '$chop', '$[]', '$translate_escape_chars', '$inspect', '$trimmed_value', '$map', '$each_char', '$valid_encoding?', '$>', '$ord', '$warning', '$line', '$attr_accessor', '$extract_flags_and_value', '$select!', '$flags', '$=~', '$compiler', '$===', '$compile_dynamic_regexp', '$compile_static_regexp', '$any?', '$expr', '$new', '$to_proc', '$flags=', '$-', '$s', '$value=', '$include?', '$is_a?', '$==', '$updated', '$delete', '$source', '$expression', '$loc', '$regexp', '$each', '$first', '$raise', '$each_with_index', '$compile_inline?', '$helper', '$compile_inline', '$compile_range_initialize', '$start', '$finish', '$numerator', '$denominator', '$real', '$imag']);
+  Opal.add_stubs(['$require', '$handle', '$push', '$to_s', '$type', '$children', '$value', '$recv?', '$wrap', '$join', '$keys', '$gsub', '$even?', '$length', '$+', '$chop', '$[]', '$inspect', '$to_i', '$to_utf16', '$translate_escape_chars', '$lambda', '$upcase', '$<=', '$call', '$-', '$>>', '$&', '$attr_accessor', '$extract_flags_and_value', '$select!', '$flags', '$=~', '$warning', '$compiler', '$===', '$compile_dynamic_regexp', '$compile_static_regexp', '$any?', '$expr', '$new', '$map', '$to_proc', '$flags=', '$s', '$value=', '$include?', '$is_a?', '$==', '$updated', '$delete', '$source', '$expression', '$loc', '$regexp', '$each', '$first', '$raise', '$each_with_index', '$compile_inline?', '$helper', '$compile_inline', '$compile_range_initialize', '$start', '$finish', '$numerator', '$denominator', '$real', '$imag']);
   
   self.$require("opal/nodes/base");
   return (function($base, $visibility_scopes) {
@@ -18992,7 +18992,7 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         function $StringNode(){};
         var self = $StringNode = $klass($base, $super, 'StringNode', $StringNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_StringNode_translate_escape_chars_6, TMP_StringNode_compile_7, TMP_StringNode_trimmed_value_9;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_StringNode_translate_escape_chars_6, TMP_StringNode_compile_8, TMP_StringNode_to_utf16_10;
 
         
         self.$handle("str");
@@ -19010,70 +19010,76 @@ if (original == null) original = nil;
               return $rb_plus((($a = $gvars['~']) === nil ? nil : $a['$[]'](1)).$chop(), Opal.const_get($scopes, 'ESCAPE_CHARS', true, true)['$[]']((($a = $gvars['~']) === nil ? nil : $a['$[]'](2))))
             }}, TMP_5.$$s = self, TMP_5.$$arity = 1, TMP_5))
         }, TMP_StringNode_translate_escape_chars_6.$$arity = 1);
-        Opal.defn(self, '$compile', TMP_StringNode_compile_7 = function $$compile() {
-          var self = this;
+        Opal.defn(self, '$compile', TMP_StringNode_compile_8 = function $$compile() {
+          var TMP_7, self = this, sanitized_value = nil;
 
-          return self.$push(self.$translate_escape_chars(self.$trimmed_value().$inspect()))
-        }, TMP_StringNode_compile_7.$$arity = 0);
-        return (Opal.defn(self, '$trimmed_value', TMP_StringNode_trimmed_value_9 = function $$trimmed_value() {
-          var TMP_8, self = this;
+          
+          sanitized_value = $send(self.$value().$inspect(), 'gsub', [/\\u\{([0-9a-f]+)\}/], (TMP_7 = function(match){var self = TMP_7.$$s || this, $a, code_point = nil;
+if (match == null) match = nil;
+          
+            code_point = (($a = $gvars['~']) === nil ? nil : $a['$[]'](1)).$to_i(16);
+            return self.$to_utf16(code_point);}, TMP_7.$$s = self, TMP_7.$$arity = 1, TMP_7));
+          return self.$push(self.$translate_escape_chars(sanitized_value));
+        }, TMP_StringNode_compile_8.$$arity = 0);
+        return (Opal.defn(self, '$to_utf16', TMP_StringNode_to_utf16_10 = function $$to_utf16(code_point) {
+          var TMP_9, $a, self = this, ten_bits = nil, u = nil, lead_surrogate = nil, tail_surrogate = nil;
 
-          return $send(self.$value().$each_char(), 'map', [], (TMP_8 = function(char$){var self = TMP_8.$$s || this, $a, $b;
-            if (self.compiler == null) self.compiler = nil;
-            if (self.sexp == null) self.sexp = nil;
-if (char$ == null) char$ = nil;
-          if ((($a = ($b = char$['$valid_encoding?'](), $b !== false && $b !== nil && $b != null ?$rb_gt(char$.$ord(), 65535) : $b)) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
-              
-              self.compiler.$warning("" + "Ignoring unsupported character " + (char$), self.sexp.$line());
-              return "";
-              } else {
-              return char$
-            }}, TMP_8.$$s = self, TMP_8.$$arity = 1, TMP_8)).$join()
-        }, TMP_StringNode_trimmed_value_9.$$arity = 0), nil) && 'trimmed_value';
+          
+          ten_bits = 1023;
+          u = $send(self, 'lambda', [], (TMP_9 = function(code_unit){var self = TMP_9.$$s || this;
+if (code_unit == null) code_unit = nil;
+          return $rb_plus("\\u", code_unit.$to_s(16).$upcase())}, TMP_9.$$s = self, TMP_9.$$arity = 1, TMP_9));
+          if ((($a = $rb_le(code_point, 65535)) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
+            return u.$call(code_point)};
+          (code_point = $rb_minus(code_point, 65536));
+          lead_surrogate = $rb_plus(55296, code_point['$>>'](10));
+          tail_surrogate = $rb_plus(56320, code_point['$&'](ten_bits));
+          return $rb_plus(u.$call(lead_surrogate), u.$call(tail_surrogate));
+        }, TMP_StringNode_to_utf16_10.$$arity = 1), nil) && 'to_utf16';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $SymbolNode(){};
         var self = $SymbolNode = $klass($base, $super, 'SymbolNode', $SymbolNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_SymbolNode_compile_10;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_SymbolNode_compile_11;
 
         
         self.$handle("sym");
         self.$children("value");
-        return (Opal.defn(self, '$compile', TMP_SymbolNode_compile_10 = function $$compile() {
+        return (Opal.defn(self, '$compile', TMP_SymbolNode_compile_11 = function $$compile() {
           var self = this;
 
           return self.$push(self.$value().$to_s().$inspect())
-        }, TMP_SymbolNode_compile_10.$$arity = 0), nil) && 'compile';
+        }, TMP_SymbolNode_compile_11.$$arity = 0), nil) && 'compile';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $RegexpNode(){};
         var self = $RegexpNode = $klass($base, $super, 'RegexpNode', $RegexpNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_RegexpNode_initialize_11, TMP_RegexpNode_compile_13, TMP_RegexpNode_compile_dynamic_regexp_14, TMP_RegexpNode_compile_static_regexp_15, TMP_RegexpNode_extract_flags_and_value_17, TMP_RegexpNode_raw_value_18;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_RegexpNode_initialize_12, TMP_RegexpNode_compile_14, TMP_RegexpNode_compile_dynamic_regexp_15, TMP_RegexpNode_compile_static_regexp_16, TMP_RegexpNode_extract_flags_and_value_18, TMP_RegexpNode_raw_value_19;
 
         def.sexp = nil;
         
         self.$handle("regexp");
         self.$attr_accessor("value", "flags");
         Opal.cdecl($scope, 'SUPPORTED_FLAGS', /[gimuy]/);
-        Opal.defn(self, '$initialize', TMP_RegexpNode_initialize_11 = function $$initialize($a_rest) {
-          var self = this, $iter = TMP_RegexpNode_initialize_11.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
+        Opal.defn(self, '$initialize', TMP_RegexpNode_initialize_12 = function $$initialize($a_rest) {
+          var self = this, $iter = TMP_RegexpNode_initialize_12.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_RegexpNode_initialize_11.$$p = null;
+          TMP_RegexpNode_initialize_12.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
           }
           
-          $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_RegexpNode_initialize_11, false), $zuper, $iter);
+          $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_RegexpNode_initialize_12, false), $zuper, $iter);
           return self.$extract_flags_and_value();
-        }, TMP_RegexpNode_initialize_11.$$arity = -1);
-        Opal.defn(self, '$compile', TMP_RegexpNode_compile_13 = function $$compile() {
-          var TMP_12, self = this, $case = nil;
+        }, TMP_RegexpNode_initialize_12.$$arity = -1);
+        Opal.defn(self, '$compile', TMP_RegexpNode_compile_14 = function $$compile() {
+          var TMP_13, self = this, $case = nil;
 
           
-          $send(self.$flags(), 'select!', [], (TMP_12 = function(flag){var self = TMP_12.$$s || this, $a;
+          $send(self.$flags(), 'select!', [], (TMP_13 = function(flag){var self = TMP_13.$$s || this, $a;
 if (flag == null) flag = nil;
           if ((($a = Opal.const_get($scopes, 'SUPPORTED_FLAGS', true, true)['$=~'](flag)) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
               return true
@@ -19081,11 +19087,11 @@ if (flag == null) flag = nil;
               
               self.$compiler().$warning("" + "Skipping the '" + (flag) + "' Regexp flag as it's not widely supported by JavaScript vendors.");
               return false;
-            }}, TMP_12.$$s = self, TMP_12.$$arity = 1, TMP_12));
+            }}, TMP_13.$$s = self, TMP_13.$$arity = 1, TMP_13));
           return (function() {$case = self.$value().$type();
 if ("dstr"['$===']($case) || "begin"['$===']($case)) {return self.$compile_dynamic_regexp()}else if ("str"['$===']($case)) {return self.$compile_static_regexp()}else { return nil }})();
-        }, TMP_RegexpNode_compile_13.$$arity = 0);
-        Opal.defn(self, '$compile_dynamic_regexp', TMP_RegexpNode_compile_dynamic_regexp_14 = function $$compile_dynamic_regexp() {
+        }, TMP_RegexpNode_compile_14.$$arity = 0);
+        Opal.defn(self, '$compile_dynamic_regexp', TMP_RegexpNode_compile_dynamic_regexp_15 = function $$compile_dynamic_regexp() {
           var $a, self = this;
 
           if ((($a = self.$flags()['$any?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
@@ -19093,8 +19099,8 @@ if ("dstr"['$===']($case) || "begin"['$===']($case)) {return self.$compile_dynam
             } else {
             return self.$push("new RegExp(", self.$expr(self.$value()), ")")
           }
-        }, TMP_RegexpNode_compile_dynamic_regexp_14.$$arity = 0);
-        Opal.defn(self, '$compile_static_regexp', TMP_RegexpNode_compile_static_regexp_15 = function $$compile_static_regexp() {
+        }, TMP_RegexpNode_compile_dynamic_regexp_15.$$arity = 0);
+        Opal.defn(self, '$compile_static_regexp', TMP_RegexpNode_compile_static_regexp_16 = function $$compile_static_regexp() {
           var self = this, value = nil, $case = nil, message = nil;
 
           
@@ -19103,9 +19109,9 @@ if ("dstr"['$===']($case) || "begin"['$===']($case)) {return self.$compile_dynam
 if (""['$===']($case)) {return self.$push("/(?:)/")}else if (/\?<\w+\>/['$===']($case)) {
           message = "" + "named captures are not supported in javascript: " + (value.$inspect());
           return self.$push("" + "self.$raise(new SyntaxError('" + (message) + "'))");}else {return self.$push("" + (Opal.const_get($scopes, 'Regexp', true, true).$new(value).$inspect()) + (self.$flags().$join()))}})();
-        }, TMP_RegexpNode_compile_static_regexp_15.$$arity = 0);
-        Opal.defn(self, '$extract_flags_and_value', TMP_RegexpNode_extract_flags_and_value_17 = function $$extract_flags_and_value() {
-          var $a, $b, TMP_16, self = this, values = nil, flags_sexp = nil, $writer = nil, $case = nil, parts = nil;
+        }, TMP_RegexpNode_compile_static_regexp_16.$$arity = 0);
+        Opal.defn(self, '$extract_flags_and_value', TMP_RegexpNode_extract_flags_and_value_18 = function $$extract_flags_and_value() {
+          var $a, $b, TMP_17, self = this, values = nil, flags_sexp = nil, $writer = nil, $case = nil, parts = nil;
 
           
           $a = [].concat(Opal.to_a(self.$children())), $b = $a.length - 1, $b = ($b < 0) ? 0 : $b, (values = $slice.call($a, 0, $b)), (flags_sexp = ($a[$b] == null ? nil : $a[$b])), $a;
@@ -19126,7 +19132,7 @@ if ((0)['$===']($case)) {
           $writer[$rb_minus($writer["length"], 1)];};
           if ((($a = self.$flags()['$include?']("x")) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
             
-            parts = $send(self.$value().$children(), 'map', [], (TMP_16 = function(part){var self = TMP_16.$$s || this, $c, $d, trimmed_value = nil;
+            parts = $send(self.$value().$children(), 'map', [], (TMP_17 = function(part){var self = TMP_17.$$s || this, $c, $d, trimmed_value = nil;
 if (part == null) part = nil;
             if ((($c = ($d = part['$is_a?'](Opal.const_get([Opal.const_get([Opal.const_get([Opal.Object.$$scope], 'Opal', true, true).$$scope], 'AST', true, true).$$scope], 'Node', true, true)), $d !== false && $d !== nil && $d != null ?part.$type()['$==']("str") : $d)) !== nil && $c != null && (!$c.$$is_boolean || $c == true))) {
                 
@@ -19134,7 +19140,7 @@ if (part == null) part = nil;
                 return self.$s("str", trimmed_value);
                 } else {
                 return part
-              }}, TMP_16.$$s = self, TMP_16.$$arity = 1, TMP_16));
+              }}, TMP_17.$$s = self, TMP_17.$$arity = 1, TMP_17));
             
             $writer = [self.$value().$updated(nil, parts)];
             $send(self, 'value=', Opal.to_a($writer));
@@ -19148,47 +19154,47 @@ if (part == null) part = nil;
             } else {
             return nil
           };
-        }, TMP_RegexpNode_extract_flags_and_value_17.$$arity = 0);
-        return (Opal.defn(self, '$raw_value', TMP_RegexpNode_raw_value_18 = function $$raw_value() {
+        }, TMP_RegexpNode_extract_flags_and_value_18.$$arity = 0);
+        return (Opal.defn(self, '$raw_value', TMP_RegexpNode_raw_value_19 = function $$raw_value() {
           var self = this, $writer = nil;
 
           
           $writer = [self.sexp.$loc().$expression().$source()];
           $send(self, 'value=', Opal.to_a($writer));
           return $writer[$rb_minus($writer["length"], 1)];
-        }, TMP_RegexpNode_raw_value_18.$$arity = 0), nil) && 'raw_value';
+        }, TMP_RegexpNode_raw_value_19.$$arity = 0), nil) && 'raw_value';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $MatchCurrentLineNode(){};
         var self = $MatchCurrentLineNode = $klass($base, $super, 'MatchCurrentLineNode', $MatchCurrentLineNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_MatchCurrentLineNode_compile_19;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_MatchCurrentLineNode_compile_20;
 
         
         self.$handle("match_current_line");
         self.$children("regexp");
-        return (Opal.defn(self, '$compile', TMP_MatchCurrentLineNode_compile_19 = function $$compile() {
+        return (Opal.defn(self, '$compile', TMP_MatchCurrentLineNode_compile_20 = function $$compile() {
           var self = this, gvar_sexp = nil, send_node = nil;
 
           
           gvar_sexp = self.$s("gvar", "$_");
           send_node = self.$s("send", gvar_sexp, "=~", self.$regexp());
           return self.$push(self.$expr(send_node));
-        }, TMP_MatchCurrentLineNode_compile_19.$$arity = 0), nil) && 'compile';
+        }, TMP_MatchCurrentLineNode_compile_20.$$arity = 0), nil) && 'compile';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $XStringNode(){};
         var self = $XStringNode = $klass($base, $super, 'XStringNode', $XStringNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_XStringNode_compile_21;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_XStringNode_compile_22;
 
         
         self.$handle("xstr");
-        return (Opal.defn(self, '$compile', TMP_XStringNode_compile_21 = function $$compile() {
-          var TMP_20, $a, self = this;
+        return (Opal.defn(self, '$compile', TMP_XStringNode_compile_22 = function $$compile() {
+          var TMP_21, $a, self = this;
 
           
-          $send(self.$children(), 'each', [], (TMP_20 = function(child){var self = TMP_20.$$s || this, $case = nil, value = nil, str = nil;
+          $send(self.$children(), 'each', [], (TMP_21 = function(child){var self = TMP_21.$$s || this, $case = nil, value = nil, str = nil;
 if (child == null) child = nil;
           return (function() {$case = child.$type();
 if ("str"['$===']($case)) {
@@ -19197,28 +19203,28 @@ if ("str"['$===']($case)) {
             self.$push("return ");
             str = child.$children().$first();
             value = str.$loc().$expression().$source();
-            return self.$push(Opal.const_get($scopes, 'Fragment', true, true).$new(value, nil));}else {return self.$raise("" + "Unsupported xstr part: " + (child.$type()))}})()}, TMP_20.$$s = self, TMP_20.$$arity = 1, TMP_20));
+            return self.$push(Opal.const_get($scopes, 'Fragment', true, true).$new(value, nil));}else {return self.$raise("" + "Unsupported xstr part: " + (child.$type()))}})()}, TMP_21.$$s = self, TMP_21.$$arity = 1, TMP_21));
           if ((($a = self['$recv?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
             return self.$wrap("(", ")")
             } else {
             return nil
           };
-        }, TMP_XStringNode_compile_21.$$arity = 0), nil) && 'compile';
+        }, TMP_XStringNode_compile_22.$$arity = 0), nil) && 'compile';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $DynamicStringNode(){};
         var self = $DynamicStringNode = $klass($base, $super, 'DynamicStringNode', $DynamicStringNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_DynamicStringNode_compile_23;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_DynamicStringNode_compile_24;
 
         
         self.$handle("dstr");
-        return (Opal.defn(self, '$compile', TMP_DynamicStringNode_compile_23 = function $$compile() {
-          var TMP_22, self = this;
+        return (Opal.defn(self, '$compile', TMP_DynamicStringNode_compile_24 = function $$compile() {
+          var TMP_23, self = this;
 
           
           self.$push("\"\"");
-          return $send(self.$children(), 'each_with_index', [], (TMP_22 = function(part, idx){var self = TMP_22.$$s || this, $a;
+          return $send(self.$children(), 'each_with_index', [], (TMP_23 = function(part, idx){var self = TMP_23.$$s || this, $a;
 if (part == null) part = nil;if (idx == null) idx = nil;
           
             self.$push(" + ");
@@ -19231,8 +19237,8 @@ if (part == null) part = nil;if (idx == null) idx = nil;
               return self.$wrap("(", ")")
               } else {
               return nil
-            };}, TMP_22.$$s = self, TMP_22.$$arity = 2, TMP_22));
-        }, TMP_DynamicStringNode_compile_23.$$arity = 0), nil) && 'compile';
+            };}, TMP_23.$$s = self, TMP_23.$$arity = 2, TMP_23));
+        }, TMP_DynamicStringNode_compile_24.$$arity = 0), nil) && 'compile';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $DynamicSymbolNode(){};
@@ -19246,12 +19252,12 @@ if (part == null) part = nil;if (idx == null) idx = nil;
         function $RangeNode(){};
         var self = $RangeNode = $klass($base, $super, 'RangeNode', $RangeNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_RangeNode_compile_24, TMP_RangeNode_compile_inline$q_25, TMP_RangeNode_compile_inline_26, TMP_RangeNode_compile_range_initialize_27;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_RangeNode_compile_25, TMP_RangeNode_compile_inline$q_26, TMP_RangeNode_compile_inline_27, TMP_RangeNode_compile_range_initialize_28;
 
         
         self.$children("start", "finish");
         Opal.cdecl($scope, 'SIMPLE_CHILDREN_TYPES', ["int", "float", "str", "sym"]);
-        Opal.defn(self, '$compile', TMP_RangeNode_compile_24 = function $$compile() {
+        Opal.defn(self, '$compile', TMP_RangeNode_compile_25 = function $$compile() {
           var $a, self = this;
 
           if ((($a = self['$compile_inline?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
@@ -19261,90 +19267,90 @@ if (part == null) part = nil;if (idx == null) idx = nil;
             } else {
             return self.$compile_range_initialize()
           }
-        }, TMP_RangeNode_compile_24.$$arity = 0);
-        Opal.defn(self, '$compile_inline?', TMP_RangeNode_compile_inline$q_25 = function() {
+        }, TMP_RangeNode_compile_25.$$arity = 0);
+        Opal.defn(self, '$compile_inline?', TMP_RangeNode_compile_inline$q_26 = function() {
           var $a, $b, self = this;
 
           return ($a = (($b = self.$start().$type()['$=='](self.$finish().$type())) ? Opal.const_get($scopes, 'SIMPLE_CHILDREN_TYPES', true, true)['$include?'](self.$start().$type()) : self.$start().$type()['$=='](self.$finish().$type())), $a !== false && $a !== nil && $a != null ?Opal.const_get($scopes, 'SIMPLE_CHILDREN_TYPES', true, true)['$include?'](self.$finish().$type()) : $a)
-        }, TMP_RangeNode_compile_inline$q_25.$$arity = 0);
-        Opal.defn(self, '$compile_inline', TMP_RangeNode_compile_inline_26 = function $$compile_inline() {
+        }, TMP_RangeNode_compile_inline$q_26.$$arity = 0);
+        Opal.defn(self, '$compile_inline', TMP_RangeNode_compile_inline_27 = function $$compile_inline() {
           var self = this;
 
           return self.$raise(Opal.const_get($scopes, 'NotImplementedError', true, true))
-        }, TMP_RangeNode_compile_inline_26.$$arity = 0);
-        return (Opal.defn(self, '$compile_range_initialize', TMP_RangeNode_compile_range_initialize_27 = function $$compile_range_initialize() {
+        }, TMP_RangeNode_compile_inline_27.$$arity = 0);
+        return (Opal.defn(self, '$compile_range_initialize', TMP_RangeNode_compile_range_initialize_28 = function $$compile_range_initialize() {
           var self = this;
 
           return self.$raise(Opal.const_get($scopes, 'NotImplementedError', true, true))
-        }, TMP_RangeNode_compile_range_initialize_27.$$arity = 0), nil) && 'compile_range_initialize';
+        }, TMP_RangeNode_compile_range_initialize_28.$$arity = 0), nil) && 'compile_range_initialize';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $InclusiveRangeNode(){};
         var self = $InclusiveRangeNode = $klass($base, $super, 'InclusiveRangeNode', $InclusiveRangeNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_InclusiveRangeNode_compile_inline_28, TMP_InclusiveRangeNode_compile_range_initialize_29;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_InclusiveRangeNode_compile_inline_29, TMP_InclusiveRangeNode_compile_range_initialize_30;
 
         
         self.$handle("irange");
-        Opal.defn(self, '$compile_inline', TMP_InclusiveRangeNode_compile_inline_28 = function $$compile_inline() {
+        Opal.defn(self, '$compile_inline', TMP_InclusiveRangeNode_compile_inline_29 = function $$compile_inline() {
           var self = this;
 
           return self.$push("$range(", self.$expr(self.$start()), ", ", self.$expr(self.$finish()), ", false)")
-        }, TMP_InclusiveRangeNode_compile_inline_28.$$arity = 0);
-        return (Opal.defn(self, '$compile_range_initialize', TMP_InclusiveRangeNode_compile_range_initialize_29 = function $$compile_range_initialize() {
+        }, TMP_InclusiveRangeNode_compile_inline_29.$$arity = 0);
+        return (Opal.defn(self, '$compile_range_initialize', TMP_InclusiveRangeNode_compile_range_initialize_30 = function $$compile_range_initialize() {
           var self = this;
 
           return self.$push("Opal.Range.$new(", self.$expr(self.$start()), ", ", self.$expr(self.$finish()), ", false)")
-        }, TMP_InclusiveRangeNode_compile_range_initialize_29.$$arity = 0), nil) && 'compile_range_initialize';
+        }, TMP_InclusiveRangeNode_compile_range_initialize_30.$$arity = 0), nil) && 'compile_range_initialize';
       })($scope.base, Opal.const_get($scopes, 'RangeNode', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $ExclusiveRangeNode(){};
         var self = $ExclusiveRangeNode = $klass($base, $super, 'ExclusiveRangeNode', $ExclusiveRangeNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_ExclusiveRangeNode_compile_inline_30, TMP_ExclusiveRangeNode_compile_range_initialize_31;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_ExclusiveRangeNode_compile_inline_31, TMP_ExclusiveRangeNode_compile_range_initialize_32;
 
         
         self.$handle("erange");
-        Opal.defn(self, '$compile_inline', TMP_ExclusiveRangeNode_compile_inline_30 = function $$compile_inline() {
+        Opal.defn(self, '$compile_inline', TMP_ExclusiveRangeNode_compile_inline_31 = function $$compile_inline() {
           var self = this;
 
           return self.$push("$range(", self.$expr(self.$start()), ", ", self.$expr(self.$finish()), ", true)")
-        }, TMP_ExclusiveRangeNode_compile_inline_30.$$arity = 0);
-        return (Opal.defn(self, '$compile_range_initialize', TMP_ExclusiveRangeNode_compile_range_initialize_31 = function $$compile_range_initialize() {
+        }, TMP_ExclusiveRangeNode_compile_inline_31.$$arity = 0);
+        return (Opal.defn(self, '$compile_range_initialize', TMP_ExclusiveRangeNode_compile_range_initialize_32 = function $$compile_range_initialize() {
           var self = this;
 
           return self.$push("Opal.Range.$new(", self.$expr(self.$start()), ",", self.$expr(self.$finish()), ", true)")
-        }, TMP_ExclusiveRangeNode_compile_range_initialize_31.$$arity = 0), nil) && 'compile_range_initialize';
+        }, TMP_ExclusiveRangeNode_compile_range_initialize_32.$$arity = 0), nil) && 'compile_range_initialize';
       })($scope.base, Opal.const_get($scopes, 'RangeNode', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $RationalNode(){};
         var self = $RationalNode = $klass($base, $super, 'RationalNode', $RationalNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_RationalNode_compile_32;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_RationalNode_compile_33;
 
         
         self.$handle("rational");
         self.$children("value");
-        return (Opal.defn(self, '$compile', TMP_RationalNode_compile_32 = function $$compile() {
+        return (Opal.defn(self, '$compile', TMP_RationalNode_compile_33 = function $$compile() {
           var self = this;
 
           return self.$push("" + "Opal.Rational.$new(" + (self.$value().$numerator()) + ", " + (self.$value().$denominator()) + ")")
-        }, TMP_RationalNode_compile_32.$$arity = 0), nil) && 'compile';
+        }, TMP_RationalNode_compile_33.$$arity = 0), nil) && 'compile';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $ComplexNode(){};
         var self = $ComplexNode = $klass($base, $super, 'ComplexNode', $ComplexNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_ComplexNode_compile_33;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_ComplexNode_compile_34;
 
         
         self.$handle("complex");
         self.$children("value");
-        return (Opal.defn(self, '$compile', TMP_ComplexNode_compile_33 = function $$compile() {
+        return (Opal.defn(self, '$compile', TMP_ComplexNode_compile_34 = function $$compile() {
           var self = this;
 
           return self.$push("" + "Opal.Complex.$new(" + (self.$value().$real()) + ", " + (self.$value().$imag()) + ")")
-        }, TMP_ComplexNode_compile_33.$$arity = 0), nil) && 'compile';
+        }, TMP_ComplexNode_compile_34.$$arity = 0), nil) && 'compile';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
     })($scope.base, $scopes)
   })($scope.base, $scopes);
@@ -20324,7 +20330,7 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
   }
   var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $send = Opal.send, $range = Opal.range;
 
-  Opal.add_stubs(['$require', '$handle', '$children', '$push', '$recv', '$recvr', '$expr', '$property', '$value', '$<<', '$default_compile', '$+', '$to_s', '$meth', '$s', '$lhs', '$rhs', '$process', '$type', '$===', '$updated', '$compile_send', '$raise', '$evaluates_to', '$last', '$==', '$send_evaluates_to', '$to_sym', '$compile_temporary_assignments', '$set_sexp', '$with_temp', '$stmt', '$compact', '$op', '$get_sexp', '$get_and_update_sexp', '$[]', '$args', '$compile_or', '$compile_and', '$compile_operator', '$first_arg', '$mid']);
+  Opal.add_stubs(['$require', '$handle', '$children', '$push', '$recv', '$recvr', '$expr', '$property', '$value', '$<<', '$default_compile', '$+', '$to_s', '$meth', '$s', '$lhs', '$rhs', '$process', '$type', '$===', '$compile_asgn', '$compile_send', '$raise', '$last', '$updated', '$evaluates_to', '$==', '$send_evaluates_to', '$to_sym', '$compile_temporary_assignments', '$set_sexp', '$with_temp', '$stmt', '$compact', '$op', '$get_sexp', '$get_and_update_sexp', '$[]', '$args', '$compile_or', '$compile_and', '$compile_operator', '$first_arg', '$mid']);
   
   self.$require("opal/nodes/base");
   self.$require("opal/nodes/call");
@@ -20425,28 +20431,31 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
         function $LogicalOpAssignNode(){};
         var self = $LogicalOpAssignNode = $klass($base, $super, 'LogicalOpAssignNode', $LogicalOpAssignNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_LogicalOpAssignNode_compile_7, TMP_LogicalOpAssignNode_rhs_8, TMP_LogicalOpAssignNode_compile_send_9, TMP_LogicalOpAssignNode_evaluates_to_10;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_LogicalOpAssignNode_compile_7, TMP_LogicalOpAssignNode_rhs_8, TMP_LogicalOpAssignNode_compile_asgn_9, TMP_LogicalOpAssignNode_compile_send_10, TMP_LogicalOpAssignNode_evaluates_to_11;
 
         
         self.$children("lhs");
         Opal.defn(self, '$compile', TMP_LogicalOpAssignNode_compile_7 = function $$compile() {
-          var self = this, get_node = nil, $case = nil, set_node = nil, sexp = nil;
+          var self = this, $case = nil;
 
-          
-          get_node = (function() {$case = self.$lhs().$type();
-if ("lvasgn"['$===']($case)) {return self.$lhs().$updated("lvar")}else if ("ivasgn"['$===']($case)) {return self.$lhs().$updated("ivar")}else if ("casgn"['$===']($case)) {return self.$lhs().$updated("const")}else if ("cvasgn"['$===']($case)) {return self.$lhs().$updated("cvar")}else if ("gvasgn"['$===']($case)) {return self.$lhs().$updated("gvar")}else if ("send"['$===']($case)) {
-          self.$compile_send();
-          return nil;}else {return self.$raise("" + "Unsupported node in LogicalOpAssignNode " + (self.$lhs().$type()))}})();
-          set_node = self.$lhs().$updated(nil, $rb_plus(self.$lhs().$children(), [self.$rhs()]));
-          sexp = self.$s(self.$evaluates_to(), get_node, set_node);
-          return self.$push(self.$expr(sexp));
+          return (function() {$case = self.$lhs().$type();
+if ("lvasgn"['$===']($case)) {return self.$compile_asgn("lvar")}else if ("ivasgn"['$===']($case)) {return self.$compile_asgn("ivar")}else if ("casgn"['$===']($case)) {return self.$compile_asgn("const")}else if ("cvasgn"['$===']($case)) {return self.$compile_asgn("cvar")}else if ("gvasgn"['$===']($case)) {return self.$compile_asgn("gvar")}else if ("send"['$===']($case)) {return self.$compile_send()}else {return self.$raise("" + "Unsupported node in LogicalOpAssignNode " + (self.$lhs().$type()))}})()
         }, TMP_LogicalOpAssignNode_compile_7.$$arity = 0);
         Opal.defn(self, '$rhs', TMP_LogicalOpAssignNode_rhs_8 = function $$rhs() {
           var self = this;
 
           return self.$children().$last()
         }, TMP_LogicalOpAssignNode_rhs_8.$$arity = 0);
-        Opal.defn(self, '$compile_send', TMP_LogicalOpAssignNode_compile_send_9 = function $$compile_send() {
+        Opal.defn(self, '$compile_asgn', TMP_LogicalOpAssignNode_compile_asgn_9 = function $$compile_asgn(asgn) {
+          var self = this, get_node = nil, set_node = nil, sexp = nil;
+
+          
+          get_node = self.$lhs().$updated(asgn);
+          set_node = self.$lhs().$updated(nil, $rb_plus(self.$lhs().$children(), [self.$rhs()]));
+          sexp = self.$s(self.$evaluates_to(), get_node, set_node);
+          return self.$push(self.$expr(sexp));
+        }, TMP_LogicalOpAssignNode_compile_asgn_9.$$arity = 1);
+        Opal.defn(self, '$compile_send', TMP_LogicalOpAssignNode_compile_send_10 = function $$compile_send() {
           var $a, $b, self = this, send_lhs = nil, send_op = nil, send_args = nil, sexp = nil;
 
           
@@ -20459,74 +20468,74 @@ if ("lvasgn"['$===']($case)) {return self.$lhs().$updated("lvar")}else if ("ivas
             sexp = self.$s("op_asgn2", send_lhs, send_op, self.$send_evaluates_to(), self.$rhs());
           };
           return self.$push(self.$expr(sexp));
-        }, TMP_LogicalOpAssignNode_compile_send_9.$$arity = 0);
-        return (Opal.defn(self, '$evaluates_to', TMP_LogicalOpAssignNode_evaluates_to_10 = function $$evaluates_to() {
+        }, TMP_LogicalOpAssignNode_compile_send_10.$$arity = 0);
+        return (Opal.defn(self, '$evaluates_to', TMP_LogicalOpAssignNode_evaluates_to_11 = function $$evaluates_to() {
           var self = this;
 
           return self.$raise(Opal.const_get($scopes, 'NotImplemetnedError', true, true))
-        }, TMP_LogicalOpAssignNode_evaluates_to_10.$$arity = 0), nil) && 'evaluates_to';
+        }, TMP_LogicalOpAssignNode_evaluates_to_11.$$arity = 0), nil) && 'evaluates_to';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgnOrNode(){};
         var self = $OpAsgnOrNode = $klass($base, $super, 'OpAsgnOrNode', $OpAsgnOrNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnOrNode_evaluates_to_11, TMP_OpAsgnOrNode_send_evaluates_to_12;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnOrNode_evaluates_to_12, TMP_OpAsgnOrNode_send_evaluates_to_13;
 
         
         self.$handle("or_asgn");
-        Opal.defn(self, '$evaluates_to', TMP_OpAsgnOrNode_evaluates_to_11 = function $$evaluates_to() {
+        Opal.defn(self, '$evaluates_to', TMP_OpAsgnOrNode_evaluates_to_12 = function $$evaluates_to() {
           var self = this;
 
           return "or"
-        }, TMP_OpAsgnOrNode_evaluates_to_11.$$arity = 0);
-        return (Opal.defn(self, '$send_evaluates_to', TMP_OpAsgnOrNode_send_evaluates_to_12 = function $$send_evaluates_to() {
+        }, TMP_OpAsgnOrNode_evaluates_to_12.$$arity = 0);
+        return (Opal.defn(self, '$send_evaluates_to', TMP_OpAsgnOrNode_send_evaluates_to_13 = function $$send_evaluates_to() {
           var self = this;
 
           return "||"
-        }, TMP_OpAsgnOrNode_send_evaluates_to_12.$$arity = 0), nil) && 'send_evaluates_to';
+        }, TMP_OpAsgnOrNode_send_evaluates_to_13.$$arity = 0), nil) && 'send_evaluates_to';
       })($scope.base, Opal.const_get($scopes, 'LogicalOpAssignNode', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgnAndNode(){};
         var self = $OpAsgnAndNode = $klass($base, $super, 'OpAsgnAndNode', $OpAsgnAndNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnAndNode_evaluates_to_13, TMP_OpAsgnAndNode_send_evaluates_to_14;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnAndNode_evaluates_to_14, TMP_OpAsgnAndNode_send_evaluates_to_15;
 
         
         self.$handle("and_asgn");
-        Opal.defn(self, '$evaluates_to', TMP_OpAsgnAndNode_evaluates_to_13 = function $$evaluates_to() {
+        Opal.defn(self, '$evaluates_to', TMP_OpAsgnAndNode_evaluates_to_14 = function $$evaluates_to() {
           var self = this;
 
           return "and"
-        }, TMP_OpAsgnAndNode_evaluates_to_13.$$arity = 0);
-        return (Opal.defn(self, '$send_evaluates_to', TMP_OpAsgnAndNode_send_evaluates_to_14 = function $$send_evaluates_to() {
+        }, TMP_OpAsgnAndNode_evaluates_to_14.$$arity = 0);
+        return (Opal.defn(self, '$send_evaluates_to', TMP_OpAsgnAndNode_send_evaluates_to_15 = function $$send_evaluates_to() {
           var self = this;
 
           return "&&"
-        }, TMP_OpAsgnAndNode_send_evaluates_to_14.$$arity = 0), nil) && 'send_evaluates_to';
+        }, TMP_OpAsgnAndNode_send_evaluates_to_15.$$arity = 0), nil) && 'send_evaluates_to';
       })($scope.base, Opal.const_get($scopes, 'LogicalOpAssignNode', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgnNode(){};
         var self = $OpAsgnNode = $klass($base, $super, 'OpAsgnNode', $OpAsgnNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnNode_compile_15, TMP_OpAsgnNode_compile_temporary_assignments_18, TMP_OpAsgnNode_get_sexp_19, TMP_OpAsgnNode_get_and_update_sexp_20, TMP_OpAsgnNode_set_sexp_21;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnNode_compile_16, TMP_OpAsgnNode_compile_temporary_assignments_19, TMP_OpAsgnNode_get_sexp_20, TMP_OpAsgnNode_get_and_update_sexp_21, TMP_OpAsgnNode_set_sexp_22;
 
         
         self.$handle("op_asgn");
         self.$children("lhs", "op", "rhs");
-        Opal.defn(self, '$compile', TMP_OpAsgnNode_compile_15 = function $$compile() {
+        Opal.defn(self, '$compile', TMP_OpAsgnNode_compile_16 = function $$compile() {
           var self = this;
 
           
           if (self.$lhs().$type()['$==']("send")) {
             self.$compile_temporary_assignments()};
           return self.$push(self.$expr(self.$set_sexp()));
-        }, TMP_OpAsgnNode_compile_15.$$arity = 0);
-        Opal.defn(self, '$compile_temporary_assignments', TMP_OpAsgnNode_compile_temporary_assignments_18 = function $$compile_temporary_assignments() {
-          var TMP_16, self = this;
+        }, TMP_OpAsgnNode_compile_16.$$arity = 0);
+        Opal.defn(self, '$compile_temporary_assignments', TMP_OpAsgnNode_compile_temporary_assignments_19 = function $$compile_temporary_assignments() {
+          var TMP_17, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_16 = function(lhs_recv_tmp){var self = TMP_16.$$s || this, TMP_17;
+          return $send(self, 'with_temp', [], (TMP_17 = function(lhs_recv_tmp){var self = TMP_17.$$s || this, TMP_18;
 if (lhs_recv_tmp == null) lhs_recv_tmp = nil;
-          return $send(self, 'with_temp', [], (TMP_17 = function(lhs_arg_tmp){var self = TMP_17.$$s || this, $a, lhs_recv = nil, lhs_op = nil, lhs_arg = nil, lhs_recv_asgn = nil, new_lhs_recv = nil, lhs_arg_asgn = nil, new_lhs_arg = nil, new_lhs = nil;
+          return $send(self, 'with_temp', [], (TMP_18 = function(lhs_arg_tmp){var self = TMP_18.$$s || this, $a, lhs_recv = nil, lhs_op = nil, lhs_arg = nil, lhs_recv_asgn = nil, new_lhs_recv = nil, lhs_arg_asgn = nil, new_lhs_arg = nil, new_lhs = nil;
               if (self.sexp == null) self.sexp = nil;
 if (lhs_arg_tmp == null) lhs_arg_tmp = nil;
             
@@ -20540,21 +20549,21 @@ if (lhs_arg_tmp == null) lhs_arg_tmp = nil;
                 new_lhs_arg = self.$s("lvar", lhs_arg_tmp);
                 self.$push(self.$stmt(lhs_arg_asgn), ",");};
               new_lhs = self.$lhs().$updated(nil, [new_lhs_recv, lhs_op, new_lhs_arg].$compact());
-              return (self.sexp = self.sexp.$updated(nil, [new_lhs, self.$op(), self.$rhs()]));}, TMP_17.$$s = self, TMP_17.$$arity = 1, TMP_17))}, TMP_16.$$s = self, TMP_16.$$arity = 1, TMP_16))
-        }, TMP_OpAsgnNode_compile_temporary_assignments_18.$$arity = 0);
-        Opal.defn(self, '$get_sexp', TMP_OpAsgnNode_get_sexp_19 = function $$get_sexp() {
+              return (self.sexp = self.sexp.$updated(nil, [new_lhs, self.$op(), self.$rhs()]));}, TMP_18.$$s = self, TMP_18.$$arity = 1, TMP_18))}, TMP_17.$$s = self, TMP_17.$$arity = 1, TMP_17))
+        }, TMP_OpAsgnNode_compile_temporary_assignments_19.$$arity = 0);
+        Opal.defn(self, '$get_sexp', TMP_OpAsgnNode_get_sexp_20 = function $$get_sexp() {
           var self = this, $case = nil;
 
           return (function() {$case = self.$lhs().$type();
 if ("lvasgn"['$===']($case)) {return self.$lhs().$updated("lvar")}else if ("ivasgn"['$===']($case)) {return self.$lhs().$updated("ivar")}else if ("casgn"['$===']($case)) {return self.$lhs().$updated("const")}else if ("cvasgn"['$===']($case)) {return self.$lhs().$updated("cvar")}else if ("gvasgn"['$===']($case)) {return self.$lhs().$updated("gvar")}else if ("send"['$===']($case)) {return self.$lhs()}else {return self.$raise(Opal.const_get($scopes, 'NotImplementedError', true, true))}})()
-        }, TMP_OpAsgnNode_get_sexp_19.$$arity = 0);
-        Opal.defn(self, '$get_and_update_sexp', TMP_OpAsgnNode_get_and_update_sexp_20 = function $$get_and_update_sexp() {
+        }, TMP_OpAsgnNode_get_sexp_20.$$arity = 0);
+        Opal.defn(self, '$get_and_update_sexp', TMP_OpAsgnNode_get_and_update_sexp_21 = function $$get_and_update_sexp() {
           var self = this, $case = nil;
 
           return (function() {$case = self.$lhs().$type();
 if ("lvasgn"['$===']($case) || "ivasgn"['$===']($case) || "casgn"['$===']($case) || "cvasgn"['$===']($case) || "gvasgn"['$===']($case) || "send"['$===']($case)) {return self.$s("send", self.$get_sexp(), self.$op(), self.$rhs())}else {return self.$raise(Opal.const_get($scopes, 'NotImplementedError', true, true))}})()
-        }, TMP_OpAsgnNode_get_and_update_sexp_20.$$arity = 0);
-        return (Opal.defn(self, '$set_sexp', TMP_OpAsgnNode_set_sexp_21 = function $$set_sexp() {
+        }, TMP_OpAsgnNode_get_and_update_sexp_21.$$arity = 0);
+        return (Opal.defn(self, '$set_sexp', TMP_OpAsgnNode_set_sexp_22 = function $$set_sexp() {
           var $a, self = this, $case = nil, recvr = nil, meth = nil, rest = nil;
 
           return (function() {$case = self.$lhs().$type();
@@ -20562,124 +20571,124 @@ if ("lvasgn"['$===']($case) || "ivasgn"['$===']($case) || "casgn"['$===']($case)
           $a = [].concat(Opal.to_a(self.$lhs().$children())), (recvr = ($a[0] == null ? nil : $a[0])), (meth = ($a[1] == null ? nil : $a[1])), (rest = $slice.call($a, 2)), $a;
           meth = $rb_plus(meth.$to_s(), "=").$to_sym();
           return self.$lhs().$updated(nil, [recvr, meth].concat(Opal.to_a(rest)).concat([self.$get_and_update_sexp()]));}else { return nil }})()
-        }, TMP_OpAsgnNode_set_sexp_21.$$arity = 0), nil) && 'set_sexp';
+        }, TMP_OpAsgnNode_set_sexp_22.$$arity = 0), nil) && 'set_sexp';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgn1Node(){};
         var self = $OpAsgn1Node = $klass($base, $super, 'OpAsgn1Node', $OpAsgn1Node);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgn1Node_first_arg_22, TMP_OpAsgn1Node_compile_23, TMP_OpAsgn1Node_compile_operator_26, TMP_OpAsgn1Node_compile_or_29, TMP_OpAsgn1Node_compile_and_32;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgn1Node_first_arg_23, TMP_OpAsgn1Node_compile_24, TMP_OpAsgn1Node_compile_operator_27, TMP_OpAsgn1Node_compile_or_30, TMP_OpAsgn1Node_compile_and_33;
 
         
         self.$handle("op_asgn1");
         self.$children("lhs", "args", "op", "rhs");
-        Opal.defn(self, '$first_arg', TMP_OpAsgn1Node_first_arg_22 = function $$first_arg() {
+        Opal.defn(self, '$first_arg', TMP_OpAsgn1Node_first_arg_23 = function $$first_arg() {
           var self = this;
 
           return self.$args().$children()['$[]'](0)
-        }, TMP_OpAsgn1Node_first_arg_22.$$arity = 0);
-        Opal.defn(self, '$compile', TMP_OpAsgn1Node_compile_23 = function $$compile() {
+        }, TMP_OpAsgn1Node_first_arg_23.$$arity = 0);
+        Opal.defn(self, '$compile', TMP_OpAsgn1Node_compile_24 = function $$compile() {
           var self = this, $case = nil;
 
           return (function() {$case = self.$op().$to_s();
 if ("||"['$===']($case)) {return self.$compile_or()}else if ("&&"['$===']($case)) {return self.$compile_and()}else {return self.$compile_operator()}})()
-        }, TMP_OpAsgn1Node_compile_23.$$arity = 0);
-        Opal.defn(self, '$compile_operator', TMP_OpAsgn1Node_compile_operator_26 = function $$compile_operator() {
-          var TMP_24, self = this;
+        }, TMP_OpAsgn1Node_compile_24.$$arity = 0);
+        Opal.defn(self, '$compile_operator', TMP_OpAsgn1Node_compile_operator_27 = function $$compile_operator() {
+          var TMP_25, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_24 = function(a){var self = TMP_24.$$s || this, TMP_25;
+          return $send(self, 'with_temp', [], (TMP_25 = function(a){var self = TMP_25.$$s || this, TMP_26;
 if (a == null) a = nil;
-          return $send(self, 'with_temp', [], (TMP_25 = function(r){var self = TMP_25.$$s || this, cur = nil, rhs = nil, call = nil;
+          return $send(self, 'with_temp', [], (TMP_26 = function(r){var self = TMP_26.$$s || this, cur = nil, rhs = nil, call = nil;
 if (r == null) r = nil;
             
               cur = self.$s("send", self.$s("js_tmp", r), "[]", self.$s("arglist", self.$s("js_tmp", a)));
               rhs = self.$s("send", cur, self.$op().$to_sym(), self.$s("arglist", self.$rhs()));
               call = self.$s("send", self.$s("js_tmp", r), "[]=", self.$s("arglist", self.$s("js_tmp", a), rhs));
               self.$push("" + "(" + (a) + " = ", self.$expr(self.$first_arg()), "" + ", " + (r) + " = ", self.$expr(self.$lhs()));
-              return self.$push(", ", self.$expr(call), ")");}, TMP_25.$$s = self, TMP_25.$$arity = 1, TMP_25))}, TMP_24.$$s = self, TMP_24.$$arity = 1, TMP_24))
-        }, TMP_OpAsgn1Node_compile_operator_26.$$arity = 0);
-        Opal.defn(self, '$compile_or', TMP_OpAsgn1Node_compile_or_29 = function $$compile_or() {
-          var TMP_27, self = this;
+              return self.$push(", ", self.$expr(call), ")");}, TMP_26.$$s = self, TMP_26.$$arity = 1, TMP_26))}, TMP_25.$$s = self, TMP_25.$$arity = 1, TMP_25))
+        }, TMP_OpAsgn1Node_compile_operator_27.$$arity = 0);
+        Opal.defn(self, '$compile_or', TMP_OpAsgn1Node_compile_or_30 = function $$compile_or() {
+          var TMP_28, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_27 = function(a){var self = TMP_27.$$s || this, TMP_28;
+          return $send(self, 'with_temp', [], (TMP_28 = function(a){var self = TMP_28.$$s || this, TMP_29;
 if (a == null) a = nil;
-          return $send(self, 'with_temp', [], (TMP_28 = function(r){var self = TMP_28.$$s || this, aref = nil, aset = nil, orop = nil;
+          return $send(self, 'with_temp', [], (TMP_29 = function(r){var self = TMP_29.$$s || this, aref = nil, aset = nil, orop = nil;
 if (r == null) r = nil;
             
               aref = self.$s("send", self.$s("js_tmp", r), "[]", self.$s("arglist", self.$s("js_tmp", a)));
               aset = self.$s("send", self.$s("js_tmp", r), "[]=", self.$s("arglist", self.$s("js_tmp", a), self.$rhs()));
               orop = self.$s("or", aref, aset);
               self.$push("" + "(" + (a) + " = ", self.$expr(self.$first_arg()), "" + ", " + (r) + " = ", self.$expr(self.$lhs()));
-              return self.$push(", ", self.$expr(orop), ")");}, TMP_28.$$s = self, TMP_28.$$arity = 1, TMP_28))}, TMP_27.$$s = self, TMP_27.$$arity = 1, TMP_27))
-        }, TMP_OpAsgn1Node_compile_or_29.$$arity = 0);
-        return (Opal.defn(self, '$compile_and', TMP_OpAsgn1Node_compile_and_32 = function $$compile_and() {
-          var TMP_30, self = this;
+              return self.$push(", ", self.$expr(orop), ")");}, TMP_29.$$s = self, TMP_29.$$arity = 1, TMP_29))}, TMP_28.$$s = self, TMP_28.$$arity = 1, TMP_28))
+        }, TMP_OpAsgn1Node_compile_or_30.$$arity = 0);
+        return (Opal.defn(self, '$compile_and', TMP_OpAsgn1Node_compile_and_33 = function $$compile_and() {
+          var TMP_31, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_30 = function(a){var self = TMP_30.$$s || this, TMP_31;
+          return $send(self, 'with_temp', [], (TMP_31 = function(a){var self = TMP_31.$$s || this, TMP_32;
 if (a == null) a = nil;
-          return $send(self, 'with_temp', [], (TMP_31 = function(r){var self = TMP_31.$$s || this, aref = nil, aset = nil, andop = nil;
+          return $send(self, 'with_temp', [], (TMP_32 = function(r){var self = TMP_32.$$s || this, aref = nil, aset = nil, andop = nil;
 if (r == null) r = nil;
             
               aref = self.$s("send", self.$s("js_tmp", r), "[]", self.$s("arglist", self.$s("js_tmp", a)));
               aset = self.$s("send", self.$s("js_tmp", r), "[]=", self.$s("arglist", self.$s("js_tmp", a), self.$rhs()));
               andop = self.$s("and", aref, aset);
               self.$push("" + "(" + (a) + " = ", self.$expr(self.$first_arg()), "" + ", " + (r) + " = ", self.$expr(self.$lhs()));
-              return self.$push(", ", self.$expr(andop), ")");}, TMP_31.$$s = self, TMP_31.$$arity = 1, TMP_31))}, TMP_30.$$s = self, TMP_30.$$arity = 1, TMP_30))
-        }, TMP_OpAsgn1Node_compile_and_32.$$arity = 0), nil) && 'compile_and';
+              return self.$push(", ", self.$expr(andop), ")");}, TMP_32.$$s = self, TMP_32.$$arity = 1, TMP_32))}, TMP_31.$$s = self, TMP_31.$$arity = 1, TMP_31))
+        }, TMP_OpAsgn1Node_compile_and_33.$$arity = 0), nil) && 'compile_and';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgn2Node(){};
         var self = $OpAsgn2Node = $klass($base, $super, 'OpAsgn2Node', $OpAsgn2Node);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgn2Node_meth_33, TMP_OpAsgn2Node_compile_34, TMP_OpAsgn2Node_compile_or_36, TMP_OpAsgn2Node_compile_and_38, TMP_OpAsgn2Node_compile_operator_40;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgn2Node_meth_34, TMP_OpAsgn2Node_compile_35, TMP_OpAsgn2Node_compile_or_37, TMP_OpAsgn2Node_compile_and_39, TMP_OpAsgn2Node_compile_operator_41;
 
         
         self.$handle("op_asgn2");
         self.$children("lhs", "mid", "op", "rhs");
-        Opal.defn(self, '$meth', TMP_OpAsgn2Node_meth_33 = function $$meth() {
+        Opal.defn(self, '$meth', TMP_OpAsgn2Node_meth_34 = function $$meth() {
           var self = this;
 
           return self.$mid().$to_s()['$[]']($range(0, -2, false))
-        }, TMP_OpAsgn2Node_meth_33.$$arity = 0);
-        Opal.defn(self, '$compile', TMP_OpAsgn2Node_compile_34 = function $$compile() {
+        }, TMP_OpAsgn2Node_meth_34.$$arity = 0);
+        Opal.defn(self, '$compile', TMP_OpAsgn2Node_compile_35 = function $$compile() {
           var self = this, $case = nil;
 
           return (function() {$case = self.$op().$to_s();
 if ("||"['$===']($case)) {return self.$compile_or()}else if ("&&"['$===']($case)) {return self.$compile_and()}else {return self.$compile_operator()}})()
-        }, TMP_OpAsgn2Node_compile_34.$$arity = 0);
-        Opal.defn(self, '$compile_or', TMP_OpAsgn2Node_compile_or_36 = function $$compile_or() {
-          var TMP_35, self = this;
+        }, TMP_OpAsgn2Node_compile_35.$$arity = 0);
+        Opal.defn(self, '$compile_or', TMP_OpAsgn2Node_compile_or_37 = function $$compile_or() {
+          var TMP_36, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_35 = function(tmp){var self = TMP_35.$$s || this, getr = nil, asgn = nil, orop = nil;
+          return $send(self, 'with_temp', [], (TMP_36 = function(tmp){var self = TMP_36.$$s || this, getr = nil, asgn = nil, orop = nil;
 if (tmp == null) tmp = nil;
           
             getr = self.$s("send", self.$s("js_tmp", tmp), self.$meth(), self.$s("arglist"));
             asgn = self.$s("send", self.$s("js_tmp", tmp), self.$mid(), self.$s("arglist", self.$rhs()));
             orop = self.$s("or", getr, asgn);
-            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(orop), ")");}, TMP_35.$$s = self, TMP_35.$$arity = 1, TMP_35))
-        }, TMP_OpAsgn2Node_compile_or_36.$$arity = 0);
-        Opal.defn(self, '$compile_and', TMP_OpAsgn2Node_compile_and_38 = function $$compile_and() {
-          var TMP_37, self = this;
+            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(orop), ")");}, TMP_36.$$s = self, TMP_36.$$arity = 1, TMP_36))
+        }, TMP_OpAsgn2Node_compile_or_37.$$arity = 0);
+        Opal.defn(self, '$compile_and', TMP_OpAsgn2Node_compile_and_39 = function $$compile_and() {
+          var TMP_38, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_37 = function(tmp){var self = TMP_37.$$s || this, getr = nil, asgn = nil, andop = nil;
+          return $send(self, 'with_temp', [], (TMP_38 = function(tmp){var self = TMP_38.$$s || this, getr = nil, asgn = nil, andop = nil;
 if (tmp == null) tmp = nil;
           
             getr = self.$s("send", self.$s("js_tmp", tmp), self.$meth(), self.$s("arglist"));
             asgn = self.$s("send", self.$s("js_tmp", tmp), self.$mid(), self.$s("arglist", self.$rhs()));
             andop = self.$s("and", getr, asgn);
-            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(andop), ")");}, TMP_37.$$s = self, TMP_37.$$arity = 1, TMP_37))
-        }, TMP_OpAsgn2Node_compile_and_38.$$arity = 0);
-        return (Opal.defn(self, '$compile_operator', TMP_OpAsgn2Node_compile_operator_40 = function $$compile_operator() {
-          var TMP_39, self = this;
+            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(andop), ")");}, TMP_38.$$s = self, TMP_38.$$arity = 1, TMP_38))
+        }, TMP_OpAsgn2Node_compile_and_39.$$arity = 0);
+        return (Opal.defn(self, '$compile_operator', TMP_OpAsgn2Node_compile_operator_41 = function $$compile_operator() {
+          var TMP_40, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_39 = function(tmp){var self = TMP_39.$$s || this, getr = nil, oper = nil, asgn = nil;
+          return $send(self, 'with_temp', [], (TMP_40 = function(tmp){var self = TMP_40.$$s || this, getr = nil, oper = nil, asgn = nil;
 if (tmp == null) tmp = nil;
           
             getr = self.$s("send", self.$s("js_tmp", tmp), self.$meth(), self.$s("arglist"));
             oper = self.$s("send", getr, self.$op(), self.$s("arglist", self.$rhs()));
             asgn = self.$s("send", self.$s("js_tmp", tmp), self.$mid(), self.$s("arglist", oper));
-            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(asgn), ")");}, TMP_39.$$s = self, TMP_39.$$arity = 1, TMP_39))
-        }, TMP_OpAsgn2Node_compile_operator_40.$$arity = 0), nil) && 'compile_operator';
+            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(asgn), ")");}, TMP_40.$$s = self, TMP_40.$$arity = 1, TMP_40))
+        }, TMP_OpAsgn2Node_compile_operator_41.$$arity = 0), nil) && 'compile_operator';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
     })($scope.base, $scopes)
   })($scope.base, $scopes);
@@ -27472,9 +27481,9 @@ if (r == null) r = nil;
 };
 
 /* Generated by Opal 0.11.0.dev */
-(function(Opal) {
+Opal.modules["opal-builder"] = function(Opal) {
   var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice;
 
   Opal.add_stubs(['$require']);
   return self.$require("opal/builder")
-})(Opal);
+};
