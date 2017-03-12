@@ -47,7 +47,7 @@ Opal.modules["hike/normalized_array"] = function(Opal) {
       Opal.defn(self, '$initialize', TMP_NormalizedArray_initialize_1 = function $$initialize() {
         var self = this, $iter = TMP_NormalizedArray_initialize_1.$$p, $yield = $iter || nil;
 
-        TMP_NormalizedArray_initialize_1.$$p = null;
+        if ($iter) TMP_NormalizedArray_initialize_1.$$p = null;
         return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_NormalizedArray_initialize_1, false), [], null)
       }, TMP_NormalizedArray_initialize_1.$$arity = 0);
       Opal.defn(self, '$[]=', TMP_NormalizedArray_$$$eq_2 = function($a_rest) {
@@ -59,7 +59,7 @@ Opal.modules["hike/normalized_array"] = function(Opal) {
         for (var $arg_idx = 0; $arg_idx < $args_len; $arg_idx++) {
           args[$arg_idx - 0] = arguments[$arg_idx];
         }
-        TMP_NormalizedArray_$$$eq_2.$$p = null;
+        if ($iter) TMP_NormalizedArray_$$$eq_2.$$p = null;
         
         value = args.$pop();
         if ((($b = value['$respond_to?']("to_ary")) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
@@ -72,13 +72,13 @@ Opal.modules["hike/normalized_array"] = function(Opal) {
       Opal.defn(self, '$<<', TMP_NormalizedArray_$lt$lt_3 = function(element) {
         var self = this, $iter = TMP_NormalizedArray_$lt$lt_3.$$p, $yield = $iter || nil;
 
-        TMP_NormalizedArray_$lt$lt_3.$$p = null;
+        if ($iter) TMP_NormalizedArray_$lt$lt_3.$$p = null;
         return $send(self, Opal.find_super_dispatcher(self, '<<', TMP_NormalizedArray_$lt$lt_3, false), [self.$normalize_element(element)], null)
       }, TMP_NormalizedArray_$lt$lt_3.$$arity = 1);
       Opal.defn(self, '$collect!', TMP_NormalizedArray_collect$B_4 = function() {
         var TMP_5, self = this, $iter = TMP_NormalizedArray_collect$B_4.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-        TMP_NormalizedArray_collect$B_4.$$p = null;
+        if ($iter) TMP_NormalizedArray_collect$B_4.$$p = null;
         // Prepare super implicit arguments
         for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
           $zuper[$zuper_i] = arguments[$zuper_i];
@@ -99,7 +99,7 @@ if (element == null) element = nil;
         for (var $arg_idx = 1; $arg_idx < $args_len; $arg_idx++) {
           elements[$arg_idx - 1] = arguments[$arg_idx];
         }
-        TMP_NormalizedArray_insert_6.$$p = null;
+        if ($iter) TMP_NormalizedArray_insert_6.$$p = null;
         return $send(self, Opal.find_super_dispatcher(self, 'insert', TMP_NormalizedArray_insert_6, false), [index].concat(Opal.to_a(self.$normalize_elements(elements))), null)
       }, TMP_NormalizedArray_insert_6.$$arity = -2);
       Opal.defn(self, '$push', TMP_NormalizedArray_push_7 = function $$push($a_rest) {
@@ -111,13 +111,13 @@ if (element == null) element = nil;
         for (var $arg_idx = 0; $arg_idx < $args_len; $arg_idx++) {
           elements[$arg_idx - 0] = arguments[$arg_idx];
         }
-        TMP_NormalizedArray_push_7.$$p = null;
+        if ($iter) TMP_NormalizedArray_push_7.$$p = null;
         return $send(self, Opal.find_super_dispatcher(self, 'push', TMP_NormalizedArray_push_7, false), Opal.to_a(self.$normalize_elements(elements)), null)
       }, TMP_NormalizedArray_push_7.$$arity = -1);
       Opal.defn(self, '$replace', TMP_NormalizedArray_replace_8 = function $$replace(elements) {
         var self = this, $iter = TMP_NormalizedArray_replace_8.$$p, $yield = $iter || nil;
 
-        TMP_NormalizedArray_replace_8.$$p = null;
+        if ($iter) TMP_NormalizedArray_replace_8.$$p = null;
         return $send(self, Opal.find_super_dispatcher(self, 'replace', TMP_NormalizedArray_replace_8, false), [self.$normalize_elements(elements)], null)
       }, TMP_NormalizedArray_replace_8.$$arity = 1);
       Opal.defn(self, '$unshift', TMP_NormalizedArray_unshift_9 = function $$unshift($a_rest) {
@@ -129,7 +129,7 @@ if (element == null) element = nil;
         for (var $arg_idx = 0; $arg_idx < $args_len; $arg_idx++) {
           elements[$arg_idx - 0] = arguments[$arg_idx];
         }
-        TMP_NormalizedArray_unshift_9.$$p = null;
+        if ($iter) TMP_NormalizedArray_unshift_9.$$p = null;
         return $send(self, Opal.find_super_dispatcher(self, 'unshift', TMP_NormalizedArray_unshift_9, false), Opal.to_a(self.$normalize_elements(elements)), null)
       }, TMP_NormalizedArray_unshift_9.$$arity = -1);
       return (Opal.defn(self, '$normalize_elements', TMP_NormalizedArray_normalize_elements_11 = function $$normalize_elements(elements) {
@@ -694,7 +694,7 @@ if (path == null) path = nil;
         for (var $arg_idx = 0; $arg_idx < $args_len; $arg_idx++) {
           logical_paths[$arg_idx - 0] = arguments[$arg_idx];
         }
-        TMP_Index_find_6.$$p = null;
+        if ($iter) TMP_Index_find_6.$$p = null;
         if ((block !== nil)) {
           
           options = self['$extract_options!'](logical_paths);
@@ -764,7 +764,7 @@ if (entry == null) entry = nil;
       Opal.defn(self, '$find_in_paths', TMP_Index_find_in_paths_14 = function $$find_in_paths(logical_path) {
         var $a, $b, TMP_15, self = this, $iter = TMP_Index_find_in_paths_14.$$p, block = $iter || nil, dirname = nil, basename = nil;
 
-        TMP_Index_find_in_paths_14.$$p = null;
+        if ($iter) TMP_Index_find_in_paths_14.$$p = null;
         
         $b = logical_path.$split(), $a = Opal.to_ary($b), (dirname = ($a[0] == null ? nil : $a[0])), (basename = ($a[1] == null ? nil : $a[1])), $b;
         return $send(self.pathnames, 'each', [], (TMP_15 = function(base_path){var self = TMP_15.$$s || this;
@@ -774,7 +774,7 @@ if (base_path == null) base_path = nil;
       Opal.defn(self, '$find_in_base_path', TMP_Index_find_in_base_path_16 = function $$find_in_base_path(logical_path, base_path) {
         var $a, $b, self = this, $iter = TMP_Index_find_in_base_path_16.$$p, block = $iter || nil, candidate = nil, dirname = nil, basename = nil;
 
-        TMP_Index_find_in_base_path_16.$$p = null;
+        if ($iter) TMP_Index_find_in_base_path_16.$$p = null;
         
         candidate = base_path.$join(logical_path);
         $b = candidate.$split(), $a = Opal.to_ary($b), (dirname = ($a[0] == null ? nil : $a[0])), (basename = ($a[1] == null ? nil : $a[1])), $b;
@@ -787,7 +787,7 @@ if (base_path == null) base_path = nil;
       Opal.defn(self, '$match', TMP_Index_match_19 = function $$match(dirname, basename) {
         var TMP_17, TMP_18, self = this, $iter = TMP_Index_match_19.$$p, $yield = $iter || nil, matches = nil, pattern = nil;
 
-        TMP_Index_match_19.$$p = null;
+        if ($iter) TMP_Index_match_19.$$p = null;
         
         matches = self.$entries(dirname);
         pattern = self.$pattern_for(basename);
@@ -912,7 +912,7 @@ Opal.modules["hike/paths"] = function(Opal) {
         if (root == null) {
           root = ".";
         }
-        TMP_Paths_initialize_1.$$p = null;
+        if ($iter) TMP_Paths_initialize_1.$$p = null;
         
         self.root = Opal.const_get($scopes, 'Pathname', true, true).$new(root);
         return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_Paths_initialize_1, false), [], null);
@@ -1061,7 +1061,7 @@ if (h == null) h = nil;if (k == null) k = nil;
         for (var $arg_idx = 0; $arg_idx < $args_len; $arg_idx++) {
           args[$arg_idx - 0] = arguments[$arg_idx];
         }
-        TMP_Trail_find_12.$$p = null;
+        if ($iter) TMP_Trail_find_12.$$p = null;
         return $send(self.$index(), 'find', Opal.to_a(args), block.$to_proc())
       }, TMP_Trail_find_12.$$arity = -1);
       Opal.defn(self, '$index', TMP_Trail_index_13 = function $$index() {
@@ -1151,7 +1151,7 @@ Opal.modules["opal/hike_path_finder"] = function(Opal) {
         if (paths == null) {
           paths = Opal.const_get($scopes, 'Opal', true, true).$paths();
         }
-        TMP_HikePathFinder_initialize_1.$$p = null;
+        if ($iter) TMP_HikePathFinder_initialize_1.$$p = null;
         
         $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_HikePathFinder_initialize_1, false), [], null);
         $send(self, 'append_paths', Opal.to_a(paths));
@@ -1160,7 +1160,7 @@ Opal.modules["opal/hike_path_finder"] = function(Opal) {
       return (Opal.defn(self, '$find', TMP_HikePathFinder_find_2 = function $$find(path) {
         var $a, $b, self = this, $iter = TMP_HikePathFinder_find_2.$$p, $yield = $iter || nil, pathname = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-        TMP_HikePathFinder_find_2.$$p = null;
+        if ($iter) TMP_HikePathFinder_find_2.$$p = null;
         // Prepare super implicit arguments
         for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
           $zuper[$zuper_i] = arguments[$zuper_i];
@@ -1287,7 +1287,7 @@ Opal.modules["set"] = function(Opal) {
       if (enum$ == null) {
         enum$ = nil;
       }
-      TMP_Set_initialize_2.$$p = null;
+      if ($iter) TMP_Set_initialize_2.$$p = null;
       
       self.hash = Opal.const_get($scopes, 'Hash', true, true).$new();
       if ((($a = enum$['$nil?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
@@ -1357,7 +1357,7 @@ if (o == null) o = nil;
     Opal.defn(self, '$classify', TMP_Set_classify_10 = function $$classify() {
       var TMP_11, TMP_12, self = this, $iter = TMP_Set_classify_10.$$p, block = $iter || nil, result = nil;
 
-      TMP_Set_classify_10.$$p = null;
+      if ($iter) TMP_Set_classify_10.$$p = null;
       
       if ((block !== nil)) {
         } else {
@@ -1377,7 +1377,7 @@ if (item == null) item = nil;
     Opal.defn(self, '$collect!', TMP_Set_collect$B_13 = function() {
       var TMP_14, self = this, $iter = TMP_Set_collect$B_13.$$p, block = $iter || nil, result = nil;
 
-      TMP_Set_collect$B_13.$$p = null;
+      if ($iter) TMP_Set_collect$B_13.$$p = null;
       
       if ((block !== nil)) {
         } else {
@@ -1412,7 +1412,7 @@ if (item == null) item = nil;
 
       var $a, TMP_18, TMP_19, self = this, $iter = TMP_Set_delete_if_17.$$p, $yield = $iter || nil;
 
-      TMP_Set_delete_if_17.$$p = null;
+      if ($iter) TMP_Set_delete_if_17.$$p = null;
       
       ((($a = ($yield !== nil)) !== false && $a !== nil && $a != null) ? $a : Opal.ret(self.$enum_for("delete_if")));
       $send($send(self, 'select', [], (TMP_18 = function(o){var self = TMP_18.$$s || this;
@@ -1436,7 +1436,7 @@ if (o == null) o = nil;
     Opal.defn(self, '$each', TMP_Set_each_21 = function $$each() {
       var self = this, $iter = TMP_Set_each_21.$$p, block = $iter || nil;
 
-      TMP_Set_each_21.$$p = null;
+      if ($iter) TMP_Set_each_21.$$p = null;
       
       if ((block !== nil)) {
         } else {
@@ -1586,7 +1586,7 @@ if (o == null) o = nil;
       for (var $arg_idx = 1; $arg_idx < $args_len; $arg_idx++) {
         args[$arg_idx - 1] = arguments[$arg_idx];
       }
-      TMP_Enumerable_to_set_43.$$p = null;
+      if ($iter) TMP_Enumerable_to_set_43.$$p = null;
       return $send(klass, 'new', [self].concat(Opal.to_a(args)), block.$to_proc())
     }, TMP_Enumerable_to_set_43.$$arity = -1)
   })($scope.base, $scopes);
@@ -1976,7 +1976,7 @@ Opal.modules["opal/ast/node"] = function(Opal) {
         Opal.defn(self, '$assign_properties', TMP_Node_assign_properties_1 = function $$assign_properties(properties) {
           var $a, self = this, $iter = TMP_Node_assign_properties_1.$$p, $yield = $iter || nil, meta = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_Node_assign_properties_1.$$p = null;
+          if ($iter) TMP_Node_assign_properties_1.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -2526,7 +2526,7 @@ Opal.modules["parser/compatibility/ruby1_9"] = function(Opal) {
       return (Opal.defn(self, '$bsearch', TMP_Array_bsearch_1 = function $$bsearch() {
         var $a, $b, self = this, $iter = TMP_Array_bsearch_1.$$p, $yield = $iter || nil, from = nil, to = nil, satisfied = nil, midpoint = nil, result = nil, cur = nil, $case = nil;
 
-        TMP_Array_bsearch_1.$$p = null;
+        if ($iter) TMP_Array_bsearch_1.$$p = null;
         
         if (($yield !== nil)) {
           } else {
@@ -3611,7 +3611,7 @@ if (action == null) action = nil;
         Opal.defn(self, '$transaction', TMP_Rewriter_transaction_11 = function $$transaction() {
           var $a, self = this, $iter = TMP_Rewriter_transaction_11.$$p, $yield = $iter || nil;
 
-          TMP_Rewriter_transaction_11.$$p = null;
+          if ($iter) TMP_Rewriter_transaction_11.$$p = null;
           return (function() { try {
           
           if (($yield !== nil)) {
@@ -3998,7 +3998,7 @@ Opal.modules["parser/source/map"] = function(Opal) {
         Opal.defn(self, '$initialize_copy', TMP_Map_initialize_copy_2 = function $$initialize_copy(other) {
           var self = this, $iter = TMP_Map_initialize_copy_2.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_Map_initialize_copy_2.$$p = null;
+          if ($iter) TMP_Map_initialize_copy_2.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -4068,7 +4068,7 @@ if (hash == null) hash = nil;if (ivar == null) ivar = nil;
         Opal.defn(self, '$with', TMP_Map_with_14 = function() {
           var self = this, $iter = TMP_Map_with_14.$$p, block = $iter || nil;
 
-          TMP_Map_with_14.$$p = null;
+          if ($iter) TMP_Map_with_14.$$p = null;
           return $send(self.$dup(), 'tap', [], block.$to_proc())
         }, TMP_Map_with_14.$$arity = 0);
         return (Opal.defn(self, '$update_expression', TMP_Map_update_expression_15 = function $$update_expression(expression_l) {
@@ -4107,7 +4107,7 @@ Opal.modules["parser/source/map/operator"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_Operator_initialize_1 = function $$initialize(operator, expression) {
           var self = this, $iter = TMP_Operator_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Operator_initialize_1.$$p = null;
+          if ($iter) TMP_Operator_initialize_1.$$p = null;
           
           self.operator = operator;
           return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_Operator_initialize_1, false), [expression], null);
@@ -4144,7 +4144,7 @@ Opal.modules["parser/source/map/collection"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_Collection_initialize_1 = function $$initialize(begin_l, end_l, expression_l) {
           var $a, self = this, $iter = TMP_Collection_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Collection_initialize_1.$$p = null;
+          if ($iter) TMP_Collection_initialize_1.$$p = null;
           
           $a = [begin_l, end_l], (self.begin = $a[0]), (self.end = $a[1]), $a;
           return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_Collection_initialize_1, false), [expression_l], null);
@@ -4182,7 +4182,7 @@ Opal.modules["parser/source/map/constant"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_Constant_initialize_1 = function $$initialize(double_colon, name, expression) {
           var $a, self = this, $iter = TMP_Constant_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Constant_initialize_1.$$p = null;
+          if ($iter) TMP_Constant_initialize_1.$$p = null;
           
           $a = [double_colon, name], (self.double_colon = $a[0]), (self.name = $a[1]), $a;
           return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_Constant_initialize_1, false), [expression], null);
@@ -4235,7 +4235,7 @@ Opal.modules["parser/source/map/variable"] = function(Opal) {
           if (expression_l == null) {
             expression_l = name_l;
           }
-          TMP_Variable_initialize_1.$$p = null;
+          if ($iter) TMP_Variable_initialize_1.$$p = null;
           
           self.name = name_l;
           return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_Variable_initialize_1, false), [expression_l], null);
@@ -4286,7 +4286,7 @@ Opal.modules["parser/source/map/keyword"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_Keyword_initialize_1 = function $$initialize(keyword_l, begin_l, end_l, expression_l) {
           var $a, self = this, $iter = TMP_Keyword_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Keyword_initialize_1.$$p = null;
+          if ($iter) TMP_Keyword_initialize_1.$$p = null;
           
           self.keyword = keyword_l;
           $a = [begin_l, end_l], (self.begin = $a[0]), (self.end = $a[1]), $a;
@@ -4327,7 +4327,7 @@ Opal.modules["parser/source/map/definition"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_Definition_initialize_1 = function $$initialize(keyword_l, operator_l, name_l, end_l) {
           var self = this, $iter = TMP_Definition_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Definition_initialize_1.$$p = null;
+          if ($iter) TMP_Definition_initialize_1.$$p = null;
           
           self.keyword = keyword_l;
           self.operator = operator_l;
@@ -4370,7 +4370,7 @@ Opal.modules["parser/source/map/send"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_Send_initialize_1 = function $$initialize(dot_l, selector_l, begin_l, end_l, expression_l) {
           var $a, self = this, $iter = TMP_Send_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Send_initialize_1.$$p = null;
+          if ($iter) TMP_Send_initialize_1.$$p = null;
           
           self.dot = dot_l;
           self.selector = selector_l;
@@ -4424,7 +4424,7 @@ Opal.modules["parser/source/map/condition"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_Condition_initialize_1 = function $$initialize(keyword_l, begin_l, else_l, end_l, expression_l) {
           var $a, self = this, $iter = TMP_Condition_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Condition_initialize_1.$$p = null;
+          if ($iter) TMP_Condition_initialize_1.$$p = null;
           
           self.keyword = keyword_l;
           $a = [begin_l, else_l, end_l], (self.begin = $a[0]), (self["else"] = $a[1]), (self.end = $a[2]), $a;
@@ -4462,7 +4462,7 @@ Opal.modules["parser/source/map/ternary"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_Ternary_initialize_1 = function $$initialize(question_l, colon_l, expression_l) {
           var $a, self = this, $iter = TMP_Ternary_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Ternary_initialize_1.$$p = null;
+          if ($iter) TMP_Ternary_initialize_1.$$p = null;
           
           $a = [question_l, colon_l], (self.question = $a[0]), (self.colon = $a[1]), $a;
           return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_Ternary_initialize_1, false), [expression_l], null);
@@ -4499,7 +4499,7 @@ Opal.modules["parser/source/map/for"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_For_initialize_1 = function $$initialize(keyword_l, in_l, begin_l, end_l, expression_l) {
           var $a, self = this, $iter = TMP_For_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_For_initialize_1.$$p = null;
+          if ($iter) TMP_For_initialize_1.$$p = null;
           
           $a = [keyword_l, in_l], (self.keyword = $a[0]), (self["in"] = $a[1]), $a;
           $a = [begin_l, end_l], (self.begin = $a[0]), (self.end = $a[1]), $a;
@@ -4538,7 +4538,7 @@ Opal.modules["parser/source/map/rescue_body"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_RescueBody_initialize_1 = function $$initialize(keyword_l, assoc_l, begin_l, expression_l) {
           var self = this, $iter = TMP_RescueBody_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_RescueBody_initialize_1.$$p = null;
+          if ($iter) TMP_RescueBody_initialize_1.$$p = null;
           
           self.keyword = keyword_l;
           self.assoc = assoc_l;
@@ -4577,7 +4577,7 @@ Opal.modules["parser/source/map/heredoc"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_Heredoc_initialize_1 = function $$initialize(begin_l, body_l, end_l) {
           var self = this, $iter = TMP_Heredoc_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_Heredoc_initialize_1.$$p = null;
+          if ($iter) TMP_Heredoc_initialize_1.$$p = null;
           
           self.heredoc_body = body_l;
           self.heredoc_end = end_l;
@@ -4616,7 +4616,7 @@ Opal.modules["parser/source/map/objc_kwarg"] = function(Opal) {
         return (Opal.defn(self, '$initialize', TMP_ObjcKwarg_initialize_1 = function $$initialize(keyword_l, operator_l, argument_l, expression_l) {
           var $a, self = this, $iter = TMP_ObjcKwarg_initialize_1.$$p, $yield = $iter || nil;
 
-          TMP_ObjcKwarg_initialize_1.$$p = null;
+          if ($iter) TMP_ObjcKwarg_initialize_1.$$p = null;
           
           $a = [keyword_l, operator_l, argument_l], (self.keyword = $a[0]), (self.operator = $a[1]), (self.argument = $a[2]), $a;
           return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_ObjcKwarg_initialize_1, false), [expression_l], null);
@@ -4647,7 +4647,7 @@ Opal.modules["parser/syntax_error"] = function(Opal) {
       return (Opal.defn(self, '$initialize', TMP_SyntaxError_initialize_1 = function $$initialize(diagnostic) {
         var self = this, $iter = TMP_SyntaxError_initialize_1.$$p, $yield = $iter || nil;
 
-        TMP_SyntaxError_initialize_1.$$p = null;
+        if ($iter) TMP_SyntaxError_initialize_1.$$p = null;
         
         self.diagnostic = diagnostic;
         return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_SyntaxError_initialize_1, false), [diagnostic.$message()], null);
@@ -17963,7 +17963,7 @@ Opal.modules["opal/rewriters/explicit_writer_return"] = function(Opal) {
         Opal.defn(self, '$on_send', TMP_ExplicitWriterReturn_on_send_2 = function $$on_send(node) {
           var $a, $b, self = this, $iter = TMP_ExplicitWriterReturn_on_send_2.$$p, $yield = $iter || nil, recv = nil, method_name = nil, args = nil, set_args_node = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_ExplicitWriterReturn_on_send_2.$$p = null;
+          if ($iter) TMP_ExplicitWriterReturn_on_send_2.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -17983,7 +17983,7 @@ Opal.modules["opal/rewriters/explicit_writer_return"] = function(Opal) {
         return (Opal.defn(self, '$on_masgn', TMP_ExplicitWriterReturn_on_masgn_3 = function $$on_masgn(node) {
           var self = this, $iter = TMP_ExplicitWriterReturn_on_masgn_3.$$p, $yield = $iter || nil, result = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_ExplicitWriterReturn_on_masgn_3.$$p = null;
+          if ($iter) TMP_ExplicitWriterReturn_on_masgn_3.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -18062,7 +18062,7 @@ Opal.modules["opal/rewriters/js_reserved_words"] = function(Opal) {
         Opal.defn(self, '$on_lvar', TMP_JsReservedWords_on_lvar_5 = function $$on_lvar(node) {
           var $a, self = this, $iter = TMP_JsReservedWords_on_lvar_5.$$p, $yield = $iter || nil, name = nil, _ = nil;
 
-          TMP_JsReservedWords_on_lvar_5.$$p = null;
+          if ($iter) TMP_JsReservedWords_on_lvar_5.$$p = null;
           
           $a = [].concat(Opal.to_a(node)), (name = ($a[0] == null ? nil : $a[0])), (_ = ($a[1] == null ? nil : $a[1])), $a;
           node = node.$updated(nil, [self.$fix_var_name(name)]);
@@ -18071,7 +18071,7 @@ Opal.modules["opal/rewriters/js_reserved_words"] = function(Opal) {
         Opal.defn(self, '$on_lvasgn', TMP_JsReservedWords_on_lvasgn_6 = function $$on_lvasgn(node) {
           var $a, self = this, $iter = TMP_JsReservedWords_on_lvasgn_6.$$p, $yield = $iter || nil, name = nil, value = nil;
 
-          TMP_JsReservedWords_on_lvasgn_6.$$p = null;
+          if ($iter) TMP_JsReservedWords_on_lvasgn_6.$$p = null;
           
           $a = [].concat(Opal.to_a(node)), (name = ($a[0] == null ? nil : $a[0])), (value = ($a[1] == null ? nil : $a[1])), $a;
           if (value !== false && value !== nil && value != null) {
@@ -18084,7 +18084,7 @@ Opal.modules["opal/rewriters/js_reserved_words"] = function(Opal) {
         Opal.defn(self, '$on_ivar', TMP_JsReservedWords_on_ivar_7 = function $$on_ivar(node) {
           var $a, self = this, $iter = TMP_JsReservedWords_on_ivar_7.$$p, $yield = $iter || nil, name = nil, _ = nil;
 
-          TMP_JsReservedWords_on_ivar_7.$$p = null;
+          if ($iter) TMP_JsReservedWords_on_ivar_7.$$p = null;
           
           $a = [].concat(Opal.to_a(node)), (name = ($a[0] == null ? nil : $a[0])), (_ = ($a[1] == null ? nil : $a[1])), $a;
           node = node.$updated(nil, [self.$fix_ivar_name(name)]);
@@ -18093,7 +18093,7 @@ Opal.modules["opal/rewriters/js_reserved_words"] = function(Opal) {
         Opal.defn(self, '$on_ivasgn', TMP_JsReservedWords_on_ivasgn_8 = function $$on_ivasgn(node) {
           var $a, self = this, $iter = TMP_JsReservedWords_on_ivasgn_8.$$p, $yield = $iter || nil, name = nil, value = nil;
 
-          TMP_JsReservedWords_on_ivasgn_8.$$p = null;
+          if ($iter) TMP_JsReservedWords_on_ivasgn_8.$$p = null;
           
           $a = [].concat(Opal.to_a(node)), (name = ($a[0] == null ? nil : $a[0])), (value = ($a[1] == null ? nil : $a[1])), $a;
           if (value !== false && value !== nil && value != null) {
@@ -18115,7 +18115,7 @@ Opal.modules["opal/rewriters/js_reserved_words"] = function(Opal) {
         return (Opal.defn(self, '$on_argument', TMP_JsReservedWords_on_argument_10 = function $$on_argument(node) {
           var $a, self = this, $iter = TMP_JsReservedWords_on_argument_10.$$p, $yield = $iter || nil, name = nil, value = nil;
 
-          TMP_JsReservedWords_on_argument_10.$$p = null;
+          if ($iter) TMP_JsReservedWords_on_argument_10.$$p = null;
           
           $a = [].concat(Opal.to_a(node)), (name = ($a[0] == null ? nil : $a[0])), (value = ($a[1] == null ? nil : $a[1])), $a;
           if (value !== false && value !== nil && value != null) {
@@ -18159,7 +18159,7 @@ Opal.modules["opal/rewriters/block_to_iter"] = function(Opal) {
         return (Opal.defn(self, '$on_block', TMP_BlockToIter_on_block_1 = function $$on_block(node) {
           var $a, self = this, $iter = TMP_BlockToIter_on_block_1.$$p, $yield = $iter || nil, recvr = nil, args = nil, body = nil, iter_node = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_BlockToIter_on_block_1.$$p = null;
+          if ($iter) TMP_BlockToIter_on_block_1.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -18201,7 +18201,7 @@ Opal.modules["opal/rewriters/dot_js_syntax"] = function(Opal) {
         Opal.defn(self, '$on_send', TMP_DotJsSyntax_on_send_1 = function $$on_send(node) {
           var $a, $b, self = this, $iter = TMP_DotJsSyntax_on_send_1.$$p, $yield = $iter || nil, recv = nil, meth = nil, args = nil, recv_of_recv = nil, meth_of_recv = nil, _ = nil, $case = nil, property = nil, value = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_DotJsSyntax_on_send_1.$$p = null;
+          if ($iter) TMP_DotJsSyntax_on_send_1.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -18361,13 +18361,13 @@ Opal.modules["opal/parser"] = function(Opal) {
       Opal.defn(self, '$initialize', TMP_Parser_initialize_2 = function $$initialize($a_rest) {
         var self = this, $iter = TMP_Parser_initialize_2.$$p, $yield = $iter || nil;
 
-        TMP_Parser_initialize_2.$$p = null;
+        if ($iter) TMP_Parser_initialize_2.$$p = null;
         return $send(self, Opal.find_super_dispatcher(self, 'initialize', TMP_Parser_initialize_2, false), [Opal.const_get([Opal.const_get([Opal.const_get($scopes, 'Opal', true, true).$$scope], 'AST', true, true).$$scope], 'Builder', true, true).$new()], null)
       }, TMP_Parser_initialize_2.$$arity = -1);
       Opal.defs(self, '$default_parser', TMP_Parser_default_parser_3 = function $$default_parser() {
         var TMP_4, self = this, $iter = TMP_Parser_default_parser_3.$$p, $yield = $iter || nil, parser = nil, $writer = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-        TMP_Parser_default_parser_3.$$p = null;
+        if ($iter) TMP_Parser_default_parser_3.$$p = null;
         // Prepare super implicit arguments
         for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
           $zuper[$zuper_i] = arguments[$zuper_i];
@@ -18397,7 +18397,7 @@ if (diag == null) diag = nil;
       Opal.defn(self, '$parse', TMP_Parser_parse_5 = function $$parse(source_buffer) {
         var self = this, $iter = TMP_Parser_parse_5.$$p, $yield = $iter || nil, parsed = nil, rewriten = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-        TMP_Parser_parse_5.$$p = null;
+        if ($iter) TMP_Parser_parse_5.$$p = null;
         // Prepare super implicit arguments
         for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
           $zuper[$zuper_i] = arguments[$zuper_i];
@@ -18540,7 +18540,7 @@ Opal.modules["opal/nodes/helpers"] = function(Opal) {
         Opal.defn(self, '$indent', TMP_Helpers_indent_4 = function $$indent() {
           var self = this, $iter = TMP_Helpers_indent_4.$$p, block = $iter || nil;
 
-          TMP_Helpers_indent_4.$$p = null;
+          if ($iter) TMP_Helpers_indent_4.$$p = null;
           return $send(self.$compiler(), 'indent', [], block.$to_proc())
         }, TMP_Helpers_indent_4.$$arity = 0);
         Opal.defn(self, '$current_indent', TMP_Helpers_current_indent_5 = function $$current_indent() {
@@ -18859,7 +18859,7 @@ if (str == null) str = nil;
         Opal.defn(self, '$with_temp', TMP_Base_with_temp_34 = function $$with_temp() {
           var self = this, $iter = TMP_Base_with_temp_34.$$p, block = $iter || nil;
 
-          TMP_Base_with_temp_34.$$p = null;
+          if ($iter) TMP_Base_with_temp_34.$$p = null;
           return $send(self.compiler, 'with_temp', [], block.$to_proc())
         }, TMP_Base_with_temp_34.$$arity = 0);
         Opal.defn(self, '$in_while?', TMP_Base_in_while$q_35 = function() {
@@ -18880,7 +18880,7 @@ if (str == null) str = nil;
         Opal.defn(self, '$in_ensure', TMP_Base_in_ensure_38 = function $$in_ensure() {
           var self = this, $iter = TMP_Base_in_ensure_38.$$p, block = $iter || nil;
 
-          TMP_Base_in_ensure_38.$$p = null;
+          if ($iter) TMP_Base_in_ensure_38.$$p = null;
           return $send(self.$scope(), 'in_ensure', [], block.$to_proc())
         }, TMP_Base_in_ensure_38.$$arity = 0);
         Opal.defn(self, '$in_ensure?', TMP_Base_in_ensure$q_39 = function() {
@@ -19066,7 +19066,7 @@ if (code_unit == null) code_unit = nil;
         Opal.defn(self, '$initialize', TMP_RegexpNode_initialize_12 = function $$initialize($a_rest) {
           var self = this, $iter = TMP_RegexpNode_initialize_12.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_RegexpNode_initialize_12.$$p = null;
+          if ($iter) TMP_RegexpNode_initialize_12.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -19522,7 +19522,7 @@ if (tmp == null) tmp = nil;
         Opal.defn(self, '$compile', TMP_BackRefNode_compile_12 = function $$compile() {
           var self = this, $iter = TMP_BackRefNode_compile_12.$$p, $yield = $iter || nil, $case = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_BackRefNode_compile_12.$$p = null;
+          if ($iter) TMP_BackRefNode_compile_12.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -19767,7 +19767,7 @@ Opal.modules["opal/nodes/runtime_helpers"] = function(Opal) {
         Opal.defs(self, '$helper', TMP_RuntimeHelpers_helper_3 = function $$helper(name) {
           var self = this, $iter = TMP_RuntimeHelpers_helper_3.$$p, block = $iter || nil;
 
-          TMP_RuntimeHelpers_helper_3.$$p = null;
+          if ($iter) TMP_RuntimeHelpers_helper_3.$$p = null;
           
           Opal.const_get($scopes, 'HELPERS', true, true)['$<<'](name);
           return $send(self, 'define_method', ["" + "compile_" + (name)], block.$to_proc());
@@ -19905,7 +19905,7 @@ Opal.modules["opal/nodes/call"] = function(Opal) {
           if (options == null) {
             options = $hash2([], {});
           }
-          TMP_CallNode_add_special_1.$$p = null;
+          if ($iter) TMP_CallNode_add_special_1.$$p = null;
           
           
           $writer = [name, options];
@@ -19916,7 +19916,7 @@ Opal.modules["opal/nodes/call"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_CallNode_initialize_2 = function $$initialize($a_rest) {
           var $b, $c, self = this, $iter = TMP_CallNode_initialize_2.$$p, $yield = $iter || nil, args = nil, rest = nil, last_arg = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_CallNode_initialize_2.$$p = null;
+          if ($iter) TMP_CallNode_initialize_2.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -20387,7 +20387,7 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_JsCallNode_initialize_3 = function $$initialize($a_rest) {
           var $b, self = this, $iter = TMP_JsCallNode_initialize_3.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_JsCallNode_initialize_3.$$p = null;
+          if ($iter) TMP_JsCallNode_initialize_3.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -20742,7 +20742,7 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_ScopeNode_initialize_1 = function $$initialize($a_rest) {
           var self = this, $iter = TMP_ScopeNode_initialize_1.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_ScopeNode_initialize_1.$$p = null;
+          if ($iter) TMP_ScopeNode_initialize_1.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -20767,7 +20767,7 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
         Opal.defn(self, '$in_scope', TMP_ScopeNode_in_scope_2 = function $$in_scope() {
           var TMP_3, self = this, $iter = TMP_ScopeNode_in_scope_2.$$p, block = $iter || nil;
 
-          TMP_ScopeNode_in_scope_2.$$p = null;
+          if ($iter) TMP_ScopeNode_in_scope_2.$$p = null;
           return $send(self, 'indent', [], (TMP_3 = function(){var self = TMP_3.$$s || this, $writer = nil;
             if (self.parent == null) self.parent = nil;
 
@@ -21061,7 +21061,7 @@ if (i == null) i = nil;
         Opal.defn(self, '$in_ensure', TMP_ScopeNode_in_ensure_39 = function $$in_ensure() {
           var self = this, $iter = TMP_ScopeNode_in_ensure_39.$$p, $yield = $iter || nil, result = nil;
 
-          TMP_ScopeNode_in_ensure_39.$$p = null;
+          if ($iter) TMP_ScopeNode_in_ensure_39.$$p = null;
           
           if (($yield !== nil)) {
             } else {
@@ -21858,7 +21858,7 @@ Opal.modules["opal/nodes/args/post_args"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_PostArgsNode_initialize_1 = function $$initialize($a_rest) {
           var self = this, $iter = TMP_PostArgsNode_initialize_1.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_PostArgsNode_initialize_1.$$p = null;
+          if ($iter) TMP_PostArgsNode_initialize_1.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -22059,7 +22059,7 @@ Opal.modules["opal/nodes/node_with_args"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_NodeWithArgs_initialize_1 = function $$initialize($a_rest) {
           var self = this, $iter = TMP_NodeWithArgs_initialize_1.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_NodeWithArgs_initialize_1.$$p = null;
+          if ($iter) TMP_NodeWithArgs_initialize_1.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -22160,7 +22160,7 @@ if (inline_arg == null) inline_arg = nil;
             yielder = self.$scope().$block_name();
             self.$add_temp("" + "$iter = " + (scope_name) + ".$$p");
             self.$add_temp("" + (yielder) + " = $iter || nil");
-            return self.$line("" + (scope_name) + ".$$p = null;");
+            return self.$line("" + "if ($iter) " + (scope_name) + ".$$p = null;");
             } else {
             return nil
           }
@@ -22168,7 +22168,7 @@ if (inline_arg == null) inline_arg = nil;
         Opal.defn(self, '$with_inline_args', TMP_NodeWithArgs_with_inline_args_18 = function $$with_inline_args(args) {
           var self = this, $iter = TMP_NodeWithArgs_with_inline_args_18.$$p, $yield = $iter || nil, old_inline_args = nil, $writer = nil;
 
-          TMP_NodeWithArgs_with_inline_args_18.$$p = null;
+          if ($iter) TMP_NodeWithArgs_with_inline_args_18.$$p = null;
           
           old_inline_args = self.$inline_args();
           
@@ -22184,7 +22184,7 @@ if (inline_arg == null) inline_arg = nil;
         Opal.defn(self, '$in_mlhs', TMP_NodeWithArgs_in_mlhs_19 = function $$in_mlhs() {
           var self = this, $iter = TMP_NodeWithArgs_in_mlhs_19.$$p, $yield = $iter || nil, old_mlhs = nil;
 
-          TMP_NodeWithArgs_in_mlhs_19.$$p = null;
+          if ($iter) TMP_NodeWithArgs_in_mlhs_19.$$p = null;
           
           old_mlhs = self.in_mlhs;
           self.in_mlhs = true;
@@ -22418,7 +22418,8 @@ if (arg == null) arg = nil;
             $writer[$rb_minus($writer["length"], 1)];;
             self.$scope().$add_temp(self.$block_arg());
             scope_name = self.$scope()['$identify!']();
-            return self.$line("" + (self.$block_arg()) + " = " + (scope_name) + ".$$p || nil, " + (scope_name) + ".$$p = null;");
+            self.$line("" + (self.$block_arg()) + " = " + (scope_name) + ".$$p || nil;");
+            return self.$line("" + "if (" + (self.$block_arg()) + ") " + (scope_name) + ".$$p = null;");
             } else {
             return nil
           }
@@ -23987,7 +23988,7 @@ Opal.modules["opal/nodes/super"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_BaseSuperNode_initialize_1 = function $$initialize($a_rest) {
           var $b, $c, self = this, $iter = TMP_BaseSuperNode_initialize_1.$$p, $yield = $iter || nil, args = nil, rest = nil, last_child = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_BaseSuperNode_initialize_1.$$p = null;
+          if ($iter) TMP_BaseSuperNode_initialize_1.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -24142,7 +24143,7 @@ if (c == null) c = nil;
         Opal.defn(self, '$initialize', TMP_SuperNode_initialize_16 = function $$initialize($a_rest) {
           var $b, self = this, $iter = TMP_SuperNode_initialize_16.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_SuperNode_initialize_16.$$p = null;
+          if ($iter) TMP_SuperNode_initialize_16.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -24172,7 +24173,7 @@ if (c == null) c = nil;
         Opal.defn(self, '$initialize', TMP_ZsuperNode_initialize_18 = function $$initialize($a_rest) {
           var self = this, $iter = TMP_ZsuperNode_initialize_18.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_ZsuperNode_initialize_18.$$p = null;
+          if ($iter) TMP_ZsuperNode_initialize_18.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -24605,7 +24606,7 @@ if (mlhs_arg == null) mlhs_arg = nil;
           return (Opal.defn(self, '$on_lvasgn', TMP_LocalsFinder_on_lvasgn_8 = function $$on_lvasgn(node) {
             var $a, self = this, $iter = TMP_LocalsFinder_on_lvasgn_8.$$p, $yield = $iter || nil, name = nil, _value = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-            TMP_LocalsFinder_on_lvasgn_8.$$p = null;
+            if ($iter) TMP_LocalsFinder_on_lvasgn_8.$$p = null;
             // Prepare super implicit arguments
             for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
               $zuper[$zuper_i] = arguments[$zuper_i];
@@ -24662,7 +24663,7 @@ Opal.modules["opal/nodes/hash"] = function(Opal) {
         Opal.defn(self, '$initialize', TMP_HashNode_initialize_1 = function $$initialize($a_rest) {
           var TMP_2, self = this, $iter = TMP_HashNode_initialize_1.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_HashNode_initialize_1.$$p = null;
+          if ($iter) TMP_HashNode_initialize_1.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -25590,7 +25591,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
       Opal.defn(self, '$indent', TMP_Compiler_indent_19 = function $$indent() {
         var self = this, $iter = TMP_Compiler_indent_19.$$p, block = $iter || nil, indent = nil, res = nil;
 
-        TMP_Compiler_indent_19.$$p = null;
+        if ($iter) TMP_Compiler_indent_19.$$p = null;
         
         indent = self.indent;
         (self.indent = $rb_plus(self.indent, Opal.const_get($scopes, 'INDENT', true, true)));
@@ -25603,7 +25604,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
       Opal.defn(self, '$with_temp', TMP_Compiler_with_temp_20 = function $$with_temp() {
         var self = this, $iter = TMP_Compiler_with_temp_20.$$p, block = $iter || nil, tmp = nil, res = nil;
 
-        TMP_Compiler_with_temp_20.$$p = null;
+        if ($iter) TMP_Compiler_with_temp_20.$$p = null;
         
         tmp = self.scope.$new_temp();
         res = Opal.yield1(block, tmp);
@@ -25613,7 +25614,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
       Opal.defn(self, '$in_while', TMP_Compiler_in_while_21 = function $$in_while() {
         var self = this, $iter = TMP_Compiler_in_while_21.$$p, $yield = $iter || nil, result = nil;
 
-        TMP_Compiler_in_while_21.$$p = null;
+        if ($iter) TMP_Compiler_in_while_21.$$p = null;
         
         if (($yield !== nil)) {
           } else {
@@ -25627,7 +25628,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
       Opal.defn(self, '$in_ensure', TMP_Compiler_in_ensure_22 = function $$in_ensure() {
         var self = this, $iter = TMP_Compiler_in_ensure_22.$$p, $yield = $iter || nil, result = nil;
 
-        TMP_Compiler_in_ensure_22.$$p = null;
+        if ($iter) TMP_Compiler_in_ensure_22.$$p = null;
         
         if (($yield !== nil)) {
           } else {
@@ -25646,7 +25647,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
       Opal.defn(self, '$in_case', TMP_Compiler_in_case_24 = function $$in_case() {
         var self = this, $iter = TMP_Compiler_in_case_24.$$p, $yield = $iter || nil, old = nil;
 
-        TMP_Compiler_in_case_24.$$p = null;
+        if ($iter) TMP_Compiler_in_case_24.$$p = null;
         
         if (($yield !== nil)) {
           } else {
@@ -26230,7 +26231,7 @@ Opal.modules["source_map/offset"] = function(Opal) {
         for (var $arg_idx = 0; $arg_idx < $args_len; $arg_idx++) {
           args[$arg_idx - 0] = arguments[$arg_idx];
         }
-        TMP_Offset_new_1.$$p = null;
+        if ($iter) TMP_Offset_new_1.$$p = null;
         return (function() {$case = args.$first();
 if (Opal.const_get($scopes, 'Offset', true, true)['$===']($case)) {return args.$first()}else if (Opal.const_get($scopes, 'Array', true, true)['$===']($case)) {return $send(self, Opal.find_super_dispatcher(self, 'new', TMP_Offset_new_1, false, $Offset), Opal.to_a(args.$first()), null)}else {return $send(self, Opal.find_super_dispatcher(self, 'new', TMP_Offset_new_1, false, $Offset), Opal.to_a(args), null)}})()
       }, TMP_Offset_new_1.$$arity = -1);
@@ -26578,7 +26579,7 @@ if (segment == null) segment = nil;
       Opal.defn(self, '$each', TMP_Map_each_9 = function $$each() {
         var self = this, $iter = TMP_Map_each_9.$$p, block = $iter || nil;
 
-        TMP_Map_each_9.$$p = null;
+        if ($iter) TMP_Map_each_9.$$p = null;
         return $send(self.mappings, 'each', [], block.$to_proc())
       }, TMP_Map_each_9.$$arity = 0);
       Opal.defn(self, '$to_s', TMP_Map_to_s_10 = function $$to_s() {
@@ -26940,7 +26941,7 @@ if (tree == null) tree = nil;
           for (var $arg_idx = 0; $arg_idx < $args_len; $arg_idx++) {
             args[$arg_idx - 0] = arguments[$arg_idx];
           }
-          TMP_OpalERBProcessor_initialize_19.$$p = null;
+          if ($iter) TMP_OpalERBProcessor_initialize_19.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -26952,7 +26953,7 @@ if (tree == null) tree = nil;
         Opal.defn(self, '$requires', TMP_OpalERBProcessor_requires_20 = function $$requires() {
           var self = this, $iter = TMP_OpalERBProcessor_requires_20.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-          TMP_OpalERBProcessor_requires_20.$$p = null;
+          if ($iter) TMP_OpalERBProcessor_requires_20.$$p = null;
           // Prepare super implicit arguments
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
@@ -27284,7 +27285,7 @@ if (k == null) k = nil;if (v == null) v = nil;
         for (var $arg_idx = 0; $arg_idx < $args_len; $arg_idx++) {
           args[$arg_idx - 0] = arguments[$arg_idx];
         }
-        TMP_Builder_build_3.$$p = null;
+        if ($iter) TMP_Builder_build_3.$$p = null;
         return $send(self.$new(), 'build', Opal.to_a(args), block.$to_proc())
       }, TMP_Builder_build_3.$$arity = -1);
       Opal.defn(self, '$build', TMP_Builder_build_4 = function $$build(path, options) {
@@ -27335,7 +27336,7 @@ if (r == null) r = nil;
       Opal.defn(self, '$initialize_copy', TMP_Builder_initialize_copy_8 = function $$initialize_copy(other) {
         var self = this, $iter = TMP_Builder_initialize_copy_8.$$p, $yield = $iter || nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
 
-        TMP_Builder_initialize_copy_8.$$p = null;
+        if ($iter) TMP_Builder_initialize_copy_8.$$p = null;
         // Prepare super implicit arguments
         for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
           $zuper[$zuper_i] = arguments[$zuper_i];
