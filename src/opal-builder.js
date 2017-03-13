@@ -345,7 +345,8 @@ Opal.modules["pathname"] = function(Opal) {
       
       path = self.path;
       while ((($b = (r = self.$chop_basename(path))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-      $c = r, $b = Opal.to_ary($c), (path = ($b[0] == null ? nil : $b[0])), $c};
+        $c = r, $b = Opal.to_ary($c), (path = ($b[0] == null ? nil : $b[0])), $c
+      };
       return path['$==']("");
     }, TMP_Pathname_relative$q_4.$$arity = 0);
     Opal.defn(self, '$chop_basename', TMP_Pathname_chop_basename_5 = function $$chop_basename(path) {
@@ -426,38 +427,42 @@ Opal.modules["pathname"] = function(Opal) {
       index_list2 = [];
       basename_list2 = [];
       while ((($b = (r2 = self.$chop_basename(prefix2))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-      
-      $c = r2, $b = Opal.to_ary($c), (prefix2 = ($b[0] == null ? nil : $b[0])), (basename2 = ($b[1] == null ? nil : $b[1])), $c;
-      index_list2.$unshift(prefix2.$length());
-      basename_list2.$unshift(basename2);};
+        
+        $c = r2, $b = Opal.to_ary($c), (prefix2 = ($b[0] == null ? nil : $b[0])), (basename2 = ($b[1] == null ? nil : $b[1])), $c;
+        index_list2.$unshift(prefix2.$length());
+        basename_list2.$unshift(basename2);
+      };
       if ((($a = prefix2['$!=']("")) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
         return path2};
       prefix1 = path1;
       while ((($b = true) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-      
-      while ((($c = ($d = basename_list2['$empty?']()['$!'](), $d !== false && $d !== nil && $d != null ?basename_list2.$first()['$=='](".") : $d)) !== nil && $c != null && (!$c.$$is_boolean || $c == true))) {
-      
-      index_list2.$shift();
-      basename_list2.$shift();};
-      if ((($b = (r1 = self.$chop_basename(prefix1))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        } else {
-        break;
-      };
-      $c = r1, $b = Opal.to_ary($c), (prefix1 = ($b[0] == null ? nil : $b[0])), (basename1 = ($b[1] == null ? nil : $b[1])), $c;
-      if (basename1['$=='](".")) {
-        continue;};
-      if ((($b = ((($c = ((($d = basename1['$==']("..")) !== false && $d !== nil && $d != null) ? $d : basename_list2['$empty?']())) !== false && $c !== nil && $c != null) ? $c : basename_list2.$first()['$!='](".."))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
         
-        prefix1 = $rb_plus(prefix1, basename1);
-        break;;};
-      index_list2.$shift();
-      basename_list2.$shift();};
+        while ((($c = ($d = basename_list2['$empty?']()['$!'](), $d !== false && $d !== nil && $d != null ?basename_list2.$first()['$=='](".") : $d)) !== nil && $c != null && (!$c.$$is_boolean || $c == true))) {
+          
+          index_list2.$shift();
+          basename_list2.$shift();
+        };
+        if ((($b = (r1 = self.$chop_basename(prefix1))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+          } else {
+          break;
+        };
+        $c = r1, $b = Opal.to_ary($c), (prefix1 = ($b[0] == null ? nil : $b[0])), (basename1 = ($b[1] == null ? nil : $b[1])), $c;
+        if (basename1['$=='](".")) {
+          continue;};
+        if ((($b = ((($c = ((($d = basename1['$==']("..")) !== false && $d !== nil && $d != null) ? $d : basename_list2['$empty?']())) !== false && $c !== nil && $c != null) ? $c : basename_list2.$first()['$!='](".."))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+          
+          prefix1 = $rb_plus(prefix1, basename1);
+          break;;};
+        index_list2.$shift();
+        basename_list2.$shift();
+      };
       r1 = self.$chop_basename(prefix1);
       if ((($a = ($b = r1['$!'](), $b !== false && $b !== nil && $b != null ?new RegExp(Opal.const_get($scopes, 'SEPARATOR_PAT', true, true))['$=~'](Opal.const_get($scopes, 'File', true, true).$basename(prefix1)) : $b)) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
         while ((($b = ($c = basename_list2['$empty?']()['$!'](), $c !== false && $c !== nil && $c != null ?basename_list2.$first()['$==']("..") : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        
-        index_list2.$shift();
-        basename_list2.$shift();}};
+          
+          index_list2.$shift();
+          basename_list2.$shift();
+        }};
       if ((($a = basename_list2['$empty?']()['$!']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
         
         suffix2 = path2['$[]'](Opal.Range.$new(index_list2.$first(), -1, false));
@@ -560,25 +565,28 @@ if (a == null) a = nil;if (b == null) b = nil;
       dest_prefix = dest_directory;
       dest_names = [];
       while ((($b = (r = self.$chop_basename(dest_prefix))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-      
-      $c = r, $b = Opal.to_ary($c), (dest_prefix = ($b[0] == null ? nil : $b[0])), (basename = ($b[1] == null ? nil : $b[1])), $c;
-      if ((($b = basename['$!='](".")) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        dest_names.$unshift(basename)};};
+        
+        $c = r, $b = Opal.to_ary($c), (dest_prefix = ($b[0] == null ? nil : $b[0])), (basename = ($b[1] == null ? nil : $b[1])), $c;
+        if ((($b = basename['$!='](".")) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+          dest_names.$unshift(basename)};
+      };
       base_prefix = base_directory;
       base_names = [];
       while ((($b = (r = self.$chop_basename(base_prefix))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-      
-      $c = r, $b = Opal.to_ary($c), (base_prefix = ($b[0] == null ? nil : $b[0])), (basename = ($b[1] == null ? nil : $b[1])), $c;
-      if ((($b = basename['$!='](".")) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        base_names.$unshift(basename)};};
+        
+        $c = r, $b = Opal.to_ary($c), (base_prefix = ($b[0] == null ? nil : $b[0])), (basename = ($b[1] == null ? nil : $b[1])), $c;
+        if ((($b = basename['$!='](".")) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+          base_names.$unshift(basename)};
+      };
       if ((($a = Opal.const_get($scopes, 'SAME_PATHS', true, true)['$[]'](dest_prefix, base_prefix)) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
         } else {
         self.$raise(Opal.const_get($scopes, 'ArgumentError', true, true), "" + "different prefix: " + (dest_prefix.$inspect()) + " and " + (base_directory.$inspect()))
       };
       while ((($b = ($c = ($d = dest_names['$empty?']()['$!'](), $d !== false && $d !== nil && $d != null ?base_names['$empty?']()['$!']() : $d), $c !== false && $c !== nil && $c != null ?Opal.const_get($scopes, 'SAME_PATHS', true, true)['$[]'](dest_names.$first(), base_names.$first()) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-      
-      dest_names.$shift();
-      base_names.$shift();};
+        
+        dest_names.$shift();
+        base_names.$shift();
+      };
       if ((($a = base_names['$include?']("..")) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
         self.$raise(Opal.const_get($scopes, 'ArgumentError', true, true), "" + "base_directory has ..: " + (base_directory.$inspect()))};
       base_names.$fill("..");
@@ -2158,31 +2166,33 @@ Opal.modules["racc/parser"] = function(Opal) {
           if (self.racc_val == null) self.racc_val = nil;
 
         while ((($d = true) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
-          
-          if ((($d = (i = action_pointer['$[]'](self.racc_state['$[]'](-1)))) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
             
-            if ((($d = self.racc_read_next) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
-              if ((($d = self.racc_t['$!='](0)) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
-                
-                $e = self.$next_token(), $d = Opal.to_ary($e), (tok = ($d[0] == null ? nil : $d[0])), (self.racc_val = ($d[1] == null ? nil : $d[1])), $e;
-                if (tok !== false && tok !== nil && tok != null) {
-                  self.racc_t = ((($d = token_table['$[]'](tok)) !== false && $d !== nil && $d != null) ? $d : 1)
-                  } else {
-                  self.racc_t = 0
-                };
-                if ((($d = self.yydebug) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
-                  self.$racc_read_token(self.racc_t, tok, self.racc_val)};
-                self.racc_read_next = false;}};
-            (i = $rb_plus(i, self.racc_t));
-            if ((($d = ($e = ($f = $rb_ge(i, 0), $f !== false && $f !== nil && $f != null ?(act = action_table['$[]'](i)) : $f), $e !== false && $e !== nil && $e != null ?action_check['$[]'](i)['$=='](self.racc_state['$[]'](-1)) : $e)) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
+            if ((($d = (i = action_pointer['$[]'](self.racc_state['$[]'](-1)))) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
+              
+              if ((($d = self.racc_read_next) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
+                if ((($d = self.racc_t['$!='](0)) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
+                  
+                  $e = self.$next_token(), $d = Opal.to_ary($e), (tok = ($d[0] == null ? nil : $d[0])), (self.racc_val = ($d[1] == null ? nil : $d[1])), $e;
+                  if (tok !== false && tok !== nil && tok != null) {
+                    self.racc_t = ((($d = token_table['$[]'](tok)) !== false && $d !== nil && $d != null) ? $d : 1)
+                    } else {
+                    self.racc_t = 0
+                  };
+                  if ((($d = self.yydebug) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
+                    self.$racc_read_token(self.racc_t, tok, self.racc_val)};
+                  self.racc_read_next = false;}};
+              (i = $rb_plus(i, self.racc_t));
+              if ((($d = ($e = ($f = $rb_ge(i, 0), $f !== false && $f !== nil && $f != null ?(act = action_table['$[]'](i)) : $f), $e !== false && $e !== nil && $e != null ?action_check['$[]'](i)['$=='](self.racc_state['$[]'](-1)) : $e)) !== nil && $d != null && (!$d.$$is_boolean || $d == true))) {
+                } else {
+                act = action_default['$[]'](self.racc_state['$[]'](-1))
+              };
               } else {
               act = action_default['$[]'](self.racc_state['$[]'](-1))
             };
-            } else {
-            act = action_default['$[]'](self.racc_state['$[]'](-1))
-          };
-          while ((($e = (act = self.$_racc_evalact(act, arg))) !== nil && $e != null && (!$e.$$is_boolean || $e == true))) {
-          };}}, TMP_6.$$s = self, TMP_6.$$arity = 0, TMP_6));
+            while ((($e = (act = self.$_racc_evalact(act, arg))) !== nil && $e != null && (!$e.$$is_boolean || $e == true))) {
+              
+            };
+          }}, TMP_6.$$s = self, TMP_6.$$arity = 0, TMP_6));
       }, TMP_Parser__racc_do_parse_rb_7.$$arity = 2);
       Opal.defn(self, '$yyparse', TMP_Parser_yyparse_8 = function $$yyparse(recv, mid) {
         var self = this;
@@ -2202,8 +2212,10 @@ Opal.modules["racc/parser"] = function(Opal) {
 
         
           while (!((($d = (i = action_pointer['$[]'](self.racc_state['$[]'](-1)))) !== nil && $d != null && (!$d.$$is_boolean || $d == true)))) {
-          while ((($e = (act = self.$_racc_evalact(action_default['$[]'](self.racc_state['$[]'](-1)), arg))) !== nil && $e != null && (!$e.$$is_boolean || $e == true))) {
-          }};
+            while ((($e = (act = self.$_racc_evalact(action_default['$[]'](self.racc_state['$[]'](-1)), arg))) !== nil && $e != null && (!$e.$$is_boolean || $e == true))) {
+              
+            }
+          };
           return $send(recv, '__send__', [mid], (TMP_10 = function(tok, val){var self = TMP_10.$$s || this, $f, $g, $h, $i, $j, $k;
             if (self.racc_t == null) self.racc_t = nil;
             if (self.racc_state == null) self.racc_state = nil;
@@ -2223,15 +2235,18 @@ if (tok == null) tok = nil;if (val == null) val = nil;
               act = action_default['$[]'](self.racc_state['$[]'](-1))
             };
             while ((($g = (act = self.$_racc_evalact(act, arg))) !== nil && $g != null && (!$g.$$is_boolean || $g == true))) {
+              
             };
             while ((($g = ((($h = ((($i = (i = action_pointer['$[]'](self.racc_state['$[]'](-1)))['$!']()) !== false && $i !== nil && $i != null) ? $i : self.racc_read_next['$!']())) !== false && $h !== nil && $h != null) ? $h : self.racc_t['$=='](0))) !== nil && $g != null && (!$g.$$is_boolean || $g == true))) {
-            
-            if ((($g = ($h = ($i = ($j = (($k = i !== false && i !== nil && i != null) ? (i = $rb_plus(i, self.racc_t)) : i), $j !== false && $j !== nil && $j != null ?$rb_ge(i, 0) : $j), $i !== false && $i !== nil && $i != null ?(act = action_table['$[]'](i)) : $i), $h !== false && $h !== nil && $h != null ?action_check['$[]'](i)['$=='](self.racc_state['$[]'](-1)) : $h)) !== nil && $g != null && (!$g.$$is_boolean || $g == true))) {
-              } else {
-              act = action_default['$[]'](self.racc_state['$[]'](-1))
-            };
-            while ((($h = (act = self.$_racc_evalact(act, arg))) !== nil && $h != null && (!$h.$$is_boolean || $h == true))) {
-            };};}, TMP_10.$$s = self, TMP_10.$$arity = 2, TMP_10));}, TMP_9.$$s = self, TMP_9.$$arity = 0, TMP_9));
+              
+              if ((($g = ($h = ($i = ($j = (($k = i !== false && i !== nil && i != null) ? (i = $rb_plus(i, self.racc_t)) : i), $j !== false && $j !== nil && $j != null ?$rb_ge(i, 0) : $j), $i !== false && $i !== nil && $i != null ?(act = action_table['$[]'](i)) : $i), $h !== false && $h !== nil && $h != null ?action_check['$[]'](i)['$=='](self.racc_state['$[]'](-1)) : $h)) !== nil && $g != null && (!$g.$$is_boolean || $g == true))) {
+                } else {
+                act = action_default['$[]'](self.racc_state['$[]'](-1))
+              };
+              while ((($h = (act = self.$_racc_evalact(act, arg))) !== nil && $h != null && (!$h.$$is_boolean || $h == true))) {
+                
+              };
+            };}, TMP_10.$$s = self, TMP_10.$$arity = 2, TMP_10));}, TMP_9.$$s = self, TMP_9.$$arity = 0, TMP_9));
       }, TMP_Parser__racc_yyparse_rb_11.$$arity = 4);
       Opal.defn(self, '$_racc_evalact', TMP_Parser__racc_evalact_13 = function $$_racc_evalact(act, arg) {
         var $a, $b, TMP_12, $c, $d, self = this, action_table = nil, action_check = nil, _ = nil, action_pointer = nil, shift_n = nil, reduce_n = nil, code = nil, $case = nil, i = nil;
@@ -2283,20 +2298,21 @@ if ((0)['$===']($case)) {if ((($a = arg['$[]'](21)) !== nil && $a != null && (!$
           self.racc_user_yyerror = false;
           self.racc_error_status = 3;
           while ((($b = true) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          
-          if ((($b = (i = action_pointer['$[]'](self.racc_state['$[]'](-1)))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
             
-            (i = $rb_plus(i, 1));
-            if ((($b = ($c = ($d = $rb_ge(i, 0), $d !== false && $d !== nil && $d != null ?(act = action_table['$[]'](i)) : $d), $c !== false && $c !== nil && $c != null ?action_check['$[]'](i)['$=='](self.racc_state['$[]'](-1)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              break;};};
-          if ((($b = $rb_le(self.racc_state.$size(), 1)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$throw("racc_end_parse", nil)};
-          self.racc_state.$pop();
-          self.racc_vstack.$pop();
-          if ((($b = self.yydebug) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.racc_tstack.$pop();
-            self.$racc_e_pop(self.racc_state, self.racc_tstack, self.racc_vstack);};};
+            if ((($b = (i = action_pointer['$[]'](self.racc_state['$[]'](-1)))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              (i = $rb_plus(i, 1));
+              if ((($b = ($c = ($d = $rb_ge(i, 0), $d !== false && $d !== nil && $d != null ?(act = action_table['$[]'](i)) : $d), $c !== false && $c !== nil && $c != null ?action_check['$[]'](i)['$=='](self.racc_state['$[]'](-1)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                break;};};
+            if ((($b = $rb_le(self.racc_state.$size(), 1)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$throw("racc_end_parse", nil)};
+            self.racc_state.$pop();
+            self.racc_vstack.$pop();
+            if ((($b = self.yydebug) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.racc_tstack.$pop();
+              self.$racc_e_pop(self.racc_state, self.racc_tstack, self.racc_vstack);};
+          };
           return act;
           } else {
           self.$raise("" + "[Racc Bug] unknown action " + (act.$inspect()))
@@ -2536,19 +2552,20 @@ Opal.modules["parser/compatibility/ruby1_9"] = function(Opal) {
         to = $rb_minus(self.$size(), 1);
         satisfied = nil;
         while ((($b = $rb_le(from, to)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        
-        midpoint = $rb_plus(from, to).$div(2);
-        result = Opal.yield1($yield, (cur = self['$[]'](midpoint)));
-        $case = result;
+          
+          midpoint = $rb_plus(from, to).$div(2);
+          result = Opal.yield1($yield, (cur = self['$[]'](midpoint)));
+          $case = result;
 if (Opal.const_get($scopes, 'Numeric', true, true)['$===']($case)) {
-        if (result['$=='](0)) {
-          return cur};
-        result = $rb_lt(result, 0);}else if (true['$===']($case)) {satisfied = cur}else if (nil['$===']($case) || false['$===']($case)) {nil}else {self.$fail(Opal.const_get($scopes, 'TypeError', true, true), "" + "wrong argument type " + (result.$class()) + " (must be numeric, true, false or nil)")};
-        if (result !== false && result !== nil && result != null) {
-          to = $rb_minus(midpoint, 1)
-          } else {
-          from = $rb_plus(midpoint, 1)
-        };};
+          if (result['$=='](0)) {
+            return cur};
+          result = $rb_lt(result, 0);}else if (true['$===']($case)) {satisfied = cur}else if (nil['$===']($case) || false['$===']($case)) {nil}else {self.$fail(Opal.const_get($scopes, 'TypeError', true, true), "" + "wrong argument type " + (result.$class()) + " (must be numeric, true, false or nil)")};
+          if (result !== false && result !== nil && result != null) {
+            to = $rb_minus(midpoint, 1)
+            } else {
+            from = $rb_plus(midpoint, 1)
+          };
+        };
         return satisfied;
       }, TMP_Array_bsearch_1.$$arity = 0), nil) && 'bsearch'
     })($scope.base, null, $scopes)
@@ -3031,9 +3048,10 @@ if (line == null) line = nil;
             
             $a = [[[0, 0]], 0], (self.line_begins = $a[0]), (index = $a[1]), $a;
             while ((($b = (index = self.source.$index("\n".$freeze(), index))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            (index = $rb_plus(index, 1));
-            self.line_begins.$unshift([self.line_begins.$length(), index]);};
+              
+              (index = $rb_plus(index, 1));
+              self.line_begins.$unshift([self.line_begins.$length(), index]);
+            };
           };
           return self.line_begins;
         }, TMP_Buffer_line_begins_18.$$arity = 0);
@@ -3420,16 +3438,19 @@ if (child == null) child = nil;
           if (node.$type()['$==']("begin")) {
             return nil};
           while ((($b = self['$current_comment_before?'](node)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          self.$associate_and_advance_comment(node)};
+            self.$associate_and_advance_comment(node)
+          };
         }, TMP_Associator_process_leading_comments_8.$$arity = 1);
         Opal.defn(self, '$process_trailing_comments', TMP_Associator_process_trailing_comments_9 = function $$process_trailing_comments(node) {
           var $a, $b, self = this;
 
           
           while ((($b = self['$current_comment_before_end?'](node)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          self.$associate_and_advance_comment(node)};
+            self.$associate_and_advance_comment(node)
+          };
           while ((($b = self['$current_comment_decorates?'](node)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          self.$associate_and_advance_comment(node)};
+            self.$associate_and_advance_comment(node)
+          };
         }, TMP_Associator_process_trailing_comments_9.$$arity = 1);
         Opal.defn(self, '$advance_comment', TMP_Associator_advance_comment_10 = function $$advance_comment() {
           var self = this;
@@ -5465,6582 +5486,6583 @@ Opal.modules["parser/lexer"] = function(Opal) {
       _test_eof = 30;
       _out = 40;
       while ((($b = true) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-      
-      if ((($b = $rb_le(_goto_level, 0)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
         
-        if (p['$=='](pe)) {
+        if ((($b = $rb_le(_goto_level, 0)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
           
-          _goto_level = _test_eof;
-          continue;;};
-        if (self.cs['$=='](0)) {
+          if (p['$=='](pe)) {
+            
+            _goto_level = _test_eof;
+            continue;;};
+          if (self.cs['$=='](0)) {
+            
+            _goto_level = _out;
+            continue;;};};
+        if ((($b = $rb_le(_goto_level, _resume)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
           
-          _goto_level = _out;
-          continue;;};};
-      if ((($b = $rb_le(_goto_level, _resume)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        
-        $case = _lex_from_state_actions['$[]'](self.cs);
+          $case = _lex_from_state_actions['$[]'](self.cs);
 if ((80)['$===']($case)) {
-        self.ts = p;};
-        _keys = self.cs['$<<'](1);
-        _inds = _lex_index_offsets['$[]'](self.cs);
-        _slen = _lex_key_spans['$[]'](self.cs);
-        _wide = ((($b = self.source_pts['$[]'](p)) !== false && $b !== nil && $b != null) ? $b : 0);
-        _trans = (function() {if ((($b = ($c = ($d = $rb_gt(_slen, 0), $d !== false && $d !== nil && $d != null ?$rb_le(_lex_trans_keys['$[]'](_keys), _wide) : $d), $c !== false && $c !== nil && $c != null ?$rb_le(_wide, _lex_trans_keys['$[]']($rb_plus(_keys, 1))) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          return _lex_indicies['$[]']($rb_minus($rb_plus(_inds, _wide), _lex_trans_keys['$[]'](_keys)))
-          } else {
-          return _lex_indicies['$[]']($rb_plus(_inds, _slen))
-        }; return nil; })();};
-      if ((($b = $rb_le(_goto_level, _eof_trans)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        
-        self.cs = _lex_trans_targs['$[]'](_trans);
-        if ((($b = _lex_trans_actions['$[]'](_trans)['$!='](0)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          $case = _lex_trans_actions['$[]'](_trans);
+          self.ts = p;};
+          _keys = self.cs['$<<'](1);
+          _inds = _lex_index_offsets['$[]'](self.cs);
+          _slen = _lex_key_spans['$[]'](self.cs);
+          _wide = ((($b = self.source_pts['$[]'](p)) !== false && $b !== nil && $b != null) ? $b : 0);
+          _trans = (function() {if ((($b = ($c = ($d = $rb_gt(_slen, 0), $d !== false && $d !== nil && $d != null ?$rb_le(_lex_trans_keys['$[]'](_keys), _wide) : $d), $c !== false && $c !== nil && $c != null ?$rb_le(_wide, _lex_trans_keys['$[]']($rb_plus(_keys, 1))) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            return _lex_indicies['$[]']($rb_minus($rb_plus(_inds, _wide), _lex_trans_keys['$[]'](_keys)))
+            } else {
+            return _lex_indicies['$[]']($rb_plus(_inds, _slen))
+          }; return nil; })();};
+        if ((($b = $rb_le(_goto_level, _eof_trans)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+          
+          self.cs = _lex_trans_targs['$[]'](_trans);
+          if ((($b = _lex_trans_actions['$[]'](_trans)['$!='](0)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            $case = _lex_trans_actions['$[]'](_trans);
 if ((28)['$===']($case)) {
-          self.newline_s = p;}else if ((99)['$===']($case)) {
-          self.escape_s = p;
-          self.escape = nil;}else if ((29)['$===']($case)) {
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.newline_s = p;}else if ((99)['$===']($case)) {
+            self.escape_s = p;
+            self.escape = nil;}else if ((29)['$===']($case)) {
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};}else if ((67)['$===']($case)) {
+            self.sharp_s = $rb_minus(p, 1);}else if ((70)['$===']($case)) {
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());}else if ((279)['$===']($case)) {
+            tm = p;}else if ((36)['$===']($case)) {
+            tm = p;}else if ((38)['$===']($case)) {
+            tm = p;}else if ((40)['$===']($case)) {
+            tm = p;}else if ((55)['$===']($case)) {
+            heredoc_e = p;}else if ((319)['$===']($case)) {
+            self.escape = nil;}else if ((348)['$===']($case)) {
+            tm = p;}else if ((424)['$===']($case)) {
+            self.num_base = 16;
+            self.num_digits_s = p;}else if ((418)['$===']($case)) {
+            self.num_base = 10;
+            self.num_digits_s = p;}else if ((421)['$===']($case)) {
+            self.num_base = 8;
+            self.num_digits_s = p;}else if ((415)['$===']($case)) {
+            self.num_base = 2;
+            self.num_digits_s = p;}else if ((430)['$===']($case)) {
+            self.num_base = 10;
+            self.num_digits_s = self.ts;}else if ((398)['$===']($case)) {
+            self.num_base = 8;
+            self.num_digits_s = self.ts;}else if ((410)['$===']($case)) {
+            self.num_suffix_s = p;}else if ((405)['$===']($case)) {
+            self.num_suffix_s = p;}else if ((403)['$===']($case)) {
+            self.num_suffix_s = p;}else if ((76)['$===']($case)) {
+            tm = p;}else if ((7)['$===']($case)) {
+            self.te = $rb_plus(p, 1);}else if ((96)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
-            p = self.herebody_s;
-            self.herebody_s = nil;};}else if ((67)['$===']($case)) {
-          self.sharp_s = $rb_minus(p, 1);}else if ((70)['$===']($case)) {
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());}else if ((279)['$===']($case)) {
-          tm = p;}else if ((36)['$===']($case)) {
-          tm = p;}else if ((38)['$===']($case)) {
-          tm = p;}else if ((40)['$===']($case)) {
-          tm = p;}else if ((55)['$===']($case)) {
-          heredoc_e = p;}else if ((319)['$===']($case)) {
-          self.escape = nil;}else if ((348)['$===']($case)) {
-          tm = p;}else if ((424)['$===']($case)) {
-          self.num_base = 16;
-          self.num_digits_s = p;}else if ((418)['$===']($case)) {
-          self.num_base = 10;
-          self.num_digits_s = p;}else if ((421)['$===']($case)) {
-          self.num_base = 8;
-          self.num_digits_s = p;}else if ((415)['$===']($case)) {
-          self.num_base = 2;
-          self.num_digits_s = p;}else if ((430)['$===']($case)) {
-          self.num_base = 10;
-          self.num_digits_s = self.ts;}else if ((398)['$===']($case)) {
-          self.num_base = 8;
-          self.num_digits_s = self.ts;}else if ((410)['$===']($case)) {
-          self.num_suffix_s = p;}else if ((405)['$===']($case)) {
-          self.num_suffix_s = p;}else if ((403)['$===']($case)) {
-          self.num_suffix_s = p;}else if ((76)['$===']($case)) {
-          tm = p;}else if ((7)['$===']($case)) {
-          self.te = $rb_plus(p, 1);}else if ((96)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DBEG", "\#{".$freeze());
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            current_literal = self.$literal();
+            current_literal.$flush_string();
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DBEG", "\#{".$freeze());
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              
+              $writer = [self.herebody_s];
+              $send(current_literal, 'saved_herebody_s=', Opal.to_a($writer));
+              $writer[$rb_minus($writer["length"], 1)];;
+              self.herebody_s = nil;};
+            current_literal.$start_interp_brace();
             
             
-            $writer = [self.herebody_s];
-            $send(current_literal, 'saved_herebody_s=', Opal.to_a($writer));
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
             $writer[$rb_minus($writer["length"], 1)];;
-            self.herebody_s = nil;};
-          current_literal.$start_interp_brace();
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 758;
-          _goto_level = _again;
-          continue;;;;}else if ((5)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
-          p = self.ts;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((92)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 758;
+            _goto_level = _again;
+            continue;;;;}else if ((5)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
+            current_literal = self.$literal();
             current_literal.$flush_string();
-          };;}else if ((91)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((97)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
-          p = self.ts;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((94)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$literal().$extend_space(self.ts, self.te);;}else if ((95)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((6)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($c = current_literal['$regexp?'](), $c !== false && $c !== nil && $c != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;}else if ((4)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((123)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DBEG", "\#{".$freeze());
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
+            p = self.ts;
             
             
-            $writer = [self.herebody_s];
-            $send(current_literal, 'saved_herebody_s=', Opal.to_a($writer));
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
             $writer[$rb_minus($writer["length"], 1)];;
-            self.herebody_s = nil;};
-          current_literal.$start_interp_brace();
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 758;
-          _goto_level = _again;
-          continue;;;;}else if ((10)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
-          p = self.ts;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((120)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((92)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;}else if ((91)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
               
               (p = $rb_plus(p, 1));
               _goto_level = _out;
               continue;;;
               } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((97)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
+            current_literal = self.$literal();
             current_literal.$flush_string();
-          };;}else if ((119)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((124)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
-          p = self.ts;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((122)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((11)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($c = current_literal['$regexp?'](), $c !== false && $c !== nil && $c != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;}else if ((9)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((146)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;}else if ((145)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((148)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$literal().$extend_space(self.ts, self.te);;}else if ((149)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((152)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;}else if ((151)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((154)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((161)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DBEG", "\#{".$freeze());
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
+            p = self.ts;
             
             
-            $writer = [self.herebody_s];
-            $send(current_literal, 'saved_herebody_s=', Opal.to_a($writer));
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
             $writer[$rb_minus($writer["length"], 1)];;
-            self.herebody_s = nil;};
-          current_literal.$start_interp_brace();
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 758;
-          _goto_level = _again;
-          continue;;;;}else if ((13)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
-          p = self.ts;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((158)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((94)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.$literal().$extend_space(self.ts, self.te);;}else if ((95)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
               
               (p = $rb_plus(p, 1));
               _goto_level = _out;
               continue;;;
               } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((6)['$===']($case)) {
             
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
+            p = $rb_minus(self.te, 1);;
             
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;}else if ((157)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($c = current_literal['$regexp?'](), $c !== false && $c !== nil && $c != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
               } else {
-              self.cs = self.$pop_literal()
-            };
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;}else if ((4)['$===']($case)) {
             
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((162)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
-          p = self.ts;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((160)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            p = $rb_minus(self.te, 1);;
             
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((12)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((164)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
               
               (p = $rb_plus(p, 1));
               _goto_level = _out;
               continue;;;
               } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((123)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
+            current_literal = self.$literal();
             current_literal.$flush_string();
-          };;}else if ((163)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DBEG", "\#{".$freeze());
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((171)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DBEG", "\#{".$freeze());
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              $writer = [self.herebody_s];
+              $send(current_literal, 'saved_herebody_s=', Opal.to_a($writer));
+              $writer[$rb_minus($writer["length"], 1)];;
+              self.herebody_s = nil;};
+            current_literal.$start_interp_brace();
             
             
-            $writer = [self.herebody_s];
-            $send(current_literal, 'saved_herebody_s=', Opal.to_a($writer));
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
             $writer[$rb_minus($writer["length"], 1)];;
-            self.herebody_s = nil;};
-          current_literal.$start_interp_brace();
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 758;
-          _goto_level = _again;
-          continue;;;;}else if ((15)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
-          p = self.ts;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((167)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 758;
+            _goto_level = _again;
+            continue;;;;}else if ((10)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            current_literal = self.$literal();
+            current_literal.$flush_string();
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
+            p = self.ts;
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((120)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;}else if ((119)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
               
               (p = $rb_plus(p, 1));
               _goto_level = _out;
               continue;;;
               } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((124)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
+            current_literal = self.$literal();
             current_literal.$flush_string();
-          };;}else if ((166)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
+            p = self.ts;
             
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((122)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((172)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          current_literal.$flush_string();
-          current_literal.$extend_content();
-          self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
-          p = self.ts;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((169)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$literal().$extend_space(self.ts, self.te);;}else if ((170)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((14)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
-              
-              (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
-              } else {
-              self.cs = self.$pop_literal()
-            };
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((174)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
               
               (p = $rb_plus(p, 1));
               _goto_level = _out;
               continue;;;
               } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((11)['$===']($case)) {
             
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            p = $rb_minus(self.te, 1);;
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($c = current_literal['$regexp?'](), $c !== false && $c !== nil && $c != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;}else if ((9)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              self.cs = self.$pop_literal();
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
               
               (p = $rb_plus(p, 1));
               _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((146)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;}else if ((145)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;}else if ((173)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          string = self.$tok();
-          if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
-          current_literal = self.$literal();
-          if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            if (token['$[]'](0)['$==']("tLABEL_END")) {
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
               
               (p = $rb_plus(p, 1));
-              self.$pop_literal();
-              self.cs = 751;
+              _goto_level = _out;
+              continue;;;
               } else {
-              self.cs = self.$pop_literal()
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((148)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$literal().$extend_space(self.ts, self.te);;}else if ((149)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((152)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
             };
+            if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;}else if ((151)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((154)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((161)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            current_literal.$flush_string();
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DBEG", "\#{".$freeze());
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              
+              $writer = [self.herebody_s];
+              $send(current_literal, 'saved_herebody_s=', Opal.to_a($writer));
+              $writer[$rb_minus($writer["length"], 1)];;
+              self.herebody_s = nil;};
+            current_literal.$start_interp_brace();
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 758;
+            _goto_level = _again;
+            continue;;;;}else if ((13)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            current_literal.$flush_string();
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
+            p = self.ts;
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((158)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;}else if ((157)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((162)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            current_literal.$flush_string();
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
+            p = self.ts;
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((160)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((12)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((164)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;}else if ((163)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((171)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            current_literal.$flush_string();
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DBEG", "\#{".$freeze());
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              
+              $writer = [self.herebody_s];
+              $send(current_literal, 'saved_herebody_s=', Opal.to_a($writer));
+              $writer[$rb_minus($writer["length"], 1)];;
+              self.herebody_s = nil;};
+            current_literal.$start_interp_brace();
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 758;
+            _goto_level = _again;
+            continue;;;;}else if ((15)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            current_literal.$flush_string();
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
+            p = self.ts;
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((167)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;}else if ((166)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((172)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            current_literal.$flush_string();
+            current_literal.$extend_content();
+            self.$emit("tSTRING_DVAR", nil, self.ts, $rb_plus(self.ts, 1));
+            p = self.ts;
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((169)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$literal().$extend_space(self.ts, self.te);;}else if ((170)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((14)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((174)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($c = current_literal['$words?'](), $c !== false && $c !== nil && $c != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;}else if ((173)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            string = self.$tok();
+            if ((($b = ($c = $rb_ge(self.version, 22), $c !== false && $c !== nil && $c != null ?self.cond['$active?']()['$!']() : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              lookahead = self.source_buffer.$slice(Opal.Range.$new(self.te,$rb_plus(self.te, 2), true))};
+            current_literal = self.$literal();
+            if ((($b = ($c = current_literal['$heredoc?']()['$!'](), $c !== false && $c !== nil && $c != null ?(token = current_literal.$nest_and_try_closing(string, self.ts, self.te, lookahead)) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              if (token['$[]'](0)['$==']("tLABEL_END")) {
+                
+                (p = $rb_plus(p, 1));
+                self.$pop_literal();
+                self.cs = 751;
+                } else {
+                self.cs = self.$pop_literal()
+              };
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              current_literal.$extend_string(string, self.ts, self.te)
+            };;}else if ((176)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$literal().$extend_space(self.ts, self.te);;}else if ((177)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tREGEXP_OPT", self.$tok(self.ts, $rb_minus(self.te, 1)), self.ts, $rb_minus(self.te, 1));
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((178)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            unknown_options = self.$tok().$scan(/[^imxouesn]/);
+            if ((($b = unknown_options['$any?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "regexp_options", $hash2(["options"], {"options": unknown_options.$join()}))};
+            self.$emit("tREGEXP_OPT");
+            self.cs = 766;
             
             (p = $rb_plus(p, 1));
             _goto_level = _out;
-            continue;;;
-            } else {
-            current_literal.$extend_string(string, self.ts, self.te)
-          };;}else if ((176)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$literal().$extend_space(self.ts, self.te);;}else if ((177)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tREGEXP_OPT", self.$tok(self.ts, $rb_minus(self.te, 1)), self.ts, $rb_minus(self.te, 1));
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((178)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          unknown_options = self.$tok().$scan(/[^imxouesn]/);
-          if ((($b = unknown_options['$any?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "regexp_options", $hash2(["options"], {"options": unknown_options.$join()}))};
-          self.$emit("tREGEXP_OPT");
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((16)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          if ((($b = self.$tok()['$=~'](/^\$([1-9][0-9]*)$/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$emit("tNTH_REF", self.$tok($rb_plus(self.ts, 1)).$to_i())
-          } else if ((($b = self.$tok()['$=~'](/^\$([&`'+])$/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$emit("tBACK_REF")
-            } else {
-            self.$emit("tGVAR")
-          };
-          self.cs = self.$stack_pop();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((179)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if ((($b = self.$tok()['$=~'](/^\$([1-9][0-9]*)$/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$emit("tNTH_REF", self.$tok($rb_plus(self.ts, 1)).$to_i())
-          } else if ((($b = self.$tok()['$=~'](/^\$([&`'+])$/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$emit("tBACK_REF")
-            } else {
-            self.$emit("tGVAR")
-          };
-          self.cs = self.$stack_pop();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((181)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if ((($b = self.$tok()['$=~'](/^@@[0-9]/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "cvar_name", $hash2(["name"], {"name": self.$tok()}))};
-          self.$emit("tCVAR");
-          self.cs = self.$stack_pop();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((180)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if ((($b = self.$tok()['$=~'](/^@[0-9]/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "ivar_name", $hash2(["name"], {"name": self.$tok()}))};
-          self.$emit("tIVAR");
-          self.cs = self.$stack_pop();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((202)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((188)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tIDENTIFIER");
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((18)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          self.cs = 766;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((185)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((197)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((20)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          if ((($b = self['$version?'](23)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            continue;;;;}else if ((16)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            if ((($b = self.$tok()['$=~'](/^\$([1-9][0-9]*)$/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$emit("tNTH_REF", self.$tok($rb_plus(self.ts, 1)).$to_i())
+            } else if ((($b = self.$tok()['$=~'](/^\$([&`'+])$/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$emit("tBACK_REF")
+              } else {
+              self.$emit("tGVAR")
+            };
+            self.cs = self.$stack_pop();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((179)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if ((($b = self.$tok()['$=~'](/^\$([1-9][0-9]*)$/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$emit("tNTH_REF", self.$tok($rb_plus(self.ts, 1)).$to_i())
+            } else if ((($b = self.$tok()['$=~'](/^\$([&`'+])$/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$emit("tBACK_REF")
+              } else {
+              self.$emit("tGVAR")
+            };
+            self.cs = self.$stack_pop();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((181)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if ((($b = self.$tok()['$=~'](/^@@[0-9]/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "cvar_name", $hash2(["name"], {"name": self.$tok()}))};
+            self.$emit("tCVAR");
+            self.cs = self.$stack_pop();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((180)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if ((($b = self.$tok()['$=~'](/^@[0-9]/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "ivar_name", $hash2(["name"], {"name": self.$tok()}))};
+            self.$emit("tIVAR");
+            self.cs = self.$stack_pop();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((202)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((188)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tIDENTIFIER");
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((18)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            self.cs = 766;
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((185)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((197)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((20)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            if ((($b = self['$version?'](23)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              $b = [self.$tok()['$[]']($range(0, -2, false)), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
+              
+              self.cs = self.$push_literal(type, delimiter, self.ts);
+              _goto_level = _again;
+              continue;;;
+              } else {
+              
+              p = $rb_minus(self.ts, 1);
+              
+              self.cs = 766;
+              _goto_level = _again;
+              continue;;;
+            };;}else if ((184)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((183)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((201)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((198)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tCONSTANT");
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((200)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tIDENTIFIER");
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((195)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            self.cs = 766;
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((191)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((196)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((189)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((194)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((19)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((17)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((187)['$===']($case)) {
+            $case = self.act;
+if ((39)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((40)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("tCONSTANT");
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((41)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("tIDENTIFIER");
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;};}else if ((22)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tLABEL", self.$tok(self.ts, $rb_minus(self.te, 2)), self.ts, $rb_minus(self.te, 1));
+            p = $rb_minus(p, 1);
+            self.cs = 751;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((204)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((203)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((206)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((205)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((21)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((212)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 468;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((211)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((210)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((222)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tCONSTANT");
+            self.cs = self.$arg_or_cmdarg();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((213)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tIDENTIFIER");
+            self.cs = self.$arg_or_cmdarg();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((218)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 468;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((216)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((221)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((245)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((228)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            if (self.$tok(tm, $rb_plus(tm, 1))['$==']("/".$freeze())) {
+              self.$diagnostic("warning", "ambiguous_literal", nil, self.$range(tm, $rb_plus(tm, 1)))};
+            p = $rb_minus(tm, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((234)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((24)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((236)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(tm, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((39)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((223)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((224)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((235)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((231)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$diagnostic("warning", "ambiguous_prefix", $hash2(["prefix"], {"prefix": self.$tok(tm, self.te)}), self.$range(tm, self.te));
+            p = $rb_minus(tm, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((233)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((227)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((226)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((244)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((25)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;}else if ((41)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((23)['$===']($case)) {
+            $case = self.act;
+if ((67)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if (self.$tok(tm, $rb_plus(tm, 1))['$==']("/".$freeze())) {
+              self.$diagnostic("warning", "ambiguous_literal", nil, self.$range(tm, $rb_plus(tm, 1)))};
+            p = $rb_minus(tm, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;}else if ((68)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$diagnostic("warning", "ambiguous_prefix", $hash2(["prefix"], {"prefix": self.$tok(tm, self.te)}), self.$range(tm, self.te));
+            p = $rb_minus(tm, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;}else if ((73)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;}else {
+            
+            p = $rb_minus(self.te, 1);;};}else if ((43)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 468;
+            _goto_level = _again;
+            continue;;;;}else if ((249)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((250)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 468;
+            _goto_level = _again;
+            continue;;;;}else if ((44)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 468;
+            _goto_level = _again;
+            continue;;;;}else if ((42)['$===']($case)) {
+            $case = self.act;
+if ((80)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if ((($b = self.cond['$active?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$emit("kDO_COND", "do".$freeze(), $rb_minus(self.te, 2), self.te)
+              } else {
+              self.$emit("kDO", "do".$freeze(), $rb_minus(self.te, 2), self.te)
+            };
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((81)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 468;
+            _goto_level = _again;
+            continue;;;};}else if ((260)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_do(true);
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((253)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((254)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((255)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((258)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((264)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((263)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((272)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((266)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((270)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((265)['$===']($case)) {
+            $case = self.act;
+if ((88)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((89)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;};}else if ((300)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            if ((($b = self.$tok()['$start_with?']("-".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tUMINUS_NUM", "-".$freeze(), self.ts, $rb_plus(self.ts, 1));
+              self.cs = 766;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;};;}else if ((301)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            type = (delimiter = self.$tok()['$[]'](0).$chr());
+            p = $rb_minus(p, 1);
+            
+            self.cs = self.$push_literal(type, delimiter, self.ts);
+            _goto_level = _again;
+            continue;;;;}else if ((295)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            $b = [self.source_buffer.$slice(self.ts).$chr(), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
+            
+            self.cs = self.$push_literal(type, delimiter, self.ts);
+            _goto_level = _again;
+            continue;;;;}else if ((51)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
             $b = [self.$tok()['$[]']($range(0, -2, false)), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
             
             self.cs = self.$push_literal(type, delimiter, self.ts);
             _goto_level = _again;
-            continue;;;
-            } else {
+            continue;;;;}else if ((302)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
+            $b = [self.$tok(), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
+            
+            self.cs = self.$push_literal(type, delimiter, self.ts);
+            _goto_level = _again;
+            continue;;;;}else if ((54)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1)), self.ts);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((316)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            escape = $hash2([" ", "\r", "\n", "\t", "\v", "\f"], {" ": "\\s", "\r": "\\r", "\n": "\\n", "\t": "\\t", "\v": "\\v", "\f": "\\f"})['$[]'](self.source_buffer.$slice($rb_plus(self.ts, 1)));
+            self.$diagnostic("warning", "invalid_escape_use", $hash2(["escape"], {"escape": escape}), self.$range());
             p = $rb_minus(self.ts, 1);
             
             self.cs = 766;
             _goto_level = _again;
-            continue;;;
-          };;}else if ((184)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((183)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((201)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((198)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tCONSTANT");
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((200)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tIDENTIFIER");
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((195)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          self.cs = 766;
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((191)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((196)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((189)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((194)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((19)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((17)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((187)['$===']($case)) {
-          $case = self.act;
-if ((39)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((40)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("tCONSTANT");
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((41)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("tIDENTIFIER");
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;};}else if ((22)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tLABEL", self.$tok(self.ts, $rb_minus(self.te, 2)), self.ts, $rb_minus(self.te, 1));
-          p = $rb_minus(p, 1);
-          self.cs = 751;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((204)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((203)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((206)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((205)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((21)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((212)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 468;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((211)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((210)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((222)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tCONSTANT");
-          self.cs = self.$arg_or_cmdarg();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((213)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tIDENTIFIER");
-          self.cs = self.$arg_or_cmdarg();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((218)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 468;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((216)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((221)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((245)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((228)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          if (self.$tok(tm, $rb_plus(tm, 1))['$==']("/".$freeze())) {
-            self.$diagnostic("warning", "ambiguous_literal", nil, self.$range(tm, $rb_plus(tm, 1)))};
-          p = $rb_minus(tm, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((234)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((24)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((236)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(tm, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((39)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((223)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((224)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((235)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((231)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$diagnostic("warning", "ambiguous_prefix", $hash2(["prefix"], {"prefix": self.$tok(tm, self.te)}), self.$range(tm, self.te));
-          p = $rb_minus(tm, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((233)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((227)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((226)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((244)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((25)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;}else if ((41)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((23)['$===']($case)) {
-          $case = self.act;
-if ((67)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if (self.$tok(tm, $rb_plus(tm, 1))['$==']("/".$freeze())) {
-            self.$diagnostic("warning", "ambiguous_literal", nil, self.$range(tm, $rb_plus(tm, 1)))};
-          p = $rb_minus(tm, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;}else if ((68)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$diagnostic("warning", "ambiguous_prefix", $hash2(["prefix"], {"prefix": self.$tok(tm, self.te)}), self.$range(tm, self.te));
-          p = $rb_minus(tm, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;}else if ((73)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;}else {
-          
-          p = $rb_minus(self.te, 1);;};}else if ((43)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 468;
-          _goto_level = _again;
-          continue;;;;}else if ((249)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((250)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 468;
-          _goto_level = _again;
-          continue;;;;}else if ((44)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 468;
-          _goto_level = _again;
-          continue;;;;}else if ((42)['$===']($case)) {
-          $case = self.act;
-if ((80)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if ((($b = self.cond['$active?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$emit("kDO_COND", "do".$freeze(), $rb_minus(self.te, 2), self.te)
-            } else {
-            self.$emit("kDO", "do".$freeze(), $rb_minus(self.te, 2), self.te)
-          };
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((81)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 468;
-          _goto_level = _again;
-          continue;;;};}else if ((260)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_do(true);
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((253)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((254)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((255)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((258)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((264)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((263)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((272)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((266)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((270)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((265)['$===']($case)) {
-          $case = self.act;
-if ((88)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((89)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;};}else if ((300)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          if ((($b = self.$tok()['$start_with?']("-".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            continue;;;;}else if ((315)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
-            self.$emit("tUMINUS_NUM", "-".$freeze(), self.ts, $rb_plus(self.ts, 1));
-            self.cs = 766;
+            self.$diagnostic("fatal", "incomplete_escape", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));;}else if ((303)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION_BEGIN', true, true));
             
             (p = $rb_plus(p, 1));
             _goto_level = _out;
-            continue;;;};;}else if ((301)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          type = (delimiter = self.$tok()['$[]'](0).$chr());
-          p = $rb_minus(p, 1);
-          
-          self.cs = self.$push_literal(type, delimiter, self.ts);
-          _goto_level = _again;
-          continue;;;;}else if ((295)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          $b = [self.source_buffer.$slice(self.ts).$chr(), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
-          
-          self.cs = self.$push_literal(type, delimiter, self.ts);
-          _goto_level = _again;
-          continue;;;;}else if ((51)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          $b = [self.$tok()['$[]']($range(0, -2, false)), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
-          
-          self.cs = self.$push_literal(type, delimiter, self.ts);
-          _goto_level = _again;
-          continue;;;;}else if ((302)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          $b = [self.$tok(), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
-          
-          self.cs = self.$push_literal(type, delimiter, self.ts);
-          _goto_level = _again;
-          continue;;;;}else if ((54)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1)), self.ts);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((316)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          escape = $hash2([" ", "\r", "\n", "\t", "\v", "\f"], {" ": "\\s", "\r": "\\r", "\n": "\\n", "\t": "\\t", "\v": "\\v", "\f": "\\f"})['$[]'](self.source_buffer.$slice($rb_plus(self.ts, 1)));
-          self.$diagnostic("warning", "invalid_escape_use", $hash2(["escape"], {"escape": escape}), self.$range());
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((315)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$diagnostic("fatal", "incomplete_escape", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));;}else if ((303)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION_BEGIN', true, true));
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((48)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            ident = self.$tok(self.ts, $rb_minus(self.te, 2));
-            self.$emit((function() {if ((($b = self.source_buffer.$slice(self.ts)['$=~'](/[A-Z]/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              return "tCONSTANT"
-              } else {
-              return "tIDENTIFIER"
-            }; return nil; })(), ident, self.ts, $rb_minus(self.te, 2));
-            p = $rb_minus(p, 1);
-            if ((($b = ($c = self.static_env['$nil?']()['$!'](), $c !== false && $c !== nil && $c != null ?self.static_env['$declared?'](ident) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.cs = 766
-              } else {
-              self.cs = self.$arg_or_cmdarg()
-            };
-            } else {
-            
-            self.$emit("tLABEL", self.$tok(self.ts, $rb_minus(self.te, 2)), self.ts, $rb_minus(self.te, 1));
-            self.cs = 751;
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((289)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 165;
-          _goto_level = _again;
-          continue;;;;}else if ((52)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((275)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((299)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSTAR", "*".$freeze());
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((296)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          $b = [self.$tok()['$[]']($range(0, -2, false)), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
-          
-          self.cs = self.$push_literal(type, delimiter, self.ts);
-          _goto_level = _again;
-          continue;;;;}else if ((294)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$diagnostic("fatal", "string_eof", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));;}else if ((304)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1)), self.ts);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((314)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$diagnostic("fatal", "incomplete_escape", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));;}else if ((320)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((297)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION_BEGIN', true, true));
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((342)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tIDENTIFIER");
-          if ((($b = ($c = self.static_env['$nil?']()['$!'](), $c !== false && $c !== nil && $c != null ?self.static_env['$declared?'](self.$tok()) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 440;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = self.$arg_or_cmdarg();
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };;}else if ((286)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((288)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 165;
-          _goto_level = _again;
-          continue;;;;}else if ((291)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((50)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          self.$diagnostic("fatal", "string_eof", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));;}else if ((57)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($c = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((49)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;}else if ((53)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((47)['$===']($case)) {
-          $case = self.act;
-if ((111)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION_BEGIN', true, true));
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((112)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("kRESCUE", "rescue".$freeze(), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 513;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((113)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((115)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;}else if ((116)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("tIDENTIFIER");
-          if ((($b = ($d = self.static_env['$nil?']()['$!'](), $d !== false && $d !== nil && $d != null ?self.static_env['$declared?'](self.$tok()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 440;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = self.$arg_or_cmdarg();
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((119)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;};}else if ((350)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((351)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((352)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((356)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((60)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((360)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          
-          self.cs = self.$push_literal(self.$tok(), self.$tok(), self.ts);
-          _goto_level = _again;
-          continue;;;;}else if ((359)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((358)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((362)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((361)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((59)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 537;
-          _goto_level = _again;
-          continue;;;;}else if ((392)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tLAMBDA", "->".$freeze(), self.ts, $rb_plus(self.ts, 2));
-          self.lambda_stack.$push(self.paren_nest);
-          self.cs = 440;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((74)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("kCLASS", "class".$freeze(), self.ts, $rb_plus(self.ts, 5));
-          self.$emit("tLSHFT", "<<".$freeze(), $rb_minus(self.te, 2), self.te);
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((370)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          $b = [self.$tok(), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
-          
-          self.cs = self.$push_literal(type, delimiter, self.ts, nil, false, false, true);
-          _goto_level = _again;
-          continue;;;;}else if ((62)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((389)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 447;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((383)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((376)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cond.$lexpop();
-          self.cmdarg.$lexpop();
-          if ((($b = Opal.const_get($scopes, 'RBRACE_OR_RBRACK', true, true)['$include?'](self.$tok())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.cs = 505};
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((388)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tOP_ASGN", self.$tok(self.ts, $rb_minus(self.te, 1)));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((374)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tEH", "?".$freeze());
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((371)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((373)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tSEMI", ";".$freeze());
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((438)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$diagnostic("error", "bare_backslash", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));
-          p = $rb_minus(p, 1);;}else if ((369)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$diagnostic("fatal", "unexpected", $hash2(["character"], {"character": self.$tok().$inspect()['$[]']($range(1, -2, false))}));;}else if ((368)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((448)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 327;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((446)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("kCLASS", "class".$freeze(), self.ts, $rb_plus(self.ts, 5));
-          self.$emit("tLSHFT", "<<".$freeze(), $rb_minus(self.te, 2), self.te);
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((445)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((395)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$diagnostic("error", "no_dot_digit_literal");;}else if ((435)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tCONSTANT");
-          self.cs = self.$arg_or_cmdarg();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((387)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          
-          $writer = [self.top, self.cs];
-          $send(self.stack, '[]=', Opal.to_a($writer));
-          $writer[$rb_minus($writer["length"], 1)];;
-          (self.top = $rb_plus(self.top, 1));
-          self.cs = 322;
-          _goto_level = _again;
-          continue;;;;}else if ((393)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 447;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((440)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tIDENTIFIER");
-          if ((($b = ($d = self.static_env['$nil?']()['$!'](), $d !== false && $d !== nil && $d != null ?self.static_env['$declared?'](self.$tok()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 440;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = self.$arg_or_cmdarg();
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };;}else if ((382)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((394)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((380)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((386)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$diagnostic("fatal", "unexpected", $hash2(["character"], {"character": self.$tok().$inspect()['$[]']($range(1, -2, false))}));;}else if ((63)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          self.$diagnostic("error", "no_dot_digit_literal");;}else if ((61)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          self.$diagnostic("fatal", "unexpected", $hash2(["character"], {"character": self.$tok().$inspect()['$[]']($range(1, -2, false))}));;}else if ((64)['$===']($case)) {
-          $case = self.act;
-if ((132)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
-            
-            self.lambda_stack.$pop();
-            if (self.$tok()['$==']("{".$freeze())) {
-              self.$emit("tLAMBEG", "{".$freeze())
-              } else {
-              self.$emit("kDO_LAMBDA", "do".$freeze())
-            };
-          } else if (self.$tok()['$==']("{".$freeze())) {
-            self.$emit("tLCURLY", "{".$freeze())
-            } else {
-            self.$emit_do()
-          };
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((133)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 327;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((134)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("kCLASS", "class".$freeze(), self.ts, $rb_plus(self.ts, 5));
-          self.$emit("tLSHFT", "<<".$freeze(), $rb_minus(self.te, 2), self.te);
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((135)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((136)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((137)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 513;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((138)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          if ((($b = ($d = self['$version?'](18), $d !== false && $d !== nil && $d != null ?self.$tok()['$==']("not".$freeze()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 537;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = 468;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((139)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tIDENTIFIER");
-            if ((($b = ($d = self.static_env['$nil?']()['$!'](), $d !== false && $d !== nil && $d != null ?self.static_env['$declared?'](self.$tok()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              } else {
-              self.cs = self.$arg_or_cmdarg()
-            };
-            } else {
-            self.$emit("k__ENCODING__", "__ENCODING__".$freeze())
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((140)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((141)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($d = ($e = digits['$empty?'](), $e !== false && $e !== nil && $e != null ?self.num_base['$=='](8) : $e), $d !== false && $d !== nil && $d != null ?self['$version?'](18) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($d = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((143)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": self.$tok($rb_minus(self.te, 1), self.te)}), self.$range($rb_minus(self.te, 1), self.te))
-            } else {
-            
-            self.$emit("tINTEGER", self.$tok(self.ts, $rb_minus(self.te, 1)).$to_i(), self.ts, $rb_minus(self.te, 1));
-            p = $rb_minus(p, 1);
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((144)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": self.$tok($rb_minus(self.te, 1), self.te)}), self.$range($rb_minus(self.te, 1), self.te))
-            } else {
-            
-            self.$emit("tFLOAT", self.$tok(self.ts, $rb_minus(self.te, 1)).$to_f(), self.ts, $rb_minus(self.te, 1));
-            p = $rb_minus(p, 1);
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((145)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          digits = self.$tok(self.ts, self.num_suffix_s);
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits)
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((147)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("tCONSTANT");
-          self.cs = self.$arg_or_cmdarg();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((151)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("tIDENTIFIER");
-          if ((($b = ($d = self.static_env['$nil?']()['$!'](), $d !== false && $d !== nil && $d != null ?self.static_env['$declared?'](self.$tok()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 440;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = self.$arg_or_cmdarg();
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((152)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if (tm['$=='](self.te)) {
-            self.$emit("tFID")
-            } else {
-            
-            self.$emit("tIDENTIFIER", self.$tok(self.ts, tm), self.ts, tm);
-            p = $rb_minus(tm, 1);
-          };
-          self.cs = 468;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;};}else if ((78)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(tm, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;}else if ((453)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit("tNL", nil, self.newline_s, $rb_plus(self.newline_s, 1));
-          p = $rb_minus(p, 1);
-          self.cs = 165;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((454)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tNL", nil, self.newline_s, $rb_plus(self.newline_s, 1));
-          p = $rb_minus(p, 1);
-          self.cs = 165;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((75)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          self.$emit("tNL", nil, self.newline_s, $rb_plus(self.newline_s, 1));
-          p = $rb_minus(p, 1);
-          self.cs = 165;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((457)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_comment(self.eq_begin_s, self.te);
-          
-          self.cs = 165;
-          _goto_level = _again;
-          continue;;;;}else if ((456)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$diagnostic("fatal", "embedded_document", nil, self.$range(self.eq_begin_s, $rb_plus(self.eq_begin_s, "=begin".$length())));;}else if ((89)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          self.eq_begin_s = self.ts;
-          
-          self.cs = 942;
-          _goto_level = _again;
-          continue;;;;}else if ((2)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(pe, 3);;}else if ((81)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 758;
-          _goto_level = _again;
-          continue;;;;}else if ((82)['$===']($case)) {
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;}else if ((83)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);}else if ((88)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.eq_begin_s = self.ts;
-          
-          self.cs = 942;
-          _goto_level = _again;
-          continue;;;;}else if ((87)['$===']($case)) {
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 758;
-          _goto_level = _again;
-          continue;;;;}else if ((1)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 758;
-          _goto_level = _again;
-          continue;;;;}else if ((73)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;}else if ((93)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;}else if ((121)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;}else if ((147)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;}else if ((153)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;}else if ((159)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;}else if ((165)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;}else if ((168)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;}else if ((175)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;
-              } else {
-              
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;};
-            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
-            
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;}else if ((246)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((237)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(tm, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((229)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((317)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          escape = $hash2([" ", "\r", "\n", "\t", "\v", "\f"], {" ": "\\s", "\r": "\\r", "\n": "\\n", "\t": "\\t", "\v": "\\v", "\f": "\\f"})['$[]'](self.source_buffer.$slice($rb_plus(self.ts, 1)));
-          self.$diagnostic("warning", "invalid_escape_use", $hash2(["escape"], {"escape": escape}), self.$range());
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((290)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 165;
-          _goto_level = _again;
-          continue;;;;;}else if ((458)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          self.$emit_comment(self.eq_begin_s, self.te);
-          
-          self.cs = 165;
-          _goto_level = _again;
-          continue;;;;;}else if ((455)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);;}else if ((90)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          self.eq_begin_s = self.ts;
-          
-          self.cs = 942;
-          _goto_level = _again;
-          continue;;;;;}else if ((3)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(pe, 3);;;}else if ((412)['$===']($case)) {
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_12 = function(chars){var self = TMP_12.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tRATIONAL", self.$Rational(chars))}, TMP_12.$$s = self, TMP_12.$$arity = 1, TMP_12));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($d = ($e = digits['$empty?'](), $e !== false && $e !== nil && $e != null ?self.num_base['$=='](8) : $e), $d !== false && $d !== nil && $d != null ?self['$version?'](18) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($d = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((411)['$===']($case)) {
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_13 = function(chars){var self = TMP_13.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tIMAGINARY", self.$Complex(0, chars))}, TMP_13.$$s = self, TMP_13.$$arity = 1, TMP_13));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($d = ($e = digits['$empty?'](), $e !== false && $e !== nil && $e != null ?self.num_base['$=='](8) : $e), $d !== false && $d !== nil && $d != null ?self['$version?'](18) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($d = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((413)['$===']($case)) {
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_14 = function(chars){var self = TMP_14.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tIMAGINARY", self.$Complex(0, self.$Rational(chars)))}, TMP_14.$$s = self, TMP_14.$$arity = 1, TMP_14));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($d = ($e = digits['$empty?'](), $e !== false && $e !== nil && $e != null ?self.num_base['$=='](8) : $e), $d !== false && $d !== nil && $d != null ?self['$version?'](18) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($d = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((406)['$===']($case)) {
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_15 = function(chars){var self = TMP_15.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tIMAGINARY", self.$Complex(0, self.$Float(chars)))}, TMP_15.$$s = self, TMP_15.$$arity = 1, TMP_15));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.ts, self.num_suffix_s);
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits)
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((407)['$===']($case)) {
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_16 = function(chars){var self = TMP_16.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tRATIONAL", self.$Rational(chars))}, TMP_16.$$s = self, TMP_16.$$arity = 1, TMP_16));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.ts, self.num_suffix_s);
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits)
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((408)['$===']($case)) {
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_17 = function(chars){var self = TMP_17.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tIMAGINARY", self.$Complex(0, self.$Rational(chars)))}, TMP_17.$$s = self, TMP_17.$$arity = 1, TMP_17));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.ts, self.num_suffix_s);
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits)
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((116)['$===']($case)) {
-          
-          self.escape = "";
-          codepoints = self.$tok($rb_plus(self.escape_s, 2), $rb_minus(p, 1));
-          codepoint_s = $rb_plus(self.escape_s, 2);
-          (function(){var $brk = Opal.new_brk(); try {return $send(codepoints.$split(/[ \t]/), 'each', [], (TMP_18 = function(codepoint_str){var self = TMP_18.$$s || this, $f, codepoint = nil;
-            if (self.escape == null) self.escape = nil;
-if (codepoint_str == null) codepoint_str = nil;
-          
-            codepoint = codepoint_str.$to_i(16);
-            if ((($f = $rb_ge(codepoint, 1114112)) !== nil && $f != null && (!$f.$$is_boolean || $f == true))) {
-              
-              self.$diagnostic("error", "unicode_point_too_large", nil, self.$range(codepoint_s, $rb_plus(codepoint_s, codepoint_str.$length())));
-              
-              Opal.brk(nil, $brk);};
-            (self.escape = $rb_plus(self.escape, codepoint.$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true))));
-            return (codepoint_s = $rb_plus(codepoint_s, $rb_plus(codepoint_str.$length(), 1)));}, TMP_18.$$s = self, TMP_18.$$brk = $brk, TMP_18.$$arity = 1, TMP_18))
-          } catch (err) { if (err === $brk) { return err.$v } else { throw err } }})();;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($d = current_literal['$regexp?'](), $d !== false && $d !== nil && $d != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((142)['$===']($case)) {
-          
-          self.escape = "";
-          codepoints = self.$tok($rb_plus(self.escape_s, 2), $rb_minus(p, 1));
-          codepoint_s = $rb_plus(self.escape_s, 2);
-          (function(){var $brk = Opal.new_brk(); try {return $send(codepoints.$split(/[ \t]/), 'each', [], (TMP_19 = function(codepoint_str){var self = TMP_19.$$s || this, $f, codepoint = nil;
-            if (self.escape == null) self.escape = nil;
-if (codepoint_str == null) codepoint_str = nil;
-          
-            codepoint = codepoint_str.$to_i(16);
-            if ((($f = $rb_ge(codepoint, 1114112)) !== nil && $f != null && (!$f.$$is_boolean || $f == true))) {
-              
-              self.$diagnostic("error", "unicode_point_too_large", nil, self.$range(codepoint_s, $rb_plus(codepoint_s, codepoint_str.$length())));
-              
-              Opal.brk(nil, $brk);};
-            (self.escape = $rb_plus(self.escape, codepoint.$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true))));
-            return (codepoint_s = $rb_plus(codepoint_s, $rb_plus(codepoint_str.$length(), 1)));}, TMP_19.$$s = self, TMP_19.$$brk = $brk, TMP_19.$$arity = 1, TMP_19))
-          } catch (err) { if (err === $brk) { return err.$v } else { throw err } }})();;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($d = current_literal['$regexp?'](), $d !== false && $d !== nil && $d != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((338)['$===']($case)) {
-          
-          self.escape = "";
-          codepoints = self.$tok($rb_plus(self.escape_s, 2), $rb_minus(p, 1));
-          codepoint_s = $rb_plus(self.escape_s, 2);
-          (function(){var $brk = Opal.new_brk(); try {return $send(codepoints.$split(/[ \t]/), 'each', [], (TMP_20 = function(codepoint_str){var self = TMP_20.$$s || this, $f, codepoint = nil;
-            if (self.escape == null) self.escape = nil;
-if (codepoint_str == null) codepoint_str = nil;
-          
-            codepoint = codepoint_str.$to_i(16);
-            if ((($f = $rb_ge(codepoint, 1114112)) !== nil && $f != null && (!$f.$$is_boolean || $f == true))) {
-              
-              self.$diagnostic("error", "unicode_point_too_large", nil, self.$range(codepoint_s, $rb_plus(codepoint_s, codepoint_str.$length())));
-              
-              Opal.brk(nil, $brk);};
-            (self.escape = $rb_plus(self.escape, codepoint.$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true))));
-            return (codepoint_s = $rb_plus(codepoint_s, $rb_plus(codepoint_str.$length(), 1)));}, TMP_20.$$s = self, TMP_20.$$brk = $brk, TMP_20.$$arity = 1, TMP_20))
-          } catch (err) { if (err === $brk) { return err.$v } else { throw err } }})();;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($d = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((100)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($e = current_literal['$regexp?'](), $e !== false && $e !== nil && $e != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $e)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((126)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($e = current_literal['$regexp?'](), $e !== false && $e !== nil && $e != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $e)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((322)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($e = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((103)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_escape");;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($f = current_literal['$regexp?'](), $f !== false && $f !== nil && $f != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $f)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((129)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_escape");;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($f = current_literal['$regexp?'](), $f !== false && $f !== nil && $f != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $f)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((325)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_escape");;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($f = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((105)['$===']($case)) {
-          
-          self.escape = "\u007F";;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($g = current_literal['$regexp?'](), $g !== false && $g !== nil && $g != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $g)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((131)['$===']($case)) {
-          
-          self.escape = "\u007F";;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($g = current_literal['$regexp?'](), $g !== false && $g !== nil && $g != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $g)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((327)['$===']($case)) {
-          
-          self.escape = "\u007F";;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($g = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((102)['$===']($case)) {
-          
-          self.escape = self.$encode_escape(self.$tok(self.escape_s, p).$to_i(8)['$%'](256));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($h = current_literal['$regexp?'](), $h !== false && $h !== nil && $h != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $h)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((128)['$===']($case)) {
-          
-          self.escape = self.$encode_escape(self.$tok(self.escape_s, p).$to_i(8)['$%'](256));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($h = current_literal['$regexp?'](), $h !== false && $h !== nil && $h != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $h)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((324)['$===']($case)) {
-          
-          self.escape = self.$encode_escape(self.$tok(self.escape_s, p).$to_i(8)['$%'](256));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($h = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((118)['$===']($case)) {
-          
-          self.escape = self.$encode_escape(self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($i = current_literal['$regexp?'](), $i !== false && $i !== nil && $i != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $i)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((144)['$===']($case)) {
-          
-          self.escape = self.$encode_escape(self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($i = current_literal['$regexp?'](), $i !== false && $i !== nil && $i != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $i)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((340)['$===']($case)) {
-          
-          self.escape = self.$encode_escape(self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($i = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((113)['$===']($case)) {
-          
-          self.escape = self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16).$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($j = current_literal['$regexp?'](), $j !== false && $j !== nil && $j != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $j)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((139)['$===']($case)) {
-          
-          self.escape = self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16).$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($j = current_literal['$regexp?'](), $j !== false && $j !== nil && $j != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $j)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((335)['$===']($case)) {
-          
-          self.escape = self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16).$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($j = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((117)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_hex_escape", nil, self.$range($rb_minus(self.escape_s, 1), $rb_plus(p, 2)));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($k = current_literal['$regexp?'](), $k !== false && $k !== nil && $k != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $k)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((143)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_hex_escape", nil, self.$range($rb_minus(self.escape_s, 1), $rb_plus(p, 2)));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($k = current_literal['$regexp?'](), $k !== false && $k !== nil && $k != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $k)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((339)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_hex_escape", nil, self.$range($rb_minus(self.escape_s, 1), $rb_plus(p, 2)));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($k = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((112)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($l = current_literal['$regexp?'](), $l !== false && $l !== nil && $l != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $l)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((138)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($l = current_literal['$regexp?'](), $l !== false && $l !== nil && $l != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $l)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((334)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($l = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((115)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($m = current_literal['$regexp?'](), $m !== false && $m !== nil && $m != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $m)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((141)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($m = current_literal['$regexp?'](), $m !== false && $m !== nil && $m != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $m)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((337)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($m = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((101)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($n = current_literal['$regexp?'](), $n !== false && $n !== nil && $n != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $n)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((127)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($n = current_literal['$regexp?'](), $n !== false && $n !== nil && $n != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $n)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((323)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($n = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((150)['$===']($case)) {
-          
-          self.escape_s = p;
-          self.escape = nil;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($o = current_literal['$regexp?'](), $o !== false && $o !== nil && $o != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((155)['$===']($case)) {
-          
-          self.escape_s = p;
-          self.escape = nil;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($o = current_literal['$regexp?'](), $o !== false && $o !== nil && $o != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((66)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.newline_s = p;;}else if ((30)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          tm = p;;}else if ((32)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          tm = p;;}else if ((34)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          tm = p;;}else if ((190)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((209)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((217)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((33)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((248)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((240)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((259)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((271)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((267)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(p, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((287)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((357)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((353)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if ((($b = self.in_kwarg) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            continue;;;;}else if ((48)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
             p = $rb_minus(p, 1);
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              ident = self.$tok(self.ts, $rb_minus(self.te, 2));
+              self.$emit((function() {if ((($b = self.source_buffer.$slice(self.ts)['$=~'](/[A-Z]/)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                return "tCONSTANT"
+                } else {
+                return "tIDENTIFIER"
+              }; return nil; })(), ident, self.ts, $rb_minus(self.te, 2));
+              p = $rb_minus(p, 1);
+              if ((($b = ($c = self.static_env['$nil?']()['$!'](), $c !== false && $c !== nil && $c != null ?self.static_env['$declared?'](ident) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.cs = 766
+                } else {
+                self.cs = self.$arg_or_cmdarg()
+              };
+              } else {
+              
+              self.$emit("tLABEL", self.$tok(self.ts, $rb_minus(self.te, 2)), self.ts, $rb_minus(self.te, 1));
+              self.cs = 751;
+            };
             
-            self.cs = 766;
-            _goto_level = _again;
-            continue;;;
-            } else {
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((289)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
             
             self.cs = 165;
             _goto_level = _again;
-            continue;;
-          };;;}else if ((366)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((363)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          
-          self.cs = 165;
-          _goto_level = _again;
-          continue;;;;;}else if ((439)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((381)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          
-          self.cs = 939;
-          _goto_level = _again;
-          continue;;;;;}else if ((84)['$===']($case)) {
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((239)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          current_literal = self.$literal();
-          if (current_literal !== false && current_literal !== nil && current_literal != null) {
-            current_literal.$start_interp_brace()};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
+            continue;;;;}else if ((52)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
             p = $rb_minus(self.ts, 1);
             
             self.cs = 766;
             _goto_level = _again;
-            continue;;;
-            } else {
+            continue;;;;}else if ((275)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
             
-            self.$emit("tLCURLY", "{".$freeze(), $rb_minus(self.te, 1), self.te);
-            self.cs = 758;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };;;}else if ((261)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          current_literal = self.$literal();
-          if (current_literal !== false && current_literal !== nil && current_literal != null) {
-            current_literal.$start_interp_brace()};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
-            
-            self.lambda_stack.$pop();
-            self.$emit("tLAMBEG", "{".$freeze());
-            } else {
-            self.$emit("tLBRACE_ARG", "{".$freeze())
-          };
-          self.cs = 758;;;}else if ((349)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          current_literal = self.$literal();
-          if (current_literal !== false && current_literal !== nil && current_literal != null) {
-            current_literal.$start_interp_brace()};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
-            
-            self.lambda_stack.$pop();
-            self.$emit("tLAMBEG", "{".$freeze());
-            } else {
-            self.$emit("tLBRACE", "{".$freeze())
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((451)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          current_literal = self.$literal();
-          if (current_literal !== false && current_literal !== nil && current_literal != null) {
-            current_literal.$start_interp_brace()};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
-            
-            self.lambda_stack.$pop();
-            if (self.$tok()['$==']("{".$freeze())) {
-              self.$emit("tLAMBEG", "{".$freeze())
-              } else {
-              self.$emit("kDO_LAMBDA", "do".$freeze())
-            };
-          } else if (self.$tok()['$==']("{".$freeze())) {
-            self.$emit("tLCURLY", "{".$freeze())
-            } else {
-            self.$emit_do()
-          };
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((452)['$===']($case)) {
-          
-          current_literal = self.$literal();
-          if (current_literal !== false && current_literal !== nil && current_literal != null) {
-            if ((($b = current_literal.$end_interp_brace_and_try_closing()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              if ((($b = self['$version?'](18, 19)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-                self.$emit("tRCURLY", "}".$freeze(), $rb_minus(p, 1), p)
-                } else {
-                self.$emit("tSTRING_DEND", "}".$freeze(), $rb_minus(p, 1), p)
-              };
-              if ((($b = current_literal.$saved_herebody_s()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-                self.herebody_s = current_literal.$saved_herebody_s()};
-              p = $rb_minus(p, 1);
-              self.cs = self.$stack_pop();
-              
-              (p = $rb_plus(p, 1));
-              _goto_level = _out;
-              continue;;;}};;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cond.$lexpop();
-          self.cmdarg.$lexpop();
-          if ((($b = Opal.const_get($scopes, 'RBRACE_OR_RBRACK', true, true)['$include?'](self.$tok())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.cs = 505};
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((68)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;}else if ((71)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.newline_s = p;;}else if ((193)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((208)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((220)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((242)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((257)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((269)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((293)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((355)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((365)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((385)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((86)['$===']($case)) {
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((214)['$===']($case)) {
-          
-          tm = p;;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tFID", self.$tok(self.ts, tm), self.ts, tm);
-          self.cs = self.$arg_or_cmdarg();
-          p = $rb_minus(tm, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((305)['$===']($case)) {
-          
-          tm = p;;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((278)['$===']($case)) {
-          
-          tm = p;;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((378)['$===']($case)) {
-          
-          tm = p;;
-          
-          $case = self.act;
-if ((132)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
-            
-            self.lambda_stack.$pop();
-            if (self.$tok()['$==']("{".$freeze())) {
-              self.$emit("tLAMBEG", "{".$freeze())
-              } else {
-              self.$emit("kDO_LAMBDA", "do".$freeze())
-            };
-          } else if (self.$tok()['$==']("{".$freeze())) {
-            self.$emit("tLCURLY", "{".$freeze())
-            } else {
-            self.$emit_do()
-          };
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((133)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 327;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((134)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("kCLASS", "class".$freeze(), self.ts, $rb_plus(self.ts, 5));
-          self.$emit("tLSHFT", "<<".$freeze(), $rb_minus(self.te, 2), self.te);
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((135)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((136)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((137)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          self.cs = 513;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((138)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          if ((($b = ($o = self['$version?'](18), $o !== false && $o !== nil && $o != null ?self.$tok()['$==']("not".$freeze()) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 537;
+            p = $rb_minus(p, 1);
             
             (p = $rb_plus(p, 1));
             _goto_level = _out;
-            continue;;;
-            } else {
+            continue;;;;}else if ((299)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
-            self.cs = 468;
+            self.$emit("tSTAR", "*".$freeze());
             
             (p = $rb_plus(p, 1));
             _goto_level = _out;
-            continue;;;
-          };}else if ((139)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            continue;;;;}else if ((296)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            $b = [self.$tok()['$[]']($range(0, -2, false)), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
+            
+            self.cs = self.$push_literal(type, delimiter, self.ts);
+            _goto_level = _again;
+            continue;;;;}else if ((294)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$diagnostic("fatal", "string_eof", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));;}else if ((304)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1)), self.ts);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((314)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$diagnostic("fatal", "incomplete_escape", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));;}else if ((320)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((297)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION_BEGIN', true, true));
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((342)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
             self.$emit("tIDENTIFIER");
-            if ((($b = ($o = self.static_env['$nil?']()['$!'](), $o !== false && $o !== nil && $o != null ?self.static_env['$declared?'](self.$tok()) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              } else {
-              self.cs = self.$arg_or_cmdarg()
-            };
-            } else {
-            self.$emit("k__ENCODING__", "__ENCODING__".$freeze())
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((140)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((141)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($o = ($p = digits['$empty?'](), $p !== false && $p !== nil && $p != null ?self.num_base['$=='](8) : $p), $o !== false && $o !== nil && $o != null ?self['$version?'](18) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($o = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((143)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": self.$tok($rb_minus(self.te, 1), self.te)}), self.$range($rb_minus(self.te, 1), self.te))
-            } else {
-            
-            self.$emit("tINTEGER", self.$tok(self.ts, $rb_minus(self.te, 1)).$to_i(), self.ts, $rb_minus(self.te, 1));
-            p = $rb_minus(p, 1);
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((144)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": self.$tok($rb_minus(self.te, 1), self.te)}), self.$range($rb_minus(self.te, 1), self.te))
-            } else {
-            
-            self.$emit("tFLOAT", self.$tok(self.ts, $rb_minus(self.te, 1)).$to_f(), self.ts, $rb_minus(self.te, 1));
-            p = $rb_minus(p, 1);
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((145)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          digits = self.$tok(self.ts, self.num_suffix_s);
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits)
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((147)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("tCONSTANT");
-          self.cs = self.$arg_or_cmdarg();
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((151)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("tIDENTIFIER");
-          if ((($b = ($o = self.static_env['$nil?']()['$!'](), $o !== false && $o !== nil && $o != null ?self.static_env['$declared?'](self.$tok()) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 440;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = self.$arg_or_cmdarg();
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((152)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          if (tm['$=='](self.te)) {
-            self.$emit("tFID")
-            } else {
-            
-            self.$emit("tIDENTIFIER", self.$tok(self.ts, tm), self.ts, tm);
-            p = $rb_minus(tm, 1);
-          };
-          self.cs = 468;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;};;}else if ((215)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tFID", self.$tok(self.ts, tm), self.ts, tm);
-          self.cs = self.$arg_or_cmdarg();
-          p = $rb_minus(tm, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((306)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((280)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((379)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if (tm['$=='](self.te)) {
-            self.$emit("tFID")
-            } else {
-            
-            self.$emit("tIDENTIFIER", self.$tok(self.ts, tm), self.ts, tm);
-            p = $rb_minus(tm, 1);
-          };
-          self.cs = 468;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((307)['$===']($case)) {
-          
-          tm = p;;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((281)['$===']($case)) {
-          
-          tm = p;;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((308)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((282)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((312)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((285)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((311)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((284)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          $case = self.act;
-if ((111)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION_BEGIN', true, true));
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((112)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("kRESCUE", "rescue".$freeze(), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 513;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((113)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
-          self.cs = 758;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;}else if ((115)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;}else if ((116)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          self.$emit("tIDENTIFIER");
-          if ((($b = ($o = self.static_env['$nil?']()['$!'](), $o !== false && $o !== nil && $o != null ?self.static_env['$declared?'](self.$tok()) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 440;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = self.$arg_or_cmdarg();
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };}else if ((119)['$===']($case)) {
-          
-          p = $rb_minus(self.te, 1);;
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;};;}else if ((309)['$===']($case)) {
-          
-          tm = $rb_minus(p, 3);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((283)['$===']($case)) {
-          
-          tm = $rb_minus(p, 3);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          p = $rb_minus(self.ts, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((310)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((434)['$===']($case)) {
-          
-          tm = $rb_minus(p, 2);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tCONSTANT", self.$tok(self.ts, tm), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((238)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tLBRACK", "[".$freeze(), $rb_minus(self.te, 1), self.te);
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((341)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tLBRACK", "[".$freeze());
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((437)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tLBRACK2", "[".$freeze());
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((230)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          (self.paren_nest = $rb_plus(self.paren_nest, 1));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tLPAREN2", "(".$freeze(), $rb_minus(self.te, 1), self.te);
-            self.cs = 758;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.$emit("tLPAREN_ARG", "(".$freeze(), $rb_minus(self.te, 1), self.te);
-            self.cs = 537;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };;;}else if ((243)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          (self.paren_nest = $rb_plus(self.paren_nest, 1));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tLPAREN2", "(".$freeze());
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((251)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          (self.paren_nest = $rb_plus(self.paren_nest, 1));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tLPAREN_ARG", "(".$freeze(), $rb_minus(self.te, 1), self.te);
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.cs = 758;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = 537;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-          };;;}else if ((298)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          (self.paren_nest = $rb_plus(self.paren_nest, 1));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("tLPAREN", "(".$freeze());
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((390)['$===']($case)) {
-          
-          self.cond.$push(false);
-          self.cmdarg.$push(false);
-          (self.paren_nest = $rb_plus(self.paren_nest, 1));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cs = 537;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((391)['$===']($case)) {
-          
-          (self.paren_nest = $rb_minus(self.paren_nest, 1));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
-          self.cond.$lexpop();
-          self.cmdarg.$lexpop();
-          if ((($b = Opal.const_get($scopes, 'RBRACE_OR_RBRACK', true, true)['$include?'](self.$tok())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.cs = 505};
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((56)['$===']($case)) {
-          
-          heredoc_e = p;;
-          
-          self.newline_s = p;;}else if ((313)['$===']($case)) {
-          
-          new_herebody_s = p;;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$tok(self.ts, heredoc_e)['$=~'](/^<<(-?)(~?)(["'`]?)(.*)\3$/);
-          indent = ((($b = (($o = $gvars['~']) === nil ? nil : $o['$[]'](1))['$empty?']()['$!']()) !== false && $b !== nil && $b != null) ? $b : (($o = $gvars['~']) === nil ? nil : $o['$[]'](2))['$empty?']()['$!']());
-          dedent_body = (($b = $gvars['~']) === nil ? nil : $b['$[]'](2))['$empty?']()['$!']();
-          type = (function() {if ((($b = (($o = $gvars['~']) === nil ? nil : $o['$[]'](3))['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            return "<<\"".$freeze()
-            } else {
-            
-            return $rb_plus("<<".$freeze(), (($b = $gvars['~']) === nil ? nil : $b['$[]'](3)));
-          }; return nil; })();
-          delimiter = (($b = $gvars['~']) === nil ? nil : $b['$[]'](4));
-          if ((($b = (($o = dedent_body !== false && dedent_body !== nil && dedent_body != null) ? self['$version?'](18, 19, 20, 21, 22) : dedent_body)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            self.$emit("tLSHFT", "<<".$freeze(), self.ts, $rb_plus(self.ts, 2));
-            p = $rb_plus(self.ts, 1);
-            self.cs = 537;
-            
-            (p = $rb_plus(p, 1));
-            _goto_level = _out;
-            continue;;;
-            } else {
-            
-            self.cs = self.$push_literal(type, delimiter, self.ts, heredoc_e, indent, dedent_body);
-            ((($b = self.herebody_s) !== false && $b !== nil && $b != null) ? $b : (self.herebody_s = new_herebody_s));
-            p = $rb_minus(self.herebody_s, 1);
-          };;;}else if ((318)['$===']($case)) {
-          
-          self.escape = nil;;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($o = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((345)['$===']($case)) {
-          
-          tm = p;;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          self.$emit("kRESCUE", "rescue".$freeze(), self.ts, tm);
-          p = $rb_minus(tm, 1);
-          self.cs = 513;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((425)['$===']($case)) {
-          
-          self.num_base = 16;
-          self.num_digits_s = p;;
-          
-          self.num_suffix_s = p;;}else if ((419)['$===']($case)) {
-          
-          self.num_base = 10;
-          self.num_digits_s = p;;
-          
-          self.num_suffix_s = p;;}else if ((422)['$===']($case)) {
-          
-          self.num_base = 8;
-          self.num_digits_s = p;;
-          
-          self.num_suffix_s = p;;}else if ((416)['$===']($case)) {
-          
-          self.num_base = 2;
-          self.num_digits_s = p;;
-          
-          self.num_suffix_s = p;;}else if ((431)['$===']($case)) {
-          
-          self.num_base = 10;
-          self.num_digits_s = self.ts;;
-          
-          self.num_suffix_s = p;;}else if ((400)['$===']($case)) {
-          
-          self.num_base = 8;
-          self.num_digits_s = self.ts;;
-          
-          self.num_suffix_s = p;;}else if ((432)['$===']($case)) {
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_21 = function(chars){var self = TMP_21.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_21.$$s = self, TMP_21.$$arity = 1, TMP_21));;}else if ((77)['$===']($case)) {
-          
-          tm = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          p = $rb_minus(tm, 1);
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((8)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.newline_s = p;;}else if ((199)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 39;;}else if ((186)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 40;;}else if ((182)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 41;;}else if ((26)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 67;;}else if ((232)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 68;;}else if ((27)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 73;;}else if ((225)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 74;;}else if ((252)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 80;;}else if ((45)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 81;;}else if ((273)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 88;;}else if ((262)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 89;;}else if ((276)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 111;;}else if ((344)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 112;;}else if ((343)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 113;;}else if ((58)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 115;;}else if ((274)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 116;;}else if ((277)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 119;;}else if ((447)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 132;;}else if ((442)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 133;;}else if ((450)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 135;;}else if ((443)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 136;;}else if ((444)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 137;;}else if ((449)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 138;;}else if ((441)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 139;;}else if ((436)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 140;;}else if ((372)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 141;;}else if ((402)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 144;;}else if ((65)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 145;;}else if ((375)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 147;;}else if ((367)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 151;;}else if ((377)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.act = 152;;}else if ((156)['$===']($case)) {
-          
-          self.newline_s = p;;
-          
-          self.te = $rb_plus(p, 1);
-          
-          current_literal = self.$literal();
-          if (self.te['$=='](pe)) {
-            self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
-          if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
-            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              line = line.$gsub(/\r.*$/, "".$freeze())};
-            if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            if ((($b = ($c = self.static_env['$nil?']()['$!'](), $c !== false && $c !== nil && $c != null ?self.static_env['$declared?'](self.$tok()) : $c)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
-              self.herebody_s = self.te;
-              p = $rb_minus(current_literal.$heredoc_e(), 1);
-              self.cs = self.$pop_literal();
+              self.cs = 440;
               
               (p = $rb_plus(p, 1));
               _goto_level = _out;
               continue;;;
               } else {
               
-              current_literal.$infer_indent_level(line);
-              self.herebody_s = self.te;
-            };
-            } else {
-            
-            if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              
-              self.cs = self.$pop_literal();
+              self.cs = self.$arg_or_cmdarg();
               
               (p = $rb_plus(p, 1));
               _goto_level = _out;
-              continue;;;};
+              continue;;;
+            };;}else if ((286)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((288)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 165;
+            _goto_level = _again;
+            continue;;;;}else if ((291)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((50)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            self.$diagnostic("fatal", "string_eof", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));;}else if ((57)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($c = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((49)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;}else if ((53)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((47)['$===']($case)) {
+            $case = self.act;
+if ((111)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION_BEGIN', true, true));
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((112)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("kRESCUE", "rescue".$freeze(), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 513;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((113)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((115)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;}else if ((116)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("tIDENTIFIER");
+            if ((($b = ($d = self.static_env['$nil?']()['$!'](), $d !== false && $d !== nil && $d != null ?self.static_env['$declared?'](self.$tok()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.cs = 440;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = self.$arg_or_cmdarg();
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((119)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;};}else if ((350)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((351)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((352)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((356)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((60)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((360)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            
+            self.cs = self.$push_literal(self.$tok(), self.$tok(), self.ts);
+            _goto_level = _again;
+            continue;;;;}else if ((359)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((358)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((362)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((361)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((59)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 537;
+            _goto_level = _again;
+            continue;;;;}else if ((392)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tLAMBDA", "->".$freeze(), self.ts, $rb_plus(self.ts, 2));
+            self.lambda_stack.$push(self.paren_nest);
+            self.cs = 440;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((74)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("kCLASS", "class".$freeze(), self.ts, $rb_plus(self.ts, 5));
+            self.$emit("tLSHFT", "<<".$freeze(), $rb_minus(self.te, 2), self.te);
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((370)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            $b = [self.$tok(), self.$tok()['$[]'](-1).$chr()], (type = $b[0]), (delimiter = $b[1]), $b;
+            
+            self.cs = self.$push_literal(type, delimiter, self.ts, nil, false, false, true);
+            _goto_level = _again;
+            continue;;;;}else if ((62)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((389)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 447;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((383)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((376)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cond.$lexpop();
+            self.cmdarg.$lexpop();
+            if ((($b = Opal.const_get($scopes, 'RBRACE_OR_RBRACK', true, true)['$include?'](self.$tok())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.cs = 505};
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((388)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tOP_ASGN", self.$tok(self.ts, $rb_minus(self.te, 1)));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((374)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tEH", "?".$freeze());
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((371)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((373)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tSEMI", ";".$freeze());
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((438)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$diagnostic("error", "bare_backslash", nil, self.$range(self.ts, $rb_plus(self.ts, 1)));
+            p = $rb_minus(p, 1);;}else if ((369)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$diagnostic("fatal", "unexpected", $hash2(["character"], {"character": self.$tok().$inspect()['$[]']($range(1, -2, false))}));;}else if ((368)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((448)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 327;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((446)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("kCLASS", "class".$freeze(), self.ts, $rb_plus(self.ts, 5));
+            self.$emit("tLSHFT", "<<".$freeze(), $rb_minus(self.te, 2), self.te);
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((445)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((395)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$diagnostic("error", "no_dot_digit_literal");;}else if ((435)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tCONSTANT");
+            self.cs = self.$arg_or_cmdarg();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((387)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            
+            $writer = [self.top, self.cs];
+            $send(self.stack, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
+            (self.top = $rb_plus(self.top, 1));
+            self.cs = 322;
+            _goto_level = _again;
+            continue;;;;}else if ((393)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 447;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((440)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tIDENTIFIER");
+            if ((($b = ($d = self.static_env['$nil?']()['$!'](), $d !== false && $d !== nil && $d != null ?self.static_env['$declared?'](self.$tok()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.cs = 440;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = self.$arg_or_cmdarg();
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };;}else if ((382)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((394)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((380)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((386)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$diagnostic("fatal", "unexpected", $hash2(["character"], {"character": self.$tok().$inspect()['$[]']($range(1, -2, false))}));;}else if ((63)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            self.$diagnostic("error", "no_dot_digit_literal");;}else if ((61)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            self.$diagnostic("fatal", "unexpected", $hash2(["character"], {"character": self.$tok().$inspect()['$[]']($range(1, -2, false))}));;}else if ((64)['$===']($case)) {
+            $case = self.act;
+if ((132)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
+              
+              self.lambda_stack.$pop();
+              if (self.$tok()['$==']("{".$freeze())) {
+                self.$emit("tLAMBEG", "{".$freeze())
+                } else {
+                self.$emit("kDO_LAMBDA", "do".$freeze())
+              };
+            } else if (self.$tok()['$==']("{".$freeze())) {
+              self.$emit("tLCURLY", "{".$freeze())
+              } else {
+              self.$emit_do()
+            };
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((133)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 327;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((134)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("kCLASS", "class".$freeze(), self.ts, $rb_plus(self.ts, 5));
+            self.$emit("tLSHFT", "<<".$freeze(), $rb_minus(self.te, 2), self.te);
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((135)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((136)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((137)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 513;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((138)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            if ((($b = ($d = self['$version?'](18), $d !== false && $d !== nil && $d != null ?self.$tok()['$==']("not".$freeze()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.cs = 537;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = 468;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((139)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tIDENTIFIER");
+              if ((($b = ($d = self.static_env['$nil?']()['$!'](), $d !== false && $d !== nil && $d != null ?self.static_env['$declared?'](self.$tok()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                } else {
+                self.cs = self.$arg_or_cmdarg()
+              };
+              } else {
+              self.$emit("k__ENCODING__", "__ENCODING__".$freeze())
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((140)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((141)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($d = ($e = digits['$empty?'](), $e !== false && $e !== nil && $e != null ?self.num_base['$=='](8) : $e), $d !== false && $d !== nil && $d != null ?self['$version?'](18) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($d = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((143)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": self.$tok($rb_minus(self.te, 1), self.te)}), self.$range($rb_minus(self.te, 1), self.te))
+              } else {
+              
+              self.$emit("tINTEGER", self.$tok(self.ts, $rb_minus(self.te, 1)).$to_i(), self.ts, $rb_minus(self.te, 1));
+              p = $rb_minus(p, 1);
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((144)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": self.$tok($rb_minus(self.te, 1), self.te)}), self.$range($rb_minus(self.te, 1), self.te))
+              } else {
+              
+              self.$emit("tFLOAT", self.$tok(self.ts, $rb_minus(self.te, 1)).$to_f(), self.ts, $rb_minus(self.te, 1));
+              p = $rb_minus(p, 1);
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((145)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            digits = self.$tok(self.ts, self.num_suffix_s);
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits)
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((147)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("tCONSTANT");
+            self.cs = self.$arg_or_cmdarg();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((151)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("tIDENTIFIER");
+            if ((($b = ($d = self.static_env['$nil?']()['$!'](), $d !== false && $d !== nil && $d != null ?self.static_env['$declared?'](self.$tok()) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.cs = 440;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = self.$arg_or_cmdarg();
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((152)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if (tm['$=='](self.te)) {
+              self.$emit("tFID")
+              } else {
+              
+              self.$emit("tIDENTIFIER", self.$tok(self.ts, tm), self.ts, tm);
+              p = $rb_minus(tm, 1);
+            };
+            self.cs = 468;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;};}else if ((78)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(tm, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;}else if ((453)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit("tNL", nil, self.newline_s, $rb_plus(self.newline_s, 1));
+            p = $rb_minus(p, 1);
+            self.cs = 165;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((454)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tNL", nil, self.newline_s, $rb_plus(self.newline_s, 1));
+            p = $rb_minus(p, 1);
+            self.cs = 165;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((75)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            self.$emit("tNL", nil, self.newline_s, $rb_plus(self.newline_s, 1));
+            p = $rb_minus(p, 1);
+            self.cs = 165;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((457)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_comment(self.eq_begin_s, self.te);
+            
+            self.cs = 165;
+            _goto_level = _again;
+            continue;;;;}else if ((456)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$diagnostic("fatal", "embedded_document", nil, self.$range(self.eq_begin_s, $rb_plus(self.eq_begin_s, "=begin".$length())));;}else if ((89)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            self.eq_begin_s = self.ts;
+            
+            self.cs = 942;
+            _goto_level = _again;
+            continue;;;;}else if ((2)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(pe, 3);;}else if ((81)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 758;
+            _goto_level = _again;
+            continue;;;;}else if ((82)['$===']($case)) {
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;}else if ((83)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);}else if ((88)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.eq_begin_s = self.ts;
+            
+            self.cs = 942;
+            _goto_level = _again;
+            continue;;;;}else if ((87)['$===']($case)) {
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 758;
+            _goto_level = _again;
+            continue;;;;}else if ((1)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 758;
+            _goto_level = _again;
+            continue;;;;}else if ((73)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;}else if ((93)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;}else if ((121)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;}else if ((147)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;}else if ((153)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;}else if ((159)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;}else if ((165)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;}else if ((168)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;}else if ((175)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
+              } else {
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($d = current_literal['$words?'](), $d !== false && $d !== nil && $d != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
+              } else {
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;}else if ((246)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((237)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(tm, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((229)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((317)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            escape = $hash2([" ", "\r", "\n", "\t", "\v", "\f"], {" ": "\\s", "\r": "\\r", "\n": "\\n", "\t": "\\t", "\v": "\\v", "\f": "\\f"})['$[]'](self.source_buffer.$slice($rb_plus(self.ts, 1)));
+            self.$diagnostic("warning", "invalid_escape_use", $hash2(["escape"], {"escape": escape}), self.$range());
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((290)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 165;
+            _goto_level = _again;
+            continue;;;;;}else if ((458)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            self.$emit_comment(self.eq_begin_s, self.te);
+            
+            self.cs = 165;
+            _goto_level = _again;
+            continue;;;;;}else if ((455)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);;}else if ((90)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            self.eq_begin_s = self.ts;
+            
+            self.cs = 942;
+            _goto_level = _again;
+            continue;;;;;}else if ((3)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(pe, 3);;;}else if ((412)['$===']($case)) {
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_12 = function(chars){var self = TMP_12.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tRATIONAL", self.$Rational(chars))}, TMP_12.$$s = self, TMP_12.$$arity = 1, TMP_12));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($d = ($e = digits['$empty?'](), $e !== false && $e !== nil && $e != null ?self.num_base['$=='](8) : $e), $d !== false && $d !== nil && $d != null ?self['$version?'](18) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($d = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((411)['$===']($case)) {
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_13 = function(chars){var self = TMP_13.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tIMAGINARY", self.$Complex(0, chars))}, TMP_13.$$s = self, TMP_13.$$arity = 1, TMP_13));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($d = ($e = digits['$empty?'](), $e !== false && $e !== nil && $e != null ?self.num_base['$=='](8) : $e), $d !== false && $d !== nil && $d != null ?self['$version?'](18) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($d = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((413)['$===']($case)) {
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_14 = function(chars){var self = TMP_14.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tIMAGINARY", self.$Complex(0, self.$Rational(chars)))}, TMP_14.$$s = self, TMP_14.$$arity = 1, TMP_14));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($d = ($e = digits['$empty?'](), $e !== false && $e !== nil && $e != null ?self.num_base['$=='](8) : $e), $d !== false && $d !== nil && $d != null ?self['$version?'](18) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($d = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((406)['$===']($case)) {
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_15 = function(chars){var self = TMP_15.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tIMAGINARY", self.$Complex(0, self.$Float(chars)))}, TMP_15.$$s = self, TMP_15.$$arity = 1, TMP_15));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.ts, self.num_suffix_s);
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits)
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((407)['$===']($case)) {
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_16 = function(chars){var self = TMP_16.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tRATIONAL", self.$Rational(chars))}, TMP_16.$$s = self, TMP_16.$$arity = 1, TMP_16));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.ts, self.num_suffix_s);
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits)
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((408)['$===']($case)) {
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_17 = function(chars){var self = TMP_17.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tIMAGINARY", self.$Complex(0, self.$Rational(chars)))}, TMP_17.$$s = self, TMP_17.$$arity = 1, TMP_17));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.ts, self.num_suffix_s);
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits)
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((116)['$===']($case)) {
+            
+            self.escape = "";
+            codepoints = self.$tok($rb_plus(self.escape_s, 2), $rb_minus(p, 1));
+            codepoint_s = $rb_plus(self.escape_s, 2);
+            (function(){var $brk = Opal.new_brk(); try {return $send(codepoints.$split(/[ \t]/), 'each', [], (TMP_18 = function(codepoint_str){var self = TMP_18.$$s || this, $f, codepoint = nil;
+              if (self.escape == null) self.escape = nil;
+if (codepoint_str == null) codepoint_str = nil;
+            
+              codepoint = codepoint_str.$to_i(16);
+              if ((($f = $rb_ge(codepoint, 1114112)) !== nil && $f != null && (!$f.$$is_boolean || $f == true))) {
+                
+                self.$diagnostic("error", "unicode_point_too_large", nil, self.$range(codepoint_s, $rb_plus(codepoint_s, codepoint_str.$length())));
+                
+                Opal.brk(nil, $brk);};
+              (self.escape = $rb_plus(self.escape, codepoint.$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true))));
+              return (codepoint_s = $rb_plus(codepoint_s, $rb_plus(codepoint_str.$length(), 1)));}, TMP_18.$$s = self, TMP_18.$$brk = $brk, TMP_18.$$arity = 1, TMP_18))
+            } catch (err) { if (err === $brk) { return err.$v } else { throw err } }})();;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($d = current_literal['$regexp?'](), $d !== false && $d !== nil && $d != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((142)['$===']($case)) {
+            
+            self.escape = "";
+            codepoints = self.$tok($rb_plus(self.escape_s, 2), $rb_minus(p, 1));
+            codepoint_s = $rb_plus(self.escape_s, 2);
+            (function(){var $brk = Opal.new_brk(); try {return $send(codepoints.$split(/[ \t]/), 'each', [], (TMP_19 = function(codepoint_str){var self = TMP_19.$$s || this, $f, codepoint = nil;
+              if (self.escape == null) self.escape = nil;
+if (codepoint_str == null) codepoint_str = nil;
+            
+              codepoint = codepoint_str.$to_i(16);
+              if ((($f = $rb_ge(codepoint, 1114112)) !== nil && $f != null && (!$f.$$is_boolean || $f == true))) {
+                
+                self.$diagnostic("error", "unicode_point_too_large", nil, self.$range(codepoint_s, $rb_plus(codepoint_s, codepoint_str.$length())));
+                
+                Opal.brk(nil, $brk);};
+              (self.escape = $rb_plus(self.escape, codepoint.$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true))));
+              return (codepoint_s = $rb_plus(codepoint_s, $rb_plus(codepoint_str.$length(), 1)));}, TMP_19.$$s = self, TMP_19.$$brk = $brk, TMP_19.$$arity = 1, TMP_19))
+            } catch (err) { if (err === $brk) { return err.$v } else { throw err } }})();;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($d = current_literal['$regexp?'](), $d !== false && $d !== nil && $d != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $d)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((338)['$===']($case)) {
+            
+            self.escape = "";
+            codepoints = self.$tok($rb_plus(self.escape_s, 2), $rb_minus(p, 1));
+            codepoint_s = $rb_plus(self.escape_s, 2);
+            (function(){var $brk = Opal.new_brk(); try {return $send(codepoints.$split(/[ \t]/), 'each', [], (TMP_20 = function(codepoint_str){var self = TMP_20.$$s || this, $f, codepoint = nil;
+              if (self.escape == null) self.escape = nil;
+if (codepoint_str == null) codepoint_str = nil;
+            
+              codepoint = codepoint_str.$to_i(16);
+              if ((($f = $rb_ge(codepoint, 1114112)) !== nil && $f != null && (!$f.$$is_boolean || $f == true))) {
+                
+                self.$diagnostic("error", "unicode_point_too_large", nil, self.$range(codepoint_s, $rb_plus(codepoint_s, codepoint_str.$length())));
+                
+                Opal.brk(nil, $brk);};
+              (self.escape = $rb_plus(self.escape, codepoint.$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true))));
+              return (codepoint_s = $rb_plus(codepoint_s, $rb_plus(codepoint_str.$length(), 1)));}, TMP_20.$$s = self, TMP_20.$$brk = $brk, TMP_20.$$arity = 1, TMP_20))
+            } catch (err) { if (err === $brk) { return err.$v } else { throw err } }})();;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($d = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((100)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($e = current_literal['$regexp?'](), $e !== false && $e !== nil && $e != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $e)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((126)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($e = current_literal['$regexp?'](), $e !== false && $e !== nil && $e != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $e)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((322)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($e = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((103)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_escape");;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($f = current_literal['$regexp?'](), $f !== false && $f !== nil && $f != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $f)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((129)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_escape");;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($f = current_literal['$regexp?'](), $f !== false && $f !== nil && $f != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $f)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((325)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_escape");;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($f = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((105)['$===']($case)) {
+            
+            self.escape = "\u007F";;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($g = current_literal['$regexp?'](), $g !== false && $g !== nil && $g != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $g)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((131)['$===']($case)) {
+            
+            self.escape = "\u007F";;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($g = current_literal['$regexp?'](), $g !== false && $g !== nil && $g != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $g)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((327)['$===']($case)) {
+            
+            self.escape = "\u007F";;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($g = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((102)['$===']($case)) {
+            
+            self.escape = self.$encode_escape(self.$tok(self.escape_s, p).$to_i(8)['$%'](256));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($h = current_literal['$regexp?'](), $h !== false && $h !== nil && $h != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $h)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((128)['$===']($case)) {
+            
+            self.escape = self.$encode_escape(self.$tok(self.escape_s, p).$to_i(8)['$%'](256));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($h = current_literal['$regexp?'](), $h !== false && $h !== nil && $h != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $h)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((324)['$===']($case)) {
+            
+            self.escape = self.$encode_escape(self.$tok(self.escape_s, p).$to_i(8)['$%'](256));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($h = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((118)['$===']($case)) {
+            
+            self.escape = self.$encode_escape(self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($i = current_literal['$regexp?'](), $i !== false && $i !== nil && $i != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $i)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((144)['$===']($case)) {
+            
+            self.escape = self.$encode_escape(self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($i = current_literal['$regexp?'](), $i !== false && $i !== nil && $i != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $i)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((340)['$===']($case)) {
+            
+            self.escape = self.$encode_escape(self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($i = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((113)['$===']($case)) {
+            
+            self.escape = self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16).$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($j = current_literal['$regexp?'](), $j !== false && $j !== nil && $j != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $j)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((139)['$===']($case)) {
+            
+            self.escape = self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16).$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($j = current_literal['$regexp?'](), $j !== false && $j !== nil && $j != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $j)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((335)['$===']($case)) {
+            
+            self.escape = self.$tok($rb_plus(self.escape_s, 1), p).$to_i(16).$chr(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'UTF_8', true, true));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($j = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((117)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_hex_escape", nil, self.$range($rb_minus(self.escape_s, 1), $rb_plus(p, 2)));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($k = current_literal['$regexp?'](), $k !== false && $k !== nil && $k != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $k)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((143)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_hex_escape", nil, self.$range($rb_minus(self.escape_s, 1), $rb_plus(p, 2)));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($k = current_literal['$regexp?'](), $k !== false && $k !== nil && $k != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $k)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((339)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_hex_escape", nil, self.$range($rb_minus(self.escape_s, 1), $rb_plus(p, 2)));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($k = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((112)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($l = current_literal['$regexp?'](), $l !== false && $l !== nil && $l != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $l)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((138)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($l = current_literal['$regexp?'](), $l !== false && $l !== nil && $l != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $l)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((334)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($l = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((115)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($m = current_literal['$regexp?'](), $m !== false && $m !== nil && $m != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $m)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((141)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($m = current_literal['$regexp?'](), $m !== false && $m !== nil && $m != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $m)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((337)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($m = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((101)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($n = current_literal['$regexp?'](), $n !== false && $n !== nil && $n != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $n)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((127)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($n = current_literal['$regexp?'](), $n !== false && $n !== nil && $n != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $n)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((323)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($n = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((150)['$===']($case)) {
+            
+            self.escape_s = p;
+            self.escape = nil;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($o = current_literal['$regexp?'](), $o !== false && $o !== nil && $o != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((155)['$===']($case)) {
+            
+            self.escape_s = p;
+            self.escape = nil;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($o = current_literal['$regexp?'](), $o !== false && $o !== nil && $o != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((66)['$===']($case)) {
+            
             if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
               
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.newline_s = p;;}else if ((30)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            tm = p;;}else if ((32)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            tm = p;;}else if ((34)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            tm = p;;}else if ((190)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((209)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((217)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((33)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = $rb_plus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((248)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((240)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((259)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((271)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((267)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(p, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((287)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((357)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((353)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if ((($b = self.in_kwarg) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = $rb_minus(p, 1);
+              
+              self.cs = 766;
+              _goto_level = _again;
+              continue;;;
+              } else {
+              
+              self.cs = 165;
+              _goto_level = _again;
+              continue;;
+            };;;}else if ((366)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((363)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            
+            self.cs = 165;
+            _goto_level = _again;
+            continue;;;;;}else if ((439)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((381)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            
+            self.cs = 939;
+            _goto_level = _again;
+            continue;;;;;}else if ((84)['$===']($case)) {
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((239)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            current_literal = self.$literal();
+            if (current_literal !== false && current_literal !== nil && current_literal != null) {
+              current_literal.$start_interp_brace()};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
+              
+              p = $rb_minus(self.ts, 1);
+              
+              self.cs = 766;
+              _goto_level = _again;
+              continue;;;
+              } else {
+              
+              self.$emit("tLCURLY", "{".$freeze(), $rb_minus(self.te, 1), self.te);
+              self.cs = 758;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };;;}else if ((261)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            current_literal = self.$literal();
+            if (current_literal !== false && current_literal !== nil && current_literal != null) {
+              current_literal.$start_interp_brace()};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
+              
+              self.lambda_stack.$pop();
+              self.$emit("tLAMBEG", "{".$freeze());
+              } else {
+              self.$emit("tLBRACE_ARG", "{".$freeze())
+            };
+            self.cs = 758;;;}else if ((349)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            current_literal = self.$literal();
+            if (current_literal !== false && current_literal !== nil && current_literal != null) {
+              current_literal.$start_interp_brace()};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
+              
+              self.lambda_stack.$pop();
+              self.$emit("tLAMBEG", "{".$freeze());
+              } else {
+              self.$emit("tLBRACE", "{".$freeze())
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((451)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            current_literal = self.$literal();
+            if (current_literal !== false && current_literal !== nil && current_literal != null) {
+              current_literal.$start_interp_brace()};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
+              
+              self.lambda_stack.$pop();
+              if (self.$tok()['$==']("{".$freeze())) {
+                self.$emit("tLAMBEG", "{".$freeze())
+                } else {
+                self.$emit("kDO_LAMBDA", "do".$freeze())
+              };
+            } else if (self.$tok()['$==']("{".$freeze())) {
+              self.$emit("tLCURLY", "{".$freeze())
+              } else {
+              self.$emit_do()
+            };
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((452)['$===']($case)) {
+            
+            current_literal = self.$literal();
+            if (current_literal !== false && current_literal !== nil && current_literal != null) {
+              if ((($b = current_literal.$end_interp_brace_and_try_closing()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                if ((($b = self['$version?'](18, 19)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                  self.$emit("tRCURLY", "}".$freeze(), $rb_minus(p, 1), p)
+                  } else {
+                  self.$emit("tSTRING_DEND", "}".$freeze(), $rb_minus(p, 1), p)
+                };
+                if ((($b = current_literal.$saved_herebody_s()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                  self.herebody_s = current_literal.$saved_herebody_s()};
+                p = $rb_minus(p, 1);
+                self.cs = self.$stack_pop();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;}};;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cond.$lexpop();
+            self.cmdarg.$lexpop();
+            if ((($b = Opal.const_get($scopes, 'RBRACE_OR_RBRACK', true, true)['$include?'](self.$tok())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.cs = 505};
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((68)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;}else if ((71)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.newline_s = p;;}else if ((193)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((208)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((220)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((242)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((257)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((269)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((293)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((355)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((365)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((385)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((86)['$===']($case)) {
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((214)['$===']($case)) {
+            
+            tm = p;;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tFID", self.$tok(self.ts, tm), self.ts, tm);
+            self.cs = self.$arg_or_cmdarg();
+            p = $rb_minus(tm, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((305)['$===']($case)) {
+            
+            tm = p;;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((278)['$===']($case)) {
+            
+            tm = p;;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((378)['$===']($case)) {
+            
+            tm = p;;
+            
+            $case = self.act;
+if ((132)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if (self.lambda_stack.$last()['$=='](self.paren_nest)) {
+              
+              self.lambda_stack.$pop();
+              if (self.$tok()['$==']("{".$freeze())) {
+                self.$emit("tLAMBEG", "{".$freeze())
+                } else {
+                self.$emit("kDO_LAMBDA", "do".$freeze())
+              };
+            } else if (self.$tok()['$==']("{".$freeze())) {
+              self.$emit("tLCURLY", "{".$freeze())
+              } else {
+              self.$emit_do()
+            };
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((133)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 327;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((134)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("kCLASS", "class".$freeze(), self.ts, $rb_plus(self.ts, 5));
+            self.$emit("tLSHFT", "<<".$freeze(), $rb_minus(self.te, 2), self.te);
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((135)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((136)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((137)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            self.cs = 513;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((138)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            if ((($b = ($o = self['$version?'](18), $o !== false && $o !== nil && $o != null ?self.$tok()['$==']("not".$freeze()) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.cs = 537;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = 468;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((139)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tIDENTIFIER");
+              if ((($b = ($o = self.static_env['$nil?']()['$!'](), $o !== false && $o !== nil && $o != null ?self.static_env['$declared?'](self.$tok()) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                } else {
+                self.cs = self.$arg_or_cmdarg()
+              };
+              } else {
+              self.$emit("k__ENCODING__", "__ENCODING__".$freeze())
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((140)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS', true, true));
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((141)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($o = ($p = digits['$empty?'](), $p !== false && $p !== nil && $p != null ?self.num_base['$=='](8) : $p), $o !== false && $o !== nil && $o != null ?self['$version?'](18) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($o = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((143)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": self.$tok($rb_minus(self.te, 1), self.te)}), self.$range($rb_minus(self.te, 1), self.te))
+              } else {
+              
+              self.$emit("tINTEGER", self.$tok(self.ts, $rb_minus(self.te, 1)).$to_i(), self.ts, $rb_minus(self.te, 1));
+              p = $rb_minus(p, 1);
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((144)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": self.$tok($rb_minus(self.te, 1), self.te)}), self.$range($rb_minus(self.te, 1), self.te))
+              } else {
+              
+              self.$emit("tFLOAT", self.$tok(self.ts, $rb_minus(self.te, 1)).$to_f(), self.ts, $rb_minus(self.te, 1));
+              p = $rb_minus(p, 1);
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((145)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            digits = self.$tok(self.ts, self.num_suffix_s);
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits)
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((147)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("tCONSTANT");
+            self.cs = self.$arg_or_cmdarg();
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((151)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("tIDENTIFIER");
+            if ((($b = ($o = self.static_env['$nil?']()['$!'](), $o !== false && $o !== nil && $o != null ?self.static_env['$declared?'](self.$tok()) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.cs = 440;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = self.$arg_or_cmdarg();
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((152)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            if (tm['$=='](self.te)) {
+              self.$emit("tFID")
+              } else {
+              
+              self.$emit("tIDENTIFIER", self.$tok(self.ts, tm), self.ts, tm);
+              p = $rb_minus(tm, 1);
+            };
+            self.cs = 468;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;};;}else if ((215)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tFID", self.$tok(self.ts, tm), self.ts, tm);
+            self.cs = self.$arg_or_cmdarg();
+            p = $rb_minus(tm, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((306)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((280)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((379)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if (tm['$=='](self.te)) {
+              self.$emit("tFID")
+              } else {
+              
+              self.$emit("tIDENTIFIER", self.$tok(self.ts, tm), self.ts, tm);
+              p = $rb_minus(tm, 1);
+            };
+            self.cs = 468;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((307)['$===']($case)) {
+            
+            tm = p;;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((281)['$===']($case)) {
+            
+            tm = p;;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((308)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((282)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((312)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((285)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((311)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((284)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            $case = self.act;
+if ((111)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION_BEGIN', true, true));
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((112)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("kRESCUE", "rescue".$freeze(), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 513;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((113)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit_table(Opal.const_get($scopes, 'KEYWORDS_BEGIN', true, true));
+            self.cs = 758;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;}else if ((115)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;}else if ((116)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            self.$emit("tIDENTIFIER");
+            if ((($b = ($o = self.static_env['$nil?']()['$!'](), $o !== false && $o !== nil && $o != null ?self.static_env['$declared?'](self.$tok()) : $o)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.cs = 440;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = self.$arg_or_cmdarg();
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };}else if ((119)['$===']($case)) {
+            
+            p = $rb_minus(self.te, 1);;
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;};;}else if ((309)['$===']($case)) {
+            
+            tm = $rb_minus(p, 3);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((283)['$===']($case)) {
+            
+            tm = $rb_minus(p, 3);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            p = $rb_minus(self.ts, 1);
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((310)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tSYMBOL", self.$tok($rb_plus(self.ts, 1), tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((434)['$===']($case)) {
+            
+            tm = $rb_minus(p, 2);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tCONSTANT", self.$tok(self.ts, tm), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((238)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tLBRACK", "[".$freeze(), $rb_minus(self.te, 1), self.te);
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((341)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tLBRACK", "[".$freeze());
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((437)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tLBRACK2", "[".$freeze());
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((230)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            (self.paren_nest = $rb_plus(self.paren_nest, 1));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tLPAREN2", "(".$freeze(), $rb_minus(self.te, 1), self.te);
+              self.cs = 758;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.$emit("tLPAREN_ARG", "(".$freeze(), $rb_minus(self.te, 1), self.te);
+              self.cs = 537;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };;;}else if ((243)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            (self.paren_nest = $rb_plus(self.paren_nest, 1));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tLPAREN2", "(".$freeze());
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((251)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            (self.paren_nest = $rb_plus(self.paren_nest, 1));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tLPAREN_ARG", "(".$freeze(), $rb_minus(self.te, 1), self.te);
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.cs = 758;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = 537;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+            };;;}else if ((298)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            (self.paren_nest = $rb_plus(self.paren_nest, 1));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("tLPAREN", "(".$freeze());
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((390)['$===']($case)) {
+            
+            self.cond.$push(false);
+            self.cmdarg.$push(false);
+            (self.paren_nest = $rb_plus(self.paren_nest, 1));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cs = 537;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((391)['$===']($case)) {
+            
+            (self.paren_nest = $rb_minus(self.paren_nest, 1));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit_table(Opal.const_get($scopes, 'PUNCTUATION', true, true));
+            self.cond.$lexpop();
+            self.cmdarg.$lexpop();
+            if ((($b = Opal.const_get($scopes, 'RBRACE_OR_RBRACK', true, true)['$include?'](self.$tok())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.cs = 505};
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((56)['$===']($case)) {
+            
+            heredoc_e = p;;
+            
+            self.newline_s = p;;}else if ((313)['$===']($case)) {
+            
+            new_herebody_s = p;;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$tok(self.ts, heredoc_e)['$=~'](/^<<(-?)(~?)(["'`]?)(.*)\3$/);
+            indent = ((($b = (($o = $gvars['~']) === nil ? nil : $o['$[]'](1))['$empty?']()['$!']()) !== false && $b !== nil && $b != null) ? $b : (($o = $gvars['~']) === nil ? nil : $o['$[]'](2))['$empty?']()['$!']());
+            dedent_body = (($b = $gvars['~']) === nil ? nil : $b['$[]'](2))['$empty?']()['$!']();
+            type = (function() {if ((($b = (($o = $gvars['~']) === nil ? nil : $o['$[]'](3))['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              return "<<\"".$freeze()
+              } else {
+              
+              return $rb_plus("<<".$freeze(), (($b = $gvars['~']) === nil ? nil : $b['$[]'](3)));
+            }; return nil; })();
+            delimiter = (($b = $gvars['~']) === nil ? nil : $b['$[]'](4));
+            if ((($b = (($o = dedent_body !== false && dedent_body !== nil && dedent_body != null) ? self['$version?'](18, 19, 20, 21, 22) : dedent_body)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tLSHFT", "<<".$freeze(), self.ts, $rb_plus(self.ts, 2));
+              p = $rb_plus(self.ts, 1);
+              self.cs = 537;
+              
+              (p = $rb_plus(p, 1));
+              _goto_level = _out;
+              continue;;;
+              } else {
+              
+              self.cs = self.$push_literal(type, delimiter, self.ts, heredoc_e, indent, dedent_body);
+              ((($b = self.herebody_s) !== false && $b !== nil && $b != null) ? $b : (self.herebody_s = new_herebody_s));
               p = $rb_minus(self.herebody_s, 1);
-              self.herebody_s = nil;};
-          };
-          if ((($b = ($p = current_literal['$words?'](), $p !== false && $p !== nil && $p != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $p)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_space(self.ts, self.te)
-            } else {
+            };;;}else if ((318)['$===']($case)) {
             
-            current_literal.$extend_string(self.$tok(), self.ts, self.te);
-            current_literal.$flush_string();
-          };;;
-          
-          self.escape_s = p;
-          self.escape = nil;;}else if ((106)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($p = current_literal['$regexp?'](), $p !== false && $p !== nil && $p != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $p)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
+            self.escape = nil;;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($o = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
               } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((132)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($p = current_literal['$regexp?'](), $p !== false && $p !== nil && $p != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $p)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((328)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($p = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((111)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($q = current_literal['$regexp?'](), $q !== false && $q !== nil && $q != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $q)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((137)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($q = current_literal['$regexp?'](), $q !== false && $q !== nil && $q != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $q)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((333)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($q = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((110)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($r = current_literal['$regexp?'](), $r !== false && $r !== nil && $r != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $r)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((136)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($r = current_literal['$regexp?'](), $r !== false && $r !== nil && $r != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $r)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((332)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($r = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((108)['$===']($case)) {
-          
-          self.escape = "\u007F";;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($s = current_literal['$regexp?'](), $s !== false && $s !== nil && $s != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $s)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((134)['$===']($case)) {
-          
-          self.escape = "\u007F";;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($s = current_literal['$regexp?'](), $s !== false && $s !== nil && $s != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $s)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((330)['$===']($case)) {
-          
-          self.escape = "\u007F";;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($s = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((104)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($t = current_literal['$regexp?'](), $t !== false && $t !== nil && $t != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $t)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((130)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($t = current_literal['$regexp?'](), $t !== false && $t !== nil && $t != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $t)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((326)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($t = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((114)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
-          
-          self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($u = current_literal['$regexp?'](), $u !== false && $u !== nil && $u != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $u)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((140)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
-          
-          self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($u = current_literal['$regexp?'](), $u !== false && $u !== nil && $u != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $u)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((336)['$===']($case)) {
-          
-          self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
-          
-          self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($u = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((98)['$===']($case)) {
-          
-          self.escape_s = p;
-          self.escape = nil;;
-          
-          self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($v = current_literal['$regexp?'](), $v !== false && $v !== nil && $v != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $v)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((125)['$===']($case)) {
-          
-          self.escape_s = p;
-          self.escape = nil;;
-          
-          self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($v = current_literal['$regexp?'](), $v !== false && $v !== nil && $v != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $v)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
-              } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((321)['$===']($case)) {
-          
-          self.escape_s = p;
-          self.escape = nil;;
-          
-          self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($v = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
-              } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((69)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.newline_s = p;;}else if ((192)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((207)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((219)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((241)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          
-          self.cs = 766;
-          _goto_level = _again;
-          continue;;;;;}else if ((256)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((268)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((292)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((354)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((364)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((384)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((85)['$===']($case)) {
-          
-          self.sharp_s = $rb_minus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);;}else if ((427)['$===']($case)) {
-          
-          self.num_base = 10;
-          self.num_digits_s = self.ts;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_22 = function(chars){var self = TMP_22.$$s || this;
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((345)['$===']($case)) {
+            
+            tm = p;;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            self.$emit("kRESCUE", "rescue".$freeze(), self.ts, tm);
+            p = $rb_minus(tm, 1);
+            self.cs = 513;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((425)['$===']($case)) {
+            
+            self.num_base = 16;
+            self.num_digits_s = p;;
+            
+            self.num_suffix_s = p;;}else if ((419)['$===']($case)) {
+            
+            self.num_base = 10;
+            self.num_digits_s = p;;
+            
+            self.num_suffix_s = p;;}else if ((422)['$===']($case)) {
+            
+            self.num_base = 8;
+            self.num_digits_s = p;;
+            
+            self.num_suffix_s = p;;}else if ((416)['$===']($case)) {
+            
+            self.num_base = 2;
+            self.num_digits_s = p;;
+            
+            self.num_suffix_s = p;;}else if ((431)['$===']($case)) {
+            
+            self.num_base = 10;
+            self.num_digits_s = self.ts;;
+            
+            self.num_suffix_s = p;;}else if ((400)['$===']($case)) {
+            
+            self.num_base = 8;
+            self.num_digits_s = self.ts;;
+            
+            self.num_suffix_s = p;;}else if ((432)['$===']($case)) {
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_21 = function(chars){var self = TMP_21.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_22.$$s = self, TMP_22.$$arity = 1, TMP_22));;}else if ((397)['$===']($case)) {
-          
-          self.num_base = 8;
-          self.num_digits_s = self.ts;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_23 = function(chars){var self = TMP_23.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_23.$$s = self, TMP_23.$$arity = 1, TMP_23));;}else if ((409)['$===']($case)) {
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_24 = function(chars){var self = TMP_24.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_24.$$s = self, TMP_24.$$arity = 1, TMP_24));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($w = ($x = digits['$empty?'](), $x !== false && $x !== nil && $x != null ?self.num_base['$=='](8) : $x), $w !== false && $w !== nil && $w != null ?self['$version?'](18) : $w)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($w = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            return self.$emit("tINTEGER", chars)}, TMP_21.$$s = self, TMP_21.$$arity = 1, TMP_21));;}else if ((77)['$===']($case)) {
             
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            tm = p;;
             
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((404)['$===']($case)) {
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_25 = function(chars){var self = TMP_25.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tFLOAT", self.$Float(chars))}, TMP_25.$$s = self, TMP_25.$$arity = 1, TMP_25));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.ts, self.num_suffix_s);
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.te = $rb_plus(p, 1);
             
-            self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits)
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((401)['$===']($case)) {
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_26 = function(chars){var self = TMP_26.$$s || this;
-if (chars == null) chars = nil;
-          return self.$emit("tFLOAT", self.$Float(chars))}, TMP_26.$$s = self, TMP_26.$$arity = 1, TMP_26));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.ts, self.num_suffix_s);
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            p = $rb_minus(tm, 1);
             
-            self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits)
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((247)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.newline_s = p;;
-          
-          self.act = 74;;}else if ((35)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((8)['$===']($case)) {
             
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.act = 73;;}else if ((46)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.te = $rb_plus(p, 1);;
             
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          self.act = 81;;}else if ((72)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
-            return $rb_minus(p, 2)
-            } else {
-            return p
-          }; return nil; })());;
-          
-          self.act = 134;;}else if ((37)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          tm = p;;
-          
-          self.act = 68;;}else if ((347)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          tm = p;;
-          
-          self.act = 115;;}else if ((346)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          tm = p;;
-          
-          self.act = 116;;}else if ((428)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.num_base = 10;
-          self.num_digits_s = self.ts;;
-          
-          self.act = 141;;}else if ((109)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($w = current_literal['$regexp?'](), $w !== false && $w !== nil && $w != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $w)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
+            self.newline_s = p;;}else if ((199)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 39;;}else if ((186)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 40;;}else if ((182)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 41;;}else if ((26)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 67;;}else if ((232)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 68;;}else if ((27)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 73;;}else if ((225)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 74;;}else if ((252)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 80;;}else if ((45)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 81;;}else if ((273)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 88;;}else if ((262)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 89;;}else if ((276)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 111;;}else if ((344)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 112;;}else if ((343)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 113;;}else if ((58)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 115;;}else if ((274)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 116;;}else if ((277)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 119;;}else if ((447)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 132;;}else if ((442)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 133;;}else if ((450)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 135;;}else if ((443)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 136;;}else if ((444)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 137;;}else if ((449)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 138;;}else if ((441)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 139;;}else if ((436)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 140;;}else if ((372)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 141;;}else if ((402)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 144;;}else if ((65)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 145;;}else if ((375)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 147;;}else if ((367)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 151;;}else if ((377)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.act = 152;;}else if ((156)['$===']($case)) {
+            
+            self.newline_s = p;;
+            
+            self.te = $rb_plus(p, 1);
+            
+            current_literal = self.$literal();
+            if (self.te['$=='](pe)) {
+              self.$diagnostic("fatal", "string_eof", nil, self.$range(current_literal.$str_s(), $rb_plus(current_literal.$str_s(), 1)))};
+            if ((($b = current_literal['$heredoc?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              line = self.$tok(self.herebody_s, self.ts).$gsub(/\r+$/, "".$freeze());
+              if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                line = line.$gsub(/\r.*$/, "".$freeze())};
+              if ((($b = current_literal.$nest_and_try_closing(line, self.herebody_s, self.ts)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.herebody_s = self.te;
+                p = $rb_minus(current_literal.$heredoc_e(), 1);
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;
+                } else {
+                
+                current_literal.$infer_indent_level(line);
+                self.herebody_s = self.te;
+              };
               } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((135)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($w = current_literal['$regexp?'](), $w !== false && $w !== nil && $w != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $w)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
+              
+              if ((($b = current_literal.$nest_and_try_closing(self.$tok(), self.ts, self.te)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                self.cs = self.$pop_literal();
+                
+                (p = $rb_plus(p, 1));
+                _goto_level = _out;
+                continue;;;};
+              if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                
+                p = $rb_minus(self.herebody_s, 1);
+                self.herebody_s = nil;};
+            };
+            if ((($b = ($p = current_literal['$words?'](), $p !== false && $p !== nil && $p != null ?self['$eof_codepoint?'](self.source_pts['$[]'](p))['$!']() : $p)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_space(self.ts, self.te)
               } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((331)['$===']($case)) {
-          
-          codepoint = self.source_pts['$[]']($rb_minus(p, 1));
-          if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($w = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+              
+              current_literal.$extend_string(self.$tok(), self.ts, self.te);
+              current_literal.$flush_string();
+            };;;
+            
+            self.escape_s = p;
+            self.escape = nil;;}else if ((106)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($p = current_literal['$regexp?'](), $p !== false && $p !== nil && $p != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $p)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
               } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((107)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($x = current_literal['$regexp?'](), $x !== false && $x !== nil && $x != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $x)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((132)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($p = current_literal['$regexp?'](), $p !== false && $p !== nil && $p != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $p)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
               } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((133)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          current_literal = self.$literal();
-          escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
-          if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = ($x = current_literal['$regexp?'](), $x !== false && $x !== nil && $x != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $x)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              current_literal.$extend_string(self.$tok(), self.ts, self.te)
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((328)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($p = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
               } else {
-              current_literal.$extend_string(escaped_char, self.ts, self.te)
-            }
-          } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
-            } else {
-            current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
-          };;;}else if ((329)['$===']($case)) {
-          
-          self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
-          
-          self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
-          if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            if ((($b = (($x = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((111)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($q = current_literal['$regexp?'](), $q !== false && $q !== nil && $q != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $q)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
               } else {
-              self.$emit("tINTEGER", value['$[]'](0).$ord())
-            }
-            } else {
-            self.$emit("tCHARACTER", value)
-          };
-          self.cs = 766;
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((423)['$===']($case)) {
-          
-          self.num_base = 16;
-          self.num_digits_s = p;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_27 = function(chars){var self = TMP_27.$$s || this;
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((137)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($q = current_literal['$regexp?'](), $q !== false && $q !== nil && $q != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $q)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((333)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($q = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((110)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($r = current_literal['$regexp?'](), $r !== false && $r !== nil && $r != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $r)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((136)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($r = current_literal['$regexp?'](), $r !== false && $r !== nil && $r != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $r)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((332)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($r = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((108)['$===']($case)) {
+            
+            self.escape = "\u007F";;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($s = current_literal['$regexp?'](), $s !== false && $s !== nil && $s != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $s)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((134)['$===']($case)) {
+            
+            self.escape = "\u007F";;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($s = current_literal['$regexp?'](), $s !== false && $s !== nil && $s != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $s)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((330)['$===']($case)) {
+            
+            self.escape = "\u007F";;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($s = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((104)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($t = current_literal['$regexp?'](), $t !== false && $t !== nil && $t != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $t)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((130)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($t = current_literal['$regexp?'](), $t !== false && $t !== nil && $t != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $t)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((326)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($t = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((114)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
+            
+            self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($u = current_literal['$regexp?'](), $u !== false && $u !== nil && $u != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $u)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((140)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
+            
+            self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($u = current_literal['$regexp?'](), $u !== false && $u !== nil && $u != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $u)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((336)['$===']($case)) {
+            
+            self.$diagnostic("fatal", "invalid_unicode_escape", nil, self.$range($rb_minus(self.escape_s, 1), p));;
+            
+            self.$diagnostic("fatal", "unterminated_unicode", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($u = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((98)['$===']($case)) {
+            
+            self.escape_s = p;
+            self.escape = nil;;
+            
+            self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($v = current_literal['$regexp?'](), $v !== false && $v !== nil && $v != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $v)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((125)['$===']($case)) {
+            
+            self.escape_s = p;
+            self.escape = nil;;
+            
+            self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($v = current_literal['$regexp?'](), $v !== false && $v !== nil && $v != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $v)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((321)['$===']($case)) {
+            
+            self.escape_s = p;
+            self.escape = nil;;
+            
+            self.$diagnostic("fatal", "escape_eof", nil, self.$range($rb_minus(p, 1), p));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($v = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((69)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.newline_s = p;;}else if ((192)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((207)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((219)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((241)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            
+            self.cs = 766;
+            _goto_level = _again;
+            continue;;;;;}else if ((256)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((268)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((292)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((354)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((364)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((384)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((85)['$===']($case)) {
+            
+            self.sharp_s = $rb_minus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);;}else if ((427)['$===']($case)) {
+            
+            self.num_base = 10;
+            self.num_digits_s = self.ts;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_22 = function(chars){var self = TMP_22.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_27.$$s = self, TMP_27.$$arity = 1, TMP_27));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            return self.$emit("tINTEGER", chars)}, TMP_22.$$s = self, TMP_22.$$arity = 1, TMP_22));;}else if ((397)['$===']($case)) {
             
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.num_base = 8;
+            self.num_digits_s = self.ts;;
             
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((417)['$===']($case)) {
-          
-          self.num_base = 10;
-          self.num_digits_s = p;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_28 = function(chars){var self = TMP_28.$$s || this;
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_23 = function(chars){var self = TMP_23.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_28.$$s = self, TMP_28.$$arity = 1, TMP_28));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            return self.$emit("tINTEGER", chars)}, TMP_23.$$s = self, TMP_23.$$arity = 1, TMP_23));;}else if ((409)['$===']($case)) {
             
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.num_suffix_s = p;;
             
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((420)['$===']($case)) {
-          
-          self.num_base = 8;
-          self.num_digits_s = p;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_29 = function(chars){var self = TMP_29.$$s || this;
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_24 = function(chars){var self = TMP_24.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_29.$$s = self, TMP_29.$$arity = 1, TMP_29));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            return self.$emit("tINTEGER", chars)}, TMP_24.$$s = self, TMP_24.$$arity = 1, TMP_24));;
             
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((414)['$===']($case)) {
-          
-          self.num_base = 2;
-          self.num_digits_s = p;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_30 = function(chars){var self = TMP_30.$$s || this;
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($w = ($x = digits['$empty?'](), $x !== false && $x !== nil && $x != null ?self.num_base['$=='](8) : $x), $w !== false && $w !== nil && $w != null ?self['$version?'](18) : $w)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($w = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((404)['$===']($case)) {
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_25 = function(chars){var self = TMP_25.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_30.$$s = self, TMP_30.$$arity = 1, TMP_30));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            return self.$emit("tFLOAT", self.$Float(chars))}, TMP_25.$$s = self, TMP_25.$$arity = 1, TMP_25));;
             
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((426)['$===']($case)) {
-          
-          self.num_base = 10;
-          self.num_digits_s = self.ts;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_31 = function(chars){var self = TMP_31.$$s || this;
+            digits = self.$tok(self.ts, self.num_suffix_s);
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits)
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((401)['$===']($case)) {
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_26 = function(chars){var self = TMP_26.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_31.$$s = self, TMP_31.$$arity = 1, TMP_31));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            return self.$emit("tFLOAT", self.$Float(chars))}, TMP_26.$$s = self, TMP_26.$$arity = 1, TMP_26));;
             
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((396)['$===']($case)) {
-          
-          self.num_base = 8;
-          self.num_digits_s = self.ts;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_32 = function(chars){var self = TMP_32.$$s || this;
+            digits = self.$tok(self.ts, self.num_suffix_s);
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tFLOAT", self.$Float(digits), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits)
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((247)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.newline_s = p;;
+            
+            self.act = 74;;}else if ((35)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.act = 73;;}else if ((46)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            self.act = 81;;}else if ((72)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.$emit_comment(self.sharp_s, (function() {if (p['$=='](pe)) {
+              return $rb_minus(p, 2)
+              } else {
+              return p
+            }; return nil; })());;
+            
+            self.act = 134;;}else if ((37)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            tm = p;;
+            
+            self.act = 68;;}else if ((347)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            tm = p;;
+            
+            self.act = 115;;}else if ((346)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            tm = p;;
+            
+            self.act = 116;;}else if ((428)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.num_base = 10;
+            self.num_digits_s = self.ts;;
+            
+            self.act = 141;;}else if ((109)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($w = current_literal['$regexp?'](), $w !== false && $w !== nil && $w != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $w)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((135)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($w = current_literal['$regexp?'](), $w !== false && $w !== nil && $w != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $w)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((331)['$===']($case)) {
+            
+            codepoint = self.source_pts['$[]']($rb_minus(p, 1));
+            if ((($b = (self.escape = Opal.const_get($scopes, 'ESCAPES', true, true)['$[]'](codepoint))['$nil?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.escape = self.$encode_escape(self.source_buffer.$slice($rb_minus(p, 1)))};;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($w = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((107)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($x = current_literal['$regexp?'](), $x !== false && $x !== nil && $x != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $x)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((133)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            current_literal = self.$literal();
+            escaped_char = self.source_buffer.$slice(self.escape_s).$chr();
+            if ((($b = current_literal['$munge_escape?'](escaped_char)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = ($x = current_literal['$regexp?'](), $x !== false && $x !== nil && $x != null ?Opal.const_get($scopes, 'REGEXP_META_CHARACTERS', true, true).$match(escaped_char) : $x)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                current_literal.$extend_string(self.$tok(), self.ts, self.te)
+                } else {
+                current_literal.$extend_string(escaped_char, self.ts, self.te)
+              }
+            } else if ((($b = current_literal['$regexp?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              current_literal.$extend_string(self.$tok().$gsub("\\\n".$freeze(), "".$freeze()), self.ts, self.te)
+              } else {
+              current_literal.$extend_string(((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok()), self.ts, self.te)
+            };;;}else if ((329)['$===']($case)) {
+            
+            self.escape = self.source_buffer.$slice($rb_minus(p, 1)).$chr();;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$&'](159));;
+            
+            self.escape = self.$encode_escape(self.escape['$[]'](0).$ord()['$|'](128));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            value = ((($b = self.escape) !== false && $b !== nil && $b != null) ? $b : self.$tok($rb_plus(self.ts, 1)));
+            if ((($b = self['$version?'](18)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              if ((($b = (($x = Opal.const_get([$scope], 'Encoding', true, false)) ? 'constant' : nil)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                self.$emit("tINTEGER", value.$dup().$force_encoding(Opal.const_get([Opal.const_get($scopes, 'Encoding', true, true).$$scope], 'BINARY', true, true))['$[]'](0).$ord())
+                } else {
+                self.$emit("tINTEGER", value['$[]'](0).$ord())
+              }
+              } else {
+              self.$emit("tCHARACTER", value)
+            };
+            self.cs = 766;
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((423)['$===']($case)) {
+            
+            self.num_base = 16;
+            self.num_digits_s = p;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_27 = function(chars){var self = TMP_27.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_32.$$s = self, TMP_32.$$arity = 1, TMP_32));;
-          
-          self.te = p;
-          p = $rb_minus(p, 1);
-          
-          digits = self.$tok(self.num_digits_s, self.num_suffix_s);
-          if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
-          } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            digits = "0".$freeze()
-          } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            self.$diagnostic("error", "empty_numeric")
-          } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            return self.$emit("tINTEGER", chars)}, TMP_27.$$s = self, TMP_27.$$arity = 1, TMP_27));;
             
-            invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
-            self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
-          if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            self.te = p;
+            p = $rb_minus(p, 1);
             
-            self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
-            p = $rb_minus(self.num_suffix_s, 1);
-            } else {
-            self.num_xfrm.$call(digits.$to_i(self.num_base))
-          };
-          
-          (p = $rb_plus(p, 1));
-          _goto_level = _out;
-          continue;;;;;}else if ((31)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
             
-            p = self.herebody_s;
-            self.herebody_s = nil;};;
-          
-          tm = p;;
-          
-          self.act = 68;;}else if ((433)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_33 = function(chars){var self = TMP_33.$$s || this;
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((417)['$===']($case)) {
+            
+            self.num_base = 10;
+            self.num_digits_s = p;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_28 = function(chars){var self = TMP_28.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_33.$$s = self, TMP_33.$$arity = 1, TMP_33));;
-          
-          self.act = 143;;}else if ((429)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.num_base = 10;
-          self.num_digits_s = self.ts;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_34 = function(chars){var self = TMP_34.$$s || this;
+            return self.$emit("tINTEGER", chars)}, TMP_28.$$s = self, TMP_28.$$arity = 1, TMP_28));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((420)['$===']($case)) {
+            
+            self.num_base = 8;
+            self.num_digits_s = p;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_29 = function(chars){var self = TMP_29.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_34.$$s = self, TMP_34.$$arity = 1, TMP_34));;
-          
-          self.act = 143;;}else if ((399)['$===']($case)) {
-          
-          self.te = $rb_plus(p, 1);;
-          
-          self.num_base = 8;
-          self.num_digits_s = self.ts;;
-          
-          self.num_suffix_s = p;;
-          
-          self.num_xfrm = $send(self, 'lambda', [], (TMP_35 = function(chars){var self = TMP_35.$$s || this;
+            return self.$emit("tINTEGER", chars)}, TMP_29.$$s = self, TMP_29.$$arity = 1, TMP_29));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((414)['$===']($case)) {
+            
+            self.num_base = 2;
+            self.num_digits_s = p;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_30 = function(chars){var self = TMP_30.$$s || this;
 if (chars == null) chars = nil;
-          return self.$emit("tINTEGER", chars)}, TMP_35.$$s = self, TMP_35.$$arity = 1, TMP_35));;
+            return self.$emit("tINTEGER", chars)}, TMP_30.$$s = self, TMP_30.$$arity = 1, TMP_30));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((426)['$===']($case)) {
+            
+            self.num_base = 10;
+            self.num_digits_s = self.ts;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_31 = function(chars){var self = TMP_31.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tINTEGER", chars)}, TMP_31.$$s = self, TMP_31.$$arity = 1, TMP_31));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((396)['$===']($case)) {
+            
+            self.num_base = 8;
+            self.num_digits_s = self.ts;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_32 = function(chars){var self = TMP_32.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tINTEGER", chars)}, TMP_32.$$s = self, TMP_32.$$arity = 1, TMP_32));;
+            
+            self.te = p;
+            p = $rb_minus(p, 1);
+            
+            digits = self.$tok(self.num_digits_s, self.num_suffix_s);
+            if ((($b = digits['$end_with?']("_".$freeze())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "trailing_in_number", $hash2(["character"], {"character": "_".$freeze()}), self.$range($rb_minus(self.te, 1), self.te))
+            } else if ((($b = ($y = ($z = digits['$empty?'](), $z !== false && $z !== nil && $z != null ?self.num_base['$=='](8) : $z), $y !== false && $y !== nil && $y != null ?self['$version?'](18) : $y)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              digits = "0".$freeze()
+            } else if ((($b = digits['$empty?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              self.$diagnostic("error", "empty_numeric")
+            } else if ((($b = (($y = self.num_base['$=='](8)) ? (invalid_idx = digits.$index(/[89]/)) : self.num_base['$=='](8))) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              invalid_s = $rb_plus(self.num_digits_s, invalid_idx);
+              self.$diagnostic("error", "invalid_octal", nil, self.$range(invalid_s, $rb_plus(invalid_s, 1)));};
+            if ((($b = self['$version?'](18, 19, 20)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              self.$emit("tINTEGER", digits.$to_i(self.num_base), self.ts, self.num_suffix_s);
+              p = $rb_minus(self.num_suffix_s, 1);
+              } else {
+              self.num_xfrm.$call(digits.$to_i(self.num_base))
+            };
+            
+            (p = $rb_plus(p, 1));
+            _goto_level = _out;
+            continue;;;;;}else if ((31)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            if ((($b = self.herebody_s) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              p = self.herebody_s;
+              self.herebody_s = nil;};;
+            
+            tm = p;;
+            
+            self.act = 68;;}else if ((433)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_33 = function(chars){var self = TMP_33.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tINTEGER", chars)}, TMP_33.$$s = self, TMP_33.$$arity = 1, TMP_33));;
+            
+            self.act = 143;;}else if ((429)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.num_base = 10;
+            self.num_digits_s = self.ts;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_34 = function(chars){var self = TMP_34.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tINTEGER", chars)}, TMP_34.$$s = self, TMP_34.$$arity = 1, TMP_34));;
+            
+            self.act = 143;;}else if ((399)['$===']($case)) {
+            
+            self.te = $rb_plus(p, 1);;
+            
+            self.num_base = 8;
+            self.num_digits_s = self.ts;;
+            
+            self.num_suffix_s = p;;
+            
+            self.num_xfrm = $send(self, 'lambda', [], (TMP_35 = function(chars){var self = TMP_35.$$s || this;
+if (chars == null) chars = nil;
+            return self.$emit("tINTEGER", chars)}, TMP_35.$$s = self, TMP_35.$$arity = 1, TMP_35));;
+            
+            self.act = 143;;}};};
+        if ((($b = $rb_le(_goto_level, _again)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
           
-          self.act = 143;;}};};
-      if ((($b = $rb_le(_goto_level, _again)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        
-        $case = _lex_to_state_actions['$[]'](self.cs);
+          $case = _lex_to_state_actions['$[]'](self.cs);
 if ((79)['$===']($case)) {
-        self.ts = nil;};
-        if (self.cs['$=='](0)) {
-          
-          _goto_level = _out;
-          continue;;};
-        (p = $rb_plus(p, 1));
-        if ((($b = p['$!='](pe)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          
-          _goto_level = _resume;
-          continue;;};};
-      if ((($b = $rb_le(_goto_level, _test_eof)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        if (p['$=='](eof)) {
-          if ((($b = $rb_gt(_lex_eof_trans['$[]'](self.cs), 0)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+          self.ts = nil;};
+          if (self.cs['$=='](0)) {
             
-            _trans = $rb_minus(_lex_eof_trans['$[]'](self.cs), 1);
-            _goto_level = _eof_trans;
-            continue;;}}};
-      if ((($b = $rb_le(_goto_level, _out)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        break;};};;
+            _goto_level = _out;
+            continue;;};
+          (p = $rb_plus(p, 1));
+          if ((($b = p['$!='](pe)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+            
+            _goto_level = _resume;
+            continue;;};};
+        if ((($b = $rb_le(_goto_level, _test_eof)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+          if (p['$=='](eof)) {
+            if ((($b = $rb_gt(_lex_eof_trans['$[]'](self.cs), 0)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              _trans = $rb_minus(_lex_eof_trans['$[]'](self.cs), 1);
+              _goto_level = _eof_trans;
+              continue;;}}};
+        if ((($b = $rb_le(_goto_level, _out)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+          break;};
+      };;
       self.p = p;
       if ((($a = self.token_queue['$any?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
         return self.token_queue.$shift()
@@ -18495,7 +18517,7 @@ Opal.modules["opal/nodes/helpers"] = function(Opal) {
   }
   var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $send = Opal.send;
 
-  Opal.add_stubs(['$require', '$valid_name?', '$inspect', '$=~', '$to_s', '$+', '$indent', '$compiler', '$to_proc', '$parser_indent', '$push', '$current_indent', '$js_truthy_optimize', '$with_temp', '$fragment', '$expr', '$==', '$type', '$[]', '$children', '$uses_block!', '$scope', '$block_name', '$handlers', '$include?', '$truthy_optimize?', '$dup']);
+  Opal.add_stubs(['$require', '$valid_name?', '$inspect', '$=~', '$to_s', '$+', '$indent', '$compiler', '$to_proc', '$parser_indent', '$push', '$current_indent', '$js_truthy_optimize', '$with_temp', '$fragment', '$expr', '$==', '$type', '$[]', '$children', '$uses_block!', '$scope', '$block_name', '$handlers', '$include?', '$truthy_optimize?', '$dup', '$new_temp', '$wrap']);
   
   self.$require("opal/regexp_anchors");
   return (function($base, $visibility_scopes) {
@@ -18511,7 +18533,7 @@ Opal.modules["opal/nodes/helpers"] = function(Opal) {
       (function($base, $visibility_scopes) {
         var $Helpers, self = $Helpers = $module($base, 'Helpers');
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_Helpers_property_1, TMP_Helpers_valid_name$q_2, TMP_Helpers_mid_to_jsid_3, TMP_Helpers_indent_4, TMP_Helpers_current_indent_5, TMP_Helpers_line_6, TMP_Helpers_empty_line_7, TMP_Helpers_js_truthy_9, TMP_Helpers_js_falsy_11, TMP_Helpers_js_truthy_optimize_12;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_Helpers_property_1, TMP_Helpers_valid_name$q_2, TMP_Helpers_mid_to_jsid_3, TMP_Helpers_indent_4, TMP_Helpers_current_indent_5, TMP_Helpers_line_6, TMP_Helpers_empty_line_7, TMP_Helpers_js_truthy_9, TMP_Helpers_js_falsy_11, TMP_Helpers_js_truthy_optimize_12, TMP_Helpers_conditional_send_13;
 
         
         Opal.defn(self, '$property', TMP_Helpers_property_1 = function $$property(name) {
@@ -18610,6 +18632,17 @@ if (tmp == null) tmp = nil;
             return nil
           }
         }, TMP_Helpers_js_truthy_optimize_12.$$arity = 1);
+        Opal.defn(self, '$conditional_send', TMP_Helpers_conditional_send_13 = function $$conditional_send(recvr) {
+          var self = this, $iter = TMP_Helpers_conditional_send_13.$$p, $yield = $iter || nil, receiver_temp = nil;
+
+          if ($iter) TMP_Helpers_conditional_send_13.$$p = null;
+          
+          receiver_temp = self.$scope().$new_temp();
+          self.$push("" + (receiver_temp) + " = ", recvr);
+          self.$push("" + ", (" + (receiver_temp) + " === nil || " + (receiver_temp) + " == null) ? nil : ");
+          Opal.yield1($yield, receiver_temp);
+          return self.$wrap("(", ")");
+        }, TMP_Helpers_conditional_send_13.$$arity = 1);
       })($scope.base, $scopes)
     })($scope.base, $scopes)
   })($scope.base, $scopes);
@@ -18894,7 +18927,8 @@ if (str == null) str = nil;
           
           current = self.$scope();
           while ((($b = (($c = current !== false && current !== nil && current != null) ? current['$class_scope?']()['$!']() : current)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          current = current.$parent()};
+            current = current.$parent()
+          };
           return current;
         }, TMP_Base_closest_module_node_40.$$arity = 0);
         Opal.defn(self, '$class_variable_owner', TMP_Base_class_variable_owner_41 = function $$class_variable_owner() {
@@ -20266,9 +20300,9 @@ if (p == null) p = nil;if (part == null) part = nil;
 
 /* Generated by Opal 0.11.0.dev */
 Opal.modules["opal/nodes/csend"] = function(Opal) {
-  var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass;
+  var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $send = Opal.send;
 
-  Opal.add_stubs(['$require', '$handle', '$new_temp', '$scope', '$helper', '$compile_receiver', '$push', '$check_receiver_code', '$receiver_temp', '$compile_method_name', '$compile_arguments', '$compile_block_pass', '$wrap', '$recv', '$receiver_sexp']);
+  Opal.add_stubs(['$require', '$handle', '$helper', '$conditional_send', '$recv', '$receiver_sexp', '$push', '$compile_method_name', '$compile_arguments', '$compile_block_pass']);
   
   self.$require("opal/nodes/call");
   return (function($base, $visibility_scopes) {
@@ -20285,39 +20319,24 @@ Opal.modules["opal/nodes/csend"] = function(Opal) {
         function $CSendNode(){};
         var self = $CSendNode = $klass($base, $super, 'CSendNode', $CSendNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_CSendNode_receiver_temp_1, TMP_CSendNode_default_compile_2, TMP_CSendNode_compile_receiver_3, TMP_CSendNode_check_receiver_code_4;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_CSendNode_default_compile_2;
 
-        def.receiver_temp = nil;
         
         self.$handle("csend");
-        Opal.defn(self, '$receiver_temp', TMP_CSendNode_receiver_temp_1 = function $$receiver_temp() {
-          var $a, self = this;
-
-          return ((($a = self.receiver_temp) !== false && $a !== nil && $a != null) ? $a : (self.receiver_temp = self.$scope().$new_temp()))
-        }, TMP_CSendNode_receiver_temp_1.$$arity = 0);
-        Opal.defn(self, '$default_compile', TMP_CSendNode_default_compile_2 = function $$default_compile() {
-          var self = this;
+        return (Opal.defn(self, '$default_compile', TMP_CSendNode_default_compile_2 = function $$default_compile() {
+          var TMP_1, self = this;
 
           
           self.$helper("send");
-          self.$compile_receiver();
-          self.$push("" + ", " + (self.$check_receiver_code()) + " ? nil : $send(");
-          self.$push(self.$receiver_temp());
-          self.$compile_method_name();
-          self.$compile_arguments();
-          self.$compile_block_pass();
-          return self.$wrap("(", "))");
-        }, TMP_CSendNode_default_compile_2.$$arity = 0);
-        Opal.defn(self, '$compile_receiver', TMP_CSendNode_compile_receiver_3 = function $$compile_receiver() {
-          var self = this;
-
-          return self.$push("" + (self.$receiver_temp()) + " = ", self.$recv(self.$receiver_sexp()))
-        }, TMP_CSendNode_compile_receiver_3.$$arity = 0);
-        return (Opal.defn(self, '$check_receiver_code', TMP_CSendNode_check_receiver_code_4 = function $$check_receiver_code() {
-          var self = this;
-
-          return "" + "(" + (self.$receiver_temp()) + " === nil || " + (self.$receiver_temp()) + " == null)"
-        }, TMP_CSendNode_check_receiver_code_4.$$arity = 0), nil) && 'check_receiver_code';
+          return $send(self, 'conditional_send', [self.$recv(self.$receiver_sexp())], (TMP_1 = function(receiver_temp){var self = TMP_1.$$s || this;
+if (receiver_temp == null) receiver_temp = nil;
+          
+            self.$push("$send(", receiver_temp);
+            self.$compile_method_name();
+            self.$compile_arguments();
+            self.$compile_block_pass();
+            return self.$push(")");}, TMP_1.$$s = self, TMP_1.$$arity = 1, TMP_1));
+        }, TMP_CSendNode_default_compile_2.$$arity = 0), nil) && 'default_compile';
       })($scope.base, Opal.const_get($scopes, 'CallNode', true, true), $scopes)
     })($scope.base, $scopes)
   })($scope.base, $scopes);
@@ -20330,7 +20349,7 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
   }
   var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $send = Opal.send, $range = Opal.range;
 
-  Opal.add_stubs(['$require', '$handle', '$children', '$push', '$recv', '$recvr', '$expr', '$property', '$value', '$<<', '$default_compile', '$+', '$to_s', '$meth', '$s', '$lhs', '$rhs', '$process', '$type', '$===', '$compile_asgn', '$compile_send', '$raise', '$last', '$updated', '$evaluates_to', '$==', '$send_evaluates_to', '$to_sym', '$compile_temporary_assignments', '$set_sexp', '$with_temp', '$stmt', '$compact', '$op', '$get_sexp', '$get_and_update_sexp', '$[]', '$args', '$compile_or', '$compile_and', '$compile_operator', '$first_arg', '$mid']);
+  Opal.add_stubs(['$require', '$handle', '$children', '$push', '$recv', '$recvr', '$expr', '$property', '$value', '$<<', '$default_compile', '$+', '$to_s', '$meth', '$s', '$lhs', '$rhs', '$process', '$type', '$===', '$compile_get_and_set', '$compile_send', '$compile_csend', '$raise', '$class', '$inspect', '$file', '$compiler', '$last', '$updated', '$evaluates_to', '$compile_generic_send', '$conditional_send', '$==', '$send_evaluates_to', '$to_sym', '$op', '$[]', '$args', '$compile_or', '$compile_and', '$compile_operator', '$with_temp', '$first_arg', '$mid']);
   
   self.$require("opal/nodes/base");
   self.$require("opal/nodes/call");
@@ -20431,7 +20450,7 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
         function $LogicalOpAssignNode(){};
         var self = $LogicalOpAssignNode = $klass($base, $super, 'LogicalOpAssignNode', $LogicalOpAssignNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_LogicalOpAssignNode_compile_7, TMP_LogicalOpAssignNode_rhs_8, TMP_LogicalOpAssignNode_compile_asgn_9, TMP_LogicalOpAssignNode_compile_send_10, TMP_LogicalOpAssignNode_evaluates_to_11;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_LogicalOpAssignNode_compile_7, TMP_LogicalOpAssignNode_rhs_8, TMP_LogicalOpAssignNode_compile_get_and_set_9, TMP_LogicalOpAssignNode_compile_send_10, TMP_LogicalOpAssignNode_compile_csend_12, TMP_LogicalOpAssignNode_compile_generic_send_13, TMP_LogicalOpAssignNode_evaluates_to_14;
 
         
         self.$children("lhs");
@@ -20439,27 +20458,44 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
           var self = this, $case = nil;
 
           return (function() {$case = self.$lhs().$type();
-if ("lvasgn"['$===']($case)) {return self.$compile_asgn("lvar")}else if ("ivasgn"['$===']($case)) {return self.$compile_asgn("ivar")}else if ("casgn"['$===']($case)) {return self.$compile_asgn("const")}else if ("cvasgn"['$===']($case)) {return self.$compile_asgn("cvar")}else if ("gvasgn"['$===']($case)) {return self.$compile_asgn("gvar")}else if ("send"['$===']($case)) {return self.$compile_send()}else {return self.$raise("" + "Unsupported node in LogicalOpAssignNode " + (self.$lhs().$type()))}})()
+if ("lvasgn"['$===']($case)) {return self.$compile_get_and_set("lvar")}else if ("ivasgn"['$===']($case)) {return self.$compile_get_and_set("ivar")}else if ("casgn"['$===']($case)) {return self.$compile_get_and_set("const")}else if ("cvasgn"['$===']($case)) {return self.$compile_get_and_set("cvar")}else if ("gvasgn"['$===']($case)) {return self.$compile_get_and_set("gvar")}else if ("send"['$===']($case)) {return self.$compile_send()}else if ("csend"['$===']($case)) {return self.$compile_csend()}else {return self.$raise("" + "Unsupported node in LogicalOpAssignNode " + (self.$lhs().$type()) + " (" + (self.$lhs().$class()) + ") " + (self.$lhs().$inspect()) + " " + (self.$compiler().$file()))}})()
         }, TMP_LogicalOpAssignNode_compile_7.$$arity = 0);
         Opal.defn(self, '$rhs', TMP_LogicalOpAssignNode_rhs_8 = function $$rhs() {
           var self = this;
 
           return self.$children().$last()
         }, TMP_LogicalOpAssignNode_rhs_8.$$arity = 0);
-        Opal.defn(self, '$compile_asgn', TMP_LogicalOpAssignNode_compile_asgn_9 = function $$compile_asgn(asgn) {
+        Opal.defn(self, '$compile_get_and_set', TMP_LogicalOpAssignNode_compile_get_and_set_9 = function $$compile_get_and_set(lhs_updated_type) {
           var self = this, get_node = nil, set_node = nil, sexp = nil;
 
           
-          get_node = self.$lhs().$updated(asgn);
+          get_node = self.$lhs().$updated(lhs_updated_type);
           set_node = self.$lhs().$updated(nil, $rb_plus(self.$lhs().$children(), [self.$rhs()]));
           sexp = self.$s(self.$evaluates_to(), get_node, set_node);
           return self.$push(self.$expr(sexp));
-        }, TMP_LogicalOpAssignNode_compile_asgn_9.$$arity = 1);
+        }, TMP_LogicalOpAssignNode_compile_get_and_set_9.$$arity = 1);
         Opal.defn(self, '$compile_send', TMP_LogicalOpAssignNode_compile_send_10 = function $$compile_send() {
-          var $a, $b, self = this, send_lhs = nil, send_op = nil, send_args = nil, sexp = nil;
+          var $a, $b, self = this, send_lhs = nil, send_op = nil, send_args = nil;
 
           
           $b = self.$lhs().$children(), $a = Opal.to_ary($b), (send_lhs = ($a[0] == null ? nil : $a[0])), (send_op = ($a[1] == null ? nil : $a[1])), (send_args = $slice.call($a, 2)), $b;
+          return self.$compile_generic_send(send_lhs, send_op, send_args);
+        }, TMP_LogicalOpAssignNode_compile_send_10.$$arity = 0);
+        Opal.defn(self, '$compile_csend', TMP_LogicalOpAssignNode_compile_csend_12 = function $$compile_csend() {
+          var $a, $b, TMP_11, self = this, send_lhs = nil, send_op = nil, send_args = nil;
+
+          
+          $b = self.$lhs().$children(), $a = Opal.to_ary($b), (send_lhs = ($a[0] == null ? nil : $a[0])), (send_op = ($a[1] == null ? nil : $a[1])), (send_args = $slice.call($a, 2)), $b;
+          return $send(self, 'conditional_send', [self.$recv(send_lhs)], (TMP_11 = function(send_lhs_temp){var self = TMP_11.$$s || this;
+if (send_lhs_temp == null) send_lhs_temp = nil;
+          
+            send_lhs_temp = self.$s("js_tmp", send_lhs_temp);
+            return self.$compile_generic_send(send_lhs_temp, send_op, send_args);}, TMP_11.$$s = self, TMP_11.$$arity = 1, TMP_11));
+        }, TMP_LogicalOpAssignNode_compile_csend_12.$$arity = 0);
+        Opal.defn(self, '$compile_generic_send', TMP_LogicalOpAssignNode_compile_generic_send_13 = function $$compile_generic_send(send_lhs, send_op, send_args) {
+          var self = this, sexp = nil;
+
+          
           if (send_op['$==']("[]")) {
             sexp = self.$s("op_asgn1", send_lhs, $send(self, 's', ["array"].concat(Opal.to_a(send_args))), self.$send_evaluates_to(), self.$rhs())
             } else {
@@ -20468,227 +20504,223 @@ if ("lvasgn"['$===']($case)) {return self.$compile_asgn("lvar")}else if ("ivasgn
             sexp = self.$s("op_asgn2", send_lhs, send_op, self.$send_evaluates_to(), self.$rhs());
           };
           return self.$push(self.$expr(sexp));
-        }, TMP_LogicalOpAssignNode_compile_send_10.$$arity = 0);
-        return (Opal.defn(self, '$evaluates_to', TMP_LogicalOpAssignNode_evaluates_to_11 = function $$evaluates_to() {
+        }, TMP_LogicalOpAssignNode_compile_generic_send_13.$$arity = 3);
+        return (Opal.defn(self, '$evaluates_to', TMP_LogicalOpAssignNode_evaluates_to_14 = function $$evaluates_to() {
           var self = this;
 
           return self.$raise(Opal.const_get($scopes, 'NotImplemetnedError', true, true))
-        }, TMP_LogicalOpAssignNode_evaluates_to_11.$$arity = 0), nil) && 'evaluates_to';
+        }, TMP_LogicalOpAssignNode_evaluates_to_14.$$arity = 0), nil) && 'evaluates_to';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgnOrNode(){};
         var self = $OpAsgnOrNode = $klass($base, $super, 'OpAsgnOrNode', $OpAsgnOrNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnOrNode_evaluates_to_12, TMP_OpAsgnOrNode_send_evaluates_to_13;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnOrNode_evaluates_to_15, TMP_OpAsgnOrNode_send_evaluates_to_16;
 
         
         self.$handle("or_asgn");
-        Opal.defn(self, '$evaluates_to', TMP_OpAsgnOrNode_evaluates_to_12 = function $$evaluates_to() {
+        Opal.defn(self, '$evaluates_to', TMP_OpAsgnOrNode_evaluates_to_15 = function $$evaluates_to() {
           var self = this;
 
           return "or"
-        }, TMP_OpAsgnOrNode_evaluates_to_12.$$arity = 0);
-        return (Opal.defn(self, '$send_evaluates_to', TMP_OpAsgnOrNode_send_evaluates_to_13 = function $$send_evaluates_to() {
+        }, TMP_OpAsgnOrNode_evaluates_to_15.$$arity = 0);
+        return (Opal.defn(self, '$send_evaluates_to', TMP_OpAsgnOrNode_send_evaluates_to_16 = function $$send_evaluates_to() {
           var self = this;
 
           return "||"
-        }, TMP_OpAsgnOrNode_send_evaluates_to_13.$$arity = 0), nil) && 'send_evaluates_to';
+        }, TMP_OpAsgnOrNode_send_evaluates_to_16.$$arity = 0), nil) && 'send_evaluates_to';
       })($scope.base, Opal.const_get($scopes, 'LogicalOpAssignNode', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgnAndNode(){};
         var self = $OpAsgnAndNode = $klass($base, $super, 'OpAsgnAndNode', $OpAsgnAndNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnAndNode_evaluates_to_14, TMP_OpAsgnAndNode_send_evaluates_to_15;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnAndNode_evaluates_to_17, TMP_OpAsgnAndNode_send_evaluates_to_18;
 
         
         self.$handle("and_asgn");
-        Opal.defn(self, '$evaluates_to', TMP_OpAsgnAndNode_evaluates_to_14 = function $$evaluates_to() {
+        Opal.defn(self, '$evaluates_to', TMP_OpAsgnAndNode_evaluates_to_17 = function $$evaluates_to() {
           var self = this;
 
           return "and"
-        }, TMP_OpAsgnAndNode_evaluates_to_14.$$arity = 0);
-        return (Opal.defn(self, '$send_evaluates_to', TMP_OpAsgnAndNode_send_evaluates_to_15 = function $$send_evaluates_to() {
+        }, TMP_OpAsgnAndNode_evaluates_to_17.$$arity = 0);
+        return (Opal.defn(self, '$send_evaluates_to', TMP_OpAsgnAndNode_send_evaluates_to_18 = function $$send_evaluates_to() {
           var self = this;
 
           return "&&"
-        }, TMP_OpAsgnAndNode_send_evaluates_to_15.$$arity = 0), nil) && 'send_evaluates_to';
+        }, TMP_OpAsgnAndNode_send_evaluates_to_18.$$arity = 0), nil) && 'send_evaluates_to';
       })($scope.base, Opal.const_get($scopes, 'LogicalOpAssignNode', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgnNode(){};
         var self = $OpAsgnNode = $klass($base, $super, 'OpAsgnNode', $OpAsgnNode);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnNode_compile_16, TMP_OpAsgnNode_compile_temporary_assignments_19, TMP_OpAsgnNode_get_sexp_20, TMP_OpAsgnNode_get_and_update_sexp_21, TMP_OpAsgnNode_set_sexp_22;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgnNode_compile_19, TMP_OpAsgnNode_compile_send_20, TMP_OpAsgnNode_compile_csend_22, TMP_OpAsgnNode_compile_generic_send_23, TMP_OpAsgnNode_compile_get_and_set_24;
 
         
         self.$handle("op_asgn");
         self.$children("lhs", "op", "rhs");
-        Opal.defn(self, '$compile', TMP_OpAsgnNode_compile_16 = function $$compile() {
-          var self = this;
+        Opal.defn(self, '$compile', TMP_OpAsgnNode_compile_19 = function $$compile() {
+          var self = this, $case = nil;
+
+          return (function() {$case = self.$lhs().$type();
+if ("lvasgn"['$===']($case)) {return self.$compile_get_and_set("lvar")}else if ("ivasgn"['$===']($case)) {return self.$compile_get_and_set("ivar")}else if ("casgn"['$===']($case)) {return self.$compile_get_and_set("const")}else if ("cvasgn"['$===']($case)) {return self.$compile_get_and_set("cvar")}else if ("gvasgn"['$===']($case)) {return self.$compile_get_and_set("gvar")}else if ("send"['$===']($case)) {return self.$compile_send()}else if ("csend"['$===']($case)) {return self.$compile_csend()}else {return self.$raise(Opal.const_get($scopes, 'NotImplementedError', true, true))}})()
+        }, TMP_OpAsgnNode_compile_19.$$arity = 0);
+        Opal.defn(self, '$compile_send', TMP_OpAsgnNode_compile_send_20 = function $$compile_send() {
+          var $a, $b, self = this, send_lhs = nil, send_op = nil, send_args = nil;
 
           
-          if (self.$lhs().$type()['$==']("send")) {
-            self.$compile_temporary_assignments()};
-          return self.$push(self.$expr(self.$set_sexp()));
-        }, TMP_OpAsgnNode_compile_16.$$arity = 0);
-        Opal.defn(self, '$compile_temporary_assignments', TMP_OpAsgnNode_compile_temporary_assignments_19 = function $$compile_temporary_assignments() {
-          var TMP_17, self = this;
+          $b = self.$lhs().$children(), $a = Opal.to_ary($b), (send_lhs = ($a[0] == null ? nil : $a[0])), (send_op = ($a[1] == null ? nil : $a[1])), (send_args = $slice.call($a, 2)), $b;
+          return self.$compile_generic_send(send_lhs, send_op, send_args);
+        }, TMP_OpAsgnNode_compile_send_20.$$arity = 0);
+        Opal.defn(self, '$compile_csend', TMP_OpAsgnNode_compile_csend_22 = function $$compile_csend() {
+          var $a, $b, TMP_21, self = this, send_lhs = nil, send_op = nil, send_args = nil;
 
-          return $send(self, 'with_temp', [], (TMP_17 = function(lhs_recv_tmp){var self = TMP_17.$$s || this, TMP_18;
-if (lhs_recv_tmp == null) lhs_recv_tmp = nil;
-          return $send(self, 'with_temp', [], (TMP_18 = function(lhs_arg_tmp){var self = TMP_18.$$s || this, $a, lhs_recv = nil, lhs_op = nil, lhs_arg = nil, lhs_recv_asgn = nil, new_lhs_recv = nil, lhs_arg_asgn = nil, new_lhs_arg = nil, new_lhs = nil;
-              if (self.sexp == null) self.sexp = nil;
-if (lhs_arg_tmp == null) lhs_arg_tmp = nil;
+          
+          $b = self.$lhs().$children(), $a = Opal.to_ary($b), (send_lhs = ($a[0] == null ? nil : $a[0])), (send_op = ($a[1] == null ? nil : $a[1])), (send_args = $slice.call($a, 2)), $b;
+          return $send(self, 'conditional_send', [self.$recv(send_lhs)], (TMP_21 = function(send_lhs_temp){var self = TMP_21.$$s || this;
+if (send_lhs_temp == null) send_lhs_temp = nil;
+          
+            send_lhs_temp = self.$s("js_tmp", send_lhs_temp);
+            return self.$compile_generic_send(send_lhs_temp, send_op, send_args);}, TMP_21.$$s = self, TMP_21.$$arity = 1, TMP_21));
+        }, TMP_OpAsgnNode_compile_csend_22.$$arity = 0);
+        Opal.defn(self, '$compile_generic_send', TMP_OpAsgnNode_compile_generic_send_23 = function $$compile_generic_send(send_lhs, send_op, send_args) {
+          var self = this, send_evaluates_to = nil, sexp = nil;
+
+          
+          send_evaluates_to = self.$op();
+          if (send_op['$==']("[]")) {
+            sexp = self.$s("op_asgn1", send_lhs, $send(self, 's', ["array"].concat(Opal.to_a(send_args))), send_evaluates_to, self.$rhs())
+            } else {
             
-              $a = [].concat(Opal.to_a(self.$lhs())), (lhs_recv = ($a[0] == null ? nil : $a[0])), (lhs_op = ($a[1] == null ? nil : $a[1])), (lhs_arg = ($a[2] == null ? nil : $a[2])), $a;
-              lhs_recv_asgn = self.$s("lvasgn", lhs_recv_tmp, lhs_recv);
-              new_lhs_recv = self.$s("lvar", lhs_recv_tmp);
-              self.$push(self.$stmt(lhs_recv_asgn), ",");
-              if (lhs_arg !== false && lhs_arg !== nil && lhs_arg != null) {
-                
-                lhs_arg_asgn = self.$s("lvasgn", lhs_arg_tmp, lhs_arg);
-                new_lhs_arg = self.$s("lvar", lhs_arg_tmp);
-                self.$push(self.$stmt(lhs_arg_asgn), ",");};
-              new_lhs = self.$lhs().$updated(nil, [new_lhs_recv, lhs_op, new_lhs_arg].$compact());
-              return (self.sexp = self.sexp.$updated(nil, [new_lhs, self.$op(), self.$rhs()]));}, TMP_18.$$s = self, TMP_18.$$arity = 1, TMP_18))}, TMP_17.$$s = self, TMP_17.$$arity = 1, TMP_17))
-        }, TMP_OpAsgnNode_compile_temporary_assignments_19.$$arity = 0);
-        Opal.defn(self, '$get_sexp', TMP_OpAsgnNode_get_sexp_20 = function $$get_sexp() {
-          var self = this, $case = nil;
+            send_op = $rb_plus(send_op.$to_s(), "=").$to_sym();
+            sexp = self.$s("op_asgn2", send_lhs, send_op, send_evaluates_to, self.$rhs());
+          };
+          return self.$push(self.$expr(sexp));
+        }, TMP_OpAsgnNode_compile_generic_send_23.$$arity = 3);
+        return (Opal.defn(self, '$compile_get_and_set', TMP_OpAsgnNode_compile_get_and_set_24 = function $$compile_get_and_set(lhs_updated_type) {
+          var self = this, get_sexp = nil, set_sexp = nil;
 
-          return (function() {$case = self.$lhs().$type();
-if ("lvasgn"['$===']($case)) {return self.$lhs().$updated("lvar")}else if ("ivasgn"['$===']($case)) {return self.$lhs().$updated("ivar")}else if ("casgn"['$===']($case)) {return self.$lhs().$updated("const")}else if ("cvasgn"['$===']($case)) {return self.$lhs().$updated("cvar")}else if ("gvasgn"['$===']($case)) {return self.$lhs().$updated("gvar")}else if ("send"['$===']($case)) {return self.$lhs()}else {return self.$raise(Opal.const_get($scopes, 'NotImplementedError', true, true))}})()
-        }, TMP_OpAsgnNode_get_sexp_20.$$arity = 0);
-        Opal.defn(self, '$get_and_update_sexp', TMP_OpAsgnNode_get_and_update_sexp_21 = function $$get_and_update_sexp() {
-          var self = this, $case = nil;
-
-          return (function() {$case = self.$lhs().$type();
-if ("lvasgn"['$===']($case) || "ivasgn"['$===']($case) || "casgn"['$===']($case) || "cvasgn"['$===']($case) || "gvasgn"['$===']($case) || "send"['$===']($case)) {return self.$s("send", self.$get_sexp(), self.$op(), self.$rhs())}else {return self.$raise(Opal.const_get($scopes, 'NotImplementedError', true, true))}})()
-        }, TMP_OpAsgnNode_get_and_update_sexp_21.$$arity = 0);
-        return (Opal.defn(self, '$set_sexp', TMP_OpAsgnNode_set_sexp_22 = function $$set_sexp() {
-          var $a, self = this, $case = nil, recvr = nil, meth = nil, rest = nil;
-
-          return (function() {$case = self.$lhs().$type();
-if ("lvasgn"['$===']($case) || "ivasgn"['$===']($case) || "casgn"['$===']($case) || "cvasgn"['$===']($case) || "gvasgn"['$===']($case)) {return self.$lhs().$updated(nil, $rb_plus(self.$lhs().$children(), [self.$get_and_update_sexp()]))}else if ("send"['$===']($case)) {
-          $a = [].concat(Opal.to_a(self.$lhs().$children())), (recvr = ($a[0] == null ? nil : $a[0])), (meth = ($a[1] == null ? nil : $a[1])), (rest = $slice.call($a, 2)), $a;
-          meth = $rb_plus(meth.$to_s(), "=").$to_sym();
-          return self.$lhs().$updated(nil, [recvr, meth].concat(Opal.to_a(rest)).concat([self.$get_and_update_sexp()]));}else { return nil }})()
-        }, TMP_OpAsgnNode_set_sexp_22.$$arity = 0), nil) && 'set_sexp';
+          
+          get_sexp = self.$lhs().$updated(lhs_updated_type);
+          set_sexp = self.$lhs().$updated(nil, $rb_plus(self.$lhs().$children(), [self.$s("send", get_sexp, self.$op(), self.$rhs())]));
+          return self.$push(self.$expr(set_sexp));
+        }, TMP_OpAsgnNode_compile_get_and_set_24.$$arity = 1), nil) && 'compile_get_and_set';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgn1Node(){};
         var self = $OpAsgn1Node = $klass($base, $super, 'OpAsgn1Node', $OpAsgn1Node);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgn1Node_first_arg_23, TMP_OpAsgn1Node_compile_24, TMP_OpAsgn1Node_compile_operator_27, TMP_OpAsgn1Node_compile_or_30, TMP_OpAsgn1Node_compile_and_33;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgn1Node_first_arg_25, TMP_OpAsgn1Node_compile_26, TMP_OpAsgn1Node_compile_operator_29, TMP_OpAsgn1Node_compile_or_32, TMP_OpAsgn1Node_compile_and_35;
 
         
         self.$handle("op_asgn1");
         self.$children("lhs", "args", "op", "rhs");
-        Opal.defn(self, '$first_arg', TMP_OpAsgn1Node_first_arg_23 = function $$first_arg() {
+        Opal.defn(self, '$first_arg', TMP_OpAsgn1Node_first_arg_25 = function $$first_arg() {
           var self = this;
 
           return self.$args().$children()['$[]'](0)
-        }, TMP_OpAsgn1Node_first_arg_23.$$arity = 0);
-        Opal.defn(self, '$compile', TMP_OpAsgn1Node_compile_24 = function $$compile() {
+        }, TMP_OpAsgn1Node_first_arg_25.$$arity = 0);
+        Opal.defn(self, '$compile', TMP_OpAsgn1Node_compile_26 = function $$compile() {
           var self = this, $case = nil;
 
           return (function() {$case = self.$op().$to_s();
 if ("||"['$===']($case)) {return self.$compile_or()}else if ("&&"['$===']($case)) {return self.$compile_and()}else {return self.$compile_operator()}})()
-        }, TMP_OpAsgn1Node_compile_24.$$arity = 0);
-        Opal.defn(self, '$compile_operator', TMP_OpAsgn1Node_compile_operator_27 = function $$compile_operator() {
-          var TMP_25, self = this;
+        }, TMP_OpAsgn1Node_compile_26.$$arity = 0);
+        Opal.defn(self, '$compile_operator', TMP_OpAsgn1Node_compile_operator_29 = function $$compile_operator() {
+          var TMP_27, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_25 = function(a){var self = TMP_25.$$s || this, TMP_26;
+          return $send(self, 'with_temp', [], (TMP_27 = function(a){var self = TMP_27.$$s || this, TMP_28;
 if (a == null) a = nil;
-          return $send(self, 'with_temp', [], (TMP_26 = function(r){var self = TMP_26.$$s || this, cur = nil, rhs = nil, call = nil;
+          return $send(self, 'with_temp', [], (TMP_28 = function(r){var self = TMP_28.$$s || this, cur = nil, rhs = nil, call = nil;
 if (r == null) r = nil;
             
               cur = self.$s("send", self.$s("js_tmp", r), "[]", self.$s("arglist", self.$s("js_tmp", a)));
               rhs = self.$s("send", cur, self.$op().$to_sym(), self.$s("arglist", self.$rhs()));
               call = self.$s("send", self.$s("js_tmp", r), "[]=", self.$s("arglist", self.$s("js_tmp", a), rhs));
               self.$push("" + "(" + (a) + " = ", self.$expr(self.$first_arg()), "" + ", " + (r) + " = ", self.$expr(self.$lhs()));
-              return self.$push(", ", self.$expr(call), ")");}, TMP_26.$$s = self, TMP_26.$$arity = 1, TMP_26))}, TMP_25.$$s = self, TMP_25.$$arity = 1, TMP_25))
-        }, TMP_OpAsgn1Node_compile_operator_27.$$arity = 0);
-        Opal.defn(self, '$compile_or', TMP_OpAsgn1Node_compile_or_30 = function $$compile_or() {
-          var TMP_28, self = this;
+              return self.$push(", ", self.$expr(call), ")");}, TMP_28.$$s = self, TMP_28.$$arity = 1, TMP_28))}, TMP_27.$$s = self, TMP_27.$$arity = 1, TMP_27))
+        }, TMP_OpAsgn1Node_compile_operator_29.$$arity = 0);
+        Opal.defn(self, '$compile_or', TMP_OpAsgn1Node_compile_or_32 = function $$compile_or() {
+          var TMP_30, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_28 = function(a){var self = TMP_28.$$s || this, TMP_29;
+          return $send(self, 'with_temp', [], (TMP_30 = function(a){var self = TMP_30.$$s || this, TMP_31;
 if (a == null) a = nil;
-          return $send(self, 'with_temp', [], (TMP_29 = function(r){var self = TMP_29.$$s || this, aref = nil, aset = nil, orop = nil;
+          return $send(self, 'with_temp', [], (TMP_31 = function(r){var self = TMP_31.$$s || this, aref = nil, aset = nil, orop = nil;
 if (r == null) r = nil;
             
               aref = self.$s("send", self.$s("js_tmp", r), "[]", self.$s("arglist", self.$s("js_tmp", a)));
               aset = self.$s("send", self.$s("js_tmp", r), "[]=", self.$s("arglist", self.$s("js_tmp", a), self.$rhs()));
               orop = self.$s("or", aref, aset);
               self.$push("" + "(" + (a) + " = ", self.$expr(self.$first_arg()), "" + ", " + (r) + " = ", self.$expr(self.$lhs()));
-              return self.$push(", ", self.$expr(orop), ")");}, TMP_29.$$s = self, TMP_29.$$arity = 1, TMP_29))}, TMP_28.$$s = self, TMP_28.$$arity = 1, TMP_28))
-        }, TMP_OpAsgn1Node_compile_or_30.$$arity = 0);
-        return (Opal.defn(self, '$compile_and', TMP_OpAsgn1Node_compile_and_33 = function $$compile_and() {
-          var TMP_31, self = this;
+              return self.$push(", ", self.$expr(orop), ")");}, TMP_31.$$s = self, TMP_31.$$arity = 1, TMP_31))}, TMP_30.$$s = self, TMP_30.$$arity = 1, TMP_30))
+        }, TMP_OpAsgn1Node_compile_or_32.$$arity = 0);
+        return (Opal.defn(self, '$compile_and', TMP_OpAsgn1Node_compile_and_35 = function $$compile_and() {
+          var TMP_33, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_31 = function(a){var self = TMP_31.$$s || this, TMP_32;
+          return $send(self, 'with_temp', [], (TMP_33 = function(a){var self = TMP_33.$$s || this, TMP_34;
 if (a == null) a = nil;
-          return $send(self, 'with_temp', [], (TMP_32 = function(r){var self = TMP_32.$$s || this, aref = nil, aset = nil, andop = nil;
+          return $send(self, 'with_temp', [], (TMP_34 = function(r){var self = TMP_34.$$s || this, aref = nil, aset = nil, andop = nil;
 if (r == null) r = nil;
             
               aref = self.$s("send", self.$s("js_tmp", r), "[]", self.$s("arglist", self.$s("js_tmp", a)));
               aset = self.$s("send", self.$s("js_tmp", r), "[]=", self.$s("arglist", self.$s("js_tmp", a), self.$rhs()));
               andop = self.$s("and", aref, aset);
               self.$push("" + "(" + (a) + " = ", self.$expr(self.$first_arg()), "" + ", " + (r) + " = ", self.$expr(self.$lhs()));
-              return self.$push(", ", self.$expr(andop), ")");}, TMP_32.$$s = self, TMP_32.$$arity = 1, TMP_32))}, TMP_31.$$s = self, TMP_31.$$arity = 1, TMP_31))
-        }, TMP_OpAsgn1Node_compile_and_33.$$arity = 0), nil) && 'compile_and';
+              return self.$push(", ", self.$expr(andop), ")");}, TMP_34.$$s = self, TMP_34.$$arity = 1, TMP_34))}, TMP_33.$$s = self, TMP_33.$$arity = 1, TMP_33))
+        }, TMP_OpAsgn1Node_compile_and_35.$$arity = 0), nil) && 'compile_and';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
       (function($base, $super, $visibility_scopes) {
         function $OpAsgn2Node(){};
         var self = $OpAsgn2Node = $klass($base, $super, 'OpAsgn2Node', $OpAsgn2Node);
 
-        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgn2Node_meth_34, TMP_OpAsgn2Node_compile_35, TMP_OpAsgn2Node_compile_or_37, TMP_OpAsgn2Node_compile_and_39, TMP_OpAsgn2Node_compile_operator_41;
+        var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_OpAsgn2Node_meth_36, TMP_OpAsgn2Node_compile_37, TMP_OpAsgn2Node_compile_or_39, TMP_OpAsgn2Node_compile_and_41, TMP_OpAsgn2Node_compile_operator_43;
 
         
         self.$handle("op_asgn2");
         self.$children("lhs", "mid", "op", "rhs");
-        Opal.defn(self, '$meth', TMP_OpAsgn2Node_meth_34 = function $$meth() {
+        Opal.defn(self, '$meth', TMP_OpAsgn2Node_meth_36 = function $$meth() {
           var self = this;
 
           return self.$mid().$to_s()['$[]']($range(0, -2, false))
-        }, TMP_OpAsgn2Node_meth_34.$$arity = 0);
-        Opal.defn(self, '$compile', TMP_OpAsgn2Node_compile_35 = function $$compile() {
+        }, TMP_OpAsgn2Node_meth_36.$$arity = 0);
+        Opal.defn(self, '$compile', TMP_OpAsgn2Node_compile_37 = function $$compile() {
           var self = this, $case = nil;
 
           return (function() {$case = self.$op().$to_s();
 if ("||"['$===']($case)) {return self.$compile_or()}else if ("&&"['$===']($case)) {return self.$compile_and()}else {return self.$compile_operator()}})()
-        }, TMP_OpAsgn2Node_compile_35.$$arity = 0);
-        Opal.defn(self, '$compile_or', TMP_OpAsgn2Node_compile_or_37 = function $$compile_or() {
-          var TMP_36, self = this;
+        }, TMP_OpAsgn2Node_compile_37.$$arity = 0);
+        Opal.defn(self, '$compile_or', TMP_OpAsgn2Node_compile_or_39 = function $$compile_or() {
+          var TMP_38, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_36 = function(tmp){var self = TMP_36.$$s || this, getr = nil, asgn = nil, orop = nil;
+          return $send(self, 'with_temp', [], (TMP_38 = function(tmp){var self = TMP_38.$$s || this, getr = nil, asgn = nil, orop = nil;
 if (tmp == null) tmp = nil;
           
             getr = self.$s("send", self.$s("js_tmp", tmp), self.$meth(), self.$s("arglist"));
             asgn = self.$s("send", self.$s("js_tmp", tmp), self.$mid(), self.$s("arglist", self.$rhs()));
             orop = self.$s("or", getr, asgn);
-            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(orop), ")");}, TMP_36.$$s = self, TMP_36.$$arity = 1, TMP_36))
-        }, TMP_OpAsgn2Node_compile_or_37.$$arity = 0);
-        Opal.defn(self, '$compile_and', TMP_OpAsgn2Node_compile_and_39 = function $$compile_and() {
-          var TMP_38, self = this;
+            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(orop), ")");}, TMP_38.$$s = self, TMP_38.$$arity = 1, TMP_38))
+        }, TMP_OpAsgn2Node_compile_or_39.$$arity = 0);
+        Opal.defn(self, '$compile_and', TMP_OpAsgn2Node_compile_and_41 = function $$compile_and() {
+          var TMP_40, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_38 = function(tmp){var self = TMP_38.$$s || this, getr = nil, asgn = nil, andop = nil;
+          return $send(self, 'with_temp', [], (TMP_40 = function(tmp){var self = TMP_40.$$s || this, getr = nil, asgn = nil, andop = nil;
 if (tmp == null) tmp = nil;
           
             getr = self.$s("send", self.$s("js_tmp", tmp), self.$meth(), self.$s("arglist"));
             asgn = self.$s("send", self.$s("js_tmp", tmp), self.$mid(), self.$s("arglist", self.$rhs()));
             andop = self.$s("and", getr, asgn);
-            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(andop), ")");}, TMP_38.$$s = self, TMP_38.$$arity = 1, TMP_38))
-        }, TMP_OpAsgn2Node_compile_and_39.$$arity = 0);
-        return (Opal.defn(self, '$compile_operator', TMP_OpAsgn2Node_compile_operator_41 = function $$compile_operator() {
-          var TMP_40, self = this;
+            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(andop), ")");}, TMP_40.$$s = self, TMP_40.$$arity = 1, TMP_40))
+        }, TMP_OpAsgn2Node_compile_and_41.$$arity = 0);
+        return (Opal.defn(self, '$compile_operator', TMP_OpAsgn2Node_compile_operator_43 = function $$compile_operator() {
+          var TMP_42, self = this;
 
-          return $send(self, 'with_temp', [], (TMP_40 = function(tmp){var self = TMP_40.$$s || this, getr = nil, oper = nil, asgn = nil;
+          return $send(self, 'with_temp', [], (TMP_42 = function(tmp){var self = TMP_42.$$s || this, getr = nil, oper = nil, asgn = nil;
 if (tmp == null) tmp = nil;
           
             getr = self.$s("send", self.$s("js_tmp", tmp), self.$meth(), self.$s("arglist"));
             oper = self.$s("send", getr, self.$op(), self.$s("arglist", self.$rhs()));
             asgn = self.$s("send", self.$s("js_tmp", tmp), self.$mid(), self.$s("arglist", oper));
-            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(asgn), ")");}, TMP_40.$$s = self, TMP_40.$$arity = 1, TMP_40))
-        }, TMP_OpAsgn2Node_compile_operator_41.$$arity = 0), nil) && 'compile_operator';
+            return self.$push("" + "(" + (tmp) + " = ", self.$expr(self.$lhs()), ", ", self.$expr(asgn), ")");}, TMP_42.$$s = self, TMP_42.$$arity = 1, TMP_42))
+        }, TMP_OpAsgn2Node_compile_operator_43.$$arity = 0), nil) && 'compile_operator';
       })($scope.base, Opal.const_get($scopes, 'Base', true, true), $scopes);
     })($scope.base, $scopes)
   })($scope.base, $scopes);
@@ -20954,13 +20986,14 @@ if (i == null) i = nil;
 
           
           while ((($b = true) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          
-          tmp = "" + "$" + (self.unique);
-          self.unique = self.unique.$succ();
-          if ((($b = self['$has_local?'](tmp)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            } else {
-            break;
-          };};
+            
+            tmp = "" + "$" + (self.unique);
+            self.unique = self.unique.$succ();
+            if ((($b = self['$has_local?'](tmp)) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              } else {
+              break;
+            };
+          };
           return tmp;
         }, TMP_ScopeNode_next_temp_27.$$arity = 0);
         Opal.defn(self, '$queue_temp', TMP_ScopeNode_queue_temp_28 = function $$queue_temp(name) {
@@ -21023,8 +21056,9 @@ if (i == null) i = nil;
           
           scope = self;
           while ((($b = (scope = scope.$parent())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-          if ((($b = scope['$def?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            return scope}};
+            if ((($b = scope['$def?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              return scope}
+          };
           return nil;
         }, TMP_ScopeNode_find_parent_def_35.$$arity = 0);
         Opal.defn(self, '$get_super_chain', TMP_ScopeNode_get_super_chain_36 = function $$get_super_chain() {
@@ -21033,19 +21067,20 @@ if (i == null) i = nil;
           
           $a = [[], self, "null", "null"], (chain = $a[0]), (scope = $a[1]), (defn = $a[2]), (mid = $a[3]), $a;
           while (scope !== false && scope !== nil && scope != null) {
-          if (scope.$type()['$==']("iter")) {
-            
-            chain['$<<'](scope['$identify!']());
-            if ((($b = scope.$parent()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-              scope = scope.$parent()};
-          } else if ((($b = ["def", "defs"]['$include?'](scope.$type())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            
-            defn = scope['$identify!']();
-            mid = "" + "'" + (scope.$mid()) + "'";
-            break;;
-            } else {
-            break;
-          }};
+            if (scope.$type()['$==']("iter")) {
+              
+              chain['$<<'](scope['$identify!']());
+              if ((($b = scope.$parent()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+                scope = scope.$parent()};
+            } else if ((($b = ["def", "defs"]['$include?'](scope.$type())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              
+              defn = scope['$identify!']();
+              mid = "" + "'" + (scope.$mid()) + "'";
+              break;;
+              } else {
+              break;
+            }
+          };
           return [chain, defn, mid];
         }, TMP_ScopeNode_get_super_chain_36.$$arity = 0);
         Opal.defn(self, '$uses_block?', TMP_ScopeNode_uses_block$q_37 = function() {
@@ -22525,7 +22560,8 @@ if (arg == null) arg = nil;
             
             parent_scope = self.$scope();
             while ((($b = ((($c = ((($d = parent_scope['$top?']()) !== false && $d !== nil && $d != null) ? $d : parent_scope['$def?']())) !== false && $c !== nil && $c != null) ? $c : parent_scope['$class_scope?']())['$!']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            parent_scope = parent_scope.$parent()};
+              parent_scope = parent_scope.$parent()
+            };
             context = (function() {if ((($a = parent_scope['$top?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
               return "'<main>'"
             } else if ((($a = parent_scope['$def?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
@@ -23489,10 +23525,11 @@ Opal.modules["opal/nodes/yield"] = function(Opal) {
           
           working = self.$scope();
           while (working !== false && working !== nil && working != null) {
-          
-          if ((($b = ((($c = working.$block_name()) !== false && $c !== nil && $c != null) ? $c : working['$def?']())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-            break;};
-          working = working.$parent();};
+            
+            if ((($b = ((($c = working.$block_name()) !== false && $c !== nil && $c != null) ? $c : working['$def?']())) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
+              break;};
+            working = working.$parent();
+          };
           return working;
         }, TMP_BaseYieldNode_find_yielding_scope_2.$$arity = 0);
         Opal.defn(self, '$yields_single_arg?', TMP_BaseYieldNode_yields_single_arg$q_3 = function(children) {
@@ -24438,7 +24475,7 @@ Opal.modules["opal/nodes/while"] = function(Opal) {
 if (redo_var == null) redo_var = nil;
           
             test_code = self.$js_truthy(self.$test());
-            return $send(self.$compiler(), 'in_while', [], (TMP_2 = function(){var self = TMP_2.$$s || this, $a, $writer = nil, body_code = nil;
+            $send(self.$compiler(), 'in_while', [], (TMP_2 = function(){var self = TMP_2.$$s || this, $a, $writer = nil, body_code = nil;
 
             
               if ((($a = self['$wrap_in_closure?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
@@ -24461,7 +24498,8 @@ if (redo_var == null) redo_var = nil;
               };
               if ((($a = self['$uses_redo?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
                 self.$push("" + (redo_var) + " = false;")};
-              return self.$line(body_code, "}");}, TMP_2.$$s = self, TMP_2.$$arity = 0, TMP_2));}, TMP_1.$$s = self, TMP_1.$$arity = 1, TMP_1));
+              return self.$line(body_code);}, TMP_2.$$s = self, TMP_2.$$arity = 0, TMP_2));
+            return self.$line("}");}, TMP_1.$$s = self, TMP_1.$$arity = 1, TMP_1));
           if ((($a = self['$wrap_in_closure?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
             return self.$wrap("(function() {", "; return nil; })()")
             } else {
@@ -25392,7 +25430,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
   }
   var self = Opal.top, $scope = Opal, $scopes = [Opal], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $hash2 = Opal.hash2, $klass = Opal.klass, $send = Opal.send;
 
-  Opal.add_stubs(['$require', '$compile', '$new', '$[]', '$define_method', '$fetch', '$!', '$include?', '$raise', '$+', '$inspect', '$compiler_option', '$attr_reader', '$attr_accessor', '$parse', '$flatten', '$process', '$join', '$map', '$to_proc', '$file', '$source=', '$-', '$default_parser', '$parse_comments?', '$parse_with_comments', '$associate_locations', '$message', '$backtrace', '$s', '$extract_eof_content', '$warn', '$to_s', '$empty?', '$gsub', '$<<', '$helpers', '$new_temp', '$queue_temp', '$push_while', '$pop_while', '$in_while?', '$==', '$fragment', '$scope', '$handlers', '$type', '$compile_to_fragments', '$returns', '$===', '$updated', '$any?', '$children', '$select', '$end_with?', '$loc', '$uses_block!', '$block_name', '$find_parent_def', '$match']);
+  Opal.add_stubs(['$require', '$compile', '$new', '$[]', '$define_method', '$fetch', '$!', '$include?', '$raise', '$+', '$inspect', '$compiler_option', '$attr_reader', '$attr_accessor', '$parse', '$flatten', '$process', '$join', '$map', '$to_proc', '$file', '$source=', '$-', '$default_parser', '$parse_comments?', '$parse_with_comments', '$associate_locations', '$message', '$backtrace', '$s', '$extract_eof_content', '$warn', '$to_s', '$empty?', '$gsub', '$<<', '$helpers', '$new_temp', '$queue_temp', '$push_while', '$indent', '$pop_while', '$in_while?', '$==', '$fragment', '$scope', '$handlers', '$type', '$compile_to_fragments', '$returns', '$===', '$updated', '$any?', '$children', '$select', '$end_with?', '$loc', '$uses_block!', '$block_name', '$find_parent_def', '$match']);
   
   self.$require("set");
   self.$require("opal/parser");
@@ -25416,7 +25454,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
       function $Compiler(){};
       var self = $Compiler = $klass($base, $super, 'Compiler', $Compiler);
 
-      var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_Compiler_compiler_option_4, TMP_Compiler_initialize_5, TMP_Compiler_compile_6, TMP_Compiler_parse_7, TMP_Compiler_source_map_8, TMP_Compiler_helpers_9, TMP_Compiler_operator_helpers_10, TMP_Compiler_method_calls_11, TMP_Compiler_error_12, TMP_Compiler_warning_13, TMP_Compiler_parser_indent_14, TMP_Compiler_s_15, TMP_Compiler_fragment_16, TMP_Compiler_unique_temp_17, TMP_Compiler_helper_18, TMP_Compiler_indent_19, TMP_Compiler_with_temp_20, TMP_Compiler_in_while_21, TMP_Compiler_in_ensure_22, TMP_Compiler_in_ensure$q_23, TMP_Compiler_in_case_24, TMP_Compiler_in_while$q_25, TMP_Compiler_process_26, TMP_Compiler_handlers_27, TMP_Compiler_requires_28, TMP_Compiler_required_trees_29, TMP_Compiler_returns_34, TMP_Compiler_handle_block_given_call_35, TMP_Compiler_extract_eof_content_36;
+      var def = self.$$proto, $scope = self.$$scope, $scopes = $visibility_scopes.slice().concat($scope), TMP_Compiler_compiler_option_4, TMP_Compiler_initialize_5, TMP_Compiler_compile_6, TMP_Compiler_parse_7, TMP_Compiler_source_map_8, TMP_Compiler_helpers_9, TMP_Compiler_operator_helpers_10, TMP_Compiler_method_calls_11, TMP_Compiler_error_12, TMP_Compiler_warning_13, TMP_Compiler_parser_indent_14, TMP_Compiler_s_15, TMP_Compiler_fragment_16, TMP_Compiler_unique_temp_17, TMP_Compiler_helper_18, TMP_Compiler_indent_19, TMP_Compiler_with_temp_20, TMP_Compiler_in_while_21, TMP_Compiler_in_ensure_23, TMP_Compiler_in_ensure$q_24, TMP_Compiler_in_case_25, TMP_Compiler_in_while$q_26, TMP_Compiler_process_27, TMP_Compiler_handlers_28, TMP_Compiler_requires_29, TMP_Compiler_required_trees_30, TMP_Compiler_returns_35, TMP_Compiler_handle_block_given_call_36, TMP_Compiler_extract_eof_content_37;
 
       def.sexp = def.fragments = def.source = def.parser = def.helpers = def.operator_helpers = def.method_calls = def.indent = def.unique = def.scope = def.in_ensure = def.case_stmt = def.handlers = def.requires = def.required_trees = nil;
       
@@ -25612,7 +25650,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
         return res;
       }, TMP_Compiler_with_temp_20.$$arity = 0);
       Opal.defn(self, '$in_while', TMP_Compiler_in_while_21 = function $$in_while() {
-        var self = this, $iter = TMP_Compiler_in_while_21.$$p, $yield = $iter || nil, result = nil;
+        var TMP_22, self = this, $iter = TMP_Compiler_in_while_21.$$p, $yield = $iter || nil, result = nil;
 
         if ($iter) TMP_Compiler_in_while_21.$$p = null;
         
@@ -25621,14 +25659,16 @@ Opal.modules["opal/compiler"] = function(Opal) {
           return nil
         };
         self.while_loop = self.scope.$push_while();
-        result = Opal.yieldX($yield, []);
+        result = $send(self, 'indent', [], (TMP_22 = function(){var self = TMP_22.$$s || this;
+
+        return Opal.yieldX($yield, []);}, TMP_22.$$s = self, TMP_22.$$arity = 0, TMP_22));
         self.scope.$pop_while();
         return result;
       }, TMP_Compiler_in_while_21.$$arity = 0);
-      Opal.defn(self, '$in_ensure', TMP_Compiler_in_ensure_22 = function $$in_ensure() {
-        var self = this, $iter = TMP_Compiler_in_ensure_22.$$p, $yield = $iter || nil, result = nil;
+      Opal.defn(self, '$in_ensure', TMP_Compiler_in_ensure_23 = function $$in_ensure() {
+        var self = this, $iter = TMP_Compiler_in_ensure_23.$$p, $yield = $iter || nil, result = nil;
 
-        if ($iter) TMP_Compiler_in_ensure_22.$$p = null;
+        if ($iter) TMP_Compiler_in_ensure_23.$$p = null;
         
         if (($yield !== nil)) {
           } else {
@@ -25638,16 +25678,16 @@ Opal.modules["opal/compiler"] = function(Opal) {
         result = Opal.yieldX($yield, []);
         self.in_ensure = false;
         return result;
-      }, TMP_Compiler_in_ensure_22.$$arity = 0);
-      Opal.defn(self, '$in_ensure?', TMP_Compiler_in_ensure$q_23 = function() {
+      }, TMP_Compiler_in_ensure_23.$$arity = 0);
+      Opal.defn(self, '$in_ensure?', TMP_Compiler_in_ensure$q_24 = function() {
         var self = this;
 
         return self.in_ensure['$!']()['$!']()
-      }, TMP_Compiler_in_ensure$q_23.$$arity = 0);
-      Opal.defn(self, '$in_case', TMP_Compiler_in_case_24 = function $$in_case() {
-        var self = this, $iter = TMP_Compiler_in_case_24.$$p, $yield = $iter || nil, old = nil;
+      }, TMP_Compiler_in_ensure$q_24.$$arity = 0);
+      Opal.defn(self, '$in_case', TMP_Compiler_in_case_25 = function $$in_case() {
+        var self = this, $iter = TMP_Compiler_in_case_25.$$p, $yield = $iter || nil, old = nil;
 
-        if ($iter) TMP_Compiler_in_case_24.$$p = null;
+        if ($iter) TMP_Compiler_in_case_25.$$p = null;
         
         if (($yield !== nil)) {
           } else {
@@ -25657,13 +25697,13 @@ Opal.modules["opal/compiler"] = function(Opal) {
         self.case_stmt = $hash2([], {});
         Opal.yieldX($yield, []);
         return (self.case_stmt = old);
-      }, TMP_Compiler_in_case_24.$$arity = 0);
-      Opal.defn(self, '$in_while?', TMP_Compiler_in_while$q_25 = function() {
+      }, TMP_Compiler_in_case_25.$$arity = 0);
+      Opal.defn(self, '$in_while?', TMP_Compiler_in_while$q_26 = function() {
         var self = this;
 
         return self.scope['$in_while?']()
-      }, TMP_Compiler_in_while$q_25.$$arity = 0);
-      Opal.defn(self, '$process', TMP_Compiler_process_26 = function $$process(sexp, level) {
+      }, TMP_Compiler_in_while$q_26.$$arity = 0);
+      Opal.defn(self, '$process', TMP_Compiler_process_27 = function $$process(sexp, level) {
         var $a, self = this, handler = nil;
 
         if (level == null) {
@@ -25677,24 +25717,24 @@ Opal.modules["opal/compiler"] = function(Opal) {
           } else {
           return self.$raise("" + "Unsupported sexp: " + (sexp.$type()))
         };
-      }, TMP_Compiler_process_26.$$arity = -2);
-      Opal.defn(self, '$handlers', TMP_Compiler_handlers_27 = function $$handlers() {
+      }, TMP_Compiler_process_27.$$arity = -2);
+      Opal.defn(self, '$handlers', TMP_Compiler_handlers_28 = function $$handlers() {
         var $a, self = this;
 
         return ((($a = self.handlers) !== false && $a !== nil && $a != null) ? $a : (self.handlers = Opal.const_get([Opal.const_get([Opal.const_get($scopes, 'Opal', true, true).$$scope], 'Nodes', true, true).$$scope], 'Base', true, true).$handlers()))
-      }, TMP_Compiler_handlers_27.$$arity = 0);
-      Opal.defn(self, '$requires', TMP_Compiler_requires_28 = function $$requires() {
+      }, TMP_Compiler_handlers_28.$$arity = 0);
+      Opal.defn(self, '$requires', TMP_Compiler_requires_29 = function $$requires() {
         var $a, self = this;
 
         return ((($a = self.requires) !== false && $a !== nil && $a != null) ? $a : (self.requires = []))
-      }, TMP_Compiler_requires_28.$$arity = 0);
-      Opal.defn(self, '$required_trees', TMP_Compiler_required_trees_29 = function $$required_trees() {
+      }, TMP_Compiler_requires_29.$$arity = 0);
+      Opal.defn(self, '$required_trees', TMP_Compiler_required_trees_30 = function $$required_trees() {
         var $a, self = this;
 
         return ((($a = self.required_trees) !== false && $a !== nil && $a != null) ? $a : (self.required_trees = []))
-      }, TMP_Compiler_required_trees_29.$$arity = 0);
-      Opal.defn(self, '$returns', TMP_Compiler_returns_34 = function $$returns(sexp) {
-        var $a, $b, TMP_30, TMP_31, TMP_32, TMP_33, self = this, $case = nil, when_sexp = nil, then_sexp = nil, body_sexp = nil, resbodies = nil, else_sexp = nil, klass = nil, lvar = nil, body = nil, rescue_sexp = nil, ensure_body = nil, rest = nil, last = nil, strs = nil, multiline = nil, first_child = nil, rest_children = nil, old_value = nil, cond = nil, true_body = nil, false_body = nil;
+      }, TMP_Compiler_required_trees_30.$$arity = 0);
+      Opal.defn(self, '$returns', TMP_Compiler_returns_35 = function $$returns(sexp) {
+        var $a, $b, TMP_31, TMP_32, TMP_33, TMP_34, self = this, $case = nil, when_sexp = nil, then_sexp = nil, body_sexp = nil, resbodies = nil, else_sexp = nil, klass = nil, lvar = nil, body = nil, rescue_sexp = nil, ensure_body = nil, rest = nil, last = nil, strs = nil, multiline = nil, first_child = nil, rest_children = nil, old_value = nil, cond = nil, true_body = nil, false_body = nil;
 
         
         if (sexp !== false && sexp !== nil && sexp != null) {
@@ -25706,9 +25746,9 @@ if ("undef"['$===']($case)) {return self.$returns(self.$s("begin", sexp, self.$s
         $a = [].concat(Opal.to_a(sexp)), $b = $a.length - 1, $b = ($b < 0) ? 0 : $b, (when_sexp = $slice.call($a, 0, $b)), (then_sexp = ($a[$b] == null ? nil : $a[$b])), $a;
         return sexp.$updated(nil, [].concat(Opal.to_a(when_sexp)).concat([self.$returns(then_sexp)]));}else if ("rescue"['$===']($case)) {
         $a = [].concat(Opal.to_a(sexp)), (body_sexp = ($a[0] == null ? nil : $a[0])), $b = $a.length - 1, $b = ($b < 1) ? 1 : $b, (resbodies = $slice.call($a, 1, $b)), (else_sexp = ($a[$b] == null ? nil : $a[$b])), $a;
-        resbodies = $send(resbodies, 'map', [], (TMP_30 = function(resbody){var self = TMP_30.$$s || this;
+        resbodies = $send(resbodies, 'map', [], (TMP_31 = function(resbody){var self = TMP_31.$$s || this;
 if (resbody == null) resbody = nil;
-        return self.$returns(resbody)}, TMP_30.$$s = self, TMP_30.$$arity = 1, TMP_30));
+        return self.$returns(resbody)}, TMP_31.$$s = self, TMP_31.$$arity = 1, TMP_31));
         if (else_sexp !== false && else_sexp !== nil && else_sexp != null) {
           else_sexp = self.$returns(else_sexp)};
         return sexp.$updated(nil, [self.$returns(body_sexp)].concat(Opal.to_a(resbodies)).concat([else_sexp]));}else if ("resbody"['$===']($case)) {
@@ -25720,14 +25760,14 @@ if (resbody == null) resbody = nil;
         $a = [].concat(Opal.to_a(sexp)), $b = $a.length - 1, $b = ($b < 0) ? 0 : $b, (rest = $slice.call($a, 0, $b)), (last = ($a[$b] == null ? nil : $a[$b])), $a;
         return sexp.$updated(nil, [].concat(Opal.to_a(rest)).concat([self.$returns(last)]));}else if ("while"['$===']($case) || "until"['$===']($case) || "while_post"['$===']($case) || "until_post"['$===']($case)) {return sexp}else if ("return"['$===']($case) || "js_return"['$===']($case) || "returnable_yield"['$===']($case)) {return sexp}else if ("xstr"['$===']($case)) {if ((($a = sexp.$children()['$any?']()) !== nil && $a != null && (!$a.$$is_boolean || $a == true))) {
           
-          strs = $send($send(sexp.$children(), 'select', [], (TMP_31 = function(child){var self = TMP_31.$$s || this;
+          strs = $send($send(sexp.$children(), 'select', [], (TMP_32 = function(child){var self = TMP_32.$$s || this;
 if (child == null) child = nil;
-          return child.$type()['$==']("str")}, TMP_31.$$s = self, TMP_31.$$arity = 1, TMP_31)), 'map', [], (TMP_32 = function(child){var self = TMP_32.$$s || this;
+          return child.$type()['$==']("str")}, TMP_32.$$s = self, TMP_32.$$arity = 1, TMP_32)), 'map', [], (TMP_33 = function(child){var self = TMP_33.$$s || this;
 if (child == null) child = nil;
-          return child.$children()['$[]'](0)}, TMP_32.$$s = self, TMP_32.$$arity = 1, TMP_32));
-          multiline = $send(strs, 'any?', [], (TMP_33 = function(str){var self = TMP_33.$$s || this;
+          return child.$children()['$[]'](0)}, TMP_33.$$s = self, TMP_33.$$arity = 1, TMP_33));
+          multiline = $send(strs, 'any?', [], (TMP_34 = function(str){var self = TMP_34.$$s || this;
 if (str == null) str = nil;
-          return str['$end_with?'](";\n")}, TMP_33.$$s = self, TMP_33.$$arity = 1, TMP_33));
+          return str['$end_with?'](";\n")}, TMP_34.$$s = self, TMP_34.$$arity = 1, TMP_34));
           $a = [].concat(Opal.to_a(sexp)), (first_child = ($a[0] == null ? nil : $a[0])), (rest_children = $slice.call($a, 1)), $a;
           if (multiline !== false && multiline !== nil && multiline != null) {
             return sexp
@@ -25749,8 +25789,8 @@ if (str == null) str = nil;
         }}else if ("if"['$===']($case)) {
         $a = [].concat(Opal.to_a(sexp)), (cond = ($a[0] == null ? nil : $a[0])), (true_body = ($a[1] == null ? nil : $a[1])), (false_body = ($a[2] == null ? nil : $a[2])), $a;
         return sexp.$updated(nil, [cond, self.$returns(true_body), self.$returns(false_body)]);}else {return self.$s("js_return", sexp).$updated(nil, nil, $hash2(["location"], {"location": sexp.$loc()}))}})();
-      }, TMP_Compiler_returns_34.$$arity = 1);
-      Opal.defn(self, '$handle_block_given_call', TMP_Compiler_handle_block_given_call_35 = function $$handle_block_given_call(sexp) {
+      }, TMP_Compiler_returns_35.$$arity = 1);
+      Opal.defn(self, '$handle_block_given_call', TMP_Compiler_handle_block_given_call_36 = function $$handle_block_given_call(sexp) {
         var $a, $b, self = this, scope = nil;
 
         
@@ -25762,14 +25802,14 @@ if (str == null) str = nil;
           } else {
           return self.$fragment("false", scope, sexp)
         };
-      }, TMP_Compiler_handle_block_given_call_35.$$arity = 1);
-      return (Opal.defn(self, '$extract_eof_content', TMP_Compiler_extract_eof_content_36 = function $$extract_eof_content() {
+      }, TMP_Compiler_handle_block_given_call_36.$$arity = 1);
+      return (Opal.defn(self, '$extract_eof_content', TMP_Compiler_extract_eof_content_37 = function $$extract_eof_content() {
         var $a, self = this, matches = nil;
 
         
         matches = self.source.$match(/\n__END__\n?([\w\s]*)/);
         return (($a = matches !== false && matches !== nil && matches != null) ? matches['$[]'](1) : matches);
-      }, TMP_Compiler_extract_eof_content_36.$$arity = 0), nil) && 'extract_eof_content';
+      }, TMP_Compiler_extract_eof_content_37.$$arity = 0), nil) && 'extract_eof_content';
     })($scope.base, null, $scopes);
   })($scope.base, $scopes);
 };
@@ -26401,28 +26441,30 @@ if (n == null) n = nil;
         result = [];
         chars = str.$split("");
         while ((($b = chars['$any?']()) !== nil && $b != null && (!$b.$$is_boolean || $b == true))) {
-        
-        vlq = 0;
-        shift = 0;
-        continuation = true;
-        while (continuation !== false && continuation !== nil && continuation != null) {
-        
-        char$ = chars.$shift();
-        if (char$ !== false && char$ !== nil && char$ != null) {
-          } else {
-          self.$raise(Opal.const_get($scopes, 'ArgumentError', true, true))
+          
+          vlq = 0;
+          shift = 0;
+          continuation = true;
+          while (continuation !== false && continuation !== nil && continuation != null) {
+            
+            char$ = chars.$shift();
+            if (char$ !== false && char$ !== nil && char$ != null) {
+              } else {
+              self.$raise(Opal.const_get($scopes, 'ArgumentError', true, true))
+            };
+            digit = Opal.const_get($scopes, 'BASE64_VALUES', true, true)['$[]'](char$);
+            if (digit['$&'](Opal.const_get($scopes, 'VLQ_CONTINUATION_BIT', true, true))['$=='](0)) {
+              continuation = false};
+            (digit = digit['$&'](Opal.const_get($scopes, 'VLQ_BASE_MASK', true, true)));
+            (vlq = $rb_plus(vlq, digit['$<<'](shift)));
+            (shift = $rb_plus(shift, Opal.const_get($scopes, 'VLQ_BASE_SHIFT', true, true)));
+          };
+          result['$<<']((function() {if (vlq['$&'](1)['$=='](1)) {
+            return vlq['$>>'](1)['$-@']()
+            } else {
+            return vlq['$>>'](1)
+          }; return nil; })());
         };
-        digit = Opal.const_get($scopes, 'BASE64_VALUES', true, true)['$[]'](char$);
-        if (digit['$&'](Opal.const_get($scopes, 'VLQ_CONTINUATION_BIT', true, true))['$=='](0)) {
-          continuation = false};
-        (digit = digit['$&'](Opal.const_get($scopes, 'VLQ_BASE_MASK', true, true)));
-        (vlq = $rb_plus(vlq, digit['$<<'](shift)));
-        (shift = $rb_plus(shift, Opal.const_get($scopes, 'VLQ_BASE_SHIFT', true, true)));};
-        result['$<<']((function() {if (vlq['$&'](1)['$=='](1)) {
-          return vlq['$>>'](1)['$-@']()
-          } else {
-          return vlq['$>>'](1)
-        }; return nil; })());};
         return result;
       }, TMP_VLQ_decode_5.$$arity = 1);
       Opal.defs(self, '$encode_mappings', TMP_VLQ_encode_mappings_8 = function $$encode_mappings(ary) {
