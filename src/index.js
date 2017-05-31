@@ -4,4 +4,4 @@ require('./opal-builder.js');
 Opal.require('nodejs');
 Opal.require('opal-builder');
 
-module.exports.Builder = ((Opal.get('Opal')).$$scope.get('Builder'));
+module.exports.Builder = Opal.const_get_qualified(Opal.const_get_relative([], 'Opal'), 'Builder');
