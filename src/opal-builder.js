@@ -19291,7 +19291,7 @@ Opal.modules["opal/ast/builder"] = function(Opal) {
 Opal.modules["opal/rewriters/base"] = function(Opal) {
   var self = Opal.top, $nesting = [], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $truthy = Opal.truthy;
 
-  Opal.add_stubs(['$require', '$new', '$!', '$nil?', '$updated', '$process', '$include?', '$type', '$s']);
+  Opal.add_stubs(['$require', '$new', '$nil?', '$include?', '$type', '$updated', '$s']);
   
   self.$require("parser");
   self.$require("opal/ast/node");
@@ -19309,7 +19309,7 @@ Opal.modules["opal/rewriters/base"] = function(Opal) {
         function $Base(){};
         var self = $Base = $klass($base, $super, 'Base', $Base);
 
-        var def = self.$$proto, $nesting = [self].concat($parent_nesting), TMP_Base_s_1, TMP_Base_s_2, TMP_Base_on_vasgn_3, TMP_Base_on_casgn_4, TMP_Base_on_argument_5, TMP_Base_prepend_to_body_6, TMP_Base_append_to_body_7;
+        var def = self.$$proto, $nesting = [self].concat($parent_nesting), TMP_Base_s_1, TMP_Base_s_2, TMP_Base_prepend_to_body_3, TMP_Base_append_to_body_4;
 
         
         
@@ -19338,44 +19338,11 @@ Opal.modules["opal/rewriters/base"] = function(Opal) {
         Opal.alias(self, "on_iter", "process_regular_node");
         Opal.alias(self, "on_top", "process_regular_node");
         Opal.alias(self, "on_zsuper", "process_regular_node");
+        Opal.alias(self, "on_jscall", "on_send");
+        Opal.alias(self, "jsattr", "process_regular_node");
+        Opal.alias(self, "jsattrasgn", "process_regular_node");
         
-        Opal.defn(self, '$on_vasgn', TMP_Base_on_vasgn_3 = function $$on_vasgn(node) {
-          var $a, self = this, name = nil, value_node = nil;
-
-          
-          $a = [].concat(Opal.to_a(node)), (name = ($a[0] == null ? nil : $a[0])), (value_node = ($a[1] == null ? nil : $a[1])), $a;
-          if ($truthy(value_node['$nil?']()['$!']())) {
-            return node.$updated(nil, [name, self.$process(value_node)])
-            } else {
-            return node
-          };
-        }, TMP_Base_on_vasgn_3.$$arity = 1);
-        
-        Opal.defn(self, '$on_casgn', TMP_Base_on_casgn_4 = function $$on_casgn(node) {
-          var $a, self = this, scope_node = nil, name = nil, value_node = nil;
-
-          
-          $a = [].concat(Opal.to_a(node)), (scope_node = ($a[0] == null ? nil : $a[0])), (name = ($a[1] == null ? nil : $a[1])), (value_node = ($a[2] == null ? nil : $a[2])), $a;
-          if ($truthy(value_node['$nil?']()['$!']())) {
-            return node.$updated(nil, [self.$process(scope_node), name, self.$process(value_node)])
-            } else {
-            return node.$updated(nil, [self.$process(scope_node), name])
-          };
-        }, TMP_Base_on_casgn_4.$$arity = 1);
-        
-        Opal.defn(self, '$on_argument', TMP_Base_on_argument_5 = function $$on_argument(node) {
-          var $a, self = this, arg_name = nil, value_node = nil;
-
-          
-          $a = [].concat(Opal.to_a(node)), (arg_name = ($a[0] == null ? nil : $a[0])), (value_node = ($a[1] == null ? nil : $a[1])), $a;
-          if ($truthy(value_node['$nil?']()['$!']())) {
-            return node.$updated(nil, [arg_name, self.$process(value_node)])
-            } else {
-            return node
-          };
-        }, TMP_Base_on_argument_5.$$arity = 1);
-        
-        Opal.defn(self, '$prepend_to_body', TMP_Base_prepend_to_body_6 = function $$prepend_to_body(body, node) {
+        Opal.defn(self, '$prepend_to_body', TMP_Base_prepend_to_body_3 = function $$prepend_to_body(body, node) {
           var self = this;
 
           if ($truthy(body['$nil?']())) {
@@ -19385,8 +19352,8 @@ Opal.modules["opal/rewriters/base"] = function(Opal) {
             } else {
             return self.$s("begin", node, body)
           }
-        }, TMP_Base_prepend_to_body_6.$$arity = 2);
-        return (Opal.defn(self, '$append_to_body', TMP_Base_append_to_body_7 = function $$append_to_body(body, node) {
+        }, TMP_Base_prepend_to_body_3.$$arity = 2);
+        return (Opal.defn(self, '$append_to_body', TMP_Base_append_to_body_4 = function $$append_to_body(body, node) {
           var self = this;
 
           if ($truthy(body['$nil?']())) {
@@ -19396,7 +19363,7 @@ Opal.modules["opal/rewriters/base"] = function(Opal) {
             } else {
             return self.$s("begin", body, node)
           }
-        }, TMP_Base_append_to_body_7.$$arity = 2), nil) && 'append_to_body';
+        }, TMP_Base_append_to_body_4.$$arity = 2), nil) && 'append_to_body';
       })($nesting[0], Opal.const_get_qualified(Opal.const_get_qualified(Opal.const_get_qualified('::', 'Parser'), 'AST'), 'Processor'), $nesting)
     })($nesting[0], $nesting)
   })($nesting[0], $nesting);
@@ -27419,7 +27386,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
   }
   var self = Opal.top, $nesting = [], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $hash2 = Opal.hash2, $klass = Opal.klass, $send = Opal.send, $truthy = Opal.truthy;
 
-  Opal.add_stubs(['$require', '$compile', '$new', '$[]', '$define_method', '$fetch', '$!', '$include?', '$raise', '$+', '$inspect', '$compiler_option', '$attr_reader', '$attr_accessor', '$parse', '$flatten', '$process', '$join', '$map', '$to_proc', '$file', '$source=', '$-', '$default_parser', '$tokenize', '$message', '$backtrace', '$s', '$associate_locations', '$eof', '$warn', '$to_s', '$empty?', '$gsub', '$<<', '$helpers', '$new_temp', '$queue_temp', '$push_while', '$indent', '$pop_while', '$in_while?', '$==', '$fragment', '$scope', '$handlers', '$type', '$compile_to_fragments', '$returns', '$===', '$updated', '$any?', '$children', '$select', '$end_with?', '$loc', '$uses_block!', '$block_name', '$find_parent_def']);
+  Opal.add_stubs(['$require', '$compile', '$new', '$[]', '$define_method', '$fetch', '$!', '$include?', '$raise', '$+', '$inspect', '$compiler_option', '$attr_reader', '$attr_accessor', '$parse', '$flatten', '$process', '$join', '$map', '$to_proc', '$file', '$source=', '$-', '$default_parser', '$tokenize', '$message', '$backtrace', '$s', '$associate_locations', '$eof', '$warn', '$to_s', '$empty?', '$gsub', '$<<', '$helpers', '$new_temp', '$queue_temp', '$push_while', '$indent', '$pop_while', '$in_while?', '$==', '$fragment', '$scope', '$handlers', '$type', '$compile_to_fragments', '$error', '$returns', '$===', '$updated', '$any?', '$children', '$select', '$end_with?', '$loc', '$uses_block!', '$block_name', '$find_parent_def']);
   
   self.$require("set");
   self.$require("opal/parser");
@@ -27722,7 +27689,7 @@ Opal.modules["opal/compiler"] = function(Opal) {
         if ($truthy((handler = self.$handlers()['$[]'](sexp.$type())))) {
           return handler.$new(sexp, level, self).$compile_to_fragments()
           } else {
-          return self.$raise("" + "Unsupported sexp: " + (sexp.$type()))
+          return self.$error("" + "Unsupported sexp: " + (sexp.$type()))
         };
       }, TMP_Compiler_process_27.$$arity = -2);
       
