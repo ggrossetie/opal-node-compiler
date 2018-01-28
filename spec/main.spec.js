@@ -13,9 +13,9 @@ describe('Opal node compiler', function () {
     });
 
     it('builder should compile simple hello world', function() {
-      var builder = Builder.$new();
-      var result = builder.$build('spec/fixtures/hello.rb');
-      expect(result.$to_s()).toMatch(/self\.\$puts\("Hello world"\)/);
+      var builder = Builder.create();
+      var result = builder.build('spec/fixtures/hello.rb');
+      expect(result.toString()).toMatch(/self\.\$puts\("Hello world"\)/);
     });
   });
 });

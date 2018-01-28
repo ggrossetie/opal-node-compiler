@@ -1,8 +1,13 @@
-# Opal Compiler for Node.js
+= Opal Compiler for Node.js
+
+ifdef::env-github[]
+image:https://img.shields.io/travis/mogztter/opal-compiler/master.svg[Travis build status, link=https://travis-ci.org/mogztter/opal-compiler]
+image:http://img.shields.io/npm/v/opal-compiler.svg[npm version, link=https://www.npmjs.org/package/opal-compiler]
+endif::[]
 
 Transpile Ruby code to JavaScript in JavaScript!
 
-## Usage
+== Usage
 
 Given a Ruby file named `hello.rb`:
 
@@ -16,8 +21,8 @@ The following code will transpile `hello.rb` to JavaScript:
 var Builder = require('opal-compiler').Builder;
 // Opal object will be available on the global scope
 
-var builder = Builder.$new();
-var result = builder.$build('hello.rb').$to_s();
+var builder = Builder.create();
+var result = builder.build('hello.rb').toString();
 console.log(result);
 //(function(Opal) {
 //  var self = Opal.top, $scope = Opal, nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice;
