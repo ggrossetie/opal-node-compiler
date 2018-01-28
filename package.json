@@ -30,7 +30,7 @@
     "url": "git://github.com/asciidoctor/opal-node-compiler.git"
   },
   "dependencies": {
-    "opal-runtime": "0.11.0-rc1+934d65a"
+    "opal-runtime": "1.0.0-alpha.2+opal.934d65a"
   },
   "devDependencies": {
     "eslint": "^4.16.0",

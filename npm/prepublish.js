@@ -23,6 +23,7 @@ fs.readFile('README.adoc', 'utf8', (readErr, asciidoc) => {
   var markdown = asciidoc
     .replace(/^=+(?= \w)/gm, function (m) { return '#'.repeat(m.length) })
     .replace(new RegExp('(https?:[^\\[]+)\\[(|.*?[^\\\\])\\]', 'g'), '[$2]($1)')
+    .replace(new RegExp('ifdef::env-github\\[\\][^]+endif::\\[\\]', 'g'), '');
   fs.writeFile('README.md', markdown, function (writeErr) {
     if (writeErr) throw writeErr;
   });
