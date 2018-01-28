@@ -570,9 +570,9 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-opal-runtime@1.0.0-alpha.2+opal.934d65a:
-  version "1.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/opal-runtime/-/opal-runtime-1.0.0-alpha.2.tgz#4dde31e71f912ed148d56dfb62b722a7b711bbde"
+opal-runtime@1.0.0+opal.934d65a:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/opal-runtime/-/opal-runtime-1.0.0.tgz#28b87e3ec31fdcf19f2fc019cd36d229fa5870ae"
   dependencies:
     glob "6.0.4"
 
