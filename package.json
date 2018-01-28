@@ -8,7 +8,7 @@
     "ruby"
   ],
   "author": "Guillaume Grossetie",
-  "version": "1.0.0-alpha.1+opal.934d65a",
+  "version": "1.0.0-alpha.2+opal.934d65a",
   "license": "MIT",
   "engines": {
     "node": ">=4"
@@ -23,14 +23,14 @@
     "prepublishOnly": "node npm/prepublish.js",
     "postpublish": "node npm/postpublish.js"
   },
-  "homepage": "http://github.com/asciidoctor/opal-node-compiler",
-  "bugs": "https://github.com/asciidoctor/opal-node-compiler/issues",
+  "homepage": "http://github.com/mogztter/opal-node-compiler",
+  "bugs": "https://github.com/mogztter/opal-node-compiler/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/asciidoctor/opal-node-compiler.git"
+    "url": "git://github.com/mogztter/opal-node-compiler.git"
   },
   "dependencies": {
-    "opal-runtime": "1.0.0-alpha.2+opal.934d65a"
+    "opal-runtime": "1.0.0+opal.934d65a"
   },
   "devDependencies": {
     "eslint": "^4.16.0",
