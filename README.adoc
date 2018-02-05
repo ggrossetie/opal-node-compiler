@@ -1,7 +1,7 @@
 = Opal Compiler for Node.js
 
 ifdef::env-github[]
-image:https://img.shields.io/travis/mogztter/opal-compiler/master.svg[Travis build status, link=https://travis-ci.org/mogztter/opal-compiler]
+image:https://img.shields.io/travis/Mogztter/opal-node-compiler/master.svg[Travis build status, link=https://travis-ci.org/Mogztter/opal-node-compiler]
 image:http://img.shields.io/npm/v/opal-compiler.svg[npm version, link=https://www.npmjs.org/package/opal-compiler]
 endif::[]
 
