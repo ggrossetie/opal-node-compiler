@@ -570,11 +570,12 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-opal-runtime@1.0.0+opal.934d65a:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/opal-runtime/-/opal-runtime-1.0.0.tgz#28b87e3ec31fdcf19f2fc019cd36d229fa5870ae"
+opal-runtime@1.0.1+opal.48bac38:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/opal-runtime/-/opal-runtime-1.0.1.tgz#bcde5e909492341043326594b165d9683625bc9d"
   dependencies:
     glob "6.0.4"
+    xmlhttprequest "1.8.0"
 
 optionator@^0.8.2:
   version "0.8.2"
@@ -814,6 +815,10 @@ write@^0.2.1:
   resolved "https://registry.yarnpkg.com/write/-/write-0.2.1.tgz#5fc03828e264cea3fe91455476f7a3c566cb0757"
   dependencies:
     mkdirp "^0.5.1"
+
+xmlhttprequest@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
 
 yallist@^2.1.2:
   version "2.1.2"
