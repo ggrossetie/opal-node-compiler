@@ -8,7 +8,7 @@
     "ruby"
   ],
   "author": "Guillaume Grossetie",
-  "version": "1.0.1+opal.48bac38",
+  "version": "1.0.2+opal.fc20415",
   "license": "MIT",
   "engines": {
     "node": ">=4"
@@ -30,7 +30,7 @@
     "url": "git://github.com/mogztter/opal-node-compiler.git"
   },
   "dependencies": {
-    "opal-runtime": "1.0.1+opal.48bac38"
+    "opal-runtime": "1.0.2+opal.fc20415"
   },
   "devDependencies": {
     "eslint": "^4.16.0",
