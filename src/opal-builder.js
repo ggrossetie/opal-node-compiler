@@ -433,7 +433,7 @@ Opal.modules["pathname"] = function(Opal) {
     Opal.def(self, '$cleanpath', TMP_Pathname_cleanpath_9 = function $$cleanpath() {
       var self = this;
 
-      return Opal.normalize(self.path);
+      return Opal.normalize(self.path)
     }, TMP_Pathname_cleanpath_9.$$arity = 0);
     
     Opal.def(self, '$to_path', TMP_Pathname_to_path_10 = function $$to_path() {
@@ -28099,7 +28099,7 @@ if (current == null) current = nil;
 Opal.modules["opal/nodes/x_string"] = function(Opal) {
   var self = Opal.top, $nesting = [], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $truthy = Opal.truthy, $send = Opal.send, $range = Opal.range;
 
-  Opal.add_stubs(['$handle', '$unpack_return', '$children', '$strip_empty_children', '$single_line?', '$compile_single_line', '$each', '$compile_child', '$recv?', '$wrap', '$push', '$private', '$type', '$===', '$source', '$expression', '$loc', '$new', '$scope', '$expr', '$raise', '$shift', '$empty?', '$==', '$strip', '$=~', '$!', '$pop', '$extract_last_value', '$!=', '$rstrip', '$expr?', '$end_with?', '$warning', '$compiler', '$line', '$[]', '$size', '$none?', '$first', '$dup', '$lambda', '$last']);
+  Opal.add_stubs(['$handle', '$unpack_return', '$children', '$strip_empty_children', '$single_line?', '$compile_single_line', '$each', '$compile_child', '$recv?', '$wrap', '$push', '$private', '$type', '$===', '$source', '$expression', '$loc', '$new', '$scope', '$expr', '$raise', '$shift', '$empty?', '$==', '$strip', '$=~', '$!', '$pop', '$extract_last_value', '$rstrip', '$expr?', '$end_with?', '$warning', '$compiler', '$line', '$[]', '$size', '$none?', '$first', '$dup', '$lambda', '$last']);
   return (function($base, $parent_nesting) {
     var $Opal, self = $Opal = $module($base, 'Opal');
 
@@ -28174,16 +28174,14 @@ if (c == null) c = nil;
           if ($truthy(single_child)) {
           } else {
             
+            self.should_add_semicolon = false;
             self.$compile_child(first_child);
             $send(children, 'each', [], (TMP_4 = function(c){var self = TMP_4.$$s || this;
 if (c == null) c = nil;
             return self.$compile_child(c)}, TMP_4.$$s = self, TMP_4.$$arity = 1, TMP_4));
           };
           if (last_child.$type()['$==']("str")) {
-            
-            if ($truthy(($truthy($a = single_child['$!']()) ? first_child.$type()['$!=']("str") : $a))) {
-              self.should_add_semicolon = false};
-            return self.$push(Opal.const_get_relative($nesting, 'Fragment').$new(last_value, self.$scope(), last_child));
+            return self.$push(Opal.const_get_relative($nesting, 'Fragment').$new(last_value, self.$scope(), last_child))
           } else {
             return self.$compile_child(last_child)
           };
