@@ -18993,7 +18993,7 @@ if (i == null) i = nil;
         var self = this;
 
         
-        result = $send(self.builder, 'loop', ["while", val['$[]'](0)].concat(Opal.to_a(val['$[]'](1))).concat(val['$[]'](2), val['$[]'](3)));
+        result = $send(self.builder, 'loop', ["while", val['$[]'](0)].concat(Opal.to_a(val['$[]'](1))).concat([val['$[]'](2), val['$[]'](3)]));
         return result;
       }, TMP_Ruby25__reduce_313_202.$$arity = 3);
       
@@ -19001,7 +19001,7 @@ if (i == null) i = nil;
         var self = this;
 
         
-        result = $send(self.builder, 'loop', ["until", val['$[]'](0)].concat(Opal.to_a(val['$[]'](1))).concat(val['$[]'](2), val['$[]'](3)));
+        result = $send(self.builder, 'loop', ["until", val['$[]'](0)].concat(Opal.to_a(val['$[]'](1))).concat([val['$[]'](2), val['$[]'](3)]));
         return result;
       }, TMP_Ruby25__reduce_314_203.$$arity = 3);
       
@@ -19027,7 +19027,7 @@ if (i == null) i = nil;
         var self = this;
 
         
-        result = $send(self.builder, 'for', [val['$[]'](0), val['$[]'](1), val['$[]'](2)].concat(Opal.to_a(val['$[]'](3))).concat(val['$[]'](4), val['$[]'](5)));
+        result = $send(self.builder, 'for', [val['$[]'](0), val['$[]'](1), val['$[]'](2)].concat(Opal.to_a(val['$[]'](3))).concat([val['$[]'](4), val['$[]'](5)]));
         return result;
       }, TMP_Ruby25__reduce_317_206.$$arity = 3);
       
@@ -21343,7 +21343,7 @@ if (lvar_name == null) lvar_name = nil;
           else {return loop_variable['$<<'](get_tmp_loop_variable)}})();
           loop_body = self.$prepend_to_body(loop_body, loop_variable_assignment);
           node = self.$s("send", iterating_value, "each", self.$s("iter", self.$s("args", self.$s("arg", tmp_loop_variable)), loop_body));
-          return $send(self, 's', ["begin"].concat(Opal.to_a(outer_assigns)).concat(node));
+          return $send(self, 's', ["begin"].concat(Opal.to_a(outer_assigns)).concat([node]));
         }, TMP_ForRewriter_on_for_4.$$arity = 1);
         return (function($base, $super, $parent_nesting) {
           function $LocalVariableAssigns(){};
@@ -29246,7 +29246,7 @@ if (current == null) current = nil;
             if ($truthy(code['$empty?']())) {
               code = join
             } else {
-              code['$<<'](self.$fragment(".concat("))['$<<'](join)['$<<'](self.$fragment(")"))
+              code['$<<'](self.$fragment(".concat(["))['$<<'](join)['$<<'](self.$fragment("])"))
             };
           };
           return $send(self, 'push', Opal.to_a(code));
