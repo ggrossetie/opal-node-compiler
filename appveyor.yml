@@ -16,5 +16,7 @@ install:
   - ps: Install-Product node $env:nodejs_version
   - yarn
 
-test_script:
+build_script:
 - yarn test
+
+test: off
