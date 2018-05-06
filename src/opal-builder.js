@@ -2046,8 +2046,11 @@ if (e == null) e = nil;
           
           if ($truthy(source['$nil?']())) {
             return nil};
+          console.log('rel_path', rel_path);
           abs_path = self.$expand_path(rel_path);
           rel_path = self.$expand_ext(rel_path);
+          console.log('abs_path', abs_path);
+          console.log('rel_path', rel_path);
           asset = self.$processor_for(source, rel_path, abs_path, options);
           requires = $rb_plus($rb_plus(self.$preload(), asset.$requires()), self.$tree_requires(asset, abs_path));
           $send(requires, 'map', [], (TMP_10 = function(r){var self = TMP_10.$$s || this;
@@ -2208,9 +2211,14 @@ if (list == null) list = nil;
 
         
         abs_path = self.$path_reader().$expand(path);
+        console.log('expand_ext.abs_path', abs_path);
         if ($truthy(abs_path)) {
+          console.log('expand_ext.dirname', $$($nesting, 'File').$dirname(path));
+          console.log('expand_ext.basename', $$($nesting, 'File').$basename(abs_path));
+          console.log('expand_ext.result', $$($nesting, 'File').$join($$($nesting, 'File').$dirname(path), $$($nesting, 'File').$basename(abs_path)));
           return $$($nesting, 'File').$join($$($nesting, 'File').$dirname(path), $$($nesting, 'File').$basename(abs_path))
         } else {
+          console.log('path', path);
           return path
         };
       }, TMP_Builder_expand_ext_27.$$arity = 1);
@@ -2221,6 +2229,8 @@ if (list == null) list = nil;
         
         if ($truthy(self['$stub?'](path))) {
           return nil};
+        console.log('self.$path_reader().$expand(path)', self.$path_reader().$expand(path));
+        console.log('$$($nesting, \'File\').$expand_path(path)', $$($nesting, 'File').$expand_path(path));
         return ($truthy($a = self.$path_reader().$expand(path)) ? $a : $$($nesting, 'File').$expand_path(path)).$to_s();
       }, TMP_Builder_expand_path_28.$$arity = 1);
       
