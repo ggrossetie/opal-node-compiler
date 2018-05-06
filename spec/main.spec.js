@@ -25,5 +25,14 @@ describe('Opal node compiler', function () {
       var result = builder.build('hello');
       expect(result.toString()).toMatch(/self\.\$puts\("Hello world"\)/);
     });
+
+    it('builder should use front slash as module name', function() {
+      var builder = Builder.create();
+      builder.appendPaths('spec/fixtures/hello-ruby/lib');
+      builder.appendPaths('src/stdlib');
+      var result = builder.build('french/bonjour', {requirable: true});
+      expect(result.toString()).toMatch(/Opal\.modules\["french\/bonjour"\]/);
+    });
+
   });
 });
