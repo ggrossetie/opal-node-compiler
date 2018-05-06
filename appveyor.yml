@@ -1,0 +1,20 @@
+version: '{build}'
+
+skip_tags: true
+
+clone_depth: 10
+
+environment:
+  nodejs_version: "6"
+
+cache:
+ - "%LOCALAPPDATA%\\Yarn"
+
+# Install scripts. (runs after repo cloning)
+install:
+  # Get the latest stable version of Node.js
+  - ps: Install-Product node $env:nodejs_version
+  - yarn
+
+test_script:
+- yarn test
