@@ -27990,7 +27990,7 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
           $writer = ["use_redo", true];
           $send(self.$while_loop(), '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
-          return self.$push("" + (self.$while_loop()['$[]']("redo_var")) + " = true");
+          return self.$push("" + (self.$while_loop()['$[]']("redo_var")) + " = true; continue;");
         }, TMP_RedoNode_compile_while_8.$$arity = 0);
         return (Opal.def(self, '$compile_iter', TMP_RedoNode_compile_iter_9 = function $$compile_iter() {
           var self = this;
