@@ -30,7 +30,7 @@
     "url": "git://github.com/mogztter/opal-node-compiler.git"
   },
   "dependencies": {
-    "opal-runtime": "1.0.5"
+    "opal-runtime": "1.0.6"
   },
   "devDependencies": {
     "eslint": "^4.16.0",
