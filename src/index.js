@@ -19,23 +19,23 @@ var Builder = Opal.const_get_qualified(Opal.const_get_relative([], 'Opal'), 'Bui
 
 // Public API
 
-Builder['$$class'].$$proto.create = function () {
+Builder['$$class'].prototype.create = function () {
   return this.$new();
 };
 
-Builder.$$proto.appendPaths = function (paths) {
+Builder.prototype.appendPaths = function (paths) {
   this.$append_paths(paths);
 };
 
-Builder.$$proto.setCompilerOptions = function (options) {
+Builder.prototype.setCompilerOptions = function (options) {
   this.compiler_options = toHash(options);
 };
 
-Builder.$$proto.build = function (path, options) {
+Builder.prototype.build = function (path, options) {
   return this.$build(path, toHash(options));
 };
 
-Builder.$$proto.toString = function () {
+Builder.prototype.toString = function () {
   return this.$to_s();
 };
 
