@@ -11,14 +11,14 @@
   "version": "1.0.7",
   "license": "MIT",
   "engines": {
-    "node": ">=4"
+    "node": ">=8.11"
   },
   "directories": {
     "lib": "src"
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "node npm/test.js",
+    "test": "mocha spec/**.spec.js",
     "lint": "eslint src/index.js spec npm",
     "prepublishOnly": "node npm/prepublish.js",
     "postpublish": "node npm/postpublish.js"
@@ -33,8 +33,8 @@
     "opal-runtime": "1.0.7"
   },
   "devDependencies": {
-    "eslint": "^4.16.0",
-    "jasmine": "2.8.0",
-    "jasmine-core": "2.8.0"
+    "chai": "4.1.2",
+    "eslint": "4.16.0",
+    "mocha": "5.2.0"
   }
 }
