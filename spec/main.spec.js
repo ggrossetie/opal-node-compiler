@@ -38,5 +38,12 @@ describe('Opal Node Compiler', function () {
       var result = builder.build('french/bonjour', {requirable: true});
       expect(result.toString()).to.match(/Opal\.modules\["french\/bonjour"\]/);
     });
+
+    it('should compile a module that require a built-in Ruby module (logger)', function() {
+      var builder = Builder.create();
+      builder.appendPaths('src/stdlib');
+      var result = builder.build('spec/fixtures/logging.rb');
+      expect(result.toString()).to.match(/Opal\.modules\["logger"\]/);
+    });
   });
 });
