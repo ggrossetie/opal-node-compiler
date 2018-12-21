@@ -13,6 +13,9 @@
   "engines": {
     "node": ">=8.11"
   },
+  "files": [
+    "src"
+  ],
   "directories": {
     "lib": "src"
   },
