@@ -4,10 +4,9 @@ Opal.modules["opal/regexp_anchors"] = function(Opal) {
 
   Opal.add_stubs(['$==', '$new']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     
     Opal.const_set($nesting[0], 'REGEXP_START', (function() {if ($$($nesting, 'RUBY_ENGINE')['$==']("opal")) {
@@ -40,10 +39,9 @@ Opal.modules["corelib/comparable"] = function(Opal) {
 
   Opal.add_stubs(['$===', '$>', '$<', '$equal?', '$<=>', '$normalize', '$raise', '$class']);
   return (function($base, $parent_nesting) {
-    function $Comparable() {};
-    var self = $Comparable = $module($base, 'Comparable', $Comparable);
+    var self = $module($base, 'Comparable');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Comparable_normalize$1, $Comparable_$eq_eq$2, $Comparable_$gt$3, $Comparable_$gt_eq$4, $Comparable_$lt$5, $Comparable_$lt_eq$6, $Comparable_between$ques$7, $Comparable_clamp$8;
+    var $nesting = [self].concat($parent_nesting), $Comparable_normalize$1, $Comparable_$eq_eq$2, $Comparable_$gt$3, $Comparable_$gt_eq$4, $Comparable_$lt$5, $Comparable_$lt_eq$6, $Comparable_between$ques$7, $Comparable_clamp$8;
 
     
     Opal.defs(self, '$normalize', $Comparable_normalize$1 = function $$normalize(what) {
@@ -177,12 +175,11 @@ Opal.modules["pathname"] = function(Opal) {
   
   self.$require("corelib/comparable");
   (function($base, $super, $parent_nesting) {
-    function $Pathname(){};
-    var self = $Pathname = $klass($base, $super, 'Pathname', $Pathname);
+    var self = $klass($base, $super, 'Pathname');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Pathname_initialize$1, $Pathname_$eq_eq$2, $Pathname_absolute$ques$3, $Pathname_relative$ques$4, $Pathname_chop_basename$5, $Pathname_root$ques$6, $Pathname_parent$7, $Pathname_sub$8, $Pathname_cleanpath$9, $Pathname_to_path$10, $Pathname_hash$11, $Pathname_expand_path$12, $Pathname_$plus$13, $Pathname_plus$14, $Pathname_join$15, $Pathname_split$17, $Pathname_dirname$18, $Pathname_basename$19, $Pathname_directory$ques$20, $Pathname_extname$21, $Pathname_$lt_eq_gt$22, $Pathname$23, $Pathname$24, $Pathname_relative_path_from$25, $Pathname_entries$26;
+    var $nesting = [self].concat($parent_nesting), $Pathname_initialize$1, $Pathname_$eq_eq$2, $Pathname_absolute$ques$3, $Pathname_relative$ques$4, $Pathname_chop_basename$5, $Pathname_root$ques$6, $Pathname_parent$7, $Pathname_sub$8, $Pathname_cleanpath$9, $Pathname_to_path$10, $Pathname_hash$11, $Pathname_expand_path$12, $Pathname_$plus$13, $Pathname_plus$14, $Pathname_join$15, $Pathname_split$17, $Pathname_dirname$18, $Pathname_basename$19, $Pathname_directory$ques$20, $Pathname_extname$21, $Pathname_$lt_eq_gt$22, $Pathname$23, $Pathname$24, $Pathname_relative_path_from$25, $Pathname_entries$26;
 
-    def.path = nil;
+    self.$$prototype.path = nil;
     
     self.$include($$($nesting, 'Comparable'));
     Opal.const_set($nesting[0], 'SEPARATOR_PAT', new RegExp($$($nesting, 'Regexp').$quote($$$($$($nesting, 'File'), 'SEPARATOR'))));
@@ -531,10 +528,9 @@ Opal.modules["pathname"] = function(Opal) {
     }, $Pathname_entries$26.$$arity = 0), nil) && 'entries';
   })($nesting[0], null, $nesting);
   return (function($base, $parent_nesting) {
-    function $Kernel() {};
-    var self = $Kernel = $module($base, 'Kernel', $Kernel);
+    var self = $module($base, 'Kernel');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Kernel_Pathname$28;
+    var $nesting = [self].concat($parent_nesting), $Kernel_Pathname$28;
 
     
     Opal.def(self, '$Pathname', $Kernel_Pathname$28 = function $$Pathname(path) {
@@ -559,25 +555,22 @@ Opal.modules["opal/hike"] = function(Opal) {
   
   self.$require("pathname");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Hike() {};
-      var self = $Hike = $module($base, 'Hike', $Hike);
+      var self = $module($base, 'Hike');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $Index(){};
-        var self = $Index = $klass($base, $super, 'Index', $Index);
+        var self = $klass($base, $super, 'Index');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Index_initialize$1, $Index_root$3, $Index_index$4, $Index_find$5, $Index_entries$8, $Index_stat$10, $Index_extract_options$excl$11, $Index_find_in_paths$12, $Index_find_in_base_path$14, $Index_match$15, $Index_paths_contain$ques$18, $Index_pattern_for$20, $Index_build_pattern_for$21, $Index_sort_matches$23;
+        var $nesting = [self].concat($parent_nesting), $Index_initialize$1, $Index_root$3, $Index_index$4, $Index_find$5, $Index_entries$8, $Index_stat$10, $Index_extract_options$excl$11, $Index_find_in_paths$12, $Index_find_in_base_path$14, $Index_match$15, $Index_paths_contain$ques$18, $Index_pattern_for$20, $Index_build_pattern_for$21, $Index_sort_matches$23;
 
-        def.root = def.entries = def.stats = def.pathnames = def.patterns = nil;
+        self.$$prototype.root = self.$$prototype.entries = self.$$prototype.stats = self.$$prototype.pathnames = self.$$prototype.patterns = nil;
         
         self.$attr_reader("paths");
         self.$attr_reader("extensions");
@@ -821,12 +814,11 @@ Opal.modules["opal/hike"] = function(Opal) {
         }, $Index_sort_matches$23.$$arity = 2), nil) && 'sort_matches';
       })($nesting[0], null, $nesting);
       (function($base, $super, $parent_nesting) {
-        function $Trail(){};
-        var self = $Trail = $klass($base, $super, 'Trail', $Trail);
+        var self = $klass($base, $super, 'Trail');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Trail_initialize$26, $Trail_root$27, $Trail_append_paths$28, $Trail_append_extensions$30, $Trail_find$32, $Trail_index$33, $Trail_entries$34, $Trail_stat$36, $Trail_normalize_extension$37, $Trail_normalize_path$38;
+        var $nesting = [self].concat($parent_nesting), $Trail_initialize$26, $Trail_root$27, $Trail_append_paths$28, $Trail_append_extensions$30, $Trail_find$32, $Trail_index$33, $Trail_entries$34, $Trail_stat$36, $Trail_normalize_extension$37, $Trail_normalize_path$38;
 
-        def.root = def.paths = def.extensions = nil;
+        self.$$prototype.root = self.$$prototype.paths = self.$$prototype.extensions = nil;
         
         self.$attr_reader("paths");
         self.$attr_reader("extensions");
@@ -968,18 +960,16 @@ Opal.modules["opal/path_reader"] = function(Opal) {
   self.$require("opal/regexp_anchors");
   self.$require("opal/hike");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $PathReader(){};
-      var self = $PathReader = $klass($base, $super, 'PathReader', $PathReader);
+      var self = $klass($base, $super, 'PathReader');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $PathReader_initialize$1, $PathReader_read$2, $PathReader_expand$3, $PathReader_paths$4, $PathReader_extensions$5, $PathReader_append_paths$6, $PathReader_find_path$7;
+      var $nesting = [self].concat($parent_nesting), $PathReader_initialize$1, $PathReader_read$2, $PathReader_expand$3, $PathReader_paths$4, $PathReader_extensions$5, $PathReader_append_paths$6, $PathReader_find_path$7;
 
-      def.file_finder = nil;
+      self.$$prototype.file_finder = nil;
       
       Opal.const_set($nesting[0], 'RELATIVE_PATH_REGEXP', new RegExp("" + ($$$($$($nesting, 'Opal'), 'REGEXP_START')) + "\\.?\\." + ($$($nesting, 'Regexp').$quote($$$($$($nesting, 'File'), 'SEPARATOR')))));
       Opal.const_set($nesting[0], 'DEFAULT_EXTENSIONS', [".js", ".js.rb", ".rb", ".opalerb"].$freeze());
@@ -1068,10 +1058,9 @@ Opal.modules["opal/paths"] = function(Opal) {
 
   Opal.add_stubs(['$expand_path', '$untaint', '$dup', '$append_paths', '$concat', '$require_paths_for_gem', '$private', '$find_by_name', '$raise', '$each', '$runtime_dependencies', '$+', '$name', '$gem_dir', '$map', '$require_paths', '$<<', '$join', '$extend', '$freeze', '$core_dir', '$std_dir', '$!=', '$reset_paths!']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Opal_gem_dir$1, $Opal_core_dir$2, $Opal_std_dir$3, $Opal_append_path$4, $Opal_append_paths$5, $Opal_paths$10, $Opal_reset_paths$excl$11;
+    var $nesting = [self].concat($parent_nesting), $Opal_gem_dir$1, $Opal_core_dir$2, $Opal_std_dir$3, $Opal_append_path$4, $Opal_append_paths$5, $Opal_paths$10, $Opal_reset_paths$excl$11;
 
     
     Opal.defs(self, '$gem_dir', $Opal_gem_dir$1 = function $$gem_dir() {
@@ -1107,10 +1096,9 @@ Opal.modules["opal/paths"] = function(Opal) {
       return nil;
     }, $Opal_append_paths$5.$$arity = -1);
     (function($base, $parent_nesting) {
-      function $UseGem() {};
-      var self = $UseGem = $module($base, 'UseGem', $UseGem);
+      var self = $module($base, 'UseGem');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $UseGem_use_gem$6, $UseGem_require_paths_for_gem$7;
+      var $nesting = [self].concat($parent_nesting), $UseGem_use_gem$6, $UseGem_require_paths_for_gem$7;
 
       
       
@@ -1193,12 +1181,11 @@ Opal.modules["set"] = function(Opal) {
   Opal.add_stubs(['$include', '$new', '$nil?', '$===', '$raise', '$each', '$add', '$merge', '$class', '$respond_to?', '$subtract', '$dup', '$join', '$to_a', '$equal?', '$instance_of?', '$==', '$instance_variable_get', '$is_a?', '$size', '$all?', '$include?', '$[]=', '$-', '$enum_for', '$[]', '$<<', '$replace', '$delete', '$select', '$each_key', '$to_proc', '$empty?', '$eql?', '$instance_eval', '$clear', '$<', '$<=', '$keys']);
   
   (function($base, $super, $parent_nesting) {
-    function $Set(){};
-    var self = $Set = $klass($base, $super, 'Set', $Set);
+    var self = $klass($base, $super, 'Set');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Set_$$$1, $Set_initialize$2, $Set_dup$4, $Set_$minus$5, $Set_inspect$6, $Set_$eq_eq$7, $Set_add$9, $Set_classify$10, $Set_collect$excl$13, $Set_delete$15, $Set_delete$ques$16, $Set_delete_if$17, $Set_add$ques$20, $Set_each$21, $Set_empty$ques$22, $Set_eql$ques$23, $Set_clear$25, $Set_include$ques$26, $Set_merge$27, $Set_replace$29, $Set_size$30, $Set_subtract$31, $Set_$$33, $Set_superset$ques$34, $Set_proper_superset$ques$36, $Set_subset$ques$38, $Set_proper_subset$ques$40, $Set_to_a$42;
+    var $nesting = [self].concat($parent_nesting), $Set_$$$1, $Set_initialize$2, $Set_dup$4, $Set_$minus$5, $Set_inspect$6, $Set_$eq_eq$7, $Set_add$9, $Set_classify$10, $Set_collect$excl$13, $Set_delete$15, $Set_delete$ques$16, $Set_delete_if$17, $Set_add$ques$20, $Set_each$21, $Set_empty$ques$22, $Set_eql$ques$23, $Set_clear$25, $Set_include$ques$26, $Set_merge$27, $Set_replace$29, $Set_size$30, $Set_subtract$31, $Set_$$33, $Set_superset$ques$34, $Set_proper_superset$ques$36, $Set_subset$ques$38, $Set_proper_subset$ques$40, $Set_to_a$42;
 
-    def.hash = nil;
+    self.$$prototype.hash = nil;
     
     self.$include($$($nesting, 'Enumerable'));
     Opal.defs(self, '$[]', $Set_$$$1 = function($a) {
@@ -1604,10 +1591,9 @@ Opal.modules["set"] = function(Opal) {
     }, $Set_to_a$42.$$arity = 0), nil) && 'to_a';
   })($nesting[0], null, $nesting);
   return (function($base, $parent_nesting) {
-    function $Enumerable() {};
-    var self = $Enumerable = $module($base, 'Enumerable', $Enumerable);
+    var self = $module($base, 'Enumerable');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Enumerable_to_set$43;
+    var $nesting = [self].concat($parent_nesting), $Enumerable_to_set$43;
 
     
     Opal.def(self, '$to_set', $Enumerable_to_set$43 = function $$to_set($a, $b) {
@@ -1645,16 +1631,14 @@ Opal.modules["opal/config"] = function(Opal) {
   
   self.$require("set");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Config() {};
-      var self = $Config = $module($base, 'Config', $Config);
+      var self = $module($base, 'Config');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Config_config_options$1, $Config_config_option$2, $Config_default_config$6, $Config_compiler_options$8, $Config_config$10, $Config_reset$excl$11, $Config$12;
+      var $nesting = [self].concat($parent_nesting), $Config_config_options$1, $Config_config_option$2, $Config_default_config$6, $Config_compiler_options$8, $Config_config$10, $Config_reset$excl$11, $Config$12;
 
       
       self.$extend(self);
@@ -1805,18 +1789,16 @@ Opal.modules["opal/builder"] = function(Opal) {
   self.$require("opal/config");
   self.$require("set");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Builder(){};
-      var self = $Builder = $klass($base, $super, 'Builder', $Builder);
+      var self = $klass($base, $super, 'Builder');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Builder_processors$1, $Builder_extensions$2, $Builder_register_processor$3, $Builder_initialize$5, $Builder_build$8, $Builder_build$9, $Builder_source_for$10, $Builder_build_str$11, $Builder_build_require$13, $Builder_initialize_copy$14, $Builder_to_s$15, $Builder_source_map$16, $Builder_append_paths$17, $Builder_tree_requires$18, $Builder_processor_for$23, $Builder_read$25, $Builder_process_require$27, $Builder_expand_ext$28, $Builder_expand_path$29, $Builder_process_requires$30, $Builder_already_processed$32, $Builder_stub$ques$33, $Builder_extensions$34;
+      var $nesting = [self].concat($parent_nesting), $Builder_processors$1, $Builder_extensions$2, $Builder_register_processor$3, $Builder_initialize$5, $Builder_build$8, $Builder_build$9, $Builder_source_for$10, $Builder_build_str$11, $Builder_build_require$13, $Builder_initialize_copy$14, $Builder_to_s$15, $Builder_source_map$16, $Builder_append_paths$17, $Builder_tree_requires$18, $Builder_processor_for$23, $Builder_read$25, $Builder_process_require$27, $Builder_expand_ext$28, $Builder_expand_path$29, $Builder_process_requires$30, $Builder_already_processed$32, $Builder_stub$ques$33, $Builder_extensions$34;
 
-      def.stubs = def.preload = def.processors = def.path_reader = def.prerequired = def.compiler_options = def.missing_require_severity = def.already_processed = nil;
+      self.$$prototype.stubs = self.$$prototype.preload = self.$$prototype.processors = self.$$prototype.path_reader = self.$$prototype.prerequired = self.$$prototype.compiler_options = self.$$prototype.missing_require_severity = self.$$prototype.already_processed = nil;
       
       Opal.defs(self, '$processors', $Builder_processors$1 = function $$processors() {
         var $a, self = this;
@@ -1847,18 +1829,16 @@ Opal.modules["opal/builder"] = function(Opal) {
           return self.$extensions()['$<<'](ext);}, $$4.$$s = self, $$4.$$arity = 1, $$4));
       }, $Builder_register_processor$3.$$arity = 2);
       (function($base, $super, $parent_nesting) {
-        function $MissingRequire(){};
-        var self = $MissingRequire = $klass($base, $super, 'MissingRequire', $MissingRequire);
+        var self = $klass($base, $super, 'MissingRequire');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return nil
       })($nesting[0], $$($nesting, 'LoadError'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ProcessorNotFound(){};
-        var self = $ProcessorNotFound = $klass($base, $super, 'ProcessorNotFound', $ProcessorNotFound);
+        var self = $klass($base, $super, 'ProcessorNotFound');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return nil
       })($nesting[0], $$($nesting, 'LoadError'), $nesting);
@@ -2208,18 +2188,16 @@ Opal.modules["ast/node"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$to_sym', '$freeze', '$to_a', '$assign_properties', '$hash', '$class', '$eql?', '$type', '$children', '$each', '$instance_variable_set', '$protected', '$private', '$==', '$nil?', '$send', '$original_dup', '$equal?', '$respond_to?', '$to_ast', '$updated', '$+', '$*', '$fancy_type', '$is_a?', '$to_sexp', '$inspect', '$map', '$to_sexp_array', '$gsub', '$to_s']);
   return (function($base, $parent_nesting) {
-    function $AST() {};
-    var self = $AST = $module($base, 'AST', $AST);
+    var self = $module($base, 'AST');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Node(){};
-      var self = $Node = $klass($base, $super, 'Node', $Node);
+      var self = $klass($base, $super, 'Node');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Node_initialize$1, $Node_eql$ques$2, $Node_assign_properties$3, $Node_dup$5, $Node_updated$6, $Node_$eq_eq$7, $Node_concat$8, $Node_append$9, $Node_to_sexp$10, $Node_inspect$12, $Node_to_ast$14, $Node_to_sexp_array$15, $Node_fancy_type$17;
+      var $nesting = [self].concat($parent_nesting), $Node_initialize$1, $Node_eql$ques$2, $Node_assign_properties$3, $Node_dup$5, $Node_updated$6, $Node_$eq_eq$7, $Node_concat$8, $Node_append$9, $Node_to_sexp$10, $Node_inspect$12, $Node_to_ast$14, $Node_to_sexp_array$15, $Node_fancy_type$17;
 
-      def.type = def.children = nil;
+      self.$$prototype.type = self.$$prototype.children = nil;
       
       self.$attr_reader("type");
       self.$attr_reader("children");
@@ -2426,22 +2404,19 @@ Opal.modules["ast/processor/mixin"] = function(Opal) {
 
   Opal.add_stubs(['$nil?', '$to_ast', '$type', '$respond_to?', '$send', '$handler_missing', '$map', '$to_a', '$process']);
   return (function($base, $parent_nesting) {
-    function $AST() {};
-    var self = $AST = $module($base, 'AST', $AST);
+    var self = $module($base, 'AST');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Processor(){};
-      var self = $Processor = $klass($base, $super, 'Processor', $Processor);
+      var self = $klass($base, $super, 'Processor');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return (function($base, $parent_nesting) {
-        function $Mixin() {};
-        var self = $Mixin = $module($base, 'Mixin', $Mixin);
+        var self = $module($base, 'Mixin');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Mixin_process$1, $Mixin_process_all$2, $Mixin_handler_missing$4;
+        var $nesting = [self].concat($parent_nesting), $Mixin_process$1, $Mixin_process_all$2, $Mixin_handler_missing$4;
 
         
         
@@ -2492,16 +2467,14 @@ Opal.modules["ast/processor"] = function(Opal) {
 
   Opal.add_stubs(['$require', '$include']);
   return (function($base, $parent_nesting) {
-    function $AST() {};
-    var self = $AST = $module($base, 'AST', $AST);
+    var self = $module($base, 'AST');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Processor(){};
-      var self = $Processor = $klass($base, $super, 'Processor', $Processor);
+      var self = $klass($base, $super, 'Processor');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$require("ast/processor/mixin");
@@ -2516,16 +2489,14 @@ Opal.modules["ast/sexp"] = function(Opal) {
 
   Opal.add_stubs(['$new']);
   return (function($base, $parent_nesting) {
-    function $AST() {};
-    var self = $AST = $module($base, 'AST', $AST);
+    var self = $module($base, 'AST');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Sexp() {};
-      var self = $Sexp = $module($base, 'Sexp', $Sexp);
+      var self = $module($base, 'Sexp');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Sexp_s$1;
+      var $nesting = [self].concat($parent_nesting), $Sexp_s$1;
 
       
       Opal.def(self, '$s', $Sexp_s$1 = function $$s(type, $a) {
@@ -2548,10 +2519,9 @@ Opal.modules["ast"] = function(Opal) {
 
   Opal.add_stubs(['$require']);
   return (function($base, $parent_nesting) {
-    function $AST() {};
-    var self = $AST = $module($base, 'AST', $AST);
+    var self = $module($base, 'AST');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     
     self.$require("ast/node");
@@ -2569,22 +2539,19 @@ Opal.modules["parser/ast/node"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$[]', '$frozen?', '$dup', '$node=', '$-']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $AST() {};
-      var self = $AST = $module($base, 'AST', $AST);
+      var self = $module($base, 'AST');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Node(){};
-        var self = $Node = $klass($base, $super, 'Node', $Node);
+        var self = $klass($base, $super, 'Node');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Node_assign_properties$1;
+        var $nesting = [self].concat($parent_nesting), $Node_assign_properties$1;
 
         
         self.$attr_reader("location");
@@ -2619,24 +2586,21 @@ Opal.modules["opal/ast/node"] = function(Opal) {
   self.$require("ast");
   self.$require("parser/ast/node");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $AST() {};
-      var self = $AST = $module($base, 'AST', $AST);
+      var self = $module($base, 'AST');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Node(){};
-        var self = $Node = $klass($base, $super, 'Node', $Node);
+        var self = $klass($base, $super, 'Node');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Node_assign_properties$1, $Node_line$2, $Node_column$3;
+        var $nesting = [self].concat($parent_nesting), $Node_assign_properties$1, $Node_line$2, $Node_column$3;
 
-        def.meta = nil;
+        self.$$prototype.meta = nil;
         
         self.$attr_reader("meta");
         
@@ -2711,16 +2675,14 @@ Opal.modules["racc/parser"] = function(Opal) {
   Opal.add_stubs(['$[]', '$class', '$<', '$size', '$[]=', '$-', '$__send__', '$_racc_setup', '$raise', '$_racc_init_sysvars', '$catch', '$!=', '$next_token', '$racc_read_token', '$+', '$>=', '$==', '$_racc_evalact', '$!', '$>', '$push', '$racc_shift', '$-@', '$_racc_do_reduce', '$===', '$racc_accept', '$throw', '$on_error', '$<=', '$pop', '$racc_e_pop', '$inspect', '$racc_next_state', '$*', '$racc_reduce', '$sprintf', '$token_to_str', '$print', '$racc_token2str', '$puts', '$racc_print_stacks', '$empty?', '$each', '$racc_print_states', '$each_index']);
   
   (function($base, $parent_nesting) {
-    function $Racc() {};
-    var self = $Racc = $module($base, 'Racc', $Racc);
+    var self = $module($base, 'Racc');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $ParseError(){};
-      var self = $ParseError = $klass($base, $super, 'ParseError', $ParseError);
+      var self = $klass($base, $super, 'ParseError');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return nil
     })($nesting[0], $$($nesting, 'StandardError'), $nesting)
@@ -2730,10 +2692,9 @@ Opal.modules["racc/parser"] = function(Opal) {
     Opal.const_set($nesting[0], 'ParseError', $$$($$($nesting, 'Racc'), 'ParseError'))
   };
   return (function($base, $parent_nesting) {
-    function $Racc() {};
-    var self = $Racc = $module($base, 'Racc', $Racc);
+    var self = $module($base, 'Racc');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $a;
+    var $nesting = [self].concat($parent_nesting), $a;
 
     
     if ($truthy((($a = $$($nesting, 'Racc_No_Extensions', 'skip_raise')) ? 'constant' : nil))) {
@@ -2741,12 +2702,11 @@ Opal.modules["racc/parser"] = function(Opal) {
       Opal.const_set($nesting[0], 'Racc_No_Extensions', false)
     };
     (function($base, $super, $parent_nesting) {
-      function $Parser(){};
-      var self = $Parser = $klass($base, $super, 'Parser', $Parser);
+      var self = $klass($base, $super, 'Parser');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Parser_racc_runtime_type$1, $Parser__racc_setup$2, $Parser__racc_init_sysvars$3, $Parser_do_parse$4, $Parser_next_token$5, $Parser__racc_do_parse_rb$6, $Parser_yyparse$8, $Parser__racc_yyparse_rb$9, $Parser__racc_evalact$12, $Parser__racc_do_reduce$14, $Parser_on_error$15, $Parser_yyerror$16, $Parser_yyaccept$17, $Parser_yyerrok$18, $Parser_racc_read_token$19, $Parser_racc_shift$20, $Parser_racc_reduce$21, $Parser_racc_accept$23, $Parser_racc_e_pop$24, $Parser_racc_next_state$25, $Parser_racc_print_stacks$26, $Parser_racc_print_states$28, $Parser_racc_token2str$30, $Parser_token_to_str$31;
+      var $nesting = [self].concat($parent_nesting), $Parser_racc_runtime_type$1, $Parser__racc_setup$2, $Parser__racc_init_sysvars$3, $Parser_do_parse$4, $Parser_next_token$5, $Parser__racc_do_parse_rb$6, $Parser_yyparse$8, $Parser__racc_yyparse_rb$9, $Parser__racc_evalact$12, $Parser__racc_do_reduce$14, $Parser_on_error$15, $Parser_yyerror$16, $Parser_yyaccept$17, $Parser_yyerrok$18, $Parser_racc_read_token$19, $Parser_racc_shift$20, $Parser_racc_reduce$21, $Parser_racc_accept$23, $Parser_racc_e_pop$24, $Parser_racc_next_state$25, $Parser_racc_print_stacks$26, $Parser_racc_print_states$28, $Parser_racc_token2str$30, $Parser_token_to_str$31;
 
-      def.yydebug = def.racc_debug_out = def.racc_error_status = def.racc_t = def.racc_vstack = def.racc_val = def.racc_state = def.racc_tstack = nil;
+      self.$$prototype.yydebug = self.$$prototype.racc_debug_out = self.$$prototype.racc_error_status = self.$$prototype.racc_t = self.$$prototype.racc_vstack = self.$$prototype.racc_val = self.$$prototype.racc_state = self.$$prototype.racc_tstack = nil;
       
       Opal.const_set($nesting[0], 'Racc_Runtime_Version', "1.4.6");
       Opal.const_set($nesting[0], 'Racc_Runtime_Revision', ["originalRevision:", "1.8"]['$[]'](1));
@@ -3195,10 +3155,9 @@ Opal.modules["parser/version"] = function(Opal) {
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module;
 
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     Opal.const_set($nesting[0], 'VERSION', "2.5.3.0")
   })($nesting[0], $nesting)
@@ -3232,16 +3191,14 @@ Opal.modules["racc/parser"] = function(Opal) {
   Opal.add_stubs(['$[]', '$class', '$<', '$size', '$[]=', '$-', '$__send__', '$_racc_setup', '$raise', '$_racc_init_sysvars', '$catch', '$!=', '$next_token', '$racc_read_token', '$+', '$>=', '$==', '$_racc_evalact', '$!', '$>', '$push', '$racc_shift', '$-@', '$_racc_do_reduce', '$===', '$racc_accept', '$throw', '$on_error', '$<=', '$pop', '$racc_e_pop', '$inspect', '$racc_next_state', '$*', '$racc_reduce', '$sprintf', '$token_to_str', '$print', '$racc_token2str', '$puts', '$racc_print_stacks', '$empty?', '$each', '$racc_print_states', '$each_index']);
   
   (function($base, $parent_nesting) {
-    function $Racc() {};
-    var self = $Racc = $module($base, 'Racc', $Racc);
+    var self = $module($base, 'Racc');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $ParseError(){};
-      var self = $ParseError = $klass($base, $super, 'ParseError', $ParseError);
+      var self = $klass($base, $super, 'ParseError');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return nil
     })($nesting[0], $$($nesting, 'StandardError'), $nesting)
@@ -3251,10 +3208,9 @@ Opal.modules["racc/parser"] = function(Opal) {
     Opal.const_set($nesting[0], 'ParseError', $$$($$($nesting, 'Racc'), 'ParseError'))
   };
   return (function($base, $parent_nesting) {
-    function $Racc() {};
-    var self = $Racc = $module($base, 'Racc', $Racc);
+    var self = $module($base, 'Racc');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $a;
+    var $nesting = [self].concat($parent_nesting), $a;
 
     
     if ($truthy((($a = $$($nesting, 'Racc_No_Extensions', 'skip_raise')) ? 'constant' : nil))) {
@@ -3262,12 +3218,11 @@ Opal.modules["racc/parser"] = function(Opal) {
       Opal.const_set($nesting[0], 'Racc_No_Extensions', false)
     };
     (function($base, $super, $parent_nesting) {
-      function $Parser(){};
-      var self = $Parser = $klass($base, $super, 'Parser', $Parser);
+      var self = $klass($base, $super, 'Parser');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Parser_racc_runtime_type$1, $Parser__racc_setup$2, $Parser__racc_init_sysvars$3, $Parser_do_parse$4, $Parser_next_token$5, $Parser__racc_do_parse_rb$6, $Parser_yyparse$8, $Parser__racc_yyparse_rb$9, $Parser__racc_evalact$12, $Parser__racc_do_reduce$14, $Parser_on_error$15, $Parser_yyerror$16, $Parser_yyaccept$17, $Parser_yyerrok$18, $Parser_racc_read_token$19, $Parser_racc_shift$20, $Parser_racc_reduce$21, $Parser_racc_accept$23, $Parser_racc_e_pop$24, $Parser_racc_next_state$25, $Parser_racc_print_stacks$26, $Parser_racc_print_states$28, $Parser_racc_token2str$30, $Parser_token_to_str$31;
+      var $nesting = [self].concat($parent_nesting), $Parser_racc_runtime_type$1, $Parser__racc_setup$2, $Parser__racc_init_sysvars$3, $Parser_do_parse$4, $Parser_next_token$5, $Parser__racc_do_parse_rb$6, $Parser_yyparse$8, $Parser__racc_yyparse_rb$9, $Parser__racc_evalact$12, $Parser__racc_do_reduce$14, $Parser_on_error$15, $Parser_yyerror$16, $Parser_yyaccept$17, $Parser_yyerrok$18, $Parser_racc_read_token$19, $Parser_racc_shift$20, $Parser_racc_reduce$21, $Parser_racc_accept$23, $Parser_racc_e_pop$24, $Parser_racc_next_state$25, $Parser_racc_print_stacks$26, $Parser_racc_print_states$28, $Parser_racc_token2str$30, $Parser_token_to_str$31;
 
-      def.yydebug = def.racc_debug_out = def.racc_error_status = def.racc_t = def.racc_vstack = def.racc_val = def.racc_state = def.racc_tstack = nil;
+      self.$$prototype.yydebug = self.$$prototype.racc_debug_out = self.$$prototype.racc_error_status = self.$$prototype.racc_t = self.$$prototype.racc_vstack = self.$$prototype.racc_val = self.$$prototype.racc_state = self.$$prototype.racc_tstack = nil;
       
       Opal.const_set($nesting[0], 'Racc_Runtime_Version', "1.4.6");
       Opal.const_set($nesting[0], 'Racc_Runtime_Revision', ["originalRevision:", "1.8"]['$[]'](1));
@@ -3717,10 +3672,9 @@ Opal.modules["parser/messages"] = function(Opal) {
 
   Opal.add_stubs(['$freeze']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     Opal.const_set($nesting[0], 'MESSAGES', $hash2(["unicode_point_too_large", "invalid_escape", "incomplete_escape", "invalid_hex_escape", "invalid_unicode_escape", "unterminated_unicode", "escape_eof", "string_eof", "regexp_options", "cvar_name", "ivar_name", "trailing_in_number", "empty_numeric", "invalid_octal", "no_dot_digit_literal", "bare_backslash", "unexpected", "embedded_document", "heredoc_id_has_newline", "heredoc_id_ends_with_nl", "invalid_escape_use", "ambiguous_literal", "ambiguous_prefix", "nth_ref_alias", "begin_in_method", "backref_assignment", "invalid_assignment", "module_name_const", "unexpected_token", "argument_const", "argument_ivar", "argument_gvar", "argument_cvar", "duplicate_argument", "empty_symbol", "odd_hash", "singleton_literal", "dynamic_const", "const_reassignment", "module_in_def", "class_in_def", "unexpected_percent_str", "block_and_blockarg", "masgn_as_condition", "block_given_to_yield", "invalid_regexp", "invalid_return", "useless_else", "invalid_encoding", "invalid_action", "clobbered", "different_replacements", "swallowed_insertions", "swallowed_insertions_conflict", "crossing_deletions", "crossing_deletions_conflict", "crossing_insertions", "crossing_insertions_conflict"], {"unicode_point_too_large": "invalid Unicode codepoint (too large)", "invalid_escape": "invalid escape character syntax", "incomplete_escape": "incomplete character syntax", "invalid_hex_escape": "invalid hex escape", "invalid_unicode_escape": "invalid Unicode escape", "unterminated_unicode": "unterminated Unicode escape", "escape_eof": "escape sequence meets end of file", "string_eof": "unterminated string meets end of file", "regexp_options": "unknown regexp options: %{options}", "cvar_name": "`%{name}' is not allowed as a class variable name", "ivar_name": "`%{name}' is not allowed as an instance variable name", "trailing_in_number": "trailing `%{character}' in number", "empty_numeric": "numeric literal without digits", "invalid_octal": "invalid octal digit", "no_dot_digit_literal": "no .<digit> floating literal anymore; put 0 before dot", "bare_backslash": "bare backslash only allowed before newline", "unexpected": "unexpected `%{character}'", "embedded_document": "embedded document meets end of file (and they embark on a romantic journey)", "heredoc_id_has_newline": "here document identifier across newlines, never match", "heredoc_id_ends_with_nl": "here document identifier ends with a newline", "invalid_escape_use": "invalid character syntax; use ?%{escape}", "ambiguous_literal": "ambiguous first argument; put parentheses or a space even after the operator", "ambiguous_prefix": "`%{prefix}' interpreted as argument prefix", "nth_ref_alias": "cannot define an alias for a back-reference variable", "begin_in_method": "BEGIN in method", "backref_assignment": "cannot assign to a back-reference variable", "invalid_assignment": "cannot assign to a keyword", "module_name_const": "class or module name must be a constant literal", "unexpected_token": "unexpected token %{token}", "argument_const": "formal argument cannot be a constant", "argument_ivar": "formal argument cannot be an instance variable", "argument_gvar": "formal argument cannot be a global variable", "argument_cvar": "formal argument cannot be a class variable", "duplicate_argument": "duplicate argument name", "empty_symbol": "empty symbol literal", "odd_hash": "odd number of entries for a hash", "singleton_literal": "cannot define a singleton method for a literal", "dynamic_const": "dynamic constant assignment", "const_reassignment": "constant re-assignment", "module_in_def": "module definition in method body", "class_in_def": "class definition in method body", "unexpected_percent_str": "%{type}: unknown type of percent-literal", "block_and_blockarg": "both block argument and literal block are passed", "masgn_as_condition": "multiple assignment in conditional context", "block_given_to_yield": "block given to yield", "invalid_regexp": "%{message}", "invalid_return": "Invalid return in class/module body", "useless_else": "else without rescue is useless", "invalid_encoding": "literal contains escape sequences incompatible with UTF-8", "invalid_action": "cannot %{action}", "clobbered": "clobbered by: %{action}", "different_replacements": "different replacements: %{replacement} vs %{other_replacement}", "swallowed_insertions": "this replacement:", "swallowed_insertions_conflict": "swallows some inner rewriting actions:", "crossing_deletions": "the deletion of:", "crossing_deletions_conflict": "is crossing:", "crossing_insertions": "the rewriting action on:", "crossing_insertions_conflict": "is crossing that on:"}).$freeze())
   })($nesting[0], $nesting)
@@ -3732,16 +3686,14 @@ Opal.modules["parser/deprecation"] = function(Opal) {
 
   Opal.add_stubs(['$attr_writer', '$warn']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Deprecation() {};
-      var self = $Deprecation = $module($base, 'Deprecation', $Deprecation);
+      var self = $module($base, 'Deprecation');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Deprecation_warn_of_deprecation$1;
+      var $nesting = [self].concat($parent_nesting), $Deprecation_warn_of_deprecation$1;
 
       
       self.$attr_writer("warned_of_deprecation");
@@ -3762,22 +3714,19 @@ Opal.modules["parser/ast/processor"] = function(Opal) {
 
   Opal.add_stubs(['$updated', '$process_all', '$on_var', '$!', '$nil?', '$process', '$on_vasgn', '$on_argument', '$warn']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $AST() {};
-      var self = $AST = $module($base, 'AST', $AST);
+      var self = $module($base, 'AST');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Processor(){};
-        var self = $Processor = $klass($base, $super, 'Processor', $Processor);
+        var self = $klass($base, $super, 'Processor');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Processor_process_regular_node$1, $Processor_on_var$2, $Processor_process_variable_node$3, $Processor_on_vasgn$4, $Processor_process_var_asgn_node$5, $Processor_on_op_asgn$6, $Processor_on_const$7, $Processor_on_casgn$8, $Processor_on_argument$9, $Processor_process_argument_node$10, $Processor_on_def$11, $Processor_on_defs$12, $Processor_on_send$13, $Processor_process_variable_node$14, $Processor_process_var_asgn_node$15, $Processor_process_argument_node$16;
+        var $nesting = [self].concat($parent_nesting), $Processor_process_regular_node$1, $Processor_on_var$2, $Processor_process_variable_node$3, $Processor_on_vasgn$4, $Processor_process_var_asgn_node$5, $Processor_on_op_asgn$6, $Processor_on_const$7, $Processor_on_casgn$8, $Processor_on_argument$9, $Processor_process_argument_node$10, $Processor_on_def$11, $Processor_on_defs$12, $Processor_on_send$13, $Processor_process_variable_node$14, $Processor_process_var_asgn_node$15, $Processor_process_argument_node$16;
 
         
         
@@ -4001,16 +3950,14 @@ Opal.modules["parser/meta"] = function(Opal) {
 
   Opal.add_stubs(['$freeze', '$to_set', '$map', '$to_proc']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Meta() {};
-      var self = $Meta = $module($base, 'Meta', $Meta);
+      var self = $module($base, 'Meta');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       Opal.const_set($nesting[0], 'NODE_TYPES', $send(["true", "false", "nil", "int", "float", "str", "dstr", "sym", "dsym", "xstr", "regopt", "regexp", "array", "splat", "pair", "kwsplat", "hash", "irange", "erange", "self", "lvar", "ivar", "cvar", "gvar", "const", "defined?", "lvasgn", "ivasgn", "cvasgn", "gvasgn", "casgn", "mlhs", "masgn", "op_asgn", "and_asgn", "ensure", "rescue", "arg_expr", "or_asgn", "back_ref", "nth_ref", "match_with_lvasgn", "match_current_line", "module", "class", "sclass", "def", "defs", "undef", "alias", "args", "cbase", "arg", "optarg", "restarg", "blockarg", "block_pass", "kwarg", "kwoptarg", "kwrestarg", "send", "csend", "super", "zsuper", "yield", "block", "and", "not", "or", "if", "when", "case", "while", "until", "while_post", "until_post", "for", "break", "next", "redo", "return", "resbody", "kwbegin", "begin", "retry", "preexe", "postexe", "iflipflop", "eflipflop", "shadowarg", "complex", "rational", "__FILE__", "__LINE__", "__ENCODING__"], 'map', [], "to_sym".$to_proc()).$to_set().$freeze())
     })($nesting[0], $nesting)
@@ -4035,24 +3982,21 @@ Opal.modules["parser/source/buffer"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$empty?', '$=~', '$start_with?', '$freeze', '$==', '$[]', '$nil?', '$!=', '$match', '$find', '$encoding', '$recognize_encoding', '$force_encoding', '$encode', '$to_s', '$open', '$read', '$source=', '$-', '$raise', '$frozen?', '$dup', '$reencode_string', '$class', '$valid_encoding?', '$name', '$raw_source=', '$gsub', '$!', '$ascii_only?', '$line_for', '$+', '$[]=', '$to_a', '$lines', '$end_with?', '$<<', '$each', '$chomp!', '$fetch', '$source_lines', '$<=', '$>', '$size', '$line_begins', '$new', '$-@', '$source', '$private', '$index', '$unshift', '$length', '$bsearch']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Buffer(){};
-        var self = $Buffer = $klass($base, $super, 'Buffer', $Buffer);
+        var self = $klass($base, $super, 'Buffer');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Buffer_recognize_encoding$1, $Buffer_reencode_string$2, $Buffer_initialize$3, $Buffer_read$4, $Buffer_source$6, $Buffer_source$eq$7, $Buffer_raw_source$eq$8, $Buffer_slice$9, $Buffer_decompose_position$10, $Buffer_line_for_position$11, $Buffer_column_for_position$12, $Buffer_source_lines$13, $Buffer_source_line$15, $Buffer_line_range$16, $Buffer_source_range$17, $Buffer_last_line$18, $Buffer_line_begins$19, $Buffer_line_for$20;
+        var $nesting = [self].concat($parent_nesting), $Buffer_recognize_encoding$1, $Buffer_reencode_string$2, $Buffer_initialize$3, $Buffer_read$4, $Buffer_source$6, $Buffer_source$eq$7, $Buffer_raw_source$eq$8, $Buffer_slice$9, $Buffer_decompose_position$10, $Buffer_line_for_position$11, $Buffer_column_for_position$12, $Buffer_source_lines$13, $Buffer_source_line$15, $Buffer_line_range$16, $Buffer_source_range$17, $Buffer_last_line$18, $Buffer_line_begins$19, $Buffer_line_for$20;
 
-        def.name = def.source = def.slice_source = def.first_line = def.line_for_position = def.column_for_position = def.lines = def.source_range = def.line_begins = nil;
+        self.$$prototype.name = self.$$prototype.source = self.$$prototype.slice_source = self.$$prototype.first_line = self.$$prototype.line_for_position = self.$$prototype.column_for_position = self.$$prototype.lines = self.$$prototype.source_range = self.$$prototype.line_begins = nil;
         
         self.$attr_reader("name", "first_line");
         Opal.const_set($nesting[0], 'ENCODING_RE', new RegExp("" + "[\\s#](en)?coding\\s*[:=]\\s*" + "(" + "" + "(utf8-mac)" + "|" + "" + "([A-Za-z0-9_-]+?)(-unix|-dos|-mac)" + "|" + "([A-Za-z0-9_-]+)" + ")" + ""));
@@ -4308,24 +4252,21 @@ Opal.modules["parser/source/range"] = function(Opal) {
 
   Opal.add_stubs(['$include', '$attr_reader', '$<', '$raise', '$nil?', '$freeze', '$with', '$-', '$line_for_position', '$alias_method', '$column_for_position', '$!=', '$line', '$begin', '$end', '$inspect', '$column', '$source_line', '$slice', '$begin_pos', '$end_pos', '$include?', '$source', '$to_a', '$decompose_position', '$join', '$name', '$+', '$new', '$min', '$max', '$disjoint?', '$empty?', '$>=', '$!', '$<=>', '$contains?', '$overlaps?', '$==', '$*', '$is_a?', '$source_buffer', '$nonzero?']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Range(){};
-        var self = $Range = $klass($base, $super, 'Range', $Range);
+        var self = $klass($base, $super, 'Range');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Range_initialize$1, $Range_begin$2, $Range_end$3, $Range_size$4, $Range_line$5, $Range_column$6, $Range_last_line$7, $Range_last_column$8, $Range_column_range$9, $Range_source_line$10, $Range_source$11, $Range_is$ques$12, $Range_to_a$13, $Range_to_s$14, $Range_with$15, $Range_adjust$16, $Range_resize$17, $Range_join$18, $Range_intersect$19, $Range_disjoint$ques$20, $Range_overlaps$ques$21, $Range_contains$ques$22, $Range_contained$ques$23, $Range_crossing$ques$24, $Range_empty$ques$25, $Range_$lt_eq_gt$26, $Range_inspect$27;
+        var $nesting = [self].concat($parent_nesting), $Range_initialize$1, $Range_begin$2, $Range_end$3, $Range_size$4, $Range_line$5, $Range_column$6, $Range_last_line$7, $Range_last_column$8, $Range_column_range$9, $Range_source_line$10, $Range_source$11, $Range_is$ques$12, $Range_to_a$13, $Range_to_s$14, $Range_with$15, $Range_adjust$16, $Range_resize$17, $Range_join$18, $Range_intersect$19, $Range_disjoint$ques$20, $Range_overlaps$ques$21, $Range_contains$ques$22, $Range_contained$ques$23, $Range_crossing$ques$24, $Range_empty$ques$25, $Range_$lt_eq_gt$26, $Range_inspect$27;
 
-        def.begin_pos = def.end_pos = def.source_buffer = nil;
+        self.$$prototype.begin_pos = self.$$prototype.end_pos = self.$$prototype.source_buffer = nil;
         
         self.$include($$($nesting, 'Comparable'));
         self.$attr_reader("source_buffer");
@@ -4577,24 +4518,21 @@ Opal.modules["parser/source/comment"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$alias_method', '$new', '$associate', '$associate_locations', '$freeze', '$source', '$start_with?', '$text', '$==', '$type', '$is_a?', '$location', '$to_s', '$expression', '$inspect']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Comment(){};
-        var self = $Comment = $klass($base, $super, 'Comment', $Comment);
+        var self = $klass($base, $super, 'Comment');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Comment_associate$1, $Comment_associate_locations$2, $Comment_initialize$3, $Comment_type$4, $Comment_inline$ques$5, $Comment_document$ques$6, $Comment_$eq_eq$7, $Comment_inspect$8;
+        var $nesting = [self].concat($parent_nesting), $Comment_associate$1, $Comment_associate_locations$2, $Comment_initialize$3, $Comment_type$4, $Comment_inline$ques$5, $Comment_document$ques$6, $Comment_$eq_eq$7, $Comment_inspect$8;
 
-        def.location = nil;
+        self.$$prototype.location = nil;
         
         self.$attr_reader("text");
         self.$attr_reader("location");
@@ -4677,24 +4615,21 @@ Opal.modules["parser/source/comment/associator"] = function(Opal) {
 
   Opal.add_stubs(['$attr_accessor', '$do_associate', '$private', '$new', '$[]=', '$-', '$advance_comment', '$advance_through_directives', '$visit', '$process_leading_comments', '$location', '$<=', '$line', '$last_line', '$is_a?', '$each', '$children', '$loc', '$expression', '$process_trailing_comments', '$==', '$type', '$current_comment_before?', '$associate_and_advance_comment', '$current_comment_before_end?', '$current_comment_decorates?', '$+', '$[]', '$!', '$end_pos', '$begin_pos', '$<<', '$start_with?', '$text', '$freeze', '$=~']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Associator(){};
-        var self = $Associator = $klass($base, $super, 'Associator', $Associator);
+        var self = $klass($base, $super, 'Associator');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Associator_initialize$1, $Associator_associate$2, $Associator_associate_locations$3, $Associator_do_associate$4, $Associator_visit$6, $Associator_process_leading_comments$8, $Associator_process_trailing_comments$9, $Associator_advance_comment$10, $Associator_current_comment_before$ques$11, $Associator_current_comment_before_end$ques$12, $Associator_current_comment_decorates$ques$13, $Associator_associate_and_advance_comment$14, $Associator_advance_through_directives$15;
+        var $nesting = [self].concat($parent_nesting), $Associator_initialize$1, $Associator_associate$2, $Associator_associate_locations$3, $Associator_do_associate$4, $Associator_visit$6, $Associator_process_leading_comments$8, $Associator_process_trailing_comments$9, $Associator_advance_comment$10, $Associator_current_comment_before$ques$11, $Associator_current_comment_before_end$ques$12, $Associator_current_comment_decorates$ques$13, $Associator_associate_and_advance_comment$14, $Associator_advance_through_directives$15;
 
-        def.skip_directives = def.ast = def.mapping = def.current_comment = def.comment_num = def.comments = def.map_using_locations = nil;
+        self.$$prototype.skip_directives = self.$$prototype.ast = self.$$prototype.mapping = self.$$prototype.current_comment = self.$$prototype.comment_num = self.$$prototype.comments = self.$$prototype.map_using_locations = nil;
         
         self.$attr_accessor("skip_directives");
         
@@ -4896,24 +4831,21 @@ Opal.modules["parser/source/rewriter"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$warn_of_deprecation', '$class', '$new', '$lambda', '$puts', '$render', '$consumer=', '$-', '$append', '$freeze', '$begin', '$end', '$+', '$in_transaction?', '$raise', '$dup', '$source', '$each', '$sort', '$begin_pos', '$range', '$length', '$replacement', '$[]=', '$private', '$empty?', '$!', '$allow_multiple_insertions?', '$clobbered_insertion?', '$raise_clobber_error', '$record_insertion', '$adjacent_updates?', '$find', '$overlaps?', '$replace_compatible_with_insertion?', '$merge_actions!', '$<<', '$active_queue', '$adjacent_insertions?', '$merge_actions', '$delete', '$can_merge?', '$record_replace', '$|', '$active_insertions', '$active_insertions=', '$active_clobber', '$clobbered_position_mask', '$active_clobber=', '$size', '$!=', '$&', '$<=', '$end_pos', '$adjacent_insertion_mask', '$select', '$adjacent?', '$adjacent_position_mask', '$>=', '$==', '$[]', '$all?', '$intersect', '$nil?', '$max', '$sort_by', '$push', '$join', '$first', '$max_by', '$merge_replacements', '$replace_actions', '$disjoint?', '$<', '$process', '$extend']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Rewriter(){};
-        var self = $Rewriter = $klass($base, $super, 'Rewriter', $Rewriter);
+        var self = $klass($base, $super, 'Rewriter');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Rewriter_initialize$1, $Rewriter_remove$3, $Rewriter_insert_before$4, $Rewriter_wrap$5, $Rewriter_insert_before_multi$6, $Rewriter_insert_after$7, $Rewriter_insert_after_multi$8, $Rewriter_replace$9, $Rewriter_process$10, $Rewriter_transaction$12, $Rewriter_append$13, $Rewriter_record_insertion$16, $Rewriter_record_replace$17, $Rewriter_clobbered_position_mask$18, $Rewriter_adjacent_position_mask$19, $Rewriter_adjacent_insertion_mask$20, $Rewriter_clobbered_insertion$ques$21, $Rewriter_adjacent_insertions$ques$23, $Rewriter_adjacent_updates$ques$25, $Rewriter_replace_compatible_with_insertion$ques$27, $Rewriter_can_merge$ques$28, $Rewriter_merge_actions$30, $Rewriter_merge_actions$excl$33, $Rewriter_merge_replacements$34, $Rewriter_replace_actions$36, $Rewriter_raise_clobber_error$38, $Rewriter_in_transaction$ques$39, $Rewriter_active_queue$40, $Rewriter_active_clobber$41, $Rewriter_active_insertions$42, $Rewriter_active_clobber$eq$43, $Rewriter_active_insertions$eq$44, $Rewriter_adjacent$ques$45;
+        var $nesting = [self].concat($parent_nesting), $Rewriter_initialize$1, $Rewriter_remove$3, $Rewriter_insert_before$4, $Rewriter_wrap$5, $Rewriter_insert_before_multi$6, $Rewriter_insert_after$7, $Rewriter_insert_after_multi$8, $Rewriter_replace$9, $Rewriter_process$10, $Rewriter_transaction$12, $Rewriter_append$13, $Rewriter_record_insertion$16, $Rewriter_record_replace$17, $Rewriter_clobbered_position_mask$18, $Rewriter_adjacent_position_mask$19, $Rewriter_adjacent_insertion_mask$20, $Rewriter_clobbered_insertion$ques$21, $Rewriter_adjacent_insertions$ques$23, $Rewriter_adjacent_updates$ques$25, $Rewriter_replace_compatible_with_insertion$ques$27, $Rewriter_can_merge$ques$28, $Rewriter_merge_actions$30, $Rewriter_merge_actions$excl$33, $Rewriter_merge_replacements$34, $Rewriter_replace_actions$36, $Rewriter_raise_clobber_error$38, $Rewriter_in_transaction$ques$39, $Rewriter_active_queue$40, $Rewriter_active_clobber$41, $Rewriter_active_insertions$42, $Rewriter_active_clobber$eq$43, $Rewriter_active_insertions$eq$44, $Rewriter_adjacent$ques$45;
 
-        def.diagnostics = def.insert_before_multi_order = def.insert_after_multi_order = def.source_buffer = def.queue = def.clobber = def.insertions = def.pending_queue = def.pending_clobber = def.pending_insertions = nil;
+        self.$$prototype.diagnostics = self.$$prototype.insert_before_multi_order = self.$$prototype.insert_after_multi_order = self.$$prototype.source_buffer = self.$$prototype.queue = self.$$prototype.clobber = self.$$prototype.insertions = self.$$prototype.pending_queue = self.$$prototype.pending_clobber = self.$$prototype.pending_insertions = nil;
         
         self.$attr_reader("source_buffer");
         self.$attr_reader("diagnostics");
@@ -5379,24 +5311,21 @@ Opal.modules["parser/source/rewriter/action"] = function(Opal) {
 
   Opal.add_stubs(['$include', '$attr_reader', '$alias_method', '$freeze', '$<=>', '$begin_pos', '$range', '$zero?', '$order', '$==', '$length', '$empty?', '$inspect']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Action(){};
-        var self = $Action = $klass($base, $super, 'Action', $Action);
+        var self = $klass($base, $super, 'Action');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Action_initialize$1, $Action_$lt_eq_gt$2, $Action_to_s$3;
+        var $nesting = [self].concat($parent_nesting), $Action_initialize$1, $Action_$lt_eq_gt$2, $Action_to_s$3;
 
-        def.range = def.replacement = nil;
+        self.$$prototype.range = self.$$prototype.replacement = nil;
         
         self.$include($$($nesting, 'Comparable'));
         self.$attr_reader("range", "replacement", "allow_multiple_insertions", "order");
@@ -5472,24 +5401,21 @@ Opal.modules["parser/source/tree_rewriter"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$new', '$puts', '$render', '$consumer=', '$-', '$freeze', '$check_policy_validity', '$method', '$adjust', '$source_range', '$combine', '$to_s', '$replace', '$wrap', '$dup', '$source', '$each', '$ordered_replacements', '$+', '$begin_pos', '$length', '$[]=', '$raise', '$class', '$warn_of_deprecation', '$insert_before', '$insert_after', '$join', '$extend', '$private', '$values', '$empty?', '$check_range_validity', '$<', '$>', '$end_pos', '$size', '$==', '$[]', '$trigger_policy', '$process']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $TreeRewriter(){};
-        var self = $TreeRewriter = $klass($base, $super, 'TreeRewriter', $TreeRewriter);
+        var self = $klass($base, $super, 'TreeRewriter');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $TreeRewriter_initialize$1, $TreeRewriter_replace$3, $TreeRewriter_wrap$4, $TreeRewriter_remove$5, $TreeRewriter_insert_before$6, $TreeRewriter_insert_after$7, $TreeRewriter_process$8, $TreeRewriter_transaction$10, $TreeRewriter_in_transaction$ques$11, $TreeRewriter_insert_before_multi$12, $TreeRewriter_insert_after_multi$13, $TreeRewriter_check_policy_validity$14, $TreeRewriter_combine$15, $TreeRewriter_check_range_validity$16, $TreeRewriter_enforce_policy$17, $TreeRewriter_trigger_policy$18;
+        var $nesting = [self].concat($parent_nesting), $TreeRewriter_initialize$1, $TreeRewriter_replace$3, $TreeRewriter_wrap$4, $TreeRewriter_remove$5, $TreeRewriter_insert_before$6, $TreeRewriter_insert_after$7, $TreeRewriter_process$8, $TreeRewriter_transaction$10, $TreeRewriter_in_transaction$ques$11, $TreeRewriter_insert_before_multi$12, $TreeRewriter_insert_after_multi$13, $TreeRewriter_check_policy_validity$14, $TreeRewriter_combine$15, $TreeRewriter_check_range_validity$16, $TreeRewriter_enforce_policy$17, $TreeRewriter_trigger_policy$18;
 
-        def.diagnostics = def.source_buffer = def.enforcer = def.action_root = def.in_transaction = def.policy = nil;
+        self.$$prototype.diagnostics = self.$$prototype.source_buffer = self.$$prototype.enforcer = self.$$prototype.action_root = self.$$prototype.in_transaction = self.$$prototype.policy = nil;
         
         self.$attr_reader("source_buffer");
         self.$attr_reader("diagnostics");
@@ -5741,24 +5667,21 @@ Opal.modules["parser/source/tree_rewriter/action"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$freeze', '$insertion?', '$replacement', '$do_combine', '$empty?', '$<<', '$begin', '$concat', '$flat_map', '$sort_by', '$to_proc', '$end', '$!', '$insert_before', '$insert_after', '$protected', '$swallow', '$new', '$class', '$==', '$range', '$merge', '$place_in_hierachy', '$group_by', '$relationship_with', '$[]', '$fuse_deletions', '$with', '$inject', '$map', '$contains?', '$contained?', '$disjoint?', '$call', '$call_enforcer_for_merge', '$!=', '$select']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Action(){};
-        var self = $Action = $klass($base, $super, 'Action', $Action);
+        var self = $klass($base, $super, 'Action');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Action_initialize$1, $Action_combine$2, $Action_ordered_replacements$3, $Action_insertion$ques$4, $Action_with$5, $Action_do_combine$6, $Action_place_in_hierachy$7, $Action_fuse_deletions$9, $Action_relationship_with$10, $Action_merge$13, $Action_call_enforcer_for_merge$14, $Action_swallow$16;
+        var $nesting = [self].concat($parent_nesting), $Action_initialize$1, $Action_combine$2, $Action_ordered_replacements$3, $Action_insertion$ques$4, $Action_with$5, $Action_do_combine$6, $Action_place_in_hierachy$7, $Action_fuse_deletions$9, $Action_relationship_with$10, $Action_merge$13, $Action_call_enforcer_for_merge$14, $Action_swallow$16;
 
-        def.insert_before = def.range = def.replacement = def.children = def.insert_after = def.enforcer = nil;
+        self.$$prototype.insert_before = self.$$prototype.range = self.$$prototype.replacement = self.$$prototype.children = self.$$prototype.insert_after = self.$$prototype.enforcer = nil;
         
         self.$attr_reader("range", "replacement", "insert_before", "insert_after");
         
@@ -5995,24 +5918,21 @@ Opal.modules["parser/source/map"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$freeze', '$line', '$alias_method', '$column', '$last_line', '$last_column', '$with', '$update_expression', '$==', '$class', '$reduce', '$map', '$instance_variables', '$instance_variable_get', '$send', '$inject', '$to_sym', '$[]', '$[]=', '$-', '$protected', '$tap', '$dup', '$to_proc']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Map(){};
-        var self = $Map = $klass($base, $super, 'Map', $Map);
+        var self = $klass($base, $super, 'Map');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Map_initialize$1, $Map_initialize_copy$2, $Map_node$eq$3, $Map_line$4, $Map_column$5, $Map_last_line$6, $Map_last_column$7, $Map_with_expression$8, $Map_$eq_eq$10, $Map_to_hash$12, $Map_with$14, $Map_update_expression$15;
+        var $nesting = [self].concat($parent_nesting), $Map_initialize$1, $Map_initialize_copy$2, $Map_node$eq$3, $Map_line$4, $Map_column$5, $Map_last_line$6, $Map_last_column$7, $Map_with_expression$8, $Map_$eq_eq$10, $Map_to_hash$12, $Map_with$14, $Map_update_expression$15;
 
-        def.node = def.expression = nil;
+        self.$$prototype.node = self.$$prototype.expression = nil;
         
         self.$attr_reader("node");
         self.$attr_reader("expression");
@@ -6145,22 +6065,19 @@ Opal.modules["parser/source/map/operator"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Operator(){};
-        var self = $Operator = $klass($base, $super, 'Operator', $Operator);
+        var self = $klass($base, $super, 'Operator');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Operator_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $Operator_initialize$1;
 
         
         self.$attr_reader("operator");
@@ -6183,22 +6100,19 @@ Opal.modules["parser/source/map/collection"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Collection(){};
-        var self = $Collection = $klass($base, $super, 'Collection', $Collection);
+        var self = $klass($base, $super, 'Collection');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Collection_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $Collection_initialize$1;
 
         
         self.$attr_reader("begin");
@@ -6222,22 +6136,19 @@ Opal.modules["parser/source/map/constant"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$with', '$update_operator', '$protected']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Constant(){};
-        var self = $Constant = $klass($base, $super, 'Constant', $Constant);
+        var self = $klass($base, $super, 'Constant');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Constant_initialize$1, $Constant_with_operator$2, $Constant_update_operator$4;
+        var $nesting = [self].concat($parent_nesting), $Constant_initialize$1, $Constant_with_operator$2, $Constant_update_operator$4;
 
         
         self.$attr_reader("double_colon");
@@ -6282,22 +6193,19 @@ Opal.modules["parser/source/map/variable"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$with', '$update_operator', '$protected']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Variable(){};
-        var self = $Variable = $klass($base, $super, 'Variable', $Variable);
+        var self = $klass($base, $super, 'Variable');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Variable_initialize$1, $Variable_with_operator$2, $Variable_update_operator$4;
+        var $nesting = [self].concat($parent_nesting), $Variable_initialize$1, $Variable_with_operator$2, $Variable_update_operator$4;
 
         
         self.$attr_reader("name");
@@ -6345,22 +6253,19 @@ Opal.modules["parser/source/map/keyword"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Keyword(){};
-        var self = $Keyword = $klass($base, $super, 'Keyword', $Keyword);
+        var self = $klass($base, $super, 'Keyword');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Keyword_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $Keyword_initialize$1;
 
         
         self.$attr_reader("keyword");
@@ -6386,24 +6291,21 @@ Opal.modules["parser/source/map/definition"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$join']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Definition(){};
-        var self = $Definition = $klass($base, $super, 'Definition', $Definition);
+        var self = $klass($base, $super, 'Definition');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Definition_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $Definition_initialize$1;
 
-        def.keyword = def.end = nil;
+        self.$$prototype.keyword = self.$$prototype.end = nil;
         
         self.$attr_reader("keyword");
         self.$attr_reader("operator");
@@ -6431,22 +6333,19 @@ Opal.modules["parser/source/map/send"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$with', '$update_operator', '$protected']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Send(){};
-        var self = $Send = $klass($base, $super, 'Send', $Send);
+        var self = $klass($base, $super, 'Send');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Send_initialize$1, $Send_with_operator$2, $Send_update_operator$4;
+        var $nesting = [self].concat($parent_nesting), $Send_initialize$1, $Send_with_operator$2, $Send_update_operator$4;
 
         
         self.$attr_reader("dot");
@@ -6495,22 +6394,19 @@ Opal.modules["parser/source/map/index"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$with', '$update_operator', '$protected']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Index(){};
-        var self = $Index = $klass($base, $super, 'Index', $Index);
+        var self = $klass($base, $super, 'Index');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Index_initialize$1, $Index_with_operator$2, $Index_update_operator$4;
+        var $nesting = [self].concat($parent_nesting), $Index_initialize$1, $Index_with_operator$2, $Index_update_operator$4;
 
         
         self.$attr_reader("begin");
@@ -6556,22 +6452,19 @@ Opal.modules["parser/source/map/condition"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Condition(){};
-        var self = $Condition = $klass($base, $super, 'Condition', $Condition);
+        var self = $klass($base, $super, 'Condition');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Condition_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $Condition_initialize$1;
 
         
         self.$attr_reader("keyword");
@@ -6598,22 +6491,19 @@ Opal.modules["parser/source/map/ternary"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Ternary(){};
-        var self = $Ternary = $klass($base, $super, 'Ternary', $Ternary);
+        var self = $klass($base, $super, 'Ternary');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Ternary_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $Ternary_initialize$1;
 
         
         self.$attr_reader("question");
@@ -6637,22 +6527,19 @@ Opal.modules["parser/source/map/for"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $For(){};
-        var self = $For = $klass($base, $super, 'For', $For);
+        var self = $klass($base, $super, 'For');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $For_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $For_initialize$1;
 
         
         self.$attr_reader("keyword", "in");
@@ -6677,22 +6564,19 @@ Opal.modules["parser/source/map/rescue_body"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $RescueBody(){};
-        var self = $RescueBody = $klass($base, $super, 'RescueBody', $RescueBody);
+        var self = $klass($base, $super, 'RescueBody');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RescueBody_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $RescueBody_initialize$1;
 
         
         self.$attr_reader("keyword");
@@ -6719,22 +6603,19 @@ Opal.modules["parser/source/map/heredoc"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Heredoc(){};
-        var self = $Heredoc = $klass($base, $super, 'Heredoc', $Heredoc);
+        var self = $klass($base, $super, 'Heredoc');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Heredoc_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $Heredoc_initialize$1;
 
         
         self.$attr_reader("heredoc_body");
@@ -6759,22 +6640,19 @@ Opal.modules["parser/source/map/objc_kwarg"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ObjcKwarg(){};
-        var self = $ObjcKwarg = $klass($base, $super, 'ObjcKwarg', $ObjcKwarg);
+        var self = $klass($base, $super, 'ObjcKwarg');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ObjcKwarg_initialize$1;
+        var $nesting = [self].concat($parent_nesting), $ObjcKwarg_initialize$1;
 
         
         self.$attr_reader("keyword");
@@ -6799,16 +6677,14 @@ Opal.modules["parser/syntax_error"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$message']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $SyntaxError(){};
-      var self = $SyntaxError = $klass($base, $super, 'SyntaxError', $SyntaxError);
+      var self = $klass($base, $super, 'SyntaxError');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $SyntaxError_initialize$1;
+      var $nesting = [self].concat($parent_nesting), $SyntaxError_initialize$1;
 
       
       self.$attr_reader("diagnostic");
@@ -6829,16 +6705,14 @@ Opal.modules["parser/clobbering_error"] = function(Opal) {
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass;
 
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $ClobberingError(){};
-      var self = $ClobberingError = $klass($base, $super, 'ClobberingError', $ClobberingError);
+      var self = $klass($base, $super, 'ClobberingError');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return nil
     })($nesting[0], $$($nesting, 'RuntimeError'), $nesting)
@@ -6866,18 +6740,16 @@ Opal.modules["parser/diagnostic"] = function(Opal) {
 
   Opal.add_stubs(['$freeze', '$attr_reader', '$include?', '$raise', '$join', '$inspect', '$dup', '$%', '$[]', '$==', '$line', '$last_line', '$is?', '$+', '$message', '$render_line', '$first_line_only', '$last_line_only', '$-', '$source_buffer', '$decompose_position', '$end_pos', '$>', '$private', '$source_line', '$*', '$length', '$each', '$line_range', '$intersect', '$column_range', '$size', '$[]=', '$!', '$>=', '$map', '$name', '$!=', '$resize', '$=~', '$source', '$adjust']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Diagnostic(){};
-      var self = $Diagnostic = $klass($base, $super, 'Diagnostic', $Diagnostic);
+      var self = $klass($base, $super, 'Diagnostic');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Diagnostic_initialize$1, $Diagnostic_message$2, $Diagnostic_render$3, $Diagnostic_render_line$4, $Diagnostic_first_line_only$7, $Diagnostic_last_line_only$8;
+      var $nesting = [self].concat($parent_nesting), $Diagnostic_initialize$1, $Diagnostic_message$2, $Diagnostic_render$3, $Diagnostic_render_line$4, $Diagnostic_first_line_only$7, $Diagnostic_last_line_only$8;
 
-      def.reason = def["arguments"] = def.location = def.level = def.highlights = nil;
+      self.$$prototype.reason = self.$$prototype["arguments"] = self.$$prototype.location = self.$$prototype.level = self.$$prototype.highlights = nil;
       
       Opal.const_set($nesting[0], 'LEVELS', ["note", "warning", "error", "fatal"].$freeze());
       self.$attr_reader("level", "reason", "arguments");
@@ -7013,18 +6885,16 @@ Opal.modules["parser/diagnostic/engine"] = function(Opal) {
 
   Opal.add_stubs(['$attr_accessor', '$ignore?', '$call', '$raise?', '$raise', '$protected', '$==', '$level']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Engine(){};
-      var self = $Engine = $klass($base, $super, 'Engine', $Engine);
+      var self = $klass($base, $super, 'Engine');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Engine_initialize$1, $Engine_process$2, $Engine_ignore$ques$3, $Engine_raise$ques$4;
+      var $nesting = [self].concat($parent_nesting), $Engine_initialize$1, $Engine_process$2, $Engine_ignore$ques$3, $Engine_raise$ques$4;
 
-      def.consumer = def.ignore_warnings = def.all_errors_are_fatal = nil;
+      self.$$prototype.consumer = self.$$prototype.ignore_warnings = self.$$prototype.all_errors_are_fatal = nil;
       
       self.$attr_accessor("consumer");
       self.$attr_accessor("all_errors_are_fatal");
@@ -7076,18 +6946,16 @@ Opal.modules["parser/static_environment"] = function(Opal) {
 
   Opal.add_stubs(['$reset', '$[]', '$push', '$dup', '$pop', '$add', '$to_sym', '$include?']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $StaticEnvironment(){};
-      var self = $StaticEnvironment = $klass($base, $super, 'StaticEnvironment', $StaticEnvironment);
+      var self = $klass($base, $super, 'StaticEnvironment');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $StaticEnvironment_initialize$1, $StaticEnvironment_reset$2, $StaticEnvironment_extend_static$3, $StaticEnvironment_extend_dynamic$4, $StaticEnvironment_unextend$5, $StaticEnvironment_declare$6, $StaticEnvironment_declared$ques$7;
+      var $nesting = [self].concat($parent_nesting), $StaticEnvironment_initialize$1, $StaticEnvironment_reset$2, $StaticEnvironment_extend_static$3, $StaticEnvironment_extend_dynamic$4, $StaticEnvironment_unextend$5, $StaticEnvironment_declare$6, $StaticEnvironment_declared$ques$7;
 
-      def.stack = def.variables = nil;
+      self.$$prototype.stack = self.$$prototype.variables = nil;
       
       
       Opal.def(self, '$initialize', $StaticEnvironment_initialize$1 = function $$initialize() {
@@ -7170,15 +7038,14 @@ Opal.modules["parser/lexer"] = function(Opal) {
 
   Opal.add_stubs(['$attr_accessor', '$private', '$_lex_trans_keys=', '$-', '$_lex_key_spans=', '$_lex_index_offsets=', '$_lex_indicies=', '$_lex_trans_targs=', '$_lex_trans_actions=', '$_lex_to_state_actions=', '$_lex_from_state_actions=', '$_lex_eof_trans=', '$lex_start=', '$lex_error=', '$lex_en_interp_words=', '$lex_en_interp_string=', '$lex_en_plain_words=', '$lex_en_plain_string=', '$lex_en_interp_backslash_delimited=', '$lex_en_plain_backslash_delimited=', '$lex_en_interp_backslash_delimited_words=', '$lex_en_plain_backslash_delimited_words=', '$lex_en_regexp_modifiers=', '$lex_en_expr_variable=', '$lex_en_expr_fname=', '$lex_en_expr_endfn=', '$lex_en_expr_dot=', '$lex_en_expr_arg=', '$lex_en_expr_cmdarg=', '$lex_en_expr_endarg=', '$lex_en_expr_mid=', '$lex_en_expr_beg=', '$lex_en_expr_labelarg=', '$lex_en_expr_value=', '$lex_en_expr_end=', '$lex_en_leading_dot=', '$lex_en_line_comment=', '$lex_en_line_begin=', '$freeze', '$ord', '$union', '$chars', '$attr_reader', '$reset', '$lex_en_line_begin', '$class', '$new', '$source', '$==', '$encoding', '$unpack', '$[]', '$lex_en_expr_dot', '$lex_en_expr_fname', '$lex_en_expr_value', '$lex_en_expr_beg', '$lex_en_expr_mid', '$lex_en_expr_arg', '$lex_en_expr_cmdarg', '$lex_en_expr_end', '$lex_en_expr_endarg', '$lex_en_expr_endfn', '$lex_en_expr_labelarg', '$lex_en_interp_string', '$lex_en_interp_words', '$lex_en_plain_string', '$fetch', '$invert', '$push', '$count', '$pop', '$any?', '$shift', '$send', '$+', '$size', '$<=', '$===', '$<<', '$>', '$!=', '$emit_comment', '$tok', '$literal', '$flush_string', '$extend_content', '$emit', '$heredoc?', '$saved_herebody_s=', '$start_interp_brace', '$[]=', '$diagnostic', '$range', '$str_s', '$gsub', '$version?', '$nest_and_try_closing', '$heredoc_e', '$pop_literal', '$infer_indent_level', '$words?', '$!', '$eof_codepoint?', '$extend_space', '$extend_string', '$>=', '$active?', '$slice', '$chr', '$munge_escape?', '$regexp?', '$match', '$squiggly_heredoc?', '$scan', '$join', '$=~', '$to_i', '$stack_pop', '$emit_table', '$push_literal', '$arg_or_cmdarg', '$emit_do', '$nil?', '$declared?', '$<', '$getbyte', '$lexpop', '$inspect', '$end_with?', '$empty?', '$index', '$call', '$Float', '$last', '$to_f', '$length', '$lambda', '$Rational', '$Complex', '$start_with?', '$each', '$encode_escape', '$%', '$end_interp_brace_and_try_closing', '$saved_herebody_s', '$next_state_for_literal', '$rstrip', '$&', '$|', '$lex_error', '$protected', '$include?', '$force_encoding', '$process', '$backslash_delimited?', '$interpolate?', '$lex_en_interp_backslash_delimited_words', '$lex_en_plain_backslash_delimited_words', '$lex_en_plain_words', '$lex_en_interp_backslash_delimited', '$lex_en_plain_backslash_delimited', '$dedent_level', '$type', '$lex_en_regexp_modifiers', '$upcase']);
   return (function($base, $super, $parent_nesting) {
-    function $Lexer(){};
-    var self = $Lexer = $klass($base, $super, 'Lexer', $Lexer);
+    var self = $klass($base, $super, 'Lexer');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Lexer_initialize$1, $Lexer_reset$2, $Lexer_source_buffer$eq$3, $Lexer_encoding$4, $Lexer_state$5, $Lexer_state$eq$6, $Lexer_push_cmdarg$7, $Lexer_pop_cmdarg$8, $Lexer_push_cond$9, $Lexer_pop_cond$10, $Lexer_dedent_level$11, $Lexer_advance$12, $Lexer_eof_codepoint$ques$42, $Lexer_version$ques$43, $Lexer_stack_pop$44, $Lexer_encode_escape$45, $Lexer_tok$46, $Lexer_range$47, $Lexer_emit$48, $Lexer_emit_table$49, $Lexer_emit_do$50, $Lexer_arg_or_cmdarg$51, $Lexer_emit_comment$52, $Lexer_diagnostic$53, $Lexer_push_literal$54, $Lexer_next_state_for_literal$55, $Lexer_literal$56, $Lexer_pop_literal$57, $Lexer$58, $writer = nil;
+    var $nesting = [self].concat($parent_nesting), $Lexer_initialize$1, $Lexer_reset$2, $Lexer_source_buffer$eq$3, $Lexer_encoding$4, $Lexer_state$5, $Lexer_state$eq$6, $Lexer_push_cmdarg$7, $Lexer_pop_cmdarg$8, $Lexer_push_cond$9, $Lexer_pop_cond$10, $Lexer_dedent_level$11, $Lexer_advance$12, $Lexer_eof_codepoint$ques$42, $Lexer_version$ques$43, $Lexer_stack_pop$44, $Lexer_encode_escape$45, $Lexer_tok$46, $Lexer_range$47, $Lexer_emit$48, $Lexer_emit_table$49, $Lexer_emit_do$50, $Lexer_arg_or_cmdarg$51, $Lexer_emit_comment$52, $Lexer_diagnostic$53, $Lexer_push_literal$54, $Lexer_next_state_for_literal$55, $Lexer_literal$56, $Lexer_pop_literal$57, $Lexer$58, $writer = nil;
 
-    def.source_buffer = def.source_pts = def.cs = def.cmdarg_stack = def.cmdarg = def.cond_stack = def.cond = def.dedent_level = def.token_queue = def.p = def.herebody_s = def.sharp_s = def.ts = def.te = def.top = def.stack = def.version = def.escape_s = def.escape = def.act = def.static_env = def.lambda_stack = def.paren_nest = def.num_digits_s = def.num_suffix_s = def.num_base = def.num_xfrm = def.newline_s = def.eq_begin_s = def.cs_before_block_comment = def.in_kwarg = def.tokens = def.command_state = def.comments = def.diagnostics = def.literal_stack = nil;
+    self.$$prototype.source_buffer = self.$$prototype.source_pts = self.$$prototype.cs = self.$$prototype.cmdarg_stack = self.$$prototype.cmdarg = self.$$prototype.cond_stack = self.$$prototype.cond = self.$$prototype.dedent_level = self.$$prototype.token_queue = self.$$prototype.p = self.$$prototype.herebody_s = self.$$prototype.sharp_s = self.$$prototype.ts = self.$$prototype.te = self.$$prototype.top = self.$$prototype.stack = self.$$prototype.version = self.$$prototype.escape_s = self.$$prototype.escape = self.$$prototype.act = self.$$prototype.static_env = self.$$prototype.lambda_stack = self.$$prototype.paren_nest = self.$$prototype.num_digits_s = self.$$prototype.num_suffix_s = self.$$prototype.num_base = self.$$prototype.num_xfrm = self.$$prototype.newline_s = self.$$prototype.eq_begin_s = self.$$prototype.cs_before_block_comment = self.$$prototype.in_kwarg = self.$$prototype.tokens = self.$$prototype.command_state = self.$$prototype.comments = self.$$prototype.diagnostics = self.$$prototype.literal_stack = nil;
     
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_trans_keys");
@@ -7189,7 +7056,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_trans_keys=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_key_spans");
@@ -7200,7 +7067,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_key_spans=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_index_offsets");
@@ -7211,7 +7078,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_index_offsets=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_indicies");
@@ -7222,7 +7089,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_indicies=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_trans_targs");
@@ -7233,7 +7100,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_trans_targs=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_trans_actions");
@@ -7244,7 +7111,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_trans_actions=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_to_state_actions");
@@ -7255,7 +7122,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_to_state_actions=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_from_state_actions");
@@ -7266,7 +7133,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_from_state_actions=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$attr_accessor("_lex_eof_trans");
@@ -7277,7 +7144,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, '_lex_eof_trans=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_start")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7286,7 +7153,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_start=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_error")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7295,7 +7162,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_error=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_interp_words")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7304,7 +7171,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_interp_words=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_interp_string")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7313,7 +7180,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_interp_string=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_plain_words")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7322,7 +7189,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_plain_words=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_plain_string")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7331,7 +7198,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_plain_string=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_interp_backslash_delimited")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7340,7 +7207,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_interp_backslash_delimited=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_plain_backslash_delimited")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7349,7 +7216,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_plain_backslash_delimited=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_interp_backslash_delimited_words")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7358,7 +7225,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_interp_backslash_delimited_words=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_plain_backslash_delimited_words")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7367,7 +7234,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_plain_backslash_delimited_words=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_regexp_modifiers")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7376,7 +7243,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_regexp_modifiers=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_variable")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7385,7 +7252,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_variable=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_fname")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7394,7 +7261,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_fname=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_endfn")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7403,7 +7270,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_endfn=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_dot")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7412,7 +7279,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_dot=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_arg")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7421,7 +7288,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_arg=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_cmdarg")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7430,7 +7297,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_cmdarg=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_endarg")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7439,7 +7306,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_endarg=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_mid")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7448,7 +7315,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_mid=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_beg")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7457,7 +7324,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_beg=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_labelarg")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7466,7 +7333,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_labelarg=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_value")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7475,7 +7342,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_value=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_expr_end")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7484,7 +7351,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_expr_end=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_leading_dot")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7493,7 +7360,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_leading_dot=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_line_comment")
     })(Opal.get_singleton_class(self), $nesting);
@@ -7502,7 +7369,7 @@ Opal.modules["parser/lexer"] = function(Opal) {
     $send(self, 'lex_en_line_comment=', Opal.to_a($writer));
     $writer[$rb_minus($writer["length"], 1)];;
     (function(self, $parent_nesting) {
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("lex_en_line_begin")
     })(Opal.get_singleton_class(self), $nesting);
@@ -15913,18 +15780,16 @@ Opal.modules["parser/lexer/literal"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$attr_accessor', '$coerce_encoding', '$include?', '$send', '$+', '$[]', '$fetch', '$==', '$!', '$heredoc?', '$start_with?', '$freeze', '$clear_buffer', '$emit_start_tok', '$type', '$words?', '$=~', '$delimiter?', '$-', '$extend_space', '$!=', '$flush_string', '$emit', '$each_char', '$===', '$%', '$nil?', '$>', '$<<', '$empty?', '$extend_content', '$protected', '$lstrip', '$b', '$dup', '$force_encoding', '$encoding', '$source', '$source_buffer', '$length']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Literal(){};
-      var self = $Literal = $klass($base, $super, 'Literal', $Literal);
+      var self = $klass($base, $super, 'Literal');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Literal_initialize$1, $Literal_interpolate$ques$2, $Literal_words$ques$3, $Literal_regexp$ques$4, $Literal_heredoc$ques$5, $Literal_plain_heredoc$ques$6, $Literal_squiggly_heredoc$ques$7, $Literal_backslash_delimited$ques$8, $Literal_type$9, $Literal_munge_escape$ques$10, $Literal_nest_and_try_closing$11, $Literal_infer_indent_level$12, $Literal_start_interp_brace$14, $Literal_end_interp_brace_and_try_closing$15, $Literal_extend_string$16, $Literal_flush_string$17, $Literal_extend_content$18, $Literal_extend_space$19, $Literal_delimiter$ques$20, $Literal_coerce_encoding$21, $Literal_clear_buffer$22, $Literal_emit_start_tok$23, $Literal_emit$24;
+      var $nesting = [self].concat($parent_nesting), $Literal_initialize$1, $Literal_interpolate$ques$2, $Literal_words$ques$3, $Literal_regexp$ques$4, $Literal_heredoc$ques$5, $Literal_plain_heredoc$ques$6, $Literal_squiggly_heredoc$ques$7, $Literal_backslash_delimited$ques$8, $Literal_type$9, $Literal_munge_escape$ques$10, $Literal_nest_and_try_closing$11, $Literal_infer_indent_level$12, $Literal_start_interp_brace$14, $Literal_end_interp_brace_and_try_closing$15, $Literal_extend_string$16, $Literal_flush_string$17, $Literal_extend_content$18, $Literal_extend_space$19, $Literal_delimiter$ques$20, $Literal_coerce_encoding$21, $Literal_clear_buffer$22, $Literal_emit_start_tok$23, $Literal_emit$24;
 
-      def.lexer = def.start_tok = def.str_type = def.monolithic = def.interpolate = def.heredoc_e = def.dedent_body = def.end_delim = def.start_delim = def.nesting = def.label_allowed = def.buffer = def.str_s = def.interp_braces = def.buffer_s = def.buffer_e = def.space_emitted = def.indent = nil;
+      self.$$prototype.lexer = self.$$prototype.start_tok = self.$$prototype.str_type = self.$$prototype.monolithic = self.$$prototype.interpolate = self.$$prototype.heredoc_e = self.$$prototype.dedent_body = self.$$prototype.end_delim = self.$$prototype.start_delim = self.$$prototype.nesting = self.$$prototype.label_allowed = self.$$prototype.buffer = self.$$prototype.str_s = self.$$prototype.interp_braces = self.$$prototype.buffer_s = self.$$prototype.buffer_e = self.$$prototype.space_emitted = self.$$prototype.indent = nil;
       
       Opal.const_set($nesting[0], 'DELIMITERS', $hash2(["(", "[", "{", "<"], {"(": ")".$force_encoding("ASCII-8BIT"), "[": "]".$force_encoding("ASCII-8BIT"), "{": "}".$force_encoding("ASCII-8BIT"), "<": ">".$force_encoding("ASCII-8BIT")}));
       Opal.const_set($nesting[0], 'TYPES', $hash2(["'", "<<'", "%q", "\"", "<<\"", "%", "%Q", "%w", "%W", "%i", "%I", ":'", "%s", ":\"", "/", "%r", "%x", "`", "<<`"], {"'": ["tSTRING_BEG", false], "<<'": ["tSTRING_BEG", false], "%q": ["tSTRING_BEG", false], "\"": ["tSTRING_BEG", true], "<<\"": ["tSTRING_BEG", true], "%": ["tSTRING_BEG", true], "%Q": ["tSTRING_BEG", true], "%w": ["tQWORDS_BEG", false], "%W": ["tWORDS_BEG", true], "%i": ["tQSYMBOLS_BEG", false], "%I": ["tSYMBOLS_BEG", true], ":'": ["tSYMBEG", false], "%s": ["tSYMBEG", false], ":\"": ["tSYMBEG", true], "/": ["tREGEXP_BEG", true], "%r": ["tREGEXP_BEG", true], "%x": ["tXSTRING_BEG", true], "`": ["tXSTRING_BEG", true], "<<`": ["tXSTRING_BEG", true]}));
@@ -16219,18 +16084,16 @@ Opal.modules["parser/lexer/stack_state"] = function(Opal) {
 
   Opal.add_stubs(['$freeze', '$clear', '$|', '$<<', '$&', '$>>', '$==', '$[]', '$to_s']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $StackState(){};
-      var self = $StackState = $klass($base, $super, 'StackState', $StackState);
+      var self = $klass($base, $super, 'StackState');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $StackState_initialize$1, $StackState_clear$2, $StackState_push$3, $StackState_pop$4, $StackState_lexpop$5, $StackState_active$ques$6, $StackState_empty$ques$7, $StackState_to_s$8;
+      var $nesting = [self].concat($parent_nesting), $StackState_initialize$1, $StackState_clear$2, $StackState_push$3, $StackState_pop$4, $StackState_lexpop$5, $StackState_active$ques$6, $StackState_empty$ques$7, $StackState_to_s$8;
 
-      def.stack = def.name = nil;
+      self.$$prototype.stack = self.$$prototype.name = nil;
       
       
       Opal.def(self, '$initialize', $StackState_initialize$1 = function $$initialize(name) {
@@ -16314,18 +16177,16 @@ Opal.modules["parser/lexer/dedenter"] = function(Opal) {
 
   Opal.add_stubs(['$-', '$length', '$each_with_index', '$chars', '$==', '$slice!', '$+', '$insert', '$>=', '$===', '$%']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Dedenter(){};
-      var self = $Dedenter = $klass($base, $super, 'Dedenter', $Dedenter);
+      var self = $klass($base, $super, 'Dedenter');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Dedenter_initialize$1, $Dedenter_dedent$2, $Dedenter_interrupt$4;
+      var $nesting = [self].concat($parent_nesting), $Dedenter_initialize$1, $Dedenter_dedent$2, $Dedenter_interrupt$4;
 
-      def.at_line_begin = nil;
+      self.$$prototype.at_line_begin = nil;
       
       
       Opal.def(self, '$initialize', $Dedenter_initialize$1 = function $$initialize(dedent_level) {
@@ -16440,45 +16301,43 @@ Opal.modules["parser/builders/default"] = function(Opal) {
 
   Opal.add_stubs(['$attr_accessor', '$n0', '$token_map', '$numeric', '$n', '$value', '$new', '$loc', '$private', '$===', '$+@', '$-@', '$updated', '$join', '$expression', '$string_value', '$delimited_string_map', '$unquoted_map', '$collapse_string_parts?', '$nil?', '$first', '$children', '$string_map', '$prefix_string_map', '$to_sym', '$collection_map', '$==', '$version', '$empty?', '$diagnostic', '$!', '$type', '$dedent', '$each', '$interrupt', '$map', '$uniq', '$sort', '$each_char', '$to_proc', '$static_regexp', '$message', '$<<', '$regexp_map', '$unary_op_map', '$binary_op_map', '$!=', '$%', '$size', '$last', '$each_slice', '$pair_keyword_map', '$pair_quoted_map', '$symbol_compose', '$range_map', '$variable_map', '$name', '$source_buffer', '$dup', '$line', '$emit_encoding', '$class', '$declared?', '$static_env', '$var_send_map', '$constant_map', '$dynamic_const_definition_allowed?', '$context', '$declare', '$with_expression', '$with_operator', '$join_exprs', '$[]', '$module_definition_map', '$definition_map', '$keyword_map', '$check_duplicate_args', '$arg_prefix_map', '$kwarg_map', '$emit_procarg0', '$resize', '$-', '$end', '$call_type_for_dot', '$send_map', '$emit_lambda', '$expr_map', '$keyword', '$include?', '$block_map', '$array', '$+', '$emit_index', '$index_map', '$send_index_map', '$send_binary_op_map', '$static_regexp_node', '$names', '$send_unary_op_map', '$check_condition', '$condition_map', '$keyword_mod_map', '$ternary_map', '$for_map', '$>', '$count', '$rescue_body_map', '$any?', '$eh_keyword_map', '$push', '$none?', '$one?', '$begin', '$<=', '$[]=', '$arg_name_collides?', '$with', '$begin_pos', '$end_pos', '$adjust', '$start_with?', '$static_string', '$encode', '$valid_encoding?', '$process', '$diagnostics', '$send']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Default(){};
-      var self = $Default = $klass($base, $super, 'Default', $Default);
+      var self = $klass($base, $super, 'Default');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Default_initialize$2, $Default_nil$3, $Default_true$4, $Default_false$5, $Default_integer$6, $Default_float$7, $Default_rational$8, $Default_complex$9, $Default_numeric$10, $Default_unary_num$11, $Default___LINE__$12, $Default_string$13, $Default_string_internal$14, $Default_string_compose$15, $Default_character$16, $Default___FILE__$17, $Default_symbol$18, $Default_symbol_internal$19, $Default_symbol_compose$20, $Default_xstring_compose$21, $Default_dedent_string$22, $Default_regexp_options$24, $Default_regexp_compose$25, $Default_array$26, $Default_splat$27, $Default_word$28, $Default_words_compose$29, $Default_symbols_compose$30, $Default_pair$32, $Default_pair_list_18$33, $Default_pair_keyword$35, $Default_pair_quoted$36, $Default_kwsplat$37, $Default_associate$38, $Default_range_inclusive$39, $Default_range_exclusive$40, $Default_self$41, $Default_ident$42, $Default_ivar$43, $Default_gvar$44, $Default_cvar$45, $Default_back_ref$46, $Default_nth_ref$47, $Default_accessible$48, $Default_const$49, $Default_const_global$50, $Default_const_fetch$51, $Default___ENCODING__$52, $Default_assignable$53, $Default_const_op_assignable$54, $Default_assign$55, $Default_op_assign$56, $Default_multi_lhs$57, $Default_multi_assign$58, $Default_def_class$59, $Default_def_sclass$60, $Default_def_module$61, $Default_def_method$62, $Default_def_singleton$63, $Default_undef_method$64, $Default_alias$65, $Default_args$66, $Default_arg$67, $Default_optarg$68, $Default_restarg$69, $Default_kwarg$70, $Default_kwoptarg$71, $Default_kwrestarg$72, $Default_shadowarg$73, $Default_blockarg$74, $Default_procarg0$75, $Default_arg_expr$76, $Default_restarg_expr$77, $Default_blockarg_expr$78, $Default_objc_kwarg$79, $Default_objc_restarg$80, $Default_call_type_for_dot$81, $Default_call_method$82, $Default_call_lambda$83, $Default_block$84, $Default_block_pass$85, $Default_objc_varargs$86, $Default_attr_asgn$87, $Default_index$88, $Default_index_asgn$89, $Default_binary_op$90, $Default_match_op$91, $Default_unary_op$93, $Default_not_op$94, $Default_logical_op$95, $Default_condition$96, $Default_condition_mod$97, $Default_ternary$98, $Default_when$99, $Default_case$100, $Default_loop$101, $Default_loop_mod$102, $Default_for$103, $Default_keyword_cmd$104, $Default_preexe$105, $Default_postexe$106, $Default_rescue_body$107, $Default_begin_body$108, $Default_compstmt$109, $Default_begin$110, $Default_begin_keyword$111, $Default_check_condition$112, $Default_check_duplicate_args$113, $Default_arg_name_collides$ques$115, $Default_n$116, $Default_n0$117, $Default_join_exprs$118, $Default_token_map$119, $Default_delimited_string_map$120, $Default_prefix_string_map$121, $Default_unquoted_map$122, $Default_pair_keyword_map$123, $Default_pair_quoted_map$124, $Default_expr_map$125, $Default_collection_map$126, $Default_string_map$127, $Default_regexp_map$128, $Default_constant_map$129, $Default_variable_map$130, $Default_binary_op_map$131, $Default_unary_op_map$132, $Default_range_map$133, $Default_arg_prefix_map$134, $Default_kwarg_map$135, $Default_module_definition_map$136, $Default_definition_map$137, $Default_send_map$138, $Default_var_send_map$139, $Default_send_binary_op_map$140, $Default_send_unary_op_map$141, $Default_index_map$142, $Default_send_index_map$143, $Default_block_map$144, $Default_keyword_map$145, $Default_keyword_mod_map$146, $Default_condition_map$147, $Default_ternary_map$148, $Default_for_map$149, $Default_rescue_body_map$150, $Default_eh_keyword_map$151, $Default_static_string$152, $Default_static_regexp$154, $Default_static_regexp_node$155, $Default_collapse_string_parts$ques$156, $Default_value$157, $Default_string_value$158, $Default_loc$159, $Default_diagnostic$160;
+      var $nesting = [self].concat($parent_nesting), $Default_initialize$2, $Default_nil$3, $Default_true$4, $Default_false$5, $Default_integer$6, $Default_float$7, $Default_rational$8, $Default_complex$9, $Default_numeric$10, $Default_unary_num$11, $Default___LINE__$12, $Default_string$13, $Default_string_internal$14, $Default_string_compose$15, $Default_character$16, $Default___FILE__$17, $Default_symbol$18, $Default_symbol_internal$19, $Default_symbol_compose$20, $Default_xstring_compose$21, $Default_dedent_string$22, $Default_regexp_options$24, $Default_regexp_compose$25, $Default_array$26, $Default_splat$27, $Default_word$28, $Default_words_compose$29, $Default_symbols_compose$30, $Default_pair$32, $Default_pair_list_18$33, $Default_pair_keyword$35, $Default_pair_quoted$36, $Default_kwsplat$37, $Default_associate$38, $Default_range_inclusive$39, $Default_range_exclusive$40, $Default_self$41, $Default_ident$42, $Default_ivar$43, $Default_gvar$44, $Default_cvar$45, $Default_back_ref$46, $Default_nth_ref$47, $Default_accessible$48, $Default_const$49, $Default_const_global$50, $Default_const_fetch$51, $Default___ENCODING__$52, $Default_assignable$53, $Default_const_op_assignable$54, $Default_assign$55, $Default_op_assign$56, $Default_multi_lhs$57, $Default_multi_assign$58, $Default_def_class$59, $Default_def_sclass$60, $Default_def_module$61, $Default_def_method$62, $Default_def_singleton$63, $Default_undef_method$64, $Default_alias$65, $Default_args$66, $Default_arg$67, $Default_optarg$68, $Default_restarg$69, $Default_kwarg$70, $Default_kwoptarg$71, $Default_kwrestarg$72, $Default_shadowarg$73, $Default_blockarg$74, $Default_procarg0$75, $Default_arg_expr$76, $Default_restarg_expr$77, $Default_blockarg_expr$78, $Default_objc_kwarg$79, $Default_objc_restarg$80, $Default_call_type_for_dot$81, $Default_call_method$82, $Default_call_lambda$83, $Default_block$84, $Default_block_pass$85, $Default_objc_varargs$86, $Default_attr_asgn$87, $Default_index$88, $Default_index_asgn$89, $Default_binary_op$90, $Default_match_op$91, $Default_unary_op$93, $Default_not_op$94, $Default_logical_op$95, $Default_condition$96, $Default_condition_mod$97, $Default_ternary$98, $Default_when$99, $Default_case$100, $Default_loop$101, $Default_loop_mod$102, $Default_for$103, $Default_keyword_cmd$104, $Default_preexe$105, $Default_postexe$106, $Default_rescue_body$107, $Default_begin_body$108, $Default_compstmt$109, $Default_begin$110, $Default_begin_keyword$111, $Default_check_condition$112, $Default_check_duplicate_args$113, $Default_arg_name_collides$ques$115, $Default_n$116, $Default_n0$117, $Default_join_exprs$118, $Default_token_map$119, $Default_delimited_string_map$120, $Default_prefix_string_map$121, $Default_unquoted_map$122, $Default_pair_keyword_map$123, $Default_pair_quoted_map$124, $Default_expr_map$125, $Default_collection_map$126, $Default_string_map$127, $Default_regexp_map$128, $Default_constant_map$129, $Default_variable_map$130, $Default_binary_op_map$131, $Default_unary_op_map$132, $Default_range_map$133, $Default_arg_prefix_map$134, $Default_kwarg_map$135, $Default_module_definition_map$136, $Default_definition_map$137, $Default_send_map$138, $Default_var_send_map$139, $Default_send_binary_op_map$140, $Default_send_unary_op_map$141, $Default_index_map$142, $Default_send_index_map$143, $Default_block_map$144, $Default_keyword_map$145, $Default_keyword_mod_map$146, $Default_condition_map$147, $Default_ternary_map$148, $Default_for_map$149, $Default_rescue_body_map$150, $Default_eh_keyword_map$151, $Default_static_string$152, $Default_static_regexp$154, $Default_static_regexp_node$155, $Default_collapse_string_parts$ques$156, $Default_value$157, $Default_string_value$158, $Default_loc$159, $Default_diagnostic$160;
 
-      def.parser = def.emit_file_line_as_literals = nil;
+      self.$$prototype.parser = self.$$prototype.emit_file_line_as_literals = nil;
       
       (function(self, $parent_nesting) {
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return self.$attr_accessor("emit_lambda")
       })(Opal.get_singleton_class(self), $nesting);
       self.emit_lambda = false;
       (function(self, $parent_nesting) {
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return self.$attr_accessor("emit_procarg0")
       })(Opal.get_singleton_class(self), $nesting);
       self.emit_procarg0 = false;
       (function(self, $parent_nesting) {
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return self.$attr_accessor("emit_encoding")
       })(Opal.get_singleton_class(self), $nesting);
       self.emit_encoding = false;
       (function(self, $parent_nesting) {
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return self.$attr_accessor("emit_index")
       })(Opal.get_singleton_class(self), $nesting);
       self.emit_index = false;
       (function(self, $parent_nesting) {
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $modernize$1;
+        var $nesting = [self].concat($parent_nesting), $modernize$1;
 
         return (Opal.def(self, '$modernize', $modernize$1 = function $$modernize() {
           var self = this;
@@ -18116,18 +17975,16 @@ Opal.modules["parser/context"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$freeze', '$<<', '$pop', '$clear', '$==', '$last', '$include?', '$rindex', '$stack', '$nil?', '$!', '$>']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Context(){};
-      var self = $Context = $klass($base, $super, 'Context', $Context);
+      var self = $klass($base, $super, 'Context');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Context_initialize$1, $Context_push$2, $Context_pop$3, $Context_reset$4, $Context_in_class$ques$5, $Context_indirectly_in_def$ques$6, $Context_class_definition_allowed$ques$7;
+      var $nesting = [self].concat($parent_nesting), $Context_initialize$1, $Context_push$2, $Context_pop$3, $Context_reset$4, $Context_in_class$ques$5, $Context_indirectly_in_def$ques$6, $Context_class_definition_allowed$ques$7;
 
-      def.stack = nil;
+      self.$$prototype.stack = nil;
       
       self.$attr_reader("stack");
       
@@ -18199,18 +18056,16 @@ Opal.modules["parser/base"] = function(Opal) {
 
   Opal.add_stubs(['$default_parser', '$setup_source_buffer', '$default_encoding', '$parse', '$parse_with_comments', '$read', '$new', '$all_errors_are_fatal=', '$diagnostics', '$-', '$ignore_warnings=', '$lambda', '$puts', '$render', '$consumer=', '$force_encoding', '$dup', '$==', '$name', '$raw_source=', '$source=', '$private_class_method', '$attr_reader', '$version', '$diagnostics=', '$static_env=', '$parser=', '$class', '$[]', '$reset', '$source_buffer=', '$do_parse', '$comments=', '$comments', '$tokens=', '$!', '$raise', '$tokens', '$private', '$advance', '$===', '$diagnostic', '$map', '$process', '$yyerror', '$token_to_str']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Base(){};
-      var self = $Base = $klass($base, $super, 'Base', $Base);
+      var self = $klass($base, $super, 'Base');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Base_parse$1, $Base_parse_with_comments$2, $Base_parse_file$3, $Base_parse_file_with_comments$4, $Base_default_parser$5, $Base_setup_source_buffer$7, $Base_initialize$8, $Base_reset$9, $Base_parse$10, $Base_parse_with_comments$11, $Base_tokenize$12, $Base_next_token$13, $Base_check_kwarg_name$14, $Base_diagnostic$15, $Base_on_error$17;
+      var $nesting = [self].concat($parent_nesting), $Base_parse$1, $Base_parse_with_comments$2, $Base_parse_file$3, $Base_parse_file_with_comments$4, $Base_default_parser$5, $Base_setup_source_buffer$7, $Base_initialize$8, $Base_reset$9, $Base_parse$10, $Base_parse_with_comments$11, $Base_tokenize$12, $Base_next_token$13, $Base_check_kwarg_name$14, $Base_diagnostic$15, $Base_on_error$17;
 
-      def.diagnostics = def.lexer = def.static_env = def.builder = def.context = nil;
+      self.$$prototype.diagnostics = self.$$prototype.lexer = self.$$prototype.static_env = self.$$prototype.builder = self.$$prototype.context = nil;
       
       Opal.defs(self, '$parse', $Base_parse$1 = function $$parse(string, file, line) {
         var self = this, parser = nil, source_buffer = nil;
@@ -18480,18 +18335,16 @@ Opal.modules["parser/rewriter"] = function(Opal) {
 
   Opal.add_stubs(['$new', '$process', '$include?', '$type', '$remove', '$wrap', '$insert_before', '$insert_after', '$replace', '$freeze', '$join', '$extend', '$warn_of_deprecation', '$class', '$warned_of_deprecation=', '$-']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Rewriter(){};
-      var self = $Rewriter = $klass($base, $super, 'Rewriter', $Rewriter);
+      var self = $klass($base, $super, 'Rewriter');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Rewriter_rewrite$1, $Rewriter_assignment$ques$2, $Rewriter_remove$3, $Rewriter_wrap$4, $Rewriter_insert_before$5, $Rewriter_insert_after$6, $Rewriter_replace$7, $Rewriter_initialize$8;
+      var $nesting = [self].concat($parent_nesting), $Rewriter_rewrite$1, $Rewriter_assignment$ques$2, $Rewriter_remove$3, $Rewriter_wrap$4, $Rewriter_insert_before$5, $Rewriter_insert_after$6, $Rewriter_replace$7, $Rewriter_initialize$8;
 
-      def.source_rewriter = nil;
+      self.$$prototype.source_rewriter = nil;
       
       
       Opal.def(self, '$rewrite', $Rewriter_rewrite$1 = function $$rewrite(source_buffer, ast) {
@@ -18569,18 +18422,16 @@ Opal.modules["parser/tree_rewriter"] = function(Opal) {
 
   Opal.add_stubs(['$new', '$process', '$include?', '$type', '$remove', '$wrap', '$insert_before', '$insert_after', '$replace']);
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $TreeRewriter(){};
-      var self = $TreeRewriter = $klass($base, $super, 'TreeRewriter', $TreeRewriter);
+      var self = $klass($base, $super, 'TreeRewriter');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $TreeRewriter_rewrite$1, $TreeRewriter_assignment$ques$2, $TreeRewriter_remove$3, $TreeRewriter_wrap$4, $TreeRewriter_insert_before$5, $TreeRewriter_insert_after$6, $TreeRewriter_replace$7;
+      var $nesting = [self].concat($parent_nesting), $TreeRewriter_rewrite$1, $TreeRewriter_assignment$ques$2, $TreeRewriter_remove$3, $TreeRewriter_wrap$4, $TreeRewriter_insert_before$5, $TreeRewriter_insert_after$6, $TreeRewriter_replace$7;
 
-      def.source_rewriter = nil;
+      self.$$prototype.source_rewriter = nil;
       
       
       Opal.def(self, '$rewrite', $TreeRewriter_rewrite$1 = function $$rewrite(source_buffer, ast, $kwargs) {
@@ -18652,20 +18503,18 @@ Opal.modules["parser"] = function(Opal) {
   self.$require("racc/parser");
   self.$require("ast");
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     
     self.$require("parser/version");
     self.$require("parser/messages");
     self.$require("parser/deprecation");
     (function($base, $parent_nesting) {
-      function $AST() {};
-      var self = $AST = $module($base, 'AST', $AST);
+      var self = $module($base, 'AST');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$require("parser/ast/node");
@@ -18673,10 +18522,9 @@ Opal.modules["parser"] = function(Opal) {
       self.$require("parser/meta");
     })($nesting[0], $nesting);
     (function($base, $parent_nesting) {
-      function $Source() {};
-      var self = $Source = $module($base, 'Source', $Source);
+      var self = $module($base, 'Source');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       self.$require("parser/source/buffer");
@@ -18713,10 +18561,9 @@ Opal.modules["parser"] = function(Opal) {
     self.$require("parser/lexer/stack_state");
     self.$require("parser/lexer/dedenter");
     (function($base, $parent_nesting) {
-      function $Builders() {};
-      var self = $Builders = $module($base, 'Builders', $Builders);
+      var self = $module($base, 'Builders');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       self.$require("parser/builders/default")
     })($nesting[0], $nesting);
@@ -18742,18 +18589,16 @@ Opal.modules["parser/ruby25"] = function(Opal) {
   self.$require("racc/parser.rb");
   self.$require("parser");
   return (function($base, $parent_nesting) {
-    function $Parser() {};
-    var self = $Parser = $module($base, 'Parser', $Parser);
+    var self = $module($base, 'Parser');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Ruby25(){};
-      var self = $Ruby25 = $klass($base, $super, 'Ruby25', $Ruby25);
+      var self = $klass($base, $super, 'Ruby25');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Ruby25_version$1, $Ruby25_default_encoding$2, $Ruby25$3, $Ruby25$5, $Ruby25$7, $Ruby25$9, $Ruby25__reduce_2$11, $Ruby25__reduce_3$12, $Ruby25__reduce_4$13, $Ruby25__reduce_5$14, $Ruby25__reduce_6$15, $Ruby25__reduce_8$16, $Ruby25__reduce_9$17, $Ruby25__reduce_10$18, $Ruby25__reduce_11$19, $Ruby25__reduce_12$20, $Ruby25__reduce_13$21, $Ruby25__reduce_14$22, $Ruby25__reduce_15$23, $Ruby25__reduce_17$24, $Ruby25__reduce_18$25, $Ruby25__reduce_19$26, $Ruby25__reduce_20$27, $Ruby25__reduce_21$28, $Ruby25__reduce_22$29, $Ruby25__reduce_23$30, $Ruby25__reduce_24$31, $Ruby25__reduce_25$32, $Ruby25__reduce_26$33, $Ruby25__reduce_27$34, $Ruby25__reduce_28$35, $Ruby25__reduce_29$36, $Ruby25__reduce_31$37, $Ruby25__reduce_32$38, $Ruby25__reduce_33$39, $Ruby25__reduce_35$40, $Ruby25__reduce_36$41, $Ruby25__reduce_37$42, $Ruby25__reduce_38$43, $Ruby25__reduce_39$44, $Ruby25__reduce_40$45, $Ruby25__reduce_41$46, $Ruby25__reduce_42$47, $Ruby25__reduce_44$48, $Ruby25__reduce_47$49, $Ruby25__reduce_48$50, $Ruby25__reduce_49$51, $Ruby25__reduce_50$52, $Ruby25__reduce_53$53, $Ruby25__reduce_54$54, $Ruby25__reduce_58$55, $Ruby25__reduce_59$56, $Ruby25__reduce_60$57, $Ruby25__reduce_62$58, $Ruby25__reduce_63$59, $Ruby25__reduce_64$60, $Ruby25__reduce_65$61, $Ruby25__reduce_66$62, $Ruby25__reduce_67$63, $Ruby25__reduce_68$64, $Ruby25__reduce_69$65, $Ruby25__reduce_70$66, $Ruby25__reduce_71$67, $Ruby25__reduce_72$68, $Ruby25__reduce_73$69, $Ruby25__reduce_74$70, $Ruby25__reduce_75$71, $Ruby25__reduce_76$72, $Ruby25__reduce_78$73, $Ruby25__reduce_79$74, $Ruby25__reduce_80$75, $Ruby25__reduce_81$76, $Ruby25__reduce_82$77, $Ruby25__reduce_83$78, $Ruby25__reduce_84$79, $Ruby25__reduce_85$80, $Ruby25__reduce_86$81, $Ruby25__reduce_88$82, $Ruby25__reduce_89$83, $Ruby25__reduce_90$84, $Ruby25__reduce_91$85, $Ruby25__reduce_92$86, $Ruby25__reduce_93$87, $Ruby25__reduce_94$88, $Ruby25__reduce_95$89, $Ruby25__reduce_96$90, $Ruby25__reduce_97$91, $Ruby25__reduce_98$92, $Ruby25__reduce_99$93, $Ruby25__reduce_100$94, $Ruby25__reduce_101$95, $Ruby25__reduce_102$96, $Ruby25__reduce_103$97, $Ruby25__reduce_104$98, $Ruby25__reduce_105$99, $Ruby25__reduce_106$100, $Ruby25__reduce_107$101, $Ruby25__reduce_108$102, $Ruby25__reduce_109$103, $Ruby25__reduce_110$104, $Ruby25__reduce_111$105, $Ruby25__reduce_113$106, $Ruby25__reduce_114$107, $Ruby25__reduce_115$108, $Ruby25__reduce_121$109, $Ruby25__reduce_125$110, $Ruby25__reduce_126$111, $Ruby25__reduce_127$112, $Ruby25__reduce_199$113, $Ruby25__reduce_200$114, $Ruby25__reduce_201$115, $Ruby25__reduce_202$116, $Ruby25__reduce_203$117, $Ruby25__reduce_204$118, $Ruby25__reduce_205$119, $Ruby25__reduce_206$120, $Ruby25__reduce_207$121, $Ruby25__reduce_208$122, $Ruby25__reduce_209$123, $Ruby25__reduce_210$124, $Ruby25__reduce_211$125, $Ruby25__reduce_212$126, $Ruby25__reduce_213$127, $Ruby25__reduce_214$128, $Ruby25__reduce_215$129, $Ruby25__reduce_216$130, $Ruby25__reduce_217$131, $Ruby25__reduce_218$132, $Ruby25__reduce_219$133, $Ruby25__reduce_220$134, $Ruby25__reduce_221$135, $Ruby25__reduce_222$136, $Ruby25__reduce_224$137, $Ruby25__reduce_225$138, $Ruby25__reduce_226$139, $Ruby25__reduce_227$140, $Ruby25__reduce_228$141, $Ruby25__reduce_229$142, $Ruby25__reduce_230$143, $Ruby25__reduce_231$144, $Ruby25__reduce_232$145, $Ruby25__reduce_233$146, $Ruby25__reduce_234$147, $Ruby25__reduce_235$148, $Ruby25__reduce_236$149, $Ruby25__reduce_242$150, $Ruby25__reduce_243$151, $Ruby25__reduce_247$152, $Ruby25__reduce_248$153, $Ruby25__reduce_250$154, $Ruby25__reduce_251$155, $Ruby25__reduce_252$156, $Ruby25__reduce_254$157, $Ruby25__reduce_257$158, $Ruby25__reduce_258$159, $Ruby25__reduce_259$160, $Ruby25__reduce_260$161, $Ruby25__reduce_261$162, $Ruby25__reduce_262$163, $Ruby25__reduce_263$164, $Ruby25__reduce_264$165, $Ruby25__reduce_265$166, $Ruby25__reduce_266$167, $Ruby25__reduce_267$168, $Ruby25__reduce_268$169, $Ruby25__reduce_269$170, $Ruby25__reduce_270$171, $Ruby25__reduce_271$172, $Ruby25__reduce_272$173, $Ruby25__reduce_273$174, $Ruby25__reduce_275$175, $Ruby25__reduce_276$176, $Ruby25__reduce_277$177, $Ruby25__reduce_288$178, $Ruby25__reduce_289$179, $Ruby25__reduce_290$180, $Ruby25__reduce_291$181, $Ruby25__reduce_292$182, $Ruby25__reduce_293$183, $Ruby25__reduce_294$184, $Ruby25__reduce_295$185, $Ruby25__reduce_296$186, $Ruby25__reduce_297$187, $Ruby25__reduce_298$188, $Ruby25__reduce_299$189, $Ruby25__reduce_300$190, $Ruby25__reduce_301$191, $Ruby25__reduce_302$192, $Ruby25__reduce_303$193, $Ruby25__reduce_304$194, $Ruby25__reduce_305$195, $Ruby25__reduce_306$196, $Ruby25__reduce_307$197, $Ruby25__reduce_309$198, $Ruby25__reduce_310$199, $Ruby25__reduce_311$200, $Ruby25__reduce_312$201, $Ruby25__reduce_313$202, $Ruby25__reduce_314$203, $Ruby25__reduce_315$204, $Ruby25__reduce_316$205, $Ruby25__reduce_317$206, $Ruby25__reduce_318$207, $Ruby25__reduce_319$208, $Ruby25__reduce_320$209, $Ruby25__reduce_321$210, $Ruby25__reduce_322$211, $Ruby25__reduce_323$212, $Ruby25__reduce_324$213, $Ruby25__reduce_325$214, $Ruby25__reduce_326$215, $Ruby25__reduce_327$216, $Ruby25__reduce_328$217, $Ruby25__reduce_329$218, $Ruby25__reduce_330$219, $Ruby25__reduce_331$220, $Ruby25__reduce_332$221, $Ruby25__reduce_334$222, $Ruby25__reduce_337$223, $Ruby25__reduce_341$224, $Ruby25__reduce_343$225, $Ruby25__reduce_346$226, $Ruby25__reduce_347$227, $Ruby25__reduce_348$228, $Ruby25__reduce_349$229, $Ruby25__reduce_351$230, $Ruby25__reduce_352$231, $Ruby25__reduce_353$232, $Ruby25__reduce_354$233, $Ruby25__reduce_355$234, $Ruby25__reduce_356$235, $Ruby25__reduce_357$236, $Ruby25__reduce_358$237, $Ruby25__reduce_359$238, $Ruby25__reduce_360$239, $Ruby25__reduce_361$240, $Ruby25__reduce_362$241, $Ruby25__reduce_363$242, $Ruby25__reduce_364$243, $Ruby25__reduce_365$244, $Ruby25__reduce_366$245, $Ruby25__reduce_367$246, $Ruby25__reduce_368$247, $Ruby25__reduce_369$248, $Ruby25__reduce_371$249, $Ruby25__reduce_372$250, $Ruby25__reduce_373$251, $Ruby25__reduce_374$252, $Ruby25__reduce_375$253, $Ruby25__reduce_376$254, $Ruby25__reduce_377$255, $Ruby25__reduce_378$256, $Ruby25__reduce_380$257, $Ruby25__reduce_381$258, $Ruby25__reduce_382$259, $Ruby25__reduce_383$260, $Ruby25__reduce_384$261, $Ruby25__reduce_385$262, $Ruby25__reduce_386$263, $Ruby25__reduce_387$264, $Ruby25__reduce_388$265, $Ruby25__reduce_389$266, $Ruby25__reduce_391$267, $Ruby25__reduce_392$268, $Ruby25__reduce_393$269, $Ruby25__reduce_394$270, $Ruby25__reduce_395$271, $Ruby25__reduce_396$272, $Ruby25__reduce_397$273, $Ruby25__reduce_398$274, $Ruby25__reduce_399$275, $Ruby25__reduce_400$276, $Ruby25__reduce_401$277, $Ruby25__reduce_402$278, $Ruby25__reduce_403$279, $Ruby25__reduce_404$280, $Ruby25__reduce_405$281, $Ruby25__reduce_406$282, $Ruby25__reduce_407$283, $Ruby25__reduce_408$284, $Ruby25__reduce_409$285, $Ruby25__reduce_410$286, $Ruby25__reduce_411$287, $Ruby25__reduce_412$288, $Ruby25__reduce_413$289, $Ruby25__reduce_414$290, $Ruby25__reduce_415$291, $Ruby25__reduce_416$292, $Ruby25__reduce_417$293, $Ruby25__reduce_418$294, $Ruby25__reduce_419$295, $Ruby25__reduce_420$296, $Ruby25__reduce_421$297, $Ruby25__reduce_422$298, $Ruby25__reduce_423$299, $Ruby25__reduce_424$300, $Ruby25__reduce_425$301, $Ruby25__reduce_427$302, $Ruby25__reduce_428$303, $Ruby25__reduce_429$304, $Ruby25__reduce_432$305, $Ruby25__reduce_434$306, $Ruby25__reduce_439$307, $Ruby25__reduce_440$308, $Ruby25__reduce_441$309, $Ruby25__reduce_442$310, $Ruby25__reduce_443$311, $Ruby25__reduce_444$312, $Ruby25__reduce_445$313, $Ruby25__reduce_446$314, $Ruby25__reduce_447$315, $Ruby25__reduce_448$316, $Ruby25__reduce_449$317, $Ruby25__reduce_450$318, $Ruby25__reduce_451$319, $Ruby25__reduce_452$320, $Ruby25__reduce_453$321, $Ruby25__reduce_454$322, $Ruby25__reduce_455$323, $Ruby25__reduce_456$324, $Ruby25__reduce_457$325, $Ruby25__reduce_458$326, $Ruby25__reduce_459$327, $Ruby25__reduce_460$328, $Ruby25__reduce_461$329, $Ruby25__reduce_462$330, $Ruby25__reduce_463$331, $Ruby25__reduce_464$332, $Ruby25__reduce_465$333, $Ruby25__reduce_466$334, $Ruby25__reduce_467$335, $Ruby25__reduce_468$336, $Ruby25__reduce_469$337, $Ruby25__reduce_470$338, $Ruby25__reduce_471$339, $Ruby25__reduce_472$340, $Ruby25__reduce_473$341, $Ruby25__reduce_475$342, $Ruby25__reduce_476$343, $Ruby25__reduce_477$344, $Ruby25__reduce_478$345, $Ruby25__reduce_479$346, $Ruby25__reduce_480$347, $Ruby25__reduce_481$348, $Ruby25__reduce_482$349, $Ruby25__reduce_483$350, $Ruby25__reduce_484$351, $Ruby25__reduce_485$352, $Ruby25__reduce_486$353, $Ruby25__reduce_487$354, $Ruby25__reduce_488$355, $Ruby25__reduce_489$356, $Ruby25__reduce_490$357, $Ruby25__reduce_491$358, $Ruby25__reduce_492$359, $Ruby25__reduce_493$360, $Ruby25__reduce_494$361, $Ruby25__reduce_495$362, $Ruby25__reduce_496$363, $Ruby25__reduce_497$364, $Ruby25__reduce_498$365, $Ruby25__reduce_499$366, $Ruby25__reduce_500$367, $Ruby25__reduce_501$368, $Ruby25__reduce_502$369, $Ruby25__reduce_503$370, $Ruby25__reduce_504$371, $Ruby25__reduce_505$372, $Ruby25__reduce_506$373, $Ruby25__reduce_507$374, $Ruby25__reduce_508$375, $Ruby25__reduce_509$376, $Ruby25__reduce_510$377, $Ruby25__reduce_511$378, $Ruby25__reduce_512$379, $Ruby25__reduce_513$380, $Ruby25__reduce_514$381, $Ruby25__reduce_515$382, $Ruby25__reduce_516$383, $Ruby25__reduce_517$384, $Ruby25__reduce_518$385, $Ruby25__reduce_519$386, $Ruby25__reduce_520$387, $Ruby25__reduce_521$388, $Ruby25__reduce_522$389, $Ruby25__reduce_523$390, $Ruby25__reduce_524$391, $Ruby25__reduce_525$392, $Ruby25__reduce_526$393, $Ruby25__reduce_527$394, $Ruby25__reduce_528$395, $Ruby25__reduce_529$396, $Ruby25__reduce_530$397, $Ruby25__reduce_531$398, $Ruby25__reduce_533$399, $Ruby25__reduce_534$400, $Ruby25__reduce_535$401, $Ruby25__reduce_536$402, $Ruby25__reduce_537$403, $Ruby25__reduce_538$404, $Ruby25__reduce_539$405, $Ruby25__reduce_540$406, $Ruby25__reduce_541$407, $Ruby25__reduce_542$408, $Ruby25__reduce_543$409, $Ruby25__reduce_544$410, $Ruby25__reduce_545$411, $Ruby25__reduce_546$412, $Ruby25__reduce_547$413, $Ruby25__reduce_550$414, $Ruby25__reduce_551$415, $Ruby25__reduce_552$416, $Ruby25__reduce_553$417, $Ruby25__reduce_554$418, $Ruby25__reduce_555$419, $Ruby25__reduce_556$420, $Ruby25__reduce_557$421, $Ruby25__reduce_560$422, $Ruby25__reduce_561$423, $Ruby25__reduce_564$424, $Ruby25__reduce_565$425, $Ruby25__reduce_566$426, $Ruby25__reduce_568$427, $Ruby25__reduce_569$428, $Ruby25__reduce_571$429, $Ruby25__reduce_572$430, $Ruby25__reduce_573$431, $Ruby25__reduce_574$432, $Ruby25__reduce_575$433, $Ruby25__reduce_576$434, $Ruby25__reduce_589$435, $Ruby25__reduce_590$436, $Ruby25__reduce_595$437, $Ruby25__reduce_596$438, $Ruby25__reduce_600$439, $Ruby25__reduce_604$440, $Ruby25__reduce_none$441, clist = nil, racc_action_table = nil, arr = nil, idx = nil, racc_action_check = nil, racc_action_pointer = nil, racc_action_default = nil, racc_goto_table = nil, racc_goto_check = nil, racc_goto_pointer = nil, racc_goto_default = nil, racc_reduce_table = nil, racc_reduce_n = nil, racc_shift_n = nil, racc_token_table = nil, racc_nt_base = nil, racc_use_result_var = nil;
+      var $nesting = [self].concat($parent_nesting), $Ruby25_version$1, $Ruby25_default_encoding$2, $Ruby25$3, $Ruby25$5, $Ruby25$7, $Ruby25$9, $Ruby25__reduce_2$11, $Ruby25__reduce_3$12, $Ruby25__reduce_4$13, $Ruby25__reduce_5$14, $Ruby25__reduce_6$15, $Ruby25__reduce_8$16, $Ruby25__reduce_9$17, $Ruby25__reduce_10$18, $Ruby25__reduce_11$19, $Ruby25__reduce_12$20, $Ruby25__reduce_13$21, $Ruby25__reduce_14$22, $Ruby25__reduce_15$23, $Ruby25__reduce_17$24, $Ruby25__reduce_18$25, $Ruby25__reduce_19$26, $Ruby25__reduce_20$27, $Ruby25__reduce_21$28, $Ruby25__reduce_22$29, $Ruby25__reduce_23$30, $Ruby25__reduce_24$31, $Ruby25__reduce_25$32, $Ruby25__reduce_26$33, $Ruby25__reduce_27$34, $Ruby25__reduce_28$35, $Ruby25__reduce_29$36, $Ruby25__reduce_31$37, $Ruby25__reduce_32$38, $Ruby25__reduce_33$39, $Ruby25__reduce_35$40, $Ruby25__reduce_36$41, $Ruby25__reduce_37$42, $Ruby25__reduce_38$43, $Ruby25__reduce_39$44, $Ruby25__reduce_40$45, $Ruby25__reduce_41$46, $Ruby25__reduce_42$47, $Ruby25__reduce_44$48, $Ruby25__reduce_47$49, $Ruby25__reduce_48$50, $Ruby25__reduce_49$51, $Ruby25__reduce_50$52, $Ruby25__reduce_53$53, $Ruby25__reduce_54$54, $Ruby25__reduce_58$55, $Ruby25__reduce_59$56, $Ruby25__reduce_60$57, $Ruby25__reduce_62$58, $Ruby25__reduce_63$59, $Ruby25__reduce_64$60, $Ruby25__reduce_65$61, $Ruby25__reduce_66$62, $Ruby25__reduce_67$63, $Ruby25__reduce_68$64, $Ruby25__reduce_69$65, $Ruby25__reduce_70$66, $Ruby25__reduce_71$67, $Ruby25__reduce_72$68, $Ruby25__reduce_73$69, $Ruby25__reduce_74$70, $Ruby25__reduce_75$71, $Ruby25__reduce_76$72, $Ruby25__reduce_78$73, $Ruby25__reduce_79$74, $Ruby25__reduce_80$75, $Ruby25__reduce_81$76, $Ruby25__reduce_82$77, $Ruby25__reduce_83$78, $Ruby25__reduce_84$79, $Ruby25__reduce_85$80, $Ruby25__reduce_86$81, $Ruby25__reduce_88$82, $Ruby25__reduce_89$83, $Ruby25__reduce_90$84, $Ruby25__reduce_91$85, $Ruby25__reduce_92$86, $Ruby25__reduce_93$87, $Ruby25__reduce_94$88, $Ruby25__reduce_95$89, $Ruby25__reduce_96$90, $Ruby25__reduce_97$91, $Ruby25__reduce_98$92, $Ruby25__reduce_99$93, $Ruby25__reduce_100$94, $Ruby25__reduce_101$95, $Ruby25__reduce_102$96, $Ruby25__reduce_103$97, $Ruby25__reduce_104$98, $Ruby25__reduce_105$99, $Ruby25__reduce_106$100, $Ruby25__reduce_107$101, $Ruby25__reduce_108$102, $Ruby25__reduce_109$103, $Ruby25__reduce_110$104, $Ruby25__reduce_111$105, $Ruby25__reduce_113$106, $Ruby25__reduce_114$107, $Ruby25__reduce_115$108, $Ruby25__reduce_121$109, $Ruby25__reduce_125$110, $Ruby25__reduce_126$111, $Ruby25__reduce_127$112, $Ruby25__reduce_199$113, $Ruby25__reduce_200$114, $Ruby25__reduce_201$115, $Ruby25__reduce_202$116, $Ruby25__reduce_203$117, $Ruby25__reduce_204$118, $Ruby25__reduce_205$119, $Ruby25__reduce_206$120, $Ruby25__reduce_207$121, $Ruby25__reduce_208$122, $Ruby25__reduce_209$123, $Ruby25__reduce_210$124, $Ruby25__reduce_211$125, $Ruby25__reduce_212$126, $Ruby25__reduce_213$127, $Ruby25__reduce_214$128, $Ruby25__reduce_215$129, $Ruby25__reduce_216$130, $Ruby25__reduce_217$131, $Ruby25__reduce_218$132, $Ruby25__reduce_219$133, $Ruby25__reduce_220$134, $Ruby25__reduce_221$135, $Ruby25__reduce_222$136, $Ruby25__reduce_224$137, $Ruby25__reduce_225$138, $Ruby25__reduce_226$139, $Ruby25__reduce_227$140, $Ruby25__reduce_228$141, $Ruby25__reduce_229$142, $Ruby25__reduce_230$143, $Ruby25__reduce_231$144, $Ruby25__reduce_232$145, $Ruby25__reduce_233$146, $Ruby25__reduce_234$147, $Ruby25__reduce_235$148, $Ruby25__reduce_236$149, $Ruby25__reduce_242$150, $Ruby25__reduce_243$151, $Ruby25__reduce_247$152, $Ruby25__reduce_248$153, $Ruby25__reduce_250$154, $Ruby25__reduce_251$155, $Ruby25__reduce_252$156, $Ruby25__reduce_254$157, $Ruby25__reduce_257$158, $Ruby25__reduce_258$159, $Ruby25__reduce_259$160, $Ruby25__reduce_260$161, $Ruby25__reduce_261$162, $Ruby25__reduce_262$163, $Ruby25__reduce_263$164, $Ruby25__reduce_264$165, $Ruby25__reduce_265$166, $Ruby25__reduce_266$167, $Ruby25__reduce_267$168, $Ruby25__reduce_268$169, $Ruby25__reduce_269$170, $Ruby25__reduce_270$171, $Ruby25__reduce_271$172, $Ruby25__reduce_272$173, $Ruby25__reduce_273$174, $Ruby25__reduce_275$175, $Ruby25__reduce_276$176, $Ruby25__reduce_277$177, $Ruby25__reduce_288$178, $Ruby25__reduce_289$179, $Ruby25__reduce_290$180, $Ruby25__reduce_291$181, $Ruby25__reduce_292$182, $Ruby25__reduce_293$183, $Ruby25__reduce_294$184, $Ruby25__reduce_295$185, $Ruby25__reduce_296$186, $Ruby25__reduce_297$187, $Ruby25__reduce_298$188, $Ruby25__reduce_299$189, $Ruby25__reduce_300$190, $Ruby25__reduce_301$191, $Ruby25__reduce_302$192, $Ruby25__reduce_303$193, $Ruby25__reduce_304$194, $Ruby25__reduce_305$195, $Ruby25__reduce_306$196, $Ruby25__reduce_307$197, $Ruby25__reduce_309$198, $Ruby25__reduce_310$199, $Ruby25__reduce_311$200, $Ruby25__reduce_312$201, $Ruby25__reduce_313$202, $Ruby25__reduce_314$203, $Ruby25__reduce_315$204, $Ruby25__reduce_316$205, $Ruby25__reduce_317$206, $Ruby25__reduce_318$207, $Ruby25__reduce_319$208, $Ruby25__reduce_320$209, $Ruby25__reduce_321$210, $Ruby25__reduce_322$211, $Ruby25__reduce_323$212, $Ruby25__reduce_324$213, $Ruby25__reduce_325$214, $Ruby25__reduce_326$215, $Ruby25__reduce_327$216, $Ruby25__reduce_328$217, $Ruby25__reduce_329$218, $Ruby25__reduce_330$219, $Ruby25__reduce_331$220, $Ruby25__reduce_332$221, $Ruby25__reduce_334$222, $Ruby25__reduce_337$223, $Ruby25__reduce_341$224, $Ruby25__reduce_343$225, $Ruby25__reduce_346$226, $Ruby25__reduce_347$227, $Ruby25__reduce_348$228, $Ruby25__reduce_349$229, $Ruby25__reduce_351$230, $Ruby25__reduce_352$231, $Ruby25__reduce_353$232, $Ruby25__reduce_354$233, $Ruby25__reduce_355$234, $Ruby25__reduce_356$235, $Ruby25__reduce_357$236, $Ruby25__reduce_358$237, $Ruby25__reduce_359$238, $Ruby25__reduce_360$239, $Ruby25__reduce_361$240, $Ruby25__reduce_362$241, $Ruby25__reduce_363$242, $Ruby25__reduce_364$243, $Ruby25__reduce_365$244, $Ruby25__reduce_366$245, $Ruby25__reduce_367$246, $Ruby25__reduce_368$247, $Ruby25__reduce_369$248, $Ruby25__reduce_371$249, $Ruby25__reduce_372$250, $Ruby25__reduce_373$251, $Ruby25__reduce_374$252, $Ruby25__reduce_375$253, $Ruby25__reduce_376$254, $Ruby25__reduce_377$255, $Ruby25__reduce_378$256, $Ruby25__reduce_380$257, $Ruby25__reduce_381$258, $Ruby25__reduce_382$259, $Ruby25__reduce_383$260, $Ruby25__reduce_384$261, $Ruby25__reduce_385$262, $Ruby25__reduce_386$263, $Ruby25__reduce_387$264, $Ruby25__reduce_388$265, $Ruby25__reduce_389$266, $Ruby25__reduce_391$267, $Ruby25__reduce_392$268, $Ruby25__reduce_393$269, $Ruby25__reduce_394$270, $Ruby25__reduce_395$271, $Ruby25__reduce_396$272, $Ruby25__reduce_397$273, $Ruby25__reduce_398$274, $Ruby25__reduce_399$275, $Ruby25__reduce_400$276, $Ruby25__reduce_401$277, $Ruby25__reduce_402$278, $Ruby25__reduce_403$279, $Ruby25__reduce_404$280, $Ruby25__reduce_405$281, $Ruby25__reduce_406$282, $Ruby25__reduce_407$283, $Ruby25__reduce_408$284, $Ruby25__reduce_409$285, $Ruby25__reduce_410$286, $Ruby25__reduce_411$287, $Ruby25__reduce_412$288, $Ruby25__reduce_413$289, $Ruby25__reduce_414$290, $Ruby25__reduce_415$291, $Ruby25__reduce_416$292, $Ruby25__reduce_417$293, $Ruby25__reduce_418$294, $Ruby25__reduce_419$295, $Ruby25__reduce_420$296, $Ruby25__reduce_421$297, $Ruby25__reduce_422$298, $Ruby25__reduce_423$299, $Ruby25__reduce_424$300, $Ruby25__reduce_425$301, $Ruby25__reduce_427$302, $Ruby25__reduce_428$303, $Ruby25__reduce_429$304, $Ruby25__reduce_432$305, $Ruby25__reduce_434$306, $Ruby25__reduce_439$307, $Ruby25__reduce_440$308, $Ruby25__reduce_441$309, $Ruby25__reduce_442$310, $Ruby25__reduce_443$311, $Ruby25__reduce_444$312, $Ruby25__reduce_445$313, $Ruby25__reduce_446$314, $Ruby25__reduce_447$315, $Ruby25__reduce_448$316, $Ruby25__reduce_449$317, $Ruby25__reduce_450$318, $Ruby25__reduce_451$319, $Ruby25__reduce_452$320, $Ruby25__reduce_453$321, $Ruby25__reduce_454$322, $Ruby25__reduce_455$323, $Ruby25__reduce_456$324, $Ruby25__reduce_457$325, $Ruby25__reduce_458$326, $Ruby25__reduce_459$327, $Ruby25__reduce_460$328, $Ruby25__reduce_461$329, $Ruby25__reduce_462$330, $Ruby25__reduce_463$331, $Ruby25__reduce_464$332, $Ruby25__reduce_465$333, $Ruby25__reduce_466$334, $Ruby25__reduce_467$335, $Ruby25__reduce_468$336, $Ruby25__reduce_469$337, $Ruby25__reduce_470$338, $Ruby25__reduce_471$339, $Ruby25__reduce_472$340, $Ruby25__reduce_473$341, $Ruby25__reduce_475$342, $Ruby25__reduce_476$343, $Ruby25__reduce_477$344, $Ruby25__reduce_478$345, $Ruby25__reduce_479$346, $Ruby25__reduce_480$347, $Ruby25__reduce_481$348, $Ruby25__reduce_482$349, $Ruby25__reduce_483$350, $Ruby25__reduce_484$351, $Ruby25__reduce_485$352, $Ruby25__reduce_486$353, $Ruby25__reduce_487$354, $Ruby25__reduce_488$355, $Ruby25__reduce_489$356, $Ruby25__reduce_490$357, $Ruby25__reduce_491$358, $Ruby25__reduce_492$359, $Ruby25__reduce_493$360, $Ruby25__reduce_494$361, $Ruby25__reduce_495$362, $Ruby25__reduce_496$363, $Ruby25__reduce_497$364, $Ruby25__reduce_498$365, $Ruby25__reduce_499$366, $Ruby25__reduce_500$367, $Ruby25__reduce_501$368, $Ruby25__reduce_502$369, $Ruby25__reduce_503$370, $Ruby25__reduce_504$371, $Ruby25__reduce_505$372, $Ruby25__reduce_506$373, $Ruby25__reduce_507$374, $Ruby25__reduce_508$375, $Ruby25__reduce_509$376, $Ruby25__reduce_510$377, $Ruby25__reduce_511$378, $Ruby25__reduce_512$379, $Ruby25__reduce_513$380, $Ruby25__reduce_514$381, $Ruby25__reduce_515$382, $Ruby25__reduce_516$383, $Ruby25__reduce_517$384, $Ruby25__reduce_518$385, $Ruby25__reduce_519$386, $Ruby25__reduce_520$387, $Ruby25__reduce_521$388, $Ruby25__reduce_522$389, $Ruby25__reduce_523$390, $Ruby25__reduce_524$391, $Ruby25__reduce_525$392, $Ruby25__reduce_526$393, $Ruby25__reduce_527$394, $Ruby25__reduce_528$395, $Ruby25__reduce_529$396, $Ruby25__reduce_530$397, $Ruby25__reduce_531$398, $Ruby25__reduce_533$399, $Ruby25__reduce_534$400, $Ruby25__reduce_535$401, $Ruby25__reduce_536$402, $Ruby25__reduce_537$403, $Ruby25__reduce_538$404, $Ruby25__reduce_539$405, $Ruby25__reduce_540$406, $Ruby25__reduce_541$407, $Ruby25__reduce_542$408, $Ruby25__reduce_543$409, $Ruby25__reduce_544$410, $Ruby25__reduce_545$411, $Ruby25__reduce_546$412, $Ruby25__reduce_547$413, $Ruby25__reduce_550$414, $Ruby25__reduce_551$415, $Ruby25__reduce_552$416, $Ruby25__reduce_553$417, $Ruby25__reduce_554$418, $Ruby25__reduce_555$419, $Ruby25__reduce_556$420, $Ruby25__reduce_557$421, $Ruby25__reduce_560$422, $Ruby25__reduce_561$423, $Ruby25__reduce_564$424, $Ruby25__reduce_565$425, $Ruby25__reduce_566$426, $Ruby25__reduce_568$427, $Ruby25__reduce_569$428, $Ruby25__reduce_571$429, $Ruby25__reduce_572$430, $Ruby25__reduce_573$431, $Ruby25__reduce_574$432, $Ruby25__reduce_575$433, $Ruby25__reduce_576$434, $Ruby25__reduce_589$435, $Ruby25__reduce_590$436, $Ruby25__reduce_595$437, $Ruby25__reduce_596$438, $Ruby25__reduce_600$439, $Ruby25__reduce_604$440, $Ruby25__reduce_none$441, clist = nil, racc_action_table = nil, arr = nil, idx = nil, racc_action_check = nil, racc_action_pointer = nil, racc_action_default = nil, racc_goto_table = nil, racc_goto_check = nil, racc_goto_pointer = nil, racc_goto_default = nil, racc_reduce_table = nil, racc_reduce_n = nil, racc_shift_n = nil, racc_token_table = nil, racc_nt_base = nil, racc_use_result_var = nil;
 
-      def.builder = def.lexer = def.context = def.last_token = def.static_env = nil;
+      self.$$prototype.builder = self.$$prototype.lexer = self.$$prototype.context = self.$$prototype.last_token = self.$$prototype.static_env = nil;
       
       
       Opal.def(self, '$version', $Ruby25_version$1 = function $$version() {
@@ -22539,22 +22384,19 @@ Opal.modules["opal/ast/builder"] = function(Opal) {
   self.$require("opal/ast/node");
   self.$require("parser/ruby25");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $AST() {};
-      var self = $AST = $module($base, 'AST', $AST);
+      var self = $module($base, 'AST');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Builder(){};
-        var self = $Builder = $klass($base, $super, 'Builder', $Builder);
+        var self = $klass($base, $super, 'Builder');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Builder_n$1, $writer = nil;
+        var $nesting = [self].concat($parent_nesting), $Builder_n$1, $writer = nil;
 
         
         
@@ -22586,29 +22428,25 @@ Opal.modules["opal/rewriters/base"] = function(Opal) {
   self.$require("parser");
   self.$require("opal/ast/node");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Base(){};
-        var self = $Base = $klass($base, $super, 'Base', $Base);
+        var self = $klass($base, $super, 'Base');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Base_s$9, $Base_s$10, $Base_prepend_to_body$11, $Base_append_to_body$12, $Base_stmts_of$13, $Base_begin_with_stmts$14, $Base_process$15, $Base_error$16;
+        var $nesting = [self].concat($parent_nesting), $Base_s$9, $Base_s$10, $Base_prepend_to_body$11, $Base_append_to_body$12, $Base_stmts_of$13, $Base_begin_with_stmts$14, $Base_process$15, $Base_error$16;
 
         
         (function($base, $super, $parent_nesting) {
-          function $DummyLocation(){};
-          var self = $DummyLocation = $klass($base, $super, 'DummyLocation', $DummyLocation);
+          var self = $klass($base, $super, 'DummyLocation');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $DummyLocation_node$eq$1, $DummyLocation_expression$2, $DummyLocation_begin_pos$3, $DummyLocation_end_pos$4, $DummyLocation_source$5, $DummyLocation_line$6, $DummyLocation_column$7, $DummyLocation_last_line$8;
+          var $nesting = [self].concat($parent_nesting), $DummyLocation_node$eq$1, $DummyLocation_expression$2, $DummyLocation_begin_pos$3, $DummyLocation_end_pos$4, $DummyLocation_source$5, $DummyLocation_line$6, $DummyLocation_column$7, $DummyLocation_last_line$8;
 
           
           
@@ -22780,22 +22618,19 @@ Opal.modules["opal/rewriters/opal_engine_check"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $OpalEngineCheck(){};
-        var self = $OpalEngineCheck = $klass($base, $super, 'OpalEngineCheck', $OpalEngineCheck);
+        var self = $klass($base, $super, 'OpalEngineCheck');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $OpalEngineCheck_on_if$1, $OpalEngineCheck_skip_check_present$ques$2, $OpalEngineCheck_skip_check_present_not$ques$3;
+        var $nesting = [self].concat($parent_nesting), $OpalEngineCheck_on_if$1, $OpalEngineCheck_skip_check_present$ques$2, $OpalEngineCheck_skip_check_present_not$ques$3;
 
         
         
@@ -22842,22 +22677,19 @@ Opal.modules["opal/rewriters/for_rewriter"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ForRewriter(){};
-        var self = $ForRewriter = $klass($base, $super, 'ForRewriter', $ForRewriter);
+        var self = $klass($base, $super, 'ForRewriter');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ForRewriter_reset_tmp_counter$excl$1, $ForRewriter_next_tmp$2, $ForRewriter_on_for$3;
+        var $nesting = [self].concat($parent_nesting), $ForRewriter_reset_tmp_counter$excl$1, $ForRewriter_next_tmp$2, $ForRewriter_on_for$3;
 
         
         Opal.defs(self, '$reset_tmp_counter!', $ForRewriter_reset_tmp_counter$excl$1 = function() {
@@ -22900,10 +22732,9 @@ Opal.modules["opal/rewriters/for_rewriter"] = function(Opal) {
           return $send(self, 's', ["begin"].concat(Opal.to_a(outer_assigns)).concat([node]));
         }, $ForRewriter_on_for$3.$$arity = 1);
         return (function($base, $super, $parent_nesting) {
-          function $LocalVariableAssigns(){};
-          var self = $LocalVariableAssigns = $klass($base, $super, 'LocalVariableAssigns', $LocalVariableAssigns);
+          var self = $klass($base, $super, 'LocalVariableAssigns');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $LocalVariableAssigns_find$5, $LocalVariableAssigns_initialize$6, $LocalVariableAssigns_on_lvasgn$7;
+          var $nesting = [self].concat($parent_nesting), $LocalVariableAssigns_find$5, $LocalVariableAssigns_initialize$6, $LocalVariableAssigns_on_lvasgn$7;
 
           
           self.$attr_reader("result");
@@ -22948,24 +22779,21 @@ Opal.modules["opal/rewriters/explicit_writer_return"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ExplicitWriterReturn(){};
-        var self = $ExplicitWriterReturn = $klass($base, $super, 'ExplicitWriterReturn', $ExplicitWriterReturn);
+        var self = $klass($base, $super, 'ExplicitWriterReturn');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExplicitWriterReturn_initialize$1, $ExplicitWriterReturn_on_send$2, $ExplicitWriterReturn_on_masgn$3;
+        var $nesting = [self].concat($parent_nesting), $ExplicitWriterReturn_initialize$1, $ExplicitWriterReturn_on_send$2, $ExplicitWriterReturn_on_masgn$3;
 
-        def.in_masgn = nil;
+        self.$$prototype.in_masgn = nil;
         
         
         Opal.def(self, '$initialize', $ExplicitWriterReturn_initialize$1 = function $$initialize() {
@@ -23025,22 +22853,19 @@ Opal.modules["opal/rewriters/js_reserved_words"] = function(Opal) {
   self.$require("opal/rewriters/base");
   self.$require("opal/regexp_anchors");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $JsReservedWords(){};
-        var self = $JsReservedWords = $klass($base, $super, 'JsReservedWords', $JsReservedWords);
+        var self = $klass($base, $super, 'JsReservedWords');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $JsReservedWords_valid_name$ques$1, $JsReservedWords_valid_ivar_name$ques$2, $JsReservedWords_fix_var_name$3, $JsReservedWords_fix_ivar_name$4, $JsReservedWords_on_lvar$5, $JsReservedWords_on_lvasgn$6, $JsReservedWords_on_ivar$7, $JsReservedWords_on_ivasgn$8, $JsReservedWords_on_restarg$9, $JsReservedWords_on_argument$10;
+        var $nesting = [self].concat($parent_nesting), $JsReservedWords_valid_name$ques$1, $JsReservedWords_valid_ivar_name$ques$2, $JsReservedWords_fix_var_name$3, $JsReservedWords_fix_ivar_name$4, $JsReservedWords_on_lvar$5, $JsReservedWords_on_lvasgn$6, $JsReservedWords_on_ivar$7, $JsReservedWords_on_ivasgn$8, $JsReservedWords_on_restarg$9, $JsReservedWords_on_argument$10;
 
         
         Opal.const_set($nesting[0], 'ES51_RESERVED_WORD', new RegExp("" + ($$($nesting, 'REGEXP_START')) + "(?:do|if|in|for|let|new|try|var|case|else|enum|eval|false|null|this|true|void|with|break|catch|class|const|super|throw|while|yield|delete|export|import|public|return|static|switch|typeof|default|extends|finally|package|private|continue|debugger|function|arguments|interface|protected|implements|instanceof)" + ($$($nesting, 'REGEXP_END'))));
@@ -23169,22 +22994,19 @@ Opal.modules["opal/rewriters/block_to_iter"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $BlockToIter(){};
-        var self = $BlockToIter = $klass($base, $super, 'BlockToIter', $BlockToIter);
+        var self = $klass($base, $super, 'BlockToIter');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BlockToIter_on_block$1;
+        var $nesting = [self].concat($parent_nesting), $BlockToIter_on_block$1;
 
         return (Opal.def(self, '$on_block', $BlockToIter_on_block$1 = function $$on_block(node) {
           var $a, $iter = $BlockToIter_on_block$1.$$p, $yield = $iter || nil, self = this, recvr = nil, args = nil, body = nil, iter_node = nil, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
@@ -23212,22 +23034,19 @@ Opal.modules["opal/rewriters/dot_js_syntax"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $DotJsSyntax(){};
-        var self = $DotJsSyntax = $klass($base, $super, 'DotJsSyntax', $DotJsSyntax);
+        var self = $klass($base, $super, 'DotJsSyntax');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $DotJsSyntax_on_send$1, $DotJsSyntax_to_native_js_call$2, $DotJsSyntax_to_js_attr_call$3, $DotJsSyntax_to_js_attr_assign_call$4;
+        var $nesting = [self].concat($parent_nesting), $DotJsSyntax_on_send$1, $DotJsSyntax_to_native_js_call$2, $DotJsSyntax_to_js_attr_call$3, $DotJsSyntax_to_js_attr_assign_call$4;
 
         
         
@@ -23299,36 +23118,33 @@ Opal.modules["opal/rewriters/logical_operator_assignment"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $LogicalOperatorAssignment(){};
-        var self = $LogicalOperatorAssignment = $klass($base, $super, 'LogicalOperatorAssignment', $LogicalOperatorAssignment);
+        var self = $klass($base, $super, 'LogicalOperatorAssignment');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $LogicalOperatorAssignment_reset_tmp_counter$excl$1, $LogicalOperatorAssignment_new_temp$2, $LogicalOperatorAssignment$3, $LogicalOperatorAssignment_on_or_asgn$7, $LogicalOperatorAssignment_on_and_asgn$9, $LogicalOperatorAssignment_on_defined$ques$11;
+        var $nesting = [self].concat($parent_nesting), $LogicalOperatorAssignment_reset_tmp_counter$excl$1, $LogicalOperatorAssignment_new_temp$2, $LogicalOperatorAssignment$3, $LogicalOperatorAssignment_on_or_asgn$7, $LogicalOperatorAssignment_on_and_asgn$9, $LogicalOperatorAssignment_on_defined$ques$11;
 
         
         Opal.defs(self, '$reset_tmp_counter!', $LogicalOperatorAssignment_reset_tmp_counter$excl$1 = function() {
           var self = this;
 
-          return (Opal.class_variable_set($LogicalOperatorAssignment, '@@counter', 0))
+          return (Opal.class_variable_set($nesting[0], '@@counter', 0))
         }, $LogicalOperatorAssignment_reset_tmp_counter$excl$1.$$arity = 0);
         Opal.defs(self, '$new_temp', $LogicalOperatorAssignment_new_temp$2 = function $$new_temp() {
           var $a, $b, self = this;
 
           
-          (Opal.class_variable_set($LogicalOperatorAssignment, '@@counter', ($truthy($a = (($b = $LogicalOperatorAssignment.$$cvars['@@counter']) == null ? nil : $b)) ? $a : 0)));
-          (Opal.class_variable_set($LogicalOperatorAssignment, '@@counter', $rb_plus((($a = $LogicalOperatorAssignment.$$cvars['@@counter']) == null ? nil : $a), 1)));
-          return "" + "$logical_op_recvr_tmp_" + ((($a = $LogicalOperatorAssignment.$$cvars['@@counter']) == null ? nil : $a));
+          (Opal.class_variable_set($nesting[0], '@@counter', ($truthy($a = (($b = $nesting[0].$$cvars['@@counter']) == null ? nil : $b)) ? $a : 0)));
+          (Opal.class_variable_set($nesting[0], '@@counter', $rb_plus((($a = $nesting[0].$$cvars['@@counter']) == null ? nil : $a), 1)));
+          return "" + "$logical_op_recvr_tmp_" + ((($a = $nesting[0].$$cvars['@@counter']) == null ? nil : $a));
         }, $LogicalOperatorAssignment_new_temp$2.$$arity = 0);
         Opal.const_set($nesting[0], 'GET_SET', $lambda(($LogicalOperatorAssignment$3 = function(get_type, set_type){var self = $LogicalOperatorAssignment$3.$$s || this, $$4;
 
@@ -23365,10 +23181,9 @@ Opal.modules["opal/rewriters/logical_operator_assignment"] = function(Opal) {
         Opal.const_set($nesting[0], 'GlobalVariableHandler', $$($nesting, 'GET_SET')['$[]']("gvar", "gvasgn"));
         Opal.const_set($nesting[0], 'ClassVariableHandler', $$($nesting, 'GET_SET')['$[]']("cvar", "cvasgn"));
         (function($base, $super, $parent_nesting) {
-          function $SendHandler(){};
-          var self = $SendHandler = $klass($base, $super, 'SendHandler', $SendHandler);
+          var self = $klass($base, $super, 'SendHandler');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $SendHandler_call$5;
+          var $nesting = [self].concat($parent_nesting), $SendHandler_call$5;
 
           return (Opal.defs(self, '$call', $SendHandler_call$5 = function $$call(lhs, rhs, root_type) {
             var $a, self = this, recvr = nil, reader_method = nil, args = nil, recvr_tmp = nil, cache_recvr = nil, writer_method = nil, call_reader = nil, call_writer = nil, get_or_set = nil;
@@ -23392,10 +23207,9 @@ Opal.modules["opal/rewriters/logical_operator_assignment"] = function(Opal) {
           }, $SendHandler_call$5.$$arity = 3), nil) && 'call'
         })($nesting[0], self, $nesting);
         (function($base, $super, $parent_nesting) {
-          function $ConditionalSendHandler(){};
-          var self = $ConditionalSendHandler = $klass($base, $super, 'ConditionalSendHandler', $ConditionalSendHandler);
+          var self = $klass($base, $super, 'ConditionalSendHandler');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ConditionalSendHandler_call$6;
+          var $nesting = [self].concat($parent_nesting), $ConditionalSendHandler_call$6;
 
           return (Opal.defs(self, '$call', $ConditionalSendHandler_call$6 = function $$call(lhs, rhs, root_type) {
             var $a, self = this, recvr = nil, meth = nil, args = nil, recvr_tmp = nil, cache_recvr = nil, recvr_is_nil = nil, plain_send = nil, plain_or_asgn = nil;
@@ -23464,36 +23278,33 @@ Opal.modules["opal/rewriters/binary_operator_assignment"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $BinaryOperatorAssignment(){};
-        var self = $BinaryOperatorAssignment = $klass($base, $super, 'BinaryOperatorAssignment', $BinaryOperatorAssignment);
+        var self = $klass($base, $super, 'BinaryOperatorAssignment');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BinaryOperatorAssignment_reset_tmp_counter$excl$1, $BinaryOperatorAssignment_new_temp$2, $BinaryOperatorAssignment$3, $BinaryOperatorAssignment_on_op_asgn$7, $BinaryOperatorAssignment_on_defined$ques$9;
+        var $nesting = [self].concat($parent_nesting), $BinaryOperatorAssignment_reset_tmp_counter$excl$1, $BinaryOperatorAssignment_new_temp$2, $BinaryOperatorAssignment$3, $BinaryOperatorAssignment_on_op_asgn$7, $BinaryOperatorAssignment_on_defined$ques$9;
 
         
         Opal.defs(self, '$reset_tmp_counter!', $BinaryOperatorAssignment_reset_tmp_counter$excl$1 = function() {
           var self = this;
 
-          return (Opal.class_variable_set($BinaryOperatorAssignment, '@@counter', 0))
+          return (Opal.class_variable_set($nesting[0], '@@counter', 0))
         }, $BinaryOperatorAssignment_reset_tmp_counter$excl$1.$$arity = 0);
         Opal.defs(self, '$new_temp', $BinaryOperatorAssignment_new_temp$2 = function $$new_temp() {
           var $a, $b, self = this;
 
           
-          (Opal.class_variable_set($BinaryOperatorAssignment, '@@counter', ($truthy($a = (($b = $BinaryOperatorAssignment.$$cvars['@@counter']) == null ? nil : $b)) ? $a : 0)));
-          (Opal.class_variable_set($BinaryOperatorAssignment, '@@counter', $rb_plus((($a = $BinaryOperatorAssignment.$$cvars['@@counter']) == null ? nil : $a), 1)));
-          return "" + "$binary_op_recvr_tmp_" + ((($a = $BinaryOperatorAssignment.$$cvars['@@counter']) == null ? nil : $a));
+          (Opal.class_variable_set($nesting[0], '@@counter', ($truthy($a = (($b = $nesting[0].$$cvars['@@counter']) == null ? nil : $b)) ? $a : 0)));
+          (Opal.class_variable_set($nesting[0], '@@counter', $rb_plus((($a = $nesting[0].$$cvars['@@counter']) == null ? nil : $a), 1)));
+          return "" + "$binary_op_recvr_tmp_" + ((($a = $nesting[0].$$cvars['@@counter']) == null ? nil : $a));
         }, $BinaryOperatorAssignment_new_temp$2.$$arity = 0);
         Opal.const_set($nesting[0], 'GET_SET', $lambda(($BinaryOperatorAssignment$3 = function(get_type, set_type){var self = $BinaryOperatorAssignment$3.$$s || this, $$4;
 
@@ -23530,10 +23341,9 @@ Opal.modules["opal/rewriters/binary_operator_assignment"] = function(Opal) {
         Opal.const_set($nesting[0], 'GlobalVariableHandler', $$($nesting, 'GET_SET')['$[]']("gvar", "gvasgn"));
         Opal.const_set($nesting[0], 'ClassVariableHandler', $$($nesting, 'GET_SET')['$[]']("cvar", "cvasgn"));
         (function($base, $super, $parent_nesting) {
-          function $SendHandler(){};
-          var self = $SendHandler = $klass($base, $super, 'SendHandler', $SendHandler);
+          var self = $klass($base, $super, 'SendHandler');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $SendHandler_call$5;
+          var $nesting = [self].concat($parent_nesting), $SendHandler_call$5;
 
           return (Opal.defs(self, '$call', $SendHandler_call$5 = function $$call(lhs, operation, rhs) {
             var $a, self = this, recvr = nil, reader_method = nil, args = nil, recvr_tmp = nil, cache_recvr = nil, writer_method = nil, call_reader = nil, call_op = nil, call_writer = nil;
@@ -23557,10 +23367,9 @@ Opal.modules["opal/rewriters/binary_operator_assignment"] = function(Opal) {
           }, $SendHandler_call$5.$$arity = 3), nil) && 'call'
         })($nesting[0], self, $nesting);
         (function($base, $super, $parent_nesting) {
-          function $ConditionalSendHandler(){};
-          var self = $ConditionalSendHandler = $klass($base, $super, 'ConditionalSendHandler', $ConditionalSendHandler);
+          var self = $klass($base, $super, 'ConditionalSendHandler');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ConditionalSendHandler_call$6;
+          var $nesting = [self].concat($parent_nesting), $ConditionalSendHandler_call$6;
 
           return (Opal.defs(self, '$call', $ConditionalSendHandler_call$6 = function $$call(lhs, operation, rhs) {
             var $a, self = this, recvr = nil, meth = nil, args = nil, recvr_tmp = nil, cache_recvr = nil, recvr_is_nil = nil, plain_send = nil, plain_op_asgn = nil;
@@ -23615,30 +23424,26 @@ Opal.modules["opal/rewriters/hashes/key_duplicates_rewriter"] = function(Opal) {
   self.$require("opal/rewriters/base");
   self.$require("set");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Hashes() {};
-        var self = $Hashes = $module($base, 'Hashes', $Hashes);
+        var self = $module($base, 'Hashes');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $KeyDuplicatesRewriter(){};
-          var self = $KeyDuplicatesRewriter = $klass($base, $super, 'KeyDuplicatesRewriter', $KeyDuplicatesRewriter);
+          var self = $klass($base, $super, 'KeyDuplicatesRewriter');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $KeyDuplicatesRewriter_initialize$1, $KeyDuplicatesRewriter_on_hash$2, $KeyDuplicatesRewriter_on_pair$3, $KeyDuplicatesRewriter_on_kwsplat$4;
+          var $nesting = [self].concat($parent_nesting), $KeyDuplicatesRewriter_initialize$1, $KeyDuplicatesRewriter_on_hash$2, $KeyDuplicatesRewriter_on_pair$3, $KeyDuplicatesRewriter_on_kwsplat$4;
 
-          def.keys = nil;
+          self.$$prototype.keys = nil;
           
           
           Opal.def(self, '$initialize', $KeyDuplicatesRewriter_initialize$1 = function $$initialize() {
@@ -23681,12 +23486,11 @@ Opal.modules["opal/rewriters/hashes/key_duplicates_rewriter"] = function(Opal) {
             return node.$updated(nil, [hash]);
           }, $KeyDuplicatesRewriter_on_kwsplat$4.$$arity = 1);
           return (function($base, $super, $parent_nesting) {
-            function $UniqKeysSet(){};
-            var self = $UniqKeysSet = $klass($base, $super, 'UniqKeysSet', $UniqKeysSet);
+            var self = $klass($base, $super, 'UniqKeysSet');
 
-            var def = self.prototype, $nesting = [self].concat($parent_nesting), $UniqKeysSet_initialize$5, $UniqKeysSet_$lt$lt$6;
+            var $nesting = [self].concat($parent_nesting), $UniqKeysSet_initialize$5, $UniqKeysSet_$lt$lt$6;
 
-            def.set = nil;
+            self.$$prototype.set = nil;
             
             
             Opal.def(self, '$initialize', $UniqKeysSet_initialize$5 = function $$initialize() {
@@ -23725,22 +23529,19 @@ Opal.modules["opal/rewriters/dump_args"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $DumpArgs(){};
-        var self = $DumpArgs = $klass($base, $super, 'DumpArgs', $DumpArgs);
+        var self = $klass($base, $super, 'DumpArgs');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $DumpArgs_on_def$1, $DumpArgs_on_defs$2, $DumpArgs_on_iter$3;
+        var $nesting = [self].concat($parent_nesting), $DumpArgs_on_def$1, $DumpArgs_on_defs$2, $DumpArgs_on_iter$3;
 
         
         
@@ -23788,22 +23589,19 @@ Opal.modules["opal/rewriters/mlhs_args"] = function(Opal) {
   
   self.$require("opal/rewriters/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $MlhsArgs(){};
-        var self = $MlhsArgs = $klass($base, $super, 'MlhsArgs', $MlhsArgs);
+        var self = $klass($base, $super, 'MlhsArgs');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $MlhsArgs_on_def$1, $MlhsArgs_on_defs$2, $MlhsArgs_on_iter$3;
+        var $nesting = [self].concat($parent_nesting), $MlhsArgs_on_def$1, $MlhsArgs_on_defs$2, $MlhsArgs_on_iter$3;
 
         
         
@@ -23855,12 +23653,11 @@ Opal.modules["opal/rewriters/mlhs_args"] = function(Opal) {
           return node.$updated(nil, [args, body]);
         }, $MlhsArgs_on_iter$3.$$arity = 1);
         (function($base, $super, $parent_nesting) {
-          function $Arguments(){};
-          var self = $Arguments = $klass($base, $super, 'Arguments', $Arguments);
+          var self = $klass($base, $super, 'Arguments');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $Arguments_initialize$4, $Arguments_reset_tmp_counter$excl$5, $Arguments_new_mlhs_tmp$6, $Arguments_split$excl$7;
+          var $nesting = [self].concat($parent_nesting), $Arguments_initialize$4, $Arguments_reset_tmp_counter$excl$5, $Arguments_new_mlhs_tmp$6, $Arguments_split$excl$7;
 
-          def.counter = def.args = def.initialization = nil;
+          self.$$prototype.counter = self.$$prototype.args = self.$$prototype.initialization = nil;
           
           self.$attr_reader("rewritten", "initialization");
           
@@ -23923,10 +23720,9 @@ Opal.modules["opal/rewriters/mlhs_args"] = function(Opal) {
           }, $Arguments_split$excl$7.$$arity = 0), nil) && 'split!';
         })($nesting[0], $$($nesting, 'Base'), $nesting);
         return (function($base, $super, $parent_nesting) {
-          function $MlhsRewriter(){};
-          var self = $MlhsRewriter = $klass($base, $super, 'MlhsRewriter', $MlhsRewriter);
+          var self = $klass($base, $super, 'MlhsRewriter');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $MlhsRewriter_on_arg$9, $MlhsRewriter_on_restarg$10;
+          var $nesting = [self].concat($parent_nesting), $MlhsRewriter_on_arg$9, $MlhsRewriter_on_restarg$10;
 
           
           
@@ -23958,24 +23754,21 @@ Opal.modules["opal/rewriters/arguments"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$each', '$type', '$===', '$<<', '$any?', '$raise', '$!', '$nil?', '$has_any_kwargs?', '$can_inline_kwargs?', '$empty?']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Arguments(){};
-        var self = $Arguments = $klass($base, $super, 'Arguments', $Arguments);
+        var self = $klass($base, $super, 'Arguments');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Arguments_initialize$1, $Arguments_has_post_args$ques$3, $Arguments_has_any_kwargs$ques$4, $Arguments_can_inline_kwargs$ques$5;
+        var $nesting = [self].concat($parent_nesting), $Arguments_initialize$1, $Arguments_has_post_args$ques$3, $Arguments_has_any_kwargs$ques$4, $Arguments_can_inline_kwargs$ques$5;
 
-        def.restarg = def.postargs = def.kwargs = def.kwoptargs = def.kwrestarg = def.optargs = nil;
+        self.$$prototype.restarg = self.$$prototype.postargs = self.$$prototype.kwargs = self.$$prototype.kwoptargs = self.$$prototype.kwrestarg = self.$$prototype.optargs = nil;
         
         self.$attr_reader("args", "optargs", "restarg", "postargs", "kwargs", "kwoptargs", "kwrestarg", "shadowargs", "blockarg");
         
@@ -24052,22 +23845,19 @@ Opal.modules["opal/rewriters/inline_args"] = function(Opal) {
   self.$require("opal/rewriters/base");
   self.$require("opal/rewriters/arguments");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $InlineArgs(){};
-        var self = $InlineArgs = $klass($base, $super, 'InlineArgs', $InlineArgs);
+        var self = $klass($base, $super, 'InlineArgs');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $InlineArgs_on_def$1, $InlineArgs_on_defs$2, $InlineArgs_on_iter$3;
+        var $nesting = [self].concat($parent_nesting), $InlineArgs_on_def$1, $InlineArgs_on_defs$2, $InlineArgs_on_iter$3;
 
         
         
@@ -24113,12 +23903,11 @@ Opal.modules["opal/rewriters/inline_args"] = function(Opal) {
           return node.$updated(nil, [inline_args, body]);
         }, $InlineArgs_on_iter$3.$$arity = 1);
         return (function($base, $super, $parent_nesting) {
-          function $Initializer(){};
-          var self = $Initializer = $klass($base, $super, 'Initializer', $Initializer);
+          var self = $klass($base, $super, 'Initializer');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $Initializer_initialize$4, $Initializer_extract_blockarg$6, $Initializer_initialize_shadowargs$7, $Initializer_extract_args$9, $Initializer_prepare_post_args$11, $Initializer_prepare_kwargs$12, $Initializer_extract_kwargs$13, $Initializer_extract_kwoptargs$15, $Initializer_extract_kwrestarg$17, $Initializer_extract_post_args$18, $Initializer_extract_optargs$20, $Initializer_extract_restarg$22, $Initializer_args_to_keep$23;
+          var $nesting = [self].concat($parent_nesting), $Initializer_initialize$4, $Initializer_extract_blockarg$6, $Initializer_initialize_shadowargs$7, $Initializer_extract_args$9, $Initializer_prepare_post_args$11, $Initializer_prepare_kwargs$12, $Initializer_extract_kwargs$13, $Initializer_extract_kwoptargs$15, $Initializer_extract_kwrestarg$17, $Initializer_extract_post_args$18, $Initializer_extract_optargs$20, $Initializer_extract_restarg$22, $Initializer_args_to_keep$23;
 
-          def.initialization = def.args = def.inline = nil;
+          self.$$prototype.initialization = self.$$prototype.args = self.$$prototype.inline = nil;
           
           self.$attr_reader("inline", "initialization");
           Opal.const_set($nesting[0], 'STEPS', ["extract_blockarg", "initialize_shadowargs", "extract_args", "prepare_post_args", "prepare_kwargs", "extract_optargs", "extract_restarg", "extract_post_args", "extract_kwargs", "extract_kwoptargs", "extract_kwrestarg"].$freeze());
@@ -24357,21 +24146,19 @@ Opal.modules["opal/rewriter"] = function(Opal) {
   self.$require("opal/rewriters/mlhs_args");
   self.$require("opal/rewriters/inline_args");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Rewriter(){};
-      var self = $Rewriter = $klass($base, $super, 'Rewriter', $Rewriter);
+      var self = $klass($base, $super, 'Rewriter');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Rewriter_initialize$6, $Rewriter_process$7;
+      var $nesting = [self].concat($parent_nesting), $Rewriter_initialize$6, $Rewriter_process$7;
 
-      def.sexp = nil;
+      self.$$prototype.sexp = nil;
       
       (function(self, $parent_nesting) {
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $list$1, $use$2, $delete$3, $disable$4, $disabled$ques$5;
+        var $nesting = [self].concat($parent_nesting), $list$1, $use$2, $delete$3, $disable$4, $disabled$ques$5;
 
         
         
@@ -24462,22 +24249,19 @@ Opal.modules["opal/parser/source_buffer"] = function(Opal) {
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $truthy = Opal.truthy, $send = Opal.send;
 
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Parser() {};
-      var self = $Parser = $module($base, 'Parser', $Parser);
+      var self = $module($base, 'Parser');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $SourceBuffer(){};
-        var self = $SourceBuffer = $klass($base, $super, 'SourceBuffer', $SourceBuffer);
+        var self = $klass($base, $super, 'SourceBuffer');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $SourceBuffer_recognize_encoding$1;
+        var $nesting = [self].concat($parent_nesting), $SourceBuffer_recognize_encoding$1;
 
         return (Opal.defs(self, '$recognize_encoding', $SourceBuffer_recognize_encoding$1 = function $$recognize_encoding(string) {
           var $a, $iter = $SourceBuffer_recognize_encoding$1.$$p, $yield = $iter || nil, self = this, $zuper = nil, $zuper_i = nil, $zuper_ii = nil;
@@ -24487,7 +24271,7 @@ Opal.modules["opal/parser/source_buffer"] = function(Opal) {
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
           }
-          return ($truthy($a = $send(self, Opal.find_super_dispatcher(self, 'recognize_encoding', $SourceBuffer_recognize_encoding$1, false, $SourceBuffer), $zuper, $iter)) ? $a : $$$($$($nesting, 'Encoding'), 'UTF_8'))
+          return ($truthy($a = $send(self, Opal.find_super_dispatcher(self, 'recognize_encoding', $SourceBuffer_recognize_encoding$1, false, self.$$class.$$prototype), $zuper, $iter)) ? $a : $$$($$($nesting, 'Encoding'), 'UTF_8'))
         }, $SourceBuffer_recognize_encoding$1.$$arity = 1), nil) && 'recognize_encoding'
       })($nesting[0], $$$($$$($$$('::', 'Parser'), 'Source'), 'Buffer'), $nesting)
     })($nesting[0], $nesting)
@@ -24503,30 +24287,26 @@ Opal.modules["opal/parser/default_config"] = function(Opal) {
 
   Opal.add_stubs(['$attr_accessor', '$all_errors_are_fatal=', '$diagnostics', '$-', '$ignore_warnings=', '$diagnostics_consumer', '$consumer=', '$extend', '$!=', '$diagnostics_consumer=', '$new', '$rewrite', '$process', '$default_parser', '$default_parser_class']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Parser() {};
-      var self = $Parser = $module($base, 'Parser', $Parser);
+      var self = $module($base, 'Parser');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $parent_nesting) {
-        function $DefaultConfig() {};
-        var self = $DefaultConfig = $module($base, 'DefaultConfig', $DefaultConfig);
+        var self = $module($base, 'DefaultConfig');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $DefaultConfig_included$2, $DefaultConfig_initialize$4, $DefaultConfig_parse$5, $DefaultConfig_rewrite$6;
+        var $nesting = [self].concat($parent_nesting), $DefaultConfig_included$2, $DefaultConfig_initialize$4, $DefaultConfig_parse$5, $DefaultConfig_rewrite$6;
 
         
         (function($base, $parent_nesting) {
-          function $ClassMethods() {};
-          var self = $ClassMethods = $module($base, 'ClassMethods', $ClassMethods);
+          var self = $module($base, 'ClassMethods');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ClassMethods_default_parser$1;
+          var $nesting = [self].concat($parent_nesting), $ClassMethods_default_parser$1;
 
           
           self.$attr_accessor("diagnostics_consumer");
@@ -24610,7 +24390,7 @@ Opal.modules["opal/parser/default_config"] = function(Opal) {
         }, $DefaultConfig_rewrite$6.$$arity = 1);
       })($nesting[0], $nesting);
       (function(self, $parent_nesting) {
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $default_parser$7;
+        var $nesting = [self].concat($parent_nesting), $default_parser$7;
 
         
         self.$attr_accessor("default_parser_class");
@@ -24633,10 +24413,9 @@ Opal.modules["opal/parser/with_ruby_lexer"] = function(Opal) {
 
   Opal.add_stubs(['$include', '$default_parser_class=', '$-']);
   return (function($base, $super, $parent_nesting) {
-    function $WithRubyLexer(){};
-    var self = $WithRubyLexer = $klass($base, $super, 'WithRubyLexer', $WithRubyLexer);
+    var self = $klass($base, $super, 'WithRubyLexer');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $writer = nil;
+    var $nesting = [self].concat($parent_nesting), $writer = nil;
 
     
     self.$include($$$($$$($$($nesting, 'Opal'), 'Parser'), 'DefaultConfig'));
@@ -24658,12 +24437,11 @@ Opal.modules["opal/parser/patch"] = function(Opal) {
   if ($$($nesting, 'RUBY_ENGINE')['$==']("opal")) {
     
     (function($base, $super, $parent_nesting) {
-      function $Literal(){};
-      var self = $Literal = $klass($base, $super, 'Literal', $Literal);
+      var self = $klass($base, $super, 'Literal');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Literal_extend_string$1;
+      var $nesting = [self].concat($parent_nesting), $Literal_extend_string$1;
 
-      def.buffer_s = def.buffer = nil;
+      self.$$prototype.buffer_s = self.$$prototype.buffer = nil;
       
       
       Opal.udef(self, '$' + "extend_string");;
@@ -24677,12 +24455,11 @@ Opal.modules["opal/parser/patch"] = function(Opal) {
       }, $Literal_extend_string$1.$$arity = 3), nil) && 'extend_string';
     })($$$($$($nesting, 'Parser'), 'Lexer'), null, $nesting);
     return (function($base, $super, $parent_nesting) {
-      function $Buffer(){};
-      var self = $Buffer = $klass($base, $super, 'Buffer', $Buffer);
+      var self = $klass($base, $super, 'Buffer');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Buffer_source_lines$2;
+      var $nesting = [self].concat($parent_nesting), $Buffer_source_lines$2;
 
-      def.lines = def.source = nil;
+      self.$$prototype.lines = self.$$prototype.source = nil;
       return (Opal.def(self, '$source_lines', $Buffer_source_lines$2 = function $$source_lines() {
         var $a, $$3, self = this, lines = nil;
 
@@ -24729,18 +24506,16 @@ Opal.modules["opal/fragment"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$to_s', '$inspect', '$type', '$===', '$first', '$children', '$[]', '$line', '$column']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $Fragment(){};
-      var self = $Fragment = $klass($base, $super, 'Fragment', $Fragment);
+      var self = $klass($base, $super, 'Fragment');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Fragment_initialize$1, $Fragment_inspect$2, $Fragment_source_map_name$3, $Fragment_line$4, $Fragment_column$5;
+      var $nesting = [self].concat($parent_nesting), $Fragment_initialize$1, $Fragment_inspect$2, $Fragment_source_map_name$3, $Fragment_line$4, $Fragment_column$5;
 
-      def.code = def.sexp = nil;
+      self.$$prototype.code = self.$$prototype.sexp = nil;
       
       self.$attr_reader("code");
       
@@ -24812,22 +24587,19 @@ Opal.modules["opal/nodes/helpers"] = function(Opal) {
   
   self.$require("opal/regexp_anchors");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Helpers() {};
-        var self = $Helpers = $module($base, 'Helpers', $Helpers);
+        var self = $module($base, 'Helpers');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Helpers_property$1, $Helpers_valid_name$ques$2, $Helpers_mid_to_jsid$3, $Helpers_indent$4, $Helpers_current_indent$5, $Helpers_line$6, $Helpers_empty_line$7, $Helpers_js_truthy$8, $Helpers_js_falsy$9, $Helpers_js_truthy_optimize$10, $Helpers_conditional_send$11;
+        var $nesting = [self].concat($parent_nesting), $Helpers_property$1, $Helpers_valid_name$ques$2, $Helpers_mid_to_jsid$3, $Helpers_indent$4, $Helpers_current_indent$5, $Helpers_line$6, $Helpers_empty_line$7, $Helpers_js_truthy$8, $Helpers_js_falsy$9, $Helpers_js_truthy_optimize$10, $Helpers_conditional_send$11;
 
         
         
@@ -24955,30 +24727,30 @@ Opal.modules["opal/nodes/base"] = function(Opal) {
   function $rb_minus(lhs, rhs) {
     return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs - rhs : lhs['$-'](rhs);
   }
+  function $rb_plus(lhs, rhs) {
+    return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs + rhs : lhs['$+'](rhs);
+  }
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $truthy = Opal.truthy, $hash2 = Opal.hash2, $send = Opal.send;
 
-  Opal.add_stubs(['$require', '$include', '$each', '$[]=', '$handlers', '$-', '$each_with_index', '$define_method', '$[]', '$children', '$attr_reader', '$type', '$compile', '$raise', '$is_a?', '$fragment', '$<<', '$reverse', '$unshift', '$push', '$new', '$scope', '$error', '$s', '$==', '$process', '$expr', '$add_scope_local', '$to_sym', '$add_scope_ivar', '$add_scope_gvar', '$add_scope_temp', '$helper', '$with_temp', '$to_proc', '$in_while?', '$instance_variable_get', '$has_rescue_else?', '$in_ensure', '$in_ensure?', '$!', '$class_scope?', '$parent', '$closest_module_node', '$name', '$comments', '$compiler', '$loc']);
+  Opal.add_stubs(['$require', '$include', '$each', '$[]=', '$handlers', '$-', '$each_with_index', '$define_method', '$[]', '$children', '$attr_reader', '$type', '$compile', '$raise', '$is_a?', '$fragment', '$<<', '$reverse', '$unshift', '$push', '$new', '$scope', '$error', '$s', '$==', '$process', '$expr', '$add_scope_local', '$to_sym', '$add_scope_ivar', '$add_scope_gvar', '$add_scope_temp', '$helper', '$with_temp', '$to_proc', '$in_while?', '$instance_variable_get', '$has_rescue_else?', '$in_ensure', '$in_ensure?', '$!', '$class_scope?', '$sclass?', '$+', '$parent', '$class_variable_owner_nesting_level', '$comments', '$compiler', '$loc']);
   
   self.$require("opal/nodes/helpers");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $Base(){};
-        var self = $Base = $klass($base, $super, 'Base', $Base);
+        var self = $klass($base, $super, 'Base');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Base_handlers$1, $Base_handle$2, $Base_children$4, $Base_truthy_optimize$ques$7, $Base_initialize$8, $Base_children$9, $Base_compile_to_fragments$10, $Base_compile$11, $Base_push$12, $Base_unshift$14, $Base_wrap$16, $Base_fragment$17, $Base_error$18, $Base_scope$19, $Base_s$20, $Base_expr$ques$21, $Base_recv$ques$22, $Base_stmt$ques$23, $Base_process$24, $Base_expr$25, $Base_recv$26, $Base_stmt$27, $Base_expr_or_nil$28, $Base_add_local$29, $Base_add_ivar$30, $Base_add_gvar$31, $Base_add_temp$32, $Base_helper$33, $Base_with_temp$34, $Base_in_while$ques$35, $Base_while_loop$36, $Base_has_rescue_else$ques$37, $Base_in_ensure$38, $Base_in_ensure$ques$39, $Base_closest_module_node$40, $Base_class_variable_owner$41, $Base_comments$42;
+        var $nesting = [self].concat($parent_nesting), $Base_handlers$1, $Base_handle$2, $Base_children$4, $Base_truthy_optimize$ques$7, $Base_initialize$8, $Base_children$9, $Base_compile_to_fragments$10, $Base_compile$11, $Base_push$12, $Base_unshift$14, $Base_wrap$16, $Base_fragment$17, $Base_error$18, $Base_scope$19, $Base_s$20, $Base_expr$ques$21, $Base_recv$ques$22, $Base_stmt$ques$23, $Base_process$24, $Base_expr$25, $Base_recv$26, $Base_stmt$27, $Base_expr_or_nil$28, $Base_add_local$29, $Base_add_ivar$30, $Base_add_gvar$31, $Base_add_temp$32, $Base_helper$33, $Base_with_temp$34, $Base_in_while$ques$35, $Base_while_loop$36, $Base_has_rescue_else$ques$37, $Base_in_ensure$38, $Base_in_ensure$ques$39, $Base_class_variable_owner_nesting_level$40, $Base_class_variable_owner$41, $Base_comments$42;
 
-        def.sexp = def.fragments = def.compiler = def.level = nil;
+        self.$$prototype.sexp = self.$$prototype.fragments = self.$$prototype.compiler = self.$$prototype.level = nil;
         
         self.$include($$($nesting, 'Helpers'));
         Opal.defs(self, '$handlers', $Base_handlers$1 = function $$handlers() {
@@ -25280,22 +25052,26 @@ Opal.modules["opal/nodes/base"] = function(Opal) {
           return self.$scope()['$in_ensure?']()
         }, $Base_in_ensure$ques$39.$$arity = 0);
         
-        Opal.def(self, '$closest_module_node', $Base_closest_module_node$40 = function $$closest_module_node() {
-          var $a, $b, self = this, current = nil;
+        Opal.def(self, '$class_variable_owner_nesting_level', $Base_class_variable_owner_nesting_level$40 = function $$class_variable_owner_nesting_level() {
+          var $a, $b, self = this, cvar_scope = nil, nesting_level = nil;
 
           
-          current = self.$scope();
-          while ($truthy(($truthy($b = current) ? current['$class_scope?']()['$!']() : $b))) {
-            current = current.$parent()
+          cvar_scope = self.$scope();
+          nesting_level = 0;
+          while ($truthy(($truthy($b = cvar_scope) ? cvar_scope['$class_scope?']()['$!']() : $b))) {
+            
+            if ($truthy(cvar_scope['$sclass?']())) {
+              nesting_level = $rb_plus(nesting_level, 1)};
+            cvar_scope = cvar_scope.$parent();
           };
-          return current;
-        }, $Base_closest_module_node$40.$$arity = 0);
+          return nesting_level;
+        }, $Base_class_variable_owner_nesting_level$40.$$arity = 0);
         
         Opal.def(self, '$class_variable_owner', $Base_class_variable_owner$41 = function $$class_variable_owner() {
           var self = this;
 
-          if ($truthy(self.$closest_module_node())) {
-            return "" + "$" + (self.$closest_module_node().$name())
+          if ($truthy(self.$scope())) {
+            return "" + "$nesting[" + (self.$class_variable_owner_nesting_level()) + "]"
           } else {
             return "Opal.Object"
           }
@@ -25327,23 +25103,20 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $ValueNode(){};
-        var self = $ValueNode = $klass($base, $super, 'ValueNode', $ValueNode);
+        var self = $klass($base, $super, 'ValueNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ValueNode_compile$1, $ValueNode_truthy_optimize$ques$2;
+        var $nesting = [self].concat($parent_nesting), $ValueNode_compile$1, $ValueNode_truthy_optimize$ques$2;
 
         
         self.$handle("true", "false", "self", "nil");
@@ -25360,10 +25133,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $ValueNode_truthy_optimize$ques$2.$$arity = 0), nil) && 'truthy_optimize?';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $NumericNode(){};
-        var self = $NumericNode = $klass($base, $super, 'NumericNode', $NumericNode);
+        var self = $klass($base, $super, 'NumericNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $NumericNode_compile$3, $NumericNode_truthy_optimize$ques$4;
+        var $nesting = [self].concat($parent_nesting), $NumericNode_compile$3, $NumericNode_truthy_optimize$ques$4;
 
         
         self.$handle("int", "float");
@@ -25387,10 +25159,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $NumericNode_truthy_optimize$ques$4.$$arity = 0), nil) && 'truthy_optimize?';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $StringNode(){};
-        var self = $StringNode = $klass($base, $super, 'StringNode', $StringNode);
+        var self = $klass($base, $super, 'StringNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $StringNode_translate_escape_chars$5, $StringNode_compile$7, $StringNode_to_utf16$9;
+        var $nesting = [self].concat($parent_nesting), $StringNode_translate_escape_chars$5, $StringNode_compile$7, $StringNode_to_utf16$9;
 
         
         self.$handle("str");
@@ -25456,10 +25227,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $StringNode_to_utf16$9.$$arity = 1), nil) && 'to_utf16';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $SymbolNode(){};
-        var self = $SymbolNode = $klass($base, $super, 'SymbolNode', $SymbolNode);
+        var self = $klass($base, $super, 'SymbolNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $SymbolNode_compile$11;
+        var $nesting = [self].concat($parent_nesting), $SymbolNode_compile$11;
 
         
         self.$handle("sym");
@@ -25471,12 +25241,11 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $SymbolNode_compile$11.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $RegexpNode(){};
-        var self = $RegexpNode = $klass($base, $super, 'RegexpNode', $RegexpNode);
+        var self = $klass($base, $super, 'RegexpNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RegexpNode_initialize$12, $RegexpNode_compile$13, $RegexpNode_compile_dynamic_regexp$15, $RegexpNode_compile_static_regexp$16, $RegexpNode_extract_flags_and_value$17, $RegexpNode_raw_value$19;
+        var $nesting = [self].concat($parent_nesting), $RegexpNode_initialize$12, $RegexpNode_compile$13, $RegexpNode_compile_dynamic_regexp$15, $RegexpNode_compile_static_regexp$16, $RegexpNode_extract_flags_and_value$17, $RegexpNode_raw_value$19;
 
-        def.sexp = nil;
+        self.$$prototype.sexp = nil;
         
         self.$handle("regexp");
         self.$attr_accessor("value", "flags");
@@ -25601,10 +25370,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $RegexpNode_raw_value$19.$$arity = 0), nil) && 'raw_value';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $MatchCurrentLineNode(){};
-        var self = $MatchCurrentLineNode = $klass($base, $super, 'MatchCurrentLineNode', $MatchCurrentLineNode);
+        var self = $klass($base, $super, 'MatchCurrentLineNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $MatchCurrentLineNode_compile$20;
+        var $nesting = [self].concat($parent_nesting), $MatchCurrentLineNode_compile$20;
 
         
         self.$handle("match_current_line");
@@ -25619,10 +25387,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $MatchCurrentLineNode_compile$20.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $DynamicStringNode(){};
-        var self = $DynamicStringNode = $klass($base, $super, 'DynamicStringNode', $DynamicStringNode);
+        var self = $klass($base, $super, 'DynamicStringNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $DynamicStringNode_compile$21;
+        var $nesting = [self].concat($parent_nesting), $DynamicStringNode_compile$21;
 
         
         self.$handle("dstr");
@@ -25652,18 +25419,16 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $DynamicStringNode_compile$21.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $DynamicSymbolNode(){};
-        var self = $DynamicSymbolNode = $klass($base, $super, 'DynamicSymbolNode', $DynamicSymbolNode);
+        var self = $klass($base, $super, 'DynamicSymbolNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return self.$handle("dsym")
       })($nesting[0], $$($nesting, 'DynamicStringNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $RangeNode(){};
-        var self = $RangeNode = $klass($base, $super, 'RangeNode', $RangeNode);
+        var self = $klass($base, $super, 'RangeNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RangeNode_compile$23, $RangeNode_compile_inline$ques$24, $RangeNode_compile_inline$25, $RangeNode_compile_range_initialize$26;
+        var $nesting = [self].concat($parent_nesting), $RangeNode_compile$23, $RangeNode_compile_inline$ques$24, $RangeNode_compile_inline$25, $RangeNode_compile_range_initialize$26;
 
         
         self.$children("start", "finish");
@@ -25699,10 +25464,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $RangeNode_compile_range_initialize$26.$$arity = 0), nil) && 'compile_range_initialize';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $InclusiveRangeNode(){};
-        var self = $InclusiveRangeNode = $klass($base, $super, 'InclusiveRangeNode', $InclusiveRangeNode);
+        var self = $klass($base, $super, 'InclusiveRangeNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $InclusiveRangeNode_compile_inline$27, $InclusiveRangeNode_compile_range_initialize$28;
+        var $nesting = [self].concat($parent_nesting), $InclusiveRangeNode_compile_inline$27, $InclusiveRangeNode_compile_range_initialize$28;
 
         
         self.$handle("irange");
@@ -25719,10 +25483,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $InclusiveRangeNode_compile_range_initialize$28.$$arity = 0), nil) && 'compile_range_initialize';
       })($nesting[0], $$($nesting, 'RangeNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ExclusiveRangeNode(){};
-        var self = $ExclusiveRangeNode = $klass($base, $super, 'ExclusiveRangeNode', $ExclusiveRangeNode);
+        var self = $klass($base, $super, 'ExclusiveRangeNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExclusiveRangeNode_compile_inline$29, $ExclusiveRangeNode_compile_range_initialize$30;
+        var $nesting = [self].concat($parent_nesting), $ExclusiveRangeNode_compile_inline$29, $ExclusiveRangeNode_compile_range_initialize$30;
 
         
         self.$handle("erange");
@@ -25739,10 +25502,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $ExclusiveRangeNode_compile_range_initialize$30.$$arity = 0), nil) && 'compile_range_initialize';
       })($nesting[0], $$($nesting, 'RangeNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $RationalNode(){};
-        var self = $RationalNode = $klass($base, $super, 'RationalNode', $RationalNode);
+        var self = $klass($base, $super, 'RationalNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RationalNode_compile$31;
+        var $nesting = [self].concat($parent_nesting), $RationalNode_compile$31;
 
         
         self.$handle("rational");
@@ -25754,10 +25516,9 @@ Opal.modules["opal/nodes/literal"] = function(Opal) {
         }, $RationalNode_compile$31.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ComplexNode(){};
-        var self = $ComplexNode = $klass($base, $super, 'ComplexNode', $ComplexNode);
+        var self = $klass($base, $super, 'ComplexNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ComplexNode_compile$32;
+        var $nesting = [self].concat($parent_nesting), $ComplexNode_compile$32;
 
         
         self.$handle("complex");
@@ -25780,23 +25541,20 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $LocalVariableNode(){};
-        var self = $LocalVariableNode = $klass($base, $super, 'LocalVariableNode', $LocalVariableNode);
+        var self = $klass($base, $super, 'LocalVariableNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $LocalVariableNode_using_irb$ques$1, $LocalVariableNode_compile$2;
+        var $nesting = [self].concat($parent_nesting), $LocalVariableNode_using_irb$ques$1, $LocalVariableNode_compile$2;
 
         
         self.$handle("lvar");
@@ -25827,10 +25585,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $LocalVariableNode_compile$2.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $LocalAssignNode(){};
-        var self = $LocalAssignNode = $klass($base, $super, 'LocalAssignNode', $LocalAssignNode);
+        var self = $klass($base, $super, 'LocalAssignNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $LocalAssignNode_using_irb$ques$4, $LocalAssignNode_compile$5;
+        var $nesting = [self].concat($parent_nesting), $LocalAssignNode_using_irb$ques$4, $LocalAssignNode_compile$5;
 
         
         self.$handle("lvasgn");
@@ -25861,10 +25618,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $LocalAssignNode_compile$5.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $LocalDeclareNode(){};
-        var self = $LocalDeclareNode = $klass($base, $super, 'LocalDeclareNode', $LocalDeclareNode);
+        var self = $klass($base, $super, 'LocalDeclareNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $LocalDeclareNode_compile$6;
+        var $nesting = [self].concat($parent_nesting), $LocalDeclareNode_compile$6;
 
         
         self.$handle("lvdeclare");
@@ -25878,10 +25634,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $LocalDeclareNode_compile$6.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $InstanceVariableNode(){};
-        var self = $InstanceVariableNode = $klass($base, $super, 'InstanceVariableNode', $InstanceVariableNode);
+        var self = $klass($base, $super, 'InstanceVariableNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $InstanceVariableNode_var_name$7, $InstanceVariableNode_compile$8;
+        var $nesting = [self].concat($parent_nesting), $InstanceVariableNode_var_name$7, $InstanceVariableNode_compile$8;
 
         
         self.$handle("ivar");
@@ -25902,10 +25657,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $InstanceVariableNode_compile$8.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $InstanceAssignNode(){};
-        var self = $InstanceAssignNode = $klass($base, $super, 'InstanceAssignNode', $InstanceAssignNode);
+        var self = $klass($base, $super, 'InstanceAssignNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $InstanceAssignNode_var_name$9, $InstanceAssignNode_compile$10;
+        var $nesting = [self].concat($parent_nesting), $InstanceAssignNode_var_name$9, $InstanceAssignNode_compile$10;
 
         
         self.$handle("ivasgn");
@@ -25931,10 +25685,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $InstanceAssignNode_compile$10.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $GlobalVariableNode(){};
-        var self = $GlobalVariableNode = $klass($base, $super, 'GlobalVariableNode', $GlobalVariableNode);
+        var self = $klass($base, $super, 'GlobalVariableNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $GlobalVariableNode_var_name$11, $GlobalVariableNode_compile$12;
+        var $nesting = [self].concat($parent_nesting), $GlobalVariableNode_var_name$11, $GlobalVariableNode_compile$12;
 
         
         self.$handle("gvar");
@@ -25956,10 +25709,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $GlobalVariableNode_compile$12.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $BackRefNode(){};
-        var self = $BackRefNode = $klass($base, $super, 'BackRefNode', $BackRefNode);
+        var self = $klass($base, $super, 'BackRefNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BackRefNode_compile$13, $BackRefNode_handle_global_match$14, $BackRefNode_handle_pre_match$16, $BackRefNode_handle_post_match$18;
+        var $nesting = [self].concat($parent_nesting), $BackRefNode_compile$13, $BackRefNode_handle_global_match$14, $BackRefNode_handle_pre_match$16, $BackRefNode_handle_post_match$18;
 
         
         self.$handle("back_ref");
@@ -26021,10 +25773,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $BackRefNode_handle_post_match$18.$$arity = 0), nil) && 'handle_post_match';
       })($nesting[0], $$($nesting, 'GlobalVariableNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $GlobalAssignNode(){};
-        var self = $GlobalAssignNode = $klass($base, $super, 'GlobalAssignNode', $GlobalAssignNode);
+        var self = $klass($base, $super, 'GlobalAssignNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $GlobalAssignNode_var_name$20, $GlobalAssignNode_compile$21;
+        var $nesting = [self].concat($parent_nesting), $GlobalAssignNode_var_name$20, $GlobalAssignNode_compile$21;
 
         
         self.$handle("gvasgn");
@@ -26051,10 +25802,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $GlobalAssignNode_compile$21.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $NthrefNode(){};
-        var self = $NthrefNode = $klass($base, $super, 'NthrefNode', $NthrefNode);
+        var self = $klass($base, $super, 'NthrefNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $NthrefNode_compile$22;
+        var $nesting = [self].concat($parent_nesting), $NthrefNode_compile$22;
 
         
         self.$handle("nth_ref");
@@ -26075,10 +25825,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $NthrefNode_compile$22.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ClassVariableNode(){};
-        var self = $ClassVariableNode = $klass($base, $super, 'ClassVariableNode', $ClassVariableNode);
+        var self = $klass($base, $super, 'ClassVariableNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ClassVariableNode_compile$24;
+        var $nesting = [self].concat($parent_nesting), $ClassVariableNode_compile$24;
 
         
         self.$handle("cvar");
@@ -26097,10 +25846,9 @@ Opal.modules["opal/nodes/variables"] = function(Opal) {
         }, $ClassVariableNode_compile$24.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ClassVarAssignNode(){};
-        var self = $ClassVarAssignNode = $klass($base, $super, 'ClassVarAssignNode', $ClassVarAssignNode);
+        var self = $klass($base, $super, 'ClassVarAssignNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ClassVarAssignNode_compile$26;
+        var $nesting = [self].concat($parent_nesting), $ClassVarAssignNode_compile$26;
 
         
         self.$handle("cvasgn");
@@ -26123,23 +25871,20 @@ Opal.modules["opal/nodes/constants"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $ConstNode(){};
-        var self = $ConstNode = $klass($base, $super, 'ConstNode', $ConstNode);
+        var self = $klass($base, $super, 'ConstNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ConstNode_compile$1, $ConstNode_magical_data_const$ques$2;
+        var $nesting = [self].concat($parent_nesting), $ConstNode_compile$1, $ConstNode_magical_data_const$ques$2;
 
         
         self.$handle("const");
@@ -26165,10 +25910,9 @@ Opal.modules["opal/nodes/constants"] = function(Opal) {
         }, $ConstNode_magical_data_const$ques$2.$$arity = 0), nil) && 'magical_data_const?';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $CbaseNode(){};
-        var self = $CbaseNode = $klass($base, $super, 'CbaseNode', $CbaseNode);
+        var self = $klass($base, $super, 'CbaseNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $CbaseNode_compile$3;
+        var $nesting = [self].concat($parent_nesting), $CbaseNode_compile$3;
 
         
         self.$handle("cbase");
@@ -26179,10 +25923,9 @@ Opal.modules["opal/nodes/constants"] = function(Opal) {
         }, $CbaseNode_compile$3.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ConstAssignNode(){};
-        var self = $ConstAssignNode = $klass($base, $super, 'ConstAssignNode', $ConstAssignNode);
+        var self = $klass($base, $super, 'ConstAssignNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ConstAssignNode_compile$4;
+        var $nesting = [self].concat($parent_nesting), $ConstAssignNode_compile$4;
 
         
         self.$handle("casgn");
@@ -26210,22 +25953,19 @@ Opal.modules["opal/nodes/runtime_helpers"] = function(Opal) {
   self.$require("set");
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $RuntimeHelpers(){};
-        var self = $RuntimeHelpers = $klass($base, $super, 'RuntimeHelpers', $RuntimeHelpers);
+        var self = $klass($base, $super, 'RuntimeHelpers');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RuntimeHelpers_s$1, $RuntimeHelpers_compatible$ques$2, $RuntimeHelpers_helper$3, $RuntimeHelpers_compile$4, $RuntimeHelpers$5, $RuntimeHelpers$6;
+        var $nesting = [self].concat($parent_nesting), $RuntimeHelpers_s$1, $RuntimeHelpers_compatible$ques$2, $RuntimeHelpers_helper$3, $RuntimeHelpers_compile$4, $RuntimeHelpers$5, $RuntimeHelpers$6;
 
         
         Opal.const_set($nesting[0], 'HELPERS', $$($nesting, 'Set').$new());
@@ -26294,24 +26034,21 @@ Opal.modules["opal/rewriters/break_finder"] = function(Opal) {
   
   self.$require("opal/rewriter");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Rewriters() {};
-      var self = $Rewriters = $module($base, 'Rewriters', $Rewriters);
+      var self = $module($base, 'Rewriters');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $BreakFinder(){};
-        var self = $BreakFinder = $klass($base, $super, 'BreakFinder', $BreakFinder);
+        var self = $klass($base, $super, 'BreakFinder');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BreakFinder_initialize$1, $BreakFinder_found_break$ques$2, $BreakFinder_on_break$3, $BreakFinder_stop_lookup$4;
+        var $nesting = [self].concat($parent_nesting), $BreakFinder_initialize$1, $BreakFinder_found_break$ques$2, $BreakFinder_on_break$3, $BreakFinder_stop_lookup$4;
 
-        def.found_break = nil;
+        self.$$prototype.found_break = nil;
         
         
         Opal.def(self, '$initialize', $BreakFinder_initialize$1 = function $$initialize() {
@@ -26368,24 +26105,21 @@ Opal.modules["opal/nodes/call"] = function(Opal) {
   self.$require("opal/nodes/runtime_helpers");
   self.$require("opal/rewriters/break_finder");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $CallNode(){};
-        var self = $CallNode = $klass($base, $super, 'CallNode', $CallNode);
+        var self = $klass($base, $super, 'CallNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $CallNode_add_special$1, $CallNode_initialize$2, $CallNode_compile$3, $CallNode_iter_has_break$ques$5, $CallNode_invoke_using_send$ques$6, $CallNode_default_compile$7, $CallNode_compile_using_send$8, $CallNode_compile_receiver$9, $CallNode_compile_method_name$10, $CallNode_compile_arguments$11, $CallNode_compile_block_pass$12, $CallNode_compile_break_catcher$13, $CallNode_compile_simple_call_chain$14, $CallNode_splat$ques$15, $CallNode_receiver_sexp$17, $CallNode_method_jsid$18, $CallNode_record_method$ques$19, $CallNode_compile_irb_var$20, $CallNode_using_irb$ques$22, $CallNode_sexp_with_arglist$23, $CallNode_handle_special$24, $CallNode$25, $CallNode$27, $CallNode$28, $CallNode$29, $CallNode$30, $CallNode$31, $CallNode$32, $CallNode$33, $CallNode$34, $CallNode$35, $CallNode$36, $CallNode$37, $CallNode_push_nesting$ques$38;
+        var $nesting = [self].concat($parent_nesting), $CallNode_add_special$1, $CallNode_initialize$2, $CallNode_compile$3, $CallNode_iter_has_break$ques$5, $CallNode_invoke_using_send$ques$6, $CallNode_default_compile$7, $CallNode_compile_using_send$8, $CallNode_compile_receiver$9, $CallNode_compile_method_name$10, $CallNode_compile_arguments$11, $CallNode_compile_block_pass$12, $CallNode_compile_break_catcher$13, $CallNode_compile_simple_call_chain$14, $CallNode_splat$ques$15, $CallNode_receiver_sexp$17, $CallNode_method_jsid$18, $CallNode_record_method$ques$19, $CallNode_compile_irb_var$20, $CallNode_using_irb$ques$22, $CallNode_sexp_with_arglist$23, $CallNode_handle_special$24, $CallNode$25, $CallNode$27, $CallNode$28, $CallNode$29, $CallNode$30, $CallNode$31, $CallNode$32, $CallNode$33, $CallNode$34, $CallNode$35, $CallNode$36, $CallNode$37, $CallNode_push_nesting$ques$38;
 
-        def.sexp = def.compiler = def.level = nil;
+        self.$$prototype.sexp = self.$$prototype.compiler = self.$$prototype.level = nil;
         
         self.$handle("send");
         self.$attr_reader("recvr", "meth", "arglist", "iter");
@@ -26786,12 +26520,11 @@ Opal.modules["opal/nodes/call"] = function(Opal) {
           return (($a = self.$children().$size()['$=='](2)) ? ($truthy($b = recv['$nil?']()) ? $b : (($c = recv.$type()['$==']("const")) ? recv.$children().$last()['$==']("Module") : recv.$type()['$==']("const"))) : self.$children().$size()['$=='](2));
         }, $CallNode_push_nesting$ques$38.$$arity = 0);
         return (function($base, $super, $parent_nesting) {
-          function $DependencyResolver(){};
-          var self = $DependencyResolver = $klass($base, $super, 'DependencyResolver', $DependencyResolver);
+          var self = $klass($base, $super, 'DependencyResolver');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $DependencyResolver_initialize$39, $DependencyResolver_resolve$40, $DependencyResolver_handle_part$41, $DependencyResolver_expand_path$43;
+          var $nesting = [self].concat($parent_nesting), $DependencyResolver_initialize$39, $DependencyResolver_resolve$40, $DependencyResolver_handle_part$41, $DependencyResolver_expand_path$43;
 
-          def.sexp = def.compiler = nil;
+          self.$$prototype.sexp = self.$$prototype.compiler = nil;
           
           
           Opal.def(self, '$initialize', $DependencyResolver_initialize$39 = function $$initialize(compiler, sexp) {
@@ -26880,22 +26613,19 @@ Opal.modules["opal/nodes/csend"] = function(Opal) {
   
   self.$require("opal/nodes/call");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $CSendNode(){};
-        var self = $CSendNode = $klass($base, $super, 'CSendNode', $CSendNode);
+        var self = $klass($base, $super, 'CSendNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $CSendNode_default_compile$1;
+        var $nesting = [self].concat($parent_nesting), $CSendNode_default_compile$1;
 
         
         self.$handle("csend");
@@ -26931,23 +26661,20 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
   self.$require("opal/nodes/base");
   self.$require("opal/nodes/call");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $JsAttrNode(){};
-        var self = $JsAttrNode = $klass($base, $super, 'JsAttrNode', $JsAttrNode);
+        var self = $klass($base, $super, 'JsAttrNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $JsAttrNode_compile$1;
+        var $nesting = [self].concat($parent_nesting), $JsAttrNode_compile$1;
 
         
         self.$handle("jsattr");
@@ -26959,10 +26686,9 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
         }, $JsAttrNode_compile$1.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $JsAttrAsgnNode(){};
-        var self = $JsAttrAsgnNode = $klass($base, $super, 'JsAttrAsgnNode', $JsAttrAsgnNode);
+        var self = $klass($base, $super, 'JsAttrAsgnNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $JsAttrAsgnNode_compile$2;
+        var $nesting = [self].concat($parent_nesting), $JsAttrAsgnNode_compile$2;
 
         
         self.$handle("jsattrasgn");
@@ -26974,12 +26700,11 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
         }, $JsAttrAsgnNode_compile$2.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $JsCallNode(){};
-        var self = $JsCallNode = $klass($base, $super, 'JsCallNode', $JsCallNode);
+        var self = $klass($base, $super, 'JsCallNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $JsCallNode_initialize$3, $JsCallNode_compile$4, $JsCallNode_method_jsid$5, $JsCallNode_compile_using_send$6;
+        var $nesting = [self].concat($parent_nesting), $JsCallNode_initialize$3, $JsCallNode_compile$4, $JsCallNode_method_jsid$5, $JsCallNode_compile_using_send$6;
 
-        def.iter = def.arglist = nil;
+        self.$$prototype.iter = self.$$prototype.arglist = nil;
         
         self.$handle("jscall");
         
@@ -27024,12 +26749,11 @@ Opal.modules["opal/nodes/call_special"] = function(Opal) {
         }, $JsCallNode_compile_using_send$6.$$arity = 0), nil) && 'compile_using_send';
       })($nesting[0], $$($nesting, 'CallNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $Match3Node(){};
-        var self = $Match3Node = $klass($base, $super, 'Match3Node', $Match3Node);
+        var self = $klass($base, $super, 'Match3Node');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Match3Node_compile$7;
+        var $nesting = [self].concat($parent_nesting), $Match3Node_compile$7;
 
-        def.level = nil;
+        self.$$prototype.level = nil;
         
         self.$handle("match_with_lvasgn");
         self.$children("lhs", "rhs");
@@ -27055,28 +26779,25 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
   }
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $send = Opal.send, $truthy = Opal.truthy, $hash2 = Opal.hash2;
 
-  Opal.add_stubs(['$require', '$attr_accessor', '$attr_reader', '$indent', '$scope', '$compiler', '$scope=', '$-', '$==', '$!', '$class?', '$dup', '$push', '$map', '$ivars', '$gvars', '$parser_indent', '$empty?', '$join', '$+', '$proto', '$fragment', '$def_in_class?', '$add_proto_ivar', '$include?', '$<<', '$has_local?', '$has_temp?', '$pop', '$next_temp', '$loop', '$succ', '$uses_block!', '$identify!', '$compact', '$parent', '$name', '$scope_name', '$mid', '$unique_temp', '$add_scope_temp', '$def?', '$type', '$nil?', '$rescue_else_sexp']);
+  Opal.add_stubs(['$require', '$attr_accessor', '$attr_reader', '$indent', '$scope', '$compiler', '$scope=', '$-', '$==', '$!', '$class?', '$dup', '$push', '$map', '$ivars', '$gvars', '$parser_indent', '$empty?', '$join', '$+', '$fragment', '$def_in_class?', '$add_proto_ivar', '$include?', '$<<', '$has_local?', '$has_temp?', '$pop', '$next_temp', '$loop', '$succ', '$uses_block!', '$identify!', '$compact', '$parent', '$name', '$scope_name', '$mid', '$unique_temp', '$add_scope_temp', '$def?', '$type', '$nil?', '$rescue_else_sexp']);
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ScopeNode(){};
-        var self = $ScopeNode = $klass($base, $super, 'ScopeNode', $ScopeNode);
+        var self = $klass($base, $super, 'ScopeNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ScopeNode_initialize$1, $ScopeNode_in_scope$2, $ScopeNode_class_scope$ques$4, $ScopeNode_class$ques$5, $ScopeNode_module$ques$6, $ScopeNode_sclass$ques$7, $ScopeNode_top$ques$8, $ScopeNode_iter$ques$9, $ScopeNode_def$ques$10, $ScopeNode_def_in_class$ques$11, $ScopeNode_proto$12, $ScopeNode_to_vars$13, $ScopeNode_add_scope_ivar$18, $ScopeNode_add_scope_gvar$19, $ScopeNode_add_proto_ivar$20, $ScopeNode_add_arg$21, $ScopeNode_add_scope_local$22, $ScopeNode_has_local$ques$23, $ScopeNode_add_scope_temp$24, $ScopeNode_has_temp$ques$25, $ScopeNode_new_temp$26, $ScopeNode_next_temp$27, $ScopeNode_queue_temp$29, $ScopeNode_push_while$30, $ScopeNode_pop_while$31, $ScopeNode_in_while$ques$32, $ScopeNode_uses_block$excl$33, $ScopeNode_identify$excl$34, $ScopeNode_find_parent_def$35, $ScopeNode_super_chain$36, $ScopeNode_uses_block$ques$37, $ScopeNode_has_rescue_else$ques$38, $ScopeNode_in_ensure$39, $ScopeNode_in_ensure$ques$40;
+        var $nesting = [self].concat($parent_nesting), $ScopeNode_initialize$1, $ScopeNode_in_scope$2, $ScopeNode_class_scope$ques$4, $ScopeNode_class$ques$5, $ScopeNode_module$ques$6, $ScopeNode_sclass$ques$7, $ScopeNode_top$ques$8, $ScopeNode_iter$ques$9, $ScopeNode_def$ques$10, $ScopeNode_def_in_class$ques$11, $ScopeNode_to_vars$12, $ScopeNode_add_scope_ivar$17, $ScopeNode_add_scope_gvar$18, $ScopeNode_add_proto_ivar$19, $ScopeNode_add_arg$20, $ScopeNode_add_scope_local$21, $ScopeNode_has_local$ques$22, $ScopeNode_add_scope_temp$23, $ScopeNode_has_temp$ques$24, $ScopeNode_new_temp$25, $ScopeNode_next_temp$26, $ScopeNode_queue_temp$28, $ScopeNode_push_while$29, $ScopeNode_pop_while$30, $ScopeNode_in_while$ques$31, $ScopeNode_uses_block$excl$32, $ScopeNode_identify$excl$33, $ScopeNode_find_parent_def$34, $ScopeNode_super_chain$35, $ScopeNode_uses_block$ques$36, $ScopeNode_has_rescue_else$ques$37, $ScopeNode_in_ensure$38, $ScopeNode_in_ensure$ques$39;
 
-        def.type = def.defs = def.parent = def.temps = def.locals = def.compiler = def.proto_ivars = def.ivars = def.gvars = def.args = def.queue = def.while_stack = def.identity = def.uses_block = def.in_ensure = nil;
+        self.$$prototype.type = self.$$prototype.defs = self.$$prototype.parent = self.$$prototype.temps = self.$$prototype.locals = self.$$prototype.compiler = self.$$prototype.proto_ivars = self.$$prototype.ivars = self.$$prototype.gvars = self.$$prototype.args = self.$$prototype.queue = self.$$prototype.while_stack = self.$$prototype.identity = self.$$prototype.uses_block = self.$$prototype.in_ensure = nil;
         
         self.$attr_accessor("parent");
         self.$attr_accessor("name");
@@ -27191,41 +26912,35 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           return ($truthy($a = ($truthy($b = ($truthy($c = self.defs['$!']()) ? self.type['$==']("def") : $c)) ? self.parent : $b)) ? self.parent['$class?']() : $a)
         }, $ScopeNode_def_in_class$ques$11.$$arity = 0);
         
-        Opal.def(self, '$proto', $ScopeNode_proto$12 = function $$proto() {
-          var self = this;
-
-          return "def"
-        }, $ScopeNode_proto$12.$$arity = 0);
-        
-        Opal.def(self, '$to_vars', $ScopeNode_to_vars$13 = function $$to_vars() {
-          var $$14, $$15, $$16, $a, $$17, self = this, vars = nil, iv = nil, gv = nil, indent = nil, str = nil, pvars = nil, result = nil;
+        Opal.def(self, '$to_vars', $ScopeNode_to_vars$12 = function $$to_vars() {
+          var $$13, $$14, $$15, $a, $$16, self = this, vars = nil, iv = nil, gv = nil, indent = nil, str = nil, pvars = nil, result = nil;
 
           
           vars = self.temps.$dup();
-          $send(vars, 'push', Opal.to_a($send(self.locals, 'map', [], ($$14 = function(l){var self = $$14.$$s || this;
+          $send(vars, 'push', Opal.to_a($send(self.locals, 'map', [], ($$13 = function(l){var self = $$13.$$s || this;
 
           
             
             if (l == null) {
               l = nil;
             };
-            return "" + (l) + " = nil";}, $$14.$$s = self, $$14.$$arity = 1, $$14))));
-          iv = $send(self.$ivars(), 'map', [], ($$15 = function(ivar){var self = $$15.$$s || this;
+            return "" + (l) + " = nil";}, $$13.$$s = self, $$13.$$arity = 1, $$13))));
+          iv = $send(self.$ivars(), 'map', [], ($$14 = function(ivar){var self = $$14.$$s || this;
 
           
             
             if (ivar == null) {
               ivar = nil;
             };
-            return "" + "if (self" + (ivar) + " == null) self" + (ivar) + " = nil;\n";}, $$15.$$s = self, $$15.$$arity = 1, $$15));
-          gv = $send(self.$gvars(), 'map', [], ($$16 = function(gvar){var self = $$16.$$s || this;
+            return "" + "if (self" + (ivar) + " == null) self" + (ivar) + " = nil;\n";}, $$14.$$s = self, $$14.$$arity = 1, $$14));
+          gv = $send(self.$gvars(), 'map', [], ($$15 = function(gvar){var self = $$15.$$s || this;
 
           
             
             if (gvar == null) {
               gvar = nil;
             };
-            return "" + "if ($gvars" + (gvar) + " == null) $gvars" + (gvar) + " = nil;\n";}, $$16.$$s = self, $$16.$$arity = 1, $$16));
+            return "" + "if ($gvars" + (gvar) + " == null) $gvars" + (gvar) + " = nil;\n";}, $$15.$$s = self, $$15.$$arity = 1, $$15));
           indent = self.compiler.$parser_indent();
           str = (function() {if ($truthy(vars['$empty?']())) {
             return ""
@@ -27242,22 +26957,22 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           };
           if ($truthy(($truthy($a = self['$class?']()) ? self.proto_ivars['$empty?']()['$!']() : $a))) {
             
-            pvars = $send(self.proto_ivars, 'map', [], ($$17 = function(i){var self = $$17.$$s || this;
+            pvars = $send(self.proto_ivars, 'map', [], ($$16 = function(i){var self = $$16.$$s || this;
 
             
               
               if (i == null) {
                 i = nil;
               };
-              return "" + (self.$proto()) + (i);}, $$17.$$s = self, $$17.$$arity = 1, $$17)).$join(" = ");
+              return "" + "self.$$prototype" + (i);}, $$16.$$s = self, $$16.$$arity = 1, $$16)).$join(" = ");
             result = "" + (str) + "\n" + (indent) + (pvars) + " = nil;";
           } else {
             result = str
           };
           return self.$fragment(result);
-        }, $ScopeNode_to_vars$13.$$arity = 0);
+        }, $ScopeNode_to_vars$12.$$arity = 0);
         
-        Opal.def(self, '$add_scope_ivar', $ScopeNode_add_scope_ivar$18 = function $$add_scope_ivar(ivar) {
+        Opal.def(self, '$add_scope_ivar', $ScopeNode_add_scope_ivar$17 = function $$add_scope_ivar(ivar) {
           var self = this;
 
           if ($truthy(self['$def_in_class?']())) {
@@ -27267,9 +26982,9 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           } else {
             return self.ivars['$<<'](ivar)
           }
-        }, $ScopeNode_add_scope_ivar$18.$$arity = 1);
+        }, $ScopeNode_add_scope_ivar$17.$$arity = 1);
         
-        Opal.def(self, '$add_scope_gvar', $ScopeNode_add_scope_gvar$19 = function $$add_scope_gvar(gvar) {
+        Opal.def(self, '$add_scope_gvar', $ScopeNode_add_scope_gvar$18 = function $$add_scope_gvar(gvar) {
           var self = this;
 
           if ($truthy(self.gvars['$include?'](gvar))) {
@@ -27277,9 +26992,9 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           } else {
             return self.gvars['$<<'](gvar)
           }
-        }, $ScopeNode_add_scope_gvar$19.$$arity = 1);
+        }, $ScopeNode_add_scope_gvar$18.$$arity = 1);
         
-        Opal.def(self, '$add_proto_ivar', $ScopeNode_add_proto_ivar$20 = function $$add_proto_ivar(ivar) {
+        Opal.def(self, '$add_proto_ivar', $ScopeNode_add_proto_ivar$19 = function $$add_proto_ivar(ivar) {
           var self = this;
 
           if ($truthy(self.proto_ivars['$include?'](ivar))) {
@@ -27287,9 +27002,9 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           } else {
             return self.proto_ivars['$<<'](ivar)
           }
-        }, $ScopeNode_add_proto_ivar$20.$$arity = 1);
+        }, $ScopeNode_add_proto_ivar$19.$$arity = 1);
         
-        Opal.def(self, '$add_arg', $ScopeNode_add_arg$21 = function $$add_arg(arg) {
+        Opal.def(self, '$add_arg', $ScopeNode_add_arg$20 = function $$add_arg(arg) {
           var self = this;
 
           
@@ -27298,18 +27013,18 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
             self.args['$<<'](arg)
           };
           return arg;
-        }, $ScopeNode_add_arg$21.$$arity = 1);
+        }, $ScopeNode_add_arg$20.$$arity = 1);
         
-        Opal.def(self, '$add_scope_local', $ScopeNode_add_scope_local$22 = function $$add_scope_local(local) {
+        Opal.def(self, '$add_scope_local', $ScopeNode_add_scope_local$21 = function $$add_scope_local(local) {
           var self = this;
 
           
           if ($truthy(self['$has_local?'](local))) {
             return nil};
           return self.locals['$<<'](local);
-        }, $ScopeNode_add_scope_local$22.$$arity = 1);
+        }, $ScopeNode_add_scope_local$21.$$arity = 1);
         
-        Opal.def(self, '$has_local?', $ScopeNode_has_local$ques$23 = function(local) {
+        Opal.def(self, '$has_local?', $ScopeNode_has_local$ques$22 = function(local) {
           var $a, $b, self = this;
 
           
@@ -27318,24 +27033,24 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           if ($truthy(($truthy($a = self.parent) ? self.type['$==']("iter") : $a))) {
             return self.parent['$has_local?'](local)};
           return false;
-        }, $ScopeNode_has_local$ques$23.$$arity = 1);
+        }, $ScopeNode_has_local$ques$22.$$arity = 1);
         
-        Opal.def(self, '$add_scope_temp', $ScopeNode_add_scope_temp$24 = function $$add_scope_temp(tmp) {
+        Opal.def(self, '$add_scope_temp', $ScopeNode_add_scope_temp$23 = function $$add_scope_temp(tmp) {
           var self = this;
 
           
           if ($truthy(self['$has_temp?'](tmp))) {
             return nil};
           return self.temps.$push(tmp);
-        }, $ScopeNode_add_scope_temp$24.$$arity = 1);
+        }, $ScopeNode_add_scope_temp$23.$$arity = 1);
         
-        Opal.def(self, '$has_temp?', $ScopeNode_has_temp$ques$25 = function(tmp) {
+        Opal.def(self, '$has_temp?', $ScopeNode_has_temp$ques$24 = function(tmp) {
           var self = this;
 
           return self.temps['$include?'](tmp)
-        }, $ScopeNode_has_temp$ques$25.$$arity = 1);
+        }, $ScopeNode_has_temp$ques$24.$$arity = 1);
         
-        Opal.def(self, '$new_temp', $ScopeNode_new_temp$26 = function $$new_temp() {
+        Opal.def(self, '$new_temp', $ScopeNode_new_temp$25 = function $$new_temp() {
           var self = this, tmp = nil;
 
           
@@ -27346,14 +27061,14 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           tmp = self.$next_temp();
           self.temps['$<<'](tmp);
           return tmp;
-        }, $ScopeNode_new_temp$26.$$arity = 0);
+        }, $ScopeNode_new_temp$25.$$arity = 0);
         
-        Opal.def(self, '$next_temp', $ScopeNode_next_temp$27 = function $$next_temp() {
-          var $$28, self = this, tmp = nil;
+        Opal.def(self, '$next_temp', $ScopeNode_next_temp$26 = function $$next_temp() {
+          var $$27, self = this, tmp = nil;
 
           
           tmp = nil;
-          (function(){var $brk = Opal.new_brk(); try {return $send(self, 'loop', [], ($$28 = function(){var self = $$28.$$s || this;
+          (function(){var $brk = Opal.new_brk(); try {return $send(self, 'loop', [], ($$27 = function(){var self = $$27.$$s || this;
             if (self.unique == null) self.unique = nil;
 
           
@@ -27364,39 +27079,39 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
             } else {
               
               Opal.brk(nil, $brk)
-            };}, $$28.$$s = self, $$28.$$brk = $brk, $$28.$$arity = 0, $$28))
+            };}, $$27.$$s = self, $$27.$$brk = $brk, $$27.$$arity = 0, $$27))
           } catch (err) { if (err === $brk) { return err.$v } else { throw err } }})();
           return tmp;
-        }, $ScopeNode_next_temp$27.$$arity = 0);
+        }, $ScopeNode_next_temp$26.$$arity = 0);
         
-        Opal.def(self, '$queue_temp', $ScopeNode_queue_temp$29 = function $$queue_temp(name) {
+        Opal.def(self, '$queue_temp', $ScopeNode_queue_temp$28 = function $$queue_temp(name) {
           var self = this;
 
           return self.queue['$<<'](name)
-        }, $ScopeNode_queue_temp$29.$$arity = 1);
+        }, $ScopeNode_queue_temp$28.$$arity = 1);
         
-        Opal.def(self, '$push_while', $ScopeNode_push_while$30 = function $$push_while() {
+        Opal.def(self, '$push_while', $ScopeNode_push_while$29 = function $$push_while() {
           var self = this, info = nil;
 
           
           info = $hash2([], {});
           self.while_stack.$push(info);
           return info;
-        }, $ScopeNode_push_while$30.$$arity = 0);
+        }, $ScopeNode_push_while$29.$$arity = 0);
         
-        Opal.def(self, '$pop_while', $ScopeNode_pop_while$31 = function $$pop_while() {
+        Opal.def(self, '$pop_while', $ScopeNode_pop_while$30 = function $$pop_while() {
           var self = this;
 
           return self.while_stack.$pop()
-        }, $ScopeNode_pop_while$31.$$arity = 0);
+        }, $ScopeNode_pop_while$30.$$arity = 0);
         
-        Opal.def(self, '$in_while?', $ScopeNode_in_while$ques$32 = function() {
+        Opal.def(self, '$in_while?', $ScopeNode_in_while$ques$31 = function() {
           var self = this;
 
           return self.while_stack['$empty?']()['$!']()
-        }, $ScopeNode_in_while$ques$32.$$arity = 0);
+        }, $ScopeNode_in_while$ques$31.$$arity = 0);
         
-        Opal.def(self, '$uses_block!', $ScopeNode_uses_block$excl$33 = function() {
+        Opal.def(self, '$uses_block!', $ScopeNode_uses_block$excl$32 = function() {
           var $a, self = this;
 
           if ($truthy((($a = self.type['$==']("iter")) ? self.parent : self.type['$==']("iter")))) {
@@ -27406,9 +27121,9 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
             self.uses_block = true;
             return self['$identify!']();
           }
-        }, $ScopeNode_uses_block$excl$33.$$arity = 0);
+        }, $ScopeNode_uses_block$excl$32.$$arity = 0);
         
-        Opal.def(self, '$identify!', $ScopeNode_identify$excl$34 = function(name) {
+        Opal.def(self, '$identify!', $ScopeNode_identify$excl$33 = function(name) {
           var $a, $b, $c, self = this;
 
           
@@ -27423,10 +27138,10 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           if ($truthy(self.parent)) {
             self.parent.$add_scope_temp(self.identity)};
           return self.identity;
-        }, $ScopeNode_identify$excl$34.$$arity = -1);
+        }, $ScopeNode_identify$excl$33.$$arity = -1);
         self.$attr_reader("identity");
         
-        Opal.def(self, '$find_parent_def', $ScopeNode_find_parent_def$35 = function $$find_parent_def() {
+        Opal.def(self, '$find_parent_def', $ScopeNode_find_parent_def$34 = function $$find_parent_def() {
           var $a, self = this, scope = nil;
 
           
@@ -27436,9 +27151,9 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
               return scope}
           };
           return nil;
-        }, $ScopeNode_find_parent_def$35.$$arity = 0);
+        }, $ScopeNode_find_parent_def$34.$$arity = 0);
         
-        Opal.def(self, '$super_chain', $ScopeNode_super_chain$36 = function $$super_chain() {
+        Opal.def(self, '$super_chain', $ScopeNode_super_chain$35 = function $$super_chain() {
           var $a, self = this, chain = nil, scope = nil, defn = nil, mid = nil;
 
           
@@ -27459,24 +27174,24 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
             }
           };
           return [chain, defn, mid];
-        }, $ScopeNode_super_chain$36.$$arity = 0);
+        }, $ScopeNode_super_chain$35.$$arity = 0);
         
-        Opal.def(self, '$uses_block?', $ScopeNode_uses_block$ques$37 = function() {
+        Opal.def(self, '$uses_block?', $ScopeNode_uses_block$ques$36 = function() {
           var self = this;
 
           return self.uses_block
-        }, $ScopeNode_uses_block$ques$37.$$arity = 0);
+        }, $ScopeNode_uses_block$ques$36.$$arity = 0);
         
-        Opal.def(self, '$has_rescue_else?', $ScopeNode_has_rescue_else$ques$38 = function() {
+        Opal.def(self, '$has_rescue_else?', $ScopeNode_has_rescue_else$ques$37 = function() {
           var self = this;
 
           return self.$rescue_else_sexp()['$nil?']()['$!']()
-        }, $ScopeNode_has_rescue_else$ques$38.$$arity = 0);
+        }, $ScopeNode_has_rescue_else$ques$37.$$arity = 0);
         
-        Opal.def(self, '$in_ensure', $ScopeNode_in_ensure$39 = function $$in_ensure() {
-          var $iter = $ScopeNode_in_ensure$39.$$p, $yield = $iter || nil, self = this, result = nil;
+        Opal.def(self, '$in_ensure', $ScopeNode_in_ensure$38 = function $$in_ensure() {
+          var $iter = $ScopeNode_in_ensure$38.$$p, $yield = $iter || nil, self = this, result = nil;
 
-          if ($iter) $ScopeNode_in_ensure$39.$$p = null;
+          if ($iter) $ScopeNode_in_ensure$38.$$p = null;
           
           if (($yield !== nil)) {
           } else {
@@ -27486,12 +27201,12 @@ Opal.modules["opal/nodes/scope"] = function(Opal) {
           result = Opal.yieldX($yield, []);
           self.in_ensure = false;
           return result;
-        }, $ScopeNode_in_ensure$39.$$arity = 0);
-        return (Opal.def(self, '$in_ensure?', $ScopeNode_in_ensure$ques$40 = function() {
+        }, $ScopeNode_in_ensure$38.$$arity = 0);
+        return (Opal.def(self, '$in_ensure?', $ScopeNode_in_ensure$ques$39 = function() {
           var self = this;
 
           return self.in_ensure
-        }, $ScopeNode_in_ensure$ques$40.$$arity = 0), nil) && 'in_ensure?';
+        }, $ScopeNode_in_ensure$ques$39.$$arity = 0), nil) && 'in_ensure?';
       })($nesting[0], $$($nesting, 'Base'), $nesting)
     })($nesting[0], $nesting)
   })($nesting[0], $nesting);
@@ -27504,26 +27219,23 @@ Opal.modules["opal/nodes/module"] = function(Opal) {
   }
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $send = Opal.send, $truthy = Opal.truthy;
 
-  Opal.add_stubs(['$require', '$handle', '$children', '$name_and_base', '$helper', '$push', '$line', '$in_scope', '$name=', '$scope', '$-', '$add_temp', '$proto', '$stmt', '$body', '$s', '$empty_line', '$to_vars', '$cid', '$nil?', '$expr']);
+  Opal.add_stubs(['$require', '$handle', '$children', '$name_and_base', '$helper', '$push', '$line', '$in_scope', '$name=', '$scope', '$-', '$add_temp', '$stmt', '$body', '$s', '$empty_line', '$to_vars', '$cid', '$nil?', '$expr']);
   
   self.$require("opal/nodes/scope");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ModuleNode(){};
-        var self = $ModuleNode = $klass($base, $super, 'ModuleNode', $ModuleNode);
+        var self = $klass($base, $super, 'ModuleNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ModuleNode_compile$1, $ModuleNode_name_and_base$3;
+        var $nesting = [self].concat($parent_nesting), $ModuleNode_compile$1, $ModuleNode_name_and_base$3;
 
         
         self.$handle("module");
@@ -27536,8 +27248,7 @@ Opal.modules["opal/nodes/module"] = function(Opal) {
           $b = self.$name_and_base(), $a = Opal.to_ary($b), (name = ($a[0] == null ? nil : $a[0])), (base = ($a[1] == null ? nil : $a[1])), $b;
           self.$helper("module");
           self.$push("(function($base, $parent_nesting) {");
-          self.$line("" + "  function $" + (name) + "() {};");
-          self.$line("" + "  var self = $" + (name) + " = $module($base, '" + (name) + "', $" + (name) + ");");
+          self.$line("" + "  var self = $module($base, '" + (name) + "');");
           $send(self, 'in_scope', [], ($$2 = function(){var self = $$2.$$s || this, $c, $writer = nil, body_code = nil;
 
           
@@ -27545,7 +27256,6 @@ Opal.modules["opal/nodes/module"] = function(Opal) {
             $writer = [name];
             $send(self.$scope(), 'name=', Opal.to_a($writer));
             $writer[$rb_minus($writer["length"], 1)];;
-            self.$add_temp("" + (self.$scope().$proto()) + " = self.prototype");
             self.$add_temp("$nesting = [self].concat($parent_nesting)");
             body_code = self.$stmt(($truthy($c = self.$body()) ? $c : self.$s("nil")));
             self.$empty_line();
@@ -27576,26 +27286,23 @@ Opal.modules["opal/nodes/class"] = function(Opal) {
   }
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $send = Opal.send, $truthy = Opal.truthy;
 
-  Opal.add_stubs(['$require', '$handle', '$children', '$name_and_base', '$helper', '$push', '$line', '$in_scope', '$name=', '$scope', '$-', '$add_temp', '$proto', '$body_code', '$empty_line', '$to_vars', '$super_code', '$sup', '$expr', '$stmt', '$returns', '$compiler', '$body', '$s']);
+  Opal.add_stubs(['$require', '$handle', '$children', '$name_and_base', '$helper', '$push', '$line', '$in_scope', '$name=', '$scope', '$-', '$add_temp', '$body_code', '$empty_line', '$to_vars', '$super_code', '$sup', '$expr', '$stmt', '$returns', '$compiler', '$body', '$s']);
   
   self.$require("opal/nodes/module");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ClassNode(){};
-        var self = $ClassNode = $klass($base, $super, 'ClassNode', $ClassNode);
+        var self = $klass($base, $super, 'ClassNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ClassNode_compile$1, $ClassNode_super_code$3, $ClassNode_body_code$4;
+        var $nesting = [self].concat($parent_nesting), $ClassNode_compile$1, $ClassNode_super_code$3, $ClassNode_body_code$4;
 
         
         self.$handle("class");
@@ -27608,8 +27315,7 @@ Opal.modules["opal/nodes/class"] = function(Opal) {
           $b = self.$name_and_base(), $a = Opal.to_ary($b), (name = ($a[0] == null ? nil : $a[0])), (base = ($a[1] == null ? nil : $a[1])), $b;
           self.$helper("klass");
           self.$push("(function($base, $super, $parent_nesting) {");
-          self.$line("" + "  function $" + (name) + "(){};");
-          self.$line("" + "  var self = $" + (name) + " = $klass($base, $super, '" + (name) + "', $" + (name) + ");");
+          self.$line("" + "  var self = $klass($base, $super, '" + (name) + "');");
           $send(self, 'in_scope', [], ($$2 = function(){var self = $$2.$$s || this, $writer = nil, body_code = nil;
 
           
@@ -27617,7 +27323,6 @@ Opal.modules["opal/nodes/class"] = function(Opal) {
             $writer = [name];
             $send(self.$scope(), 'name=', Opal.to_a($writer));
             $writer[$rb_minus($writer["length"], 1)];;
-            self.$add_temp("" + (self.$scope().$proto()) + " = self.prototype");
             self.$add_temp("$nesting = [self].concat($parent_nesting)");
             body_code = self.$body_code();
             self.$empty_line();
@@ -27653,22 +27358,19 @@ Opal.modules["opal/nodes/singleton_class"] = function(Opal) {
   
   self.$require("opal/nodes/scope");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $SingletonClassNode(){};
-        var self = $SingletonClassNode = $klass($base, $super, 'SingletonClassNode', $SingletonClassNode);
+        var self = $klass($base, $super, 'SingletonClassNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $SingletonClassNode_compile$1;
+        var $nesting = [self].concat($parent_nesting), $SingletonClassNode_compile$1;
 
         
         self.$handle("sclass");
@@ -27681,7 +27383,6 @@ Opal.modules["opal/nodes/singleton_class"] = function(Opal) {
           $send(self, 'in_scope', [], ($$2 = function(){var self = $$2.$$s || this, body_stmt = nil;
 
           
-            self.$add_temp("def = self.prototype");
             self.$add_temp("$nesting = [self].concat($parent_nesting)");
             body_stmt = self.$stmt(self.$compiler().$returns(self.$body()));
             self.$line(self.$scope().$to_vars());
@@ -27701,28 +27402,24 @@ Opal.modules["opal/nodes/args/arg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ArgNode(){};
-          var self = $ArgNode = $klass($base, $super, 'ArgNode', $ArgNode);
+          var self = $klass($base, $super, 'ArgNode');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ArgNode_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ArgNode_compile$1;
 
           
           self.$handle("arg");
@@ -27761,25 +27458,22 @@ Opal.modules["opal/nodes/args/arity_check"] = function(Opal) {
   self.$require("opal/nodes/base");
   self.$require("opal/rewriters/arguments");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $ArityCheckNode(){};
-        var self = $ArityCheckNode = $klass($base, $super, 'ArityCheckNode', $ArityCheckNode);
+        var self = $klass($base, $super, 'ArityCheckNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ArityCheckNode_initialize$1, $ArityCheckNode_compile$2, $ArityCheckNode_kwargs$3, $ArityCheckNode_all_args$4, $ArityCheckNode_arity_checks$5, $ArityCheckNode_arity$6, $ArityCheckNode_negative_arity$7, $ArityCheckNode_positive_arity$9, $ArityCheckNode_has_only_optional_kwargs$ques$10, $ArityCheckNode_has_required_kwargs$ques$12;
+        var $nesting = [self].concat($parent_nesting), $ArityCheckNode_initialize$1, $ArityCheckNode_compile$2, $ArityCheckNode_kwargs$3, $ArityCheckNode_all_args$4, $ArityCheckNode_arity_checks$5, $ArityCheckNode_arity$6, $ArityCheckNode_negative_arity$7, $ArityCheckNode_positive_arity$9, $ArityCheckNode_has_only_optional_kwargs$ques$10, $ArityCheckNode_has_required_kwargs$ques$12;
 
-        def.kwargs = def.kwoptargs = def.kwrestarg = def.all_args = def.args = def.optargs = def.restarg = def.postargs = def.arity_checks = nil;
+        self.$$prototype.kwargs = self.$$prototype.kwoptargs = self.$$prototype.kwrestarg = self.$$prototype.all_args = self.$$prototype.args = self.$$prototype.optargs = self.$$prototype.restarg = self.$$prototype.postargs = self.$$prototype.arity_checks = nil;
         
         self.$handle("arity_check");
         self.$children("args_node");
@@ -27937,10 +27631,9 @@ Opal.modules["opal/nodes/args/arity_check"] = function(Opal) {
         }, $ArityCheckNode_has_required_kwargs$ques$12.$$arity = 0), nil) && 'has_required_kwargs?';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $IterArityCheckNode(){};
-        var self = $IterArityCheckNode = $klass($base, $super, 'IterArityCheckNode', $IterArityCheckNode);
+        var self = $klass($base, $super, 'IterArityCheckNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $IterArityCheckNode_compile$14;
+        var $nesting = [self].concat($parent_nesting), $IterArityCheckNode_compile$14;
 
         
         self.$handle("iter_arity_check");
@@ -27995,28 +27688,24 @@ Opal.modules["opal/nodes/args/ensure_kwargs_are_kwargs"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $EnsureKwargsAreKwargs(){};
-          var self = $EnsureKwargsAreKwargs = $klass($base, $super, 'EnsureKwargsAreKwargs', $EnsureKwargsAreKwargs);
+          var self = $klass($base, $super, 'EnsureKwargsAreKwargs');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $EnsureKwargsAreKwargs_compile$1;
+          var $nesting = [self].concat($parent_nesting), $EnsureKwargsAreKwargs_compile$1;
 
           
           self.$handle("ensure_kwargs_are_kwargs");
@@ -28048,28 +27737,24 @@ Opal.modules["opal/nodes/args/extract_block_arg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractBlockarg(){};
-          var self = $ExtractBlockarg = $klass($base, $super, 'ExtractBlockarg', $ExtractBlockarg);
+          var self = $klass($base, $super, 'ExtractBlockarg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractBlockarg_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ExtractBlockarg_compile$1;
 
           
           self.$handle("extract_blockarg");
@@ -28104,30 +27789,26 @@ Opal.modules["opal/nodes/args/extract_kwarg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractKwarg(){};
-          var self = $ExtractKwarg = $klass($base, $super, 'ExtractKwarg', $ExtractKwarg);
+          var self = $klass($base, $super, 'ExtractKwarg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractKwarg_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ExtractKwarg_compile$1;
 
-          def.sexp = nil;
+          self.$$prototype.sexp = nil;
           
           self.$handle("extract_kwarg");
           self.$children("lvar_name");
@@ -28157,28 +27838,24 @@ Opal.modules["opal/nodes/args/extract_kwargs"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractKwargs(){};
-          var self = $ExtractKwargs = $klass($base, $super, 'ExtractKwargs', $ExtractKwargs);
+          var self = $klass($base, $super, 'ExtractKwargs');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractKwargs_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ExtractKwargs_compile$1;
 
           
           self.$handle("extract_kwargs");
@@ -28203,30 +27880,26 @@ Opal.modules["opal/nodes/args/extract_kwoptarg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractKwoptarg(){};
-          var self = $ExtractKwoptarg = $klass($base, $super, 'ExtractKwoptarg', $ExtractKwoptarg);
+          var self = $klass($base, $super, 'ExtractKwoptarg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractKwoptarg_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ExtractKwoptarg_compile$1;
 
-          def.sexp = nil;
+          self.$$prototype.sexp = nil;
           
           self.$handle("extract_kwoptarg");
           self.$children("lvar_name", "default_value");
@@ -28258,28 +27931,24 @@ Opal.modules["opal/nodes/args/extract_kwrestarg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractKwrestarg(){};
-          var self = $ExtractKwrestarg = $klass($base, $super, 'ExtractKwrestarg', $ExtractKwrestarg);
+          var self = $klass($base, $super, 'ExtractKwrestarg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractKwrestarg_compile$1, $ExtractKwrestarg_used_kwargs$2;
+          var $nesting = [self].concat($parent_nesting), $ExtractKwrestarg_compile$1, $ExtractKwrestarg_used_kwargs$2;
 
           
           self.$handle("extract_kwrestarg");
@@ -28324,28 +27993,24 @@ Opal.modules["opal/nodes/args/extract_optarg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractOptargNode(){};
-          var self = $ExtractOptargNode = $klass($base, $super, 'ExtractOptargNode', $ExtractOptargNode);
+          var self = $klass($base, $super, 'ExtractOptargNode');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractOptargNode_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ExtractOptargNode_compile$1;
 
           
           self.$handle("extract_optarg");
@@ -28374,28 +28039,24 @@ Opal.modules["opal/nodes/args/extract_post_arg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractPostArg(){};
-          var self = $ExtractPostArg = $klass($base, $super, 'ExtractPostArg', $ExtractPostArg);
+          var self = $klass($base, $super, 'ExtractPostArg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractPostArg_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ExtractPostArg_compile$1;
 
           
           self.$handle("extract_post_arg");
@@ -28425,28 +28086,24 @@ Opal.modules["opal/nodes/args/extract_post_optarg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractPostOptarg(){};
-          var self = $ExtractPostOptarg = $klass($base, $super, 'ExtractPostOptarg', $ExtractPostOptarg);
+          var self = $klass($base, $super, 'ExtractPostOptarg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractPostOptarg_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ExtractPostOptarg_compile$1;
 
           
           self.$handle("extract_post_optarg");
@@ -28480,28 +28137,24 @@ Opal.modules["opal/nodes/args/extract_restarg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $ExtractRestarg(){};
-          var self = $ExtractRestarg = $klass($base, $super, 'ExtractRestarg', $ExtractRestarg);
+          var self = $klass($base, $super, 'ExtractRestarg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $ExtractRestarg_compile$1;
+          var $nesting = [self].concat($parent_nesting), $ExtractRestarg_compile$1;
 
           
           self.$handle("extract_restarg");
@@ -28537,28 +28190,24 @@ Opal.modules["opal/nodes/args/fake_arg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $FakeArgNode(){};
-          var self = $FakeArgNode = $klass($base, $super, 'FakeArgNode', $FakeArgNode);
+          var self = $klass($base, $super, 'FakeArgNode');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $FakeArgNode_compile$1;
+          var $nesting = [self].concat($parent_nesting), $FakeArgNode_compile$1;
 
           
           self.$handle("fake_arg");
@@ -28584,28 +28233,24 @@ Opal.modules["opal/nodes/args/initialize_iterarg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $InitializeIterarg(){};
-          var self = $InitializeIterarg = $klass($base, $super, 'InitializeIterarg', $InitializeIterarg);
+          var self = $klass($base, $super, 'InitializeIterarg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $InitializeIterarg_compile$1;
+          var $nesting = [self].concat($parent_nesting), $InitializeIterarg_compile$1;
 
           
           self.$handle("initialize_iter_arg");
@@ -28632,28 +28277,24 @@ Opal.modules["opal/nodes/args/initialize_shadowarg"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $InitializeShadowarg(){};
-          var self = $InitializeShadowarg = $klass($base, $super, 'InitializeShadowarg', $InitializeShadowarg);
+          var self = $klass($base, $super, 'InitializeShadowarg');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $InitializeShadowarg_compile$1;
+          var $nesting = [self].concat($parent_nesting), $InitializeShadowarg_compile$1;
 
           
           self.$handle("initialize_shadowarg");
@@ -28678,30 +28319,26 @@ Opal.modules["opal/nodes/args/parameters"] = function(Opal) {
 
   Opal.add_stubs(['$children', '$map', '$public_send', '$type', '$join', '$compact']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $Parameters(){};
-          var self = $Parameters = $klass($base, $super, 'Parameters', $Parameters);
+          var self = $klass($base, $super, 'Parameters');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $Parameters_initialize$1, $Parameters_to_code$2, $Parameters_on_arg$4, $Parameters_on_mlhs$5, $Parameters_on_optarg$6, $Parameters_on_restarg$7, $Parameters_on_kwarg$8, $Parameters_on_kwoptarg$9, $Parameters_on_kwrestarg$10, $Parameters_on_blockarg$11, $Parameters_on_shadowarg$12;
+          var $nesting = [self].concat($parent_nesting), $Parameters_initialize$1, $Parameters_to_code$2, $Parameters_on_arg$4, $Parameters_on_mlhs$5, $Parameters_on_optarg$6, $Parameters_on_restarg$7, $Parameters_on_kwarg$8, $Parameters_on_kwoptarg$9, $Parameters_on_kwrestarg$10, $Parameters_on_blockarg$11, $Parameters_on_shadowarg$12;
 
-          def.args = nil;
+          self.$$prototype.args = nil;
           
           
           Opal.def(self, '$initialize', $Parameters_initialize$1 = function $$initialize(args) {
@@ -28813,28 +28450,24 @@ Opal.modules["opal/nodes/args/prepare_post_args"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $parent_nesting) {
-        function $Args() {};
-        var self = $Args = $module($base, 'Args', $Args);
+        var self = $module($base, 'Args');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         (function($base, $super, $parent_nesting) {
-          function $PreparePostArgs(){};
-          var self = $PreparePostArgs = $klass($base, $super, 'PreparePostArgs', $PreparePostArgs);
+          var self = $klass($base, $super, 'PreparePostArgs');
 
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $PreparePostArgs_compile$1;
+          var $nesting = [self].concat($parent_nesting), $PreparePostArgs_compile$1;
 
           
           self.$handle("prepare_post_args");
@@ -28877,22 +28510,19 @@ Opal.modules["opal/nodes/args"] = function(Opal) {
   self.$require("opal/nodes/args/parameters");
   self.$require("opal/nodes/args/prepare_post_args");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ArgsNode(){};
-        var self = $ArgsNode = $klass($base, $super, 'ArgsNode', $ArgsNode);
+        var self = $klass($base, $super, 'ArgsNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ArgsNode_compile$1;
+        var $nesting = [self].concat($parent_nesting), $ArgsNode_compile$1;
 
         
         self.$handle("args");
@@ -28928,24 +28558,21 @@ Opal.modules["opal/nodes/node_with_args"] = function(Opal) {
   self.$require("opal/nodes/scope");
   self.$require("opal/nodes/args/parameters");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $NodeWithArgs(){};
-        var self = $NodeWithArgs = $klass($base, $super, 'NodeWithArgs', $NodeWithArgs);
+        var self = $klass($base, $super, 'NodeWithArgs');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $NodeWithArgs_initialize$1, $NodeWithArgs_arity_check_node$2, $NodeWithArgs_compile_arity_check$3, $NodeWithArgs_compile_block_arg$4, $NodeWithArgs_parameters_code$5;
+        var $nesting = [self].concat($parent_nesting), $NodeWithArgs_initialize$1, $NodeWithArgs_arity_check_node$2, $NodeWithArgs_compile_arity_check$3, $NodeWithArgs_compile_block_arg$4, $NodeWithArgs_parameters_code$5;
 
-        def.sexp = nil;
+        self.$$prototype.sexp = nil;
         
         self.$attr_reader("used_kwargs");
         self.$attr_accessor("arity");
@@ -29017,24 +28644,21 @@ Opal.modules["opal/nodes/iter"] = function(Opal) {
   self.$require("opal/nodes/node_with_args");
   self.$require("opal/rewriters/break_finder");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $IterNode(){};
-        var self = $IterNode = $klass($base, $super, 'IterNode', $IterNode);
+        var self = $klass($base, $super, 'IterNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $IterNode_compile$1, $IterNode_compile_block_arg$3, $IterNode_extract_underscore_args$4, $IterNode_returned_body$6, $IterNode_has_top_level_mlhs_arg$ques$7, $IterNode_has_trailing_comma_in_args$ques$9, $IterNode_arity_check_node$10, $IterNode_contains_break$ques$11;
+        var $nesting = [self].concat($parent_nesting), $IterNode_compile$1, $IterNode_compile_block_arg$3, $IterNode_extract_underscore_args$4, $IterNode_returned_body$6, $IterNode_has_top_level_mlhs_arg$ques$7, $IterNode_has_trailing_comma_in_args$ques$9, $IterNode_arity_check_node$10, $IterNode_contains_break$ques$11;
 
-        def.sexp = nil;
+        self.$$prototype.sexp = nil;
         
         self.$handle("iter");
         self.$children("inline_args", "body");
@@ -29179,24 +28803,21 @@ Opal.modules["opal/nodes/def"] = function(Opal) {
   
   self.$require("opal/nodes/node_with_args");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $DefNode(){};
-        var self = $DefNode = $klass($base, $super, 'DefNode', $DefNode);
+        var self = $klass($base, $super, 'DefNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $DefNode_compile$1, $DefNode_wrap_with_definition$3, $DefNode_source_location$4, $DefNode_comments_code$5, $DefNode_prepare_super$7;
+        var $nesting = [self].concat($parent_nesting), $DefNode_compile$1, $DefNode_wrap_with_definition$3, $DefNode_source_location$4, $DefNode_comments_code$5, $DefNode_prepare_super$7;
 
-        def.sexp = nil;
+        self.$$prototype.sexp = nil;
         
         self.$handle("def");
         self.$children("mid", "inline_args", "stmts");
@@ -29322,22 +28943,19 @@ Opal.modules["opal/nodes/defs"] = function(Opal) {
   
   self.$require("opal/nodes/def");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $DefsNode(){};
-        var self = $DefsNode = $klass($base, $super, 'DefsNode', $DefsNode);
+        var self = $klass($base, $super, 'DefsNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $DefsNode_wrap_with_definition$1;
+        var $nesting = [self].concat($parent_nesting), $DefsNode_wrap_with_definition$1;
 
         
         self.$handle("defs");
@@ -29367,23 +28985,20 @@ Opal.modules["opal/nodes/if"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $IfNode(){};
-        var self = $IfNode = $klass($base, $super, 'IfNode', $IfNode);
+        var self = $klass($base, $super, 'IfNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $IfNode_compile$1, $IfNode_truthy$4, $IfNode_falsy$5, $IfNode_needs_wrapper$ques$6;
+        var $nesting = [self].concat($parent_nesting), $IfNode_compile$1, $IfNode_truthy$4, $IfNode_falsy$5, $IfNode_needs_wrapper$ques$6;
 
         
         self.$handle("if");
@@ -29447,10 +29062,9 @@ Opal.modules["opal/nodes/if"] = function(Opal) {
         }, $IfNode_needs_wrapper$ques$6.$$arity = 0), nil) && 'needs_wrapper?';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $IFlipFlop(){};
-        var self = $IFlipFlop = $klass($base, $super, 'IFlipFlop', $IFlipFlop);
+        var self = $klass($base, $super, 'IFlipFlop');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $IFlipFlop_compile$7;
+        var $nesting = [self].concat($parent_nesting), $IFlipFlop_compile$7;
 
         
         self.$handle("iflipflop");
@@ -29461,10 +29075,9 @@ Opal.modules["opal/nodes/if"] = function(Opal) {
         }, $IFlipFlop_compile$7.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $EFlipFlop(){};
-        var self = $EFlipFlop = $klass($base, $super, 'EFlipFlop', $EFlipFlop);
+        var self = $klass($base, $super, 'EFlipFlop');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $EFlipFlop_compile$8;
+        var $nesting = [self].concat($parent_nesting), $EFlipFlop_compile$8;
 
         
         self.$handle("eflipflop");
@@ -29492,23 +29105,20 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $NextNode(){};
-        var self = $NextNode = $klass($base, $super, 'NextNode', $NextNode);
+        var self = $klass($base, $super, 'NextNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $NextNode_compile$1, $NextNode_value$2;
+        var $nesting = [self].concat($parent_nesting), $NextNode_compile$1, $NextNode_value$2;
 
         
         self.$handle("next");
@@ -29534,10 +29144,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $NextNode_value$2.$$arity = 0), nil) && 'value';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $BreakNode(){};
-        var self = $BreakNode = $klass($base, $super, 'BreakNode', $BreakNode);
+        var self = $klass($base, $super, 'BreakNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BreakNode_compile$3, $BreakNode_compile_while$4, $BreakNode_compile_iter$5, $BreakNode_break_val$6;
+        var $nesting = [self].concat($parent_nesting), $BreakNode_compile$3, $BreakNode_compile_while$4, $BreakNode_compile_iter$5, $BreakNode_break_val$6;
 
         
         self.$handle("break");
@@ -29586,10 +29195,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $BreakNode_break_val$6.$$arity = 0), nil) && 'break_val';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $RedoNode(){};
-        var self = $RedoNode = $klass($base, $super, 'RedoNode', $RedoNode);
+        var self = $klass($base, $super, 'RedoNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RedoNode_compile$7, $RedoNode_compile_while$8, $RedoNode_compile_iter$9;
+        var $nesting = [self].concat($parent_nesting), $RedoNode_compile$7, $RedoNode_compile_while$8, $RedoNode_compile_iter$9;
 
         
         self.$handle("redo");
@@ -29623,10 +29231,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $RedoNode_compile_iter$9.$$arity = 0), nil) && 'compile_iter';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $SplatNode(){};
-        var self = $SplatNode = $klass($base, $super, 'SplatNode', $SplatNode);
+        var self = $klass($base, $super, 'SplatNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $SplatNode_empty_splat$ques$10, $SplatNode_compile$11;
+        var $nesting = [self].concat($parent_nesting), $SplatNode_empty_splat$ques$10, $SplatNode_compile$11;
 
         
         self.$handle("splat");
@@ -29648,10 +29255,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $SplatNode_compile$11.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $BinaryOp(){};
-        var self = $BinaryOp = $klass($base, $super, 'BinaryOp', $BinaryOp);
+        var self = $klass($base, $super, 'BinaryOp');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BinaryOp_compile$12, $BinaryOp_compile_ternary$13, $BinaryOp_compile_if$14;
+        var $nesting = [self].concat($parent_nesting), $BinaryOp_compile$12, $BinaryOp_compile_ternary$13, $BinaryOp_compile_if$14;
 
         
         
@@ -29677,10 +29283,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $BinaryOp_compile_if$14.$$arity = 0), nil) && 'compile_if';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $OrNode(){};
-        var self = $OrNode = $klass($base, $super, 'OrNode', $OrNode);
+        var self = $klass($base, $super, 'OrNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $OrNode_compile_ternary$15, $OrNode_compile_if$17;
+        var $nesting = [self].concat($parent_nesting), $OrNode_compile_ternary$15, $OrNode_compile_if$17;
 
         
         self.$handle("or");
@@ -29724,10 +29329,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $OrNode_compile_if$17.$$arity = 0), nil) && 'compile_if';
       })($nesting[0], $$($nesting, 'BinaryOp'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $AndNode(){};
-        var self = $AndNode = $klass($base, $super, 'AndNode', $AndNode);
+        var self = $klass($base, $super, 'AndNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $AndNode_compile_ternary$21, $AndNode_compile_if$23;
+        var $nesting = [self].concat($parent_nesting), $AndNode_compile_ternary$21, $AndNode_compile_if$23;
 
         
         self.$handle("and");
@@ -29775,10 +29379,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $AndNode_compile_if$23.$$arity = 0), nil) && 'compile_if';
       })($nesting[0], $$($nesting, 'BinaryOp'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ReturnNode(){};
-        var self = $ReturnNode = $klass($base, $super, 'ReturnNode', $ReturnNode);
+        var self = $klass($base, $super, 'ReturnNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ReturnNode_return_val$26, $ReturnNode_return_in_iter$ques$27, $ReturnNode_return_expr_in_def$ques$28, $ReturnNode_scope_to_catch_return$29, $ReturnNode_compile$30;
+        var $nesting = [self].concat($parent_nesting), $ReturnNode_return_val$26, $ReturnNode_return_in_iter$ques$27, $ReturnNode_return_expr_in_def$ques$28, $ReturnNode_scope_to_catch_return$29, $ReturnNode_compile$30;
 
         
         self.$handle("return");
@@ -29839,10 +29442,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $ReturnNode_compile$30.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $JSReturnNode(){};
-        var self = $JSReturnNode = $klass($base, $super, 'JSReturnNode', $JSReturnNode);
+        var self = $klass($base, $super, 'JSReturnNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $JSReturnNode_compile$31;
+        var $nesting = [self].concat($parent_nesting), $JSReturnNode_compile$31;
 
         
         self.$handle("js_return");
@@ -29856,10 +29458,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $JSReturnNode_compile$31.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $JSTempNode(){};
-        var self = $JSTempNode = $klass($base, $super, 'JSTempNode', $JSTempNode);
+        var self = $klass($base, $super, 'JSTempNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $JSTempNode_compile$32;
+        var $nesting = [self].concat($parent_nesting), $JSTempNode_compile$32;
 
         
         self.$handle("js_tmp");
@@ -29871,10 +29472,9 @@ Opal.modules["opal/nodes/logic"] = function(Opal) {
         }, $JSTempNode_compile$32.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $BlockPassNode(){};
-        var self = $BlockPassNode = $klass($base, $super, 'BlockPassNode', $BlockPassNode);
+        var self = $klass($base, $super, 'BlockPassNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BlockPassNode_compile$33;
+        var $nesting = [self].concat($parent_nesting), $BlockPassNode_compile$33;
 
         
         self.$handle("block_pass");
@@ -29903,23 +29503,20 @@ Opal.modules["opal/nodes/definitions"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $UndefNode(){};
-        var self = $UndefNode = $klass($base, $super, 'UndefNode', $UndefNode);
+        var self = $klass($base, $super, 'UndefNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $UndefNode_compile$1;
+        var $nesting = [self].concat($parent_nesting), $UndefNode_compile$1;
 
         
         self.$handle("undef");
@@ -29938,10 +29535,9 @@ Opal.modules["opal/nodes/definitions"] = function(Opal) {
         }, $UndefNode_compile$1.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $AliasNode(){};
-        var self = $AliasNode = $klass($base, $super, 'AliasNode', $AliasNode);
+        var self = $klass($base, $super, 'AliasNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $AliasNode_compile$3;
+        var $nesting = [self].concat($parent_nesting), $AliasNode_compile$3;
 
         
         self.$handle("alias");
@@ -29953,12 +29549,11 @@ Opal.modules["opal/nodes/definitions"] = function(Opal) {
         }, $AliasNode_compile$3.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $BeginNode(){};
-        var self = $BeginNode = $klass($base, $super, 'BeginNode', $BeginNode);
+        var self = $klass($base, $super, 'BeginNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BeginNode_compile$4, $BeginNode_returned_children$5, $BeginNode_compile_children$6, $BeginNode_simple_children$ques$8, $BeginNode_compile_inline_children$10;
+        var $nesting = [self].concat($parent_nesting), $BeginNode_compile$4, $BeginNode_returned_children$5, $BeginNode_compile_children$6, $BeginNode_simple_children$ques$8, $BeginNode_compile_inline_children$10;
 
-        def.level = def.returned_children = nil;
+        self.$$prototype.level = self.$$prototype.returned_children = nil;
         
         self.$handle("begin");
         
@@ -30054,10 +29649,9 @@ Opal.modules["opal/nodes/definitions"] = function(Opal) {
         }, $BeginNode_compile_inline_children$10.$$arity = 2), nil) && 'compile_inline_children';
       })($nesting[0], $$($nesting, 'ScopeNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $KwBeginNode(){};
-        var self = $KwBeginNode = $klass($base, $super, 'KwBeginNode', $KwBeginNode);
+        var self = $klass($base, $super, 'KwBeginNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return self.$handle("kwbegin")
       })($nesting[0], $$($nesting, 'BeginNode'), $nesting);
@@ -30076,23 +29670,20 @@ Opal.modules["opal/nodes/yield"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $BaseYieldNode(){};
-        var self = $BaseYieldNode = $klass($base, $super, 'BaseYieldNode', $BaseYieldNode);
+        var self = $klass($base, $super, 'BaseYieldNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BaseYieldNode_compile_call$1, $BaseYieldNode_find_yielding_scope$2, $BaseYieldNode_yields_single_arg$ques$3, $BaseYieldNode_uses_splat$ques$4;
+        var $nesting = [self].concat($parent_nesting), $BaseYieldNode_compile_call$1, $BaseYieldNode_find_yielding_scope$2, $BaseYieldNode_yields_single_arg$ques$3, $BaseYieldNode_uses_splat$ques$4;
 
         
         
@@ -30152,10 +29743,9 @@ Opal.modules["opal/nodes/yield"] = function(Opal) {
         }, $BaseYieldNode_uses_splat$ques$4.$$arity = 1), nil) && 'uses_splat?';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $YieldNode(){};
-        var self = $YieldNode = $klass($base, $super, 'YieldNode', $YieldNode);
+        var self = $klass($base, $super, 'YieldNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $YieldNode_compile$6;
+        var $nesting = [self].concat($parent_nesting), $YieldNode_compile$6;
 
         
         self.$handle("yield");
@@ -30166,10 +29756,9 @@ Opal.modules["opal/nodes/yield"] = function(Opal) {
         }, $YieldNode_compile$6.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'BaseYieldNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ReturnableYieldNode(){};
-        var self = $ReturnableYieldNode = $klass($base, $super, 'ReturnableYieldNode', $ReturnableYieldNode);
+        var self = $klass($base, $super, 'ReturnableYieldNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ReturnableYieldNode_compile$7;
+        var $nesting = [self].concat($parent_nesting), $ReturnableYieldNode_compile$7;
 
         
         self.$handle("returnable_yield");
@@ -30196,23 +29785,20 @@ Opal.modules["opal/nodes/rescue"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $EnsureNode(){};
-        var self = $EnsureNode = $klass($base, $super, 'EnsureNode', $EnsureNode);
+        var self = $klass($base, $super, 'EnsureNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $EnsureNode_compile$1, $EnsureNode_body_sexp$6, $EnsureNode_ensr_sexp$7, $EnsureNode_wrap_in_closure$ques$8, $EnsureNode_rescue_else_code$9;
+        var $nesting = [self].concat($parent_nesting), $EnsureNode_compile$1, $EnsureNode_body_sexp$6, $EnsureNode_ensr_sexp$7, $EnsureNode_wrap_in_closure$ques$8, $EnsureNode_rescue_else_code$9;
 
         
         self.$handle("ensure");
@@ -30291,10 +29877,9 @@ Opal.modules["opal/nodes/rescue"] = function(Opal) {
         }, $EnsureNode_rescue_else_code$9.$$arity = 0), nil) && 'rescue_else_code';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $RescueNode(){};
-        var self = $RescueNode = $klass($base, $super, 'RescueNode', $RescueNode);
+        var self = $klass($base, $super, 'RescueNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RescueNode_compile$10, $RescueNode_body_code$17, $RescueNode_rescue_else_code$18, $RescueNode_handle_rescue_else_manually$ques$19;
+        var $nesting = [self].concat($parent_nesting), $RescueNode_compile$10, $RescueNode_body_code$17, $RescueNode_rescue_else_code$18, $RescueNode_handle_rescue_else_manually$ques$19;
 
         
         self.$handle("rescue");
@@ -30405,10 +29990,9 @@ Opal.modules["opal/nodes/rescue"] = function(Opal) {
         }, $RescueNode_handle_rescue_else_manually$ques$19.$$arity = 0), nil) && 'handle_rescue_else_manually?';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ResBodyNode(){};
-        var self = $ResBodyNode = $klass($base, $super, 'ResBodyNode', $ResBodyNode);
+        var self = $klass($base, $super, 'ResBodyNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ResBodyNode_compile$20, $ResBodyNode_klasses$23, $ResBodyNode_rescue_body$24;
+        var $nesting = [self].concat($parent_nesting), $ResBodyNode_compile$20, $ResBodyNode_klasses$23, $ResBodyNode_rescue_body$24;
 
         
         self.$handle("resbody");
@@ -30450,10 +30034,9 @@ Opal.modules["opal/nodes/rescue"] = function(Opal) {
         }, $ResBodyNode_rescue_body$24.$$arity = 0), nil) && 'rescue_body';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $RetryNode(){};
-        var self = $RetryNode = $klass($base, $super, 'RetryNode', $RetryNode);
+        var self = $klass($base, $super, 'RetryNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RetryNode_compile$25;
+        var $nesting = [self].concat($parent_nesting), $RetryNode_compile$25;
 
         
         self.$handle("retry");
@@ -30478,23 +30061,20 @@ Opal.modules["opal/nodes/case"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $CaseNode(){};
-        var self = $CaseNode = $klass($base, $super, 'CaseNode', $CaseNode);
+        var self = $klass($base, $super, 'CaseNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $CaseNode_compile$1, $CaseNode_compile_code$3, $CaseNode_needs_closure$ques$5, $CaseNode_case_parts$6, $CaseNode_case_stmt$7;
+        var $nesting = [self].concat($parent_nesting), $CaseNode_compile$1, $CaseNode_compile_code$3, $CaseNode_needs_closure$ques$5, $CaseNode_case_parts$6, $CaseNode_case_stmt$7;
 
         
         self.$handle("case");
@@ -30584,12 +30164,11 @@ Opal.modules["opal/nodes/case"] = function(Opal) {
         }, $CaseNode_case_stmt$7.$$arity = 0), nil) && 'case_stmt';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $WhenNode(){};
-        var self = $WhenNode = $klass($base, $super, 'WhenNode', $WhenNode);
+        var self = $klass($base, $super, 'WhenNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $WhenNode_compile$8, $WhenNode_when_checks$10, $WhenNode_case_stmt$11, $WhenNode_body_code$12;
+        var $nesting = [self].concat($parent_nesting), $WhenNode_compile$8, $WhenNode_when_checks$10, $WhenNode_case_stmt$11, $WhenNode_body_code$12;
 
-        def.level = nil;
+        self.$$prototype.level = nil;
         
         self.$handle("when");
         self.$children("whens", "body");
@@ -30661,29 +30240,26 @@ Opal.modules["opal/nodes/super"] = function(Opal) {
   }
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $send = Opal.send, $truthy = Opal.truthy;
 
-  Opal.add_stubs(['$require', '$include?', '$type', '$s', '$helper', '$push', '$compile_receiver', '$compile_method', '$compile_arguments', '$compile_block_pass', '$private', '$def?', '$scope', '$find_parent_def', '$==', '$raise_exception?', '$implicit_args?', '$to_s', '$mid', '$def_scope', '$identify!', '$defs', '$name', '$parent', '$method_id', '$def_scope_identity', '$defined_check_param', '$super_chain', '$join', '$map', '$implicit_arguments_param', '$super_method_invocation', '$iter?', '$super_block_invocation', '$raise', '$handle', '$wrap', '$uses_block!', '$compile_using_send', '$iter', '$uses_zuper=', '$-', '$block_name', '$!', '$<<', '$empty?', '$children', '$arglist', '$expr', '$===']);
+  Opal.add_stubs(['$require', '$include?', '$type', '$s', '$helper', '$push', '$compile_receiver', '$compile_method', '$compile_arguments', '$compile_block_pass', '$private', '$def?', '$scope', '$find_parent_def', '$==', '$raise_exception?', '$implicit_args?', '$to_s', '$mid', '$def_scope', '$identify!', '$defs', '$method_id', '$def_scope_identity', '$defined_check_param', '$super_chain', '$join', '$map', '$implicit_arguments_param', '$super_method_invocation', '$iter?', '$super_block_invocation', '$raise', '$handle', '$wrap', '$uses_block!', '$compile_using_send', '$iter', '$uses_zuper=', '$-', '$block_name', '$!', '$<<', '$empty?', '$children', '$arglist', '$expr', '$===']);
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $BaseSuperNode(){};
-        var self = $BaseSuperNode = $klass($base, $super, 'BaseSuperNode', $BaseSuperNode);
+        var self = $klass($base, $super, 'BaseSuperNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $BaseSuperNode_initialize$1, $BaseSuperNode_compile_using_send$2, $BaseSuperNode_def_scope$3, $BaseSuperNode_raise_exception$ques$4, $BaseSuperNode_defined_check_param$5, $BaseSuperNode_implicit_args$ques$6, $BaseSuperNode_implicit_arguments_param$7, $BaseSuperNode_method_id$8, $BaseSuperNode_def_scope_identity$9, $BaseSuperNode_super_method_invocation$10, $BaseSuperNode_super_block_invocation$11, $BaseSuperNode_compile_method$13;
+        var $nesting = [self].concat($parent_nesting), $BaseSuperNode_initialize$1, $BaseSuperNode_compile_using_send$2, $BaseSuperNode_def_scope$3, $BaseSuperNode_raise_exception$ques$4, $BaseSuperNode_defined_check_param$5, $BaseSuperNode_implicit_args$ques$6, $BaseSuperNode_implicit_arguments_param$7, $BaseSuperNode_method_id$8, $BaseSuperNode_def_scope_identity$9, $BaseSuperNode_super_method_invocation$10, $BaseSuperNode_super_block_invocation$11, $BaseSuperNode_compile_method$13;
 
-        def.sexp = def.def_scope = nil;
+        self.$$prototype.sexp = self.$$prototype.def_scope = nil;
         
         
         Opal.def(self, '$initialize', $BaseSuperNode_initialize$1 = function $$initialize($a) {
@@ -30781,16 +30357,10 @@ Opal.modules["opal/nodes/super"] = function(Opal) {
         }, $BaseSuperNode_def_scope_identity$9.$$arity = 0);
         
         Opal.def(self, '$super_method_invocation', $BaseSuperNode_super_method_invocation$10 = function $$super_method_invocation() {
-          var self = this, class_name = nil;
+          var self = this;
 
           if ($truthy(self.$def_scope().$defs())) {
-            
-            class_name = (function() {if ($truthy(self.$def_scope().$parent().$name())) {
-              return "" + "$" + (self.$def_scope().$parent().$name())
-            } else {
-              return "self.$$class.prototype"
-            }; return nil; })();
-            return "" + "Opal.find_super_dispatcher(self, '" + (self.$method_id()) + "', " + (self.$def_scope_identity()) + ", " + (self.$defined_check_param()) + ", " + (class_name) + ")";
+            return "" + "Opal.find_super_dispatcher(self, '" + (self.$method_id()) + "', " + (self.$def_scope_identity()) + ", " + (self.$defined_check_param()) + ", self.$$class.$$prototype)"
           } else {
             return "" + "Opal.find_super_dispatcher(self, '" + (self.$method_id()) + "', " + (self.$def_scope_identity()) + ", " + (self.$defined_check_param()) + ")"
           }
@@ -30826,10 +30396,9 @@ Opal.modules["opal/nodes/super"] = function(Opal) {
         }, $BaseSuperNode_compile_method$13.$$arity = 0), nil) && 'compile_method';
       })($nesting[0], $$($nesting, 'CallNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $DefinedSuperNode(){};
-        var self = $DefinedSuperNode = $klass($base, $super, 'DefinedSuperNode', $DefinedSuperNode);
+        var self = $klass($base, $super, 'DefinedSuperNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $DefinedSuperNode_compile$14;
+        var $nesting = [self].concat($parent_nesting), $DefinedSuperNode_compile$14;
 
         
         self.$handle("defined_super");
@@ -30843,10 +30412,9 @@ Opal.modules["opal/nodes/super"] = function(Opal) {
         }, $DefinedSuperNode_compile$14.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'BaseSuperNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $SuperNode(){};
-        var self = $SuperNode = $klass($base, $super, 'SuperNode', $SuperNode);
+        var self = $klass($base, $super, 'SuperNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $SuperNode_initialize$15, $SuperNode_compile$16;
+        var $nesting = [self].concat($parent_nesting), $SuperNode_initialize$15, $SuperNode_compile$16;
 
         
         self.$handle("super");
@@ -30877,10 +30445,9 @@ Opal.modules["opal/nodes/super"] = function(Opal) {
         }, $SuperNode_compile$16.$$arity = 0), nil) && 'compile';
       })($nesting[0], $$($nesting, 'BaseSuperNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ZsuperNode(){};
-        var self = $ZsuperNode = $klass($base, $super, 'ZsuperNode', $ZsuperNode);
+        var self = $klass($base, $super, 'ZsuperNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ZsuperNode_initialize$17, $ZsuperNode_compile$18, $ZsuperNode_compile_arguments$19, $ZsuperNode_block_name$20;
+        var $nesting = [self].concat($parent_nesting), $ZsuperNode_initialize$17, $ZsuperNode_compile$18, $ZsuperNode_compile_arguments$19, $ZsuperNode_block_name$20;
 
         
         self.$handle("zsuper");
@@ -30955,10 +30522,9 @@ Opal.modules["opal/version"] = function(Opal) {
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module;
 
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     Opal.const_set($nesting[0], 'VERSION', "0.11.99.dev")
   })($nesting[0], $nesting)
@@ -30974,22 +30540,19 @@ Opal.modules["opal/nodes/top"] = function(Opal) {
   self.$require("opal/version");
   self.$require("opal/nodes/scope");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $TopNode(){};
-        var self = $TopNode = $klass($base, $super, 'TopNode', $TopNode);
+        var self = $klass($base, $super, 'TopNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $TopNode_compile$1, $TopNode_opening$3, $TopNode_closing$4, $TopNode_stmts$5, $TopNode_compile_irb_vars$6, $TopNode_add_used_helpers$7, $TopNode_add_used_operators$9, $TopNode_compile_method_stubs$11, $TopNode_compile_end_construct$13, $TopNode_version_comment$14;
+        var $nesting = [self].concat($parent_nesting), $TopNode_compile$1, $TopNode_opening$3, $TopNode_closing$4, $TopNode_stmts$5, $TopNode_compile_irb_vars$6, $TopNode_add_used_helpers$7, $TopNode_add_used_operators$9, $TopNode_compile_method_stubs$11, $TopNode_compile_end_construct$13, $TopNode_version_comment$14;
 
         
         self.$handle("top");
@@ -31158,23 +30721,20 @@ Opal.modules["opal/nodes/while"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $WhileNode(){};
-        var self = $WhileNode = $klass($base, $super, 'WhileNode', $WhileNode);
+        var self = $klass($base, $super, 'WhileNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $WhileNode_compile$1, $WhileNode_while_open$4, $WhileNode_while_close$5, $WhileNode_uses_redo$ques$6, $WhileNode_wrap_in_closure$ques$7;
+        var $nesting = [self].concat($parent_nesting), $WhileNode_compile$1, $WhileNode_while_open$4, $WhileNode_while_close$5, $WhileNode_uses_redo$ques$6, $WhileNode_wrap_in_closure$ques$7;
 
         
         self.$handle("while");
@@ -31248,18 +30808,16 @@ Opal.modules["opal/nodes/while"] = function(Opal) {
         }, $WhileNode_wrap_in_closure$ques$7.$$arity = 0), nil) && 'wrap_in_closure?';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $WhilePostNode(){};
-        var self = $WhilePostNode = $klass($base, $super, 'WhilePostNode', $WhilePostNode);
+        var self = $klass($base, $super, 'WhilePostNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return self.$handle("while_post")
       })($nesting[0], $$($nesting, 'WhileNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $UntilNode(){};
-        var self = $UntilNode = $klass($base, $super, 'UntilNode', $UntilNode);
+        var self = $klass($base, $super, 'UntilNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $UntilNode_while_open$8, $UntilNode_while_close$9;
+        var $nesting = [self].concat($parent_nesting), $UntilNode_while_open$8, $UntilNode_while_close$9;
 
         
         self.$handle("until");
@@ -31276,10 +30834,9 @@ Opal.modules["opal/nodes/while"] = function(Opal) {
         }, $UntilNode_while_close$9.$$arity = 0), nil) && 'while_close';
       })($nesting[0], $$($nesting, 'WhileNode'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $UntilPostNode(){};
-        var self = $UntilPostNode = $klass($base, $super, 'UntilPostNode', $UntilPostNode);
+        var self = $klass($base, $super, 'UntilPostNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting);
+        var $nesting = [self].concat($parent_nesting);
 
         return self.$handle("until_post")
       })($nesting[0], $$($nesting, 'UntilNode'), $nesting);
@@ -31298,23 +30855,20 @@ Opal.modules["opal/nodes/hash"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $HashNode(){};
-        var self = $HashNode = $klass($base, $super, 'HashNode', $HashNode);
+        var self = $klass($base, $super, 'HashNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $HashNode_initialize$1, $HashNode_simple_keys$ques$3, $HashNode_compile$5, $HashNode_compile_merge$6, $HashNode_compile_hash$9, $HashNode_compile_hash2$11;
+        var $nesting = [self].concat($parent_nesting), $HashNode_initialize$1, $HashNode_simple_keys$ques$3, $HashNode_compile$5, $HashNode_compile_merge$6, $HashNode_compile_hash$9, $HashNode_compile_hash2$11;
 
         
         self.$handle("hash");
@@ -31491,10 +31045,9 @@ Opal.modules["opal/nodes/hash"] = function(Opal) {
         }, $HashNode_compile_hash2$11.$$arity = 0), nil) && 'compile_hash2';
       })($nesting[0], $$($nesting, 'Base'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $KwSplatNode(){};
-        var self = $KwSplatNode = $klass($base, $super, 'KwSplatNode', $KwSplatNode);
+        var self = $klass($base, $super, 'KwSplatNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $KwSplatNode_compile$14;
+        var $nesting = [self].concat($parent_nesting), $KwSplatNode_compile$14;
 
         
         self.$handle("kwsplat");
@@ -31517,22 +31070,19 @@ Opal.modules["opal/nodes/array"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ArrayNode(){};
-        var self = $ArrayNode = $klass($base, $super, 'ArrayNode', $ArrayNode);
+        var self = $klass($base, $super, 'ArrayNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ArrayNode_compile$1;
+        var $nesting = [self].concat($parent_nesting), $ArrayNode_compile$1;
 
         
         self.$handle("array");
@@ -31603,22 +31153,19 @@ Opal.modules["opal/nodes/defined"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $DefinedNode(){};
-        var self = $DefinedNode = $klass($base, $super, 'DefinedNode', $DefinedNode);
+        var self = $klass($base, $super, 'DefinedNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $DefinedNode_compile$1, $DefinedNode_compile_defined$2, $DefinedNode_wrap_with_try_catch$3, $DefinedNode_compile_send_recv_doesnt_raise$4, $DefinedNode_compile_defined_send$5, $DefinedNode_compile_defined_ivar$7, $DefinedNode_compile_defined_super$8, $DefinedNode_compile_defined_yield$9, $DefinedNode_compile_defined_xstr$10, $DefinedNode_compile_defined_const$11, $DefinedNode_compile_defined_cvar$12, $DefinedNode_compile_defined_gvar$13, $DefinedNode_compile_defined_back_ref$14, $DefinedNode_compile_defined_nth_ref$15, $DefinedNode_compile_defined_array$16;
+        var $nesting = [self].concat($parent_nesting), $DefinedNode_compile$1, $DefinedNode_compile_defined$2, $DefinedNode_wrap_with_try_catch$3, $DefinedNode_compile_send_recv_doesnt_raise$4, $DefinedNode_compile_defined_send$5, $DefinedNode_compile_defined_ivar$7, $DefinedNode_compile_defined_super$8, $DefinedNode_compile_defined_yield$9, $DefinedNode_compile_defined_xstr$10, $DefinedNode_compile_defined_const$11, $DefinedNode_compile_defined_cvar$12, $DefinedNode_compile_defined_gvar$13, $DefinedNode_compile_defined_back_ref$14, $DefinedNode_compile_defined_nth_ref$15, $DefinedNode_compile_defined_array$16;
 
         
         self.$handle("defined?");
@@ -31879,22 +31426,19 @@ Opal.modules["opal/nodes/masgn"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $MassAssignNode(){};
-        var self = $MassAssignNode = $klass($base, $super, 'MassAssignNode', $MassAssignNode);
+        var self = $klass($base, $super, 'MassAssignNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $MassAssignNode_compile$1, $MassAssignNode_compile_masgn$3, $MassAssignNode_compile_assignment$7;
+        var $nesting = [self].concat($parent_nesting), $MassAssignNode_compile$1, $MassAssignNode_compile_masgn$3, $MassAssignNode_compile_assignment$7;
 
         
         Opal.const_set($nesting[0], 'SIMPLE_ASSIGNMENT', ["lvasgn", "ivasgn", "lvar", "gvasgn", "cdecl", "casgn"].$freeze());
@@ -32063,22 +31607,19 @@ Opal.modules["opal/nodes/arglist"] = function(Opal) {
   
   self.$require("opal/nodes/base");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $ArglistNode(){};
-        var self = $ArglistNode = $klass($base, $super, 'ArglistNode', $ArglistNode);
+        var self = $klass($base, $super, 'ArglistNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ArglistNode_compile$1;
+        var $nesting = [self].concat($parent_nesting), $ArglistNode_compile$1;
 
         
         self.$handle("arglist");
@@ -32145,24 +31686,21 @@ Opal.modules["opal/nodes/x_string"] = function(Opal) {
 
   Opal.add_stubs(['$handle', '$unpack_return', '$children', '$strip_empty_children', '$single_line?', '$compile_single_line', '$each', '$compile_child', '$recv?', '$wrap', '$push', '$private', '$type', '$===', '$source', '$expression', '$loc', '$new', '$scope', '$expr', '$raise', '$shift', '$empty?', '$s', '$==', '$strip', '$=~', '$!', '$pop', '$extract_last_value', '$rstrip', '$expr?', '$end_with?', '$warning', '$compiler', '$line', '$[]', '$size', '$none?', '$first', '$dup', '$nil?', '$any?', '$last']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $XStringNode(){};
-        var self = $XStringNode = $klass($base, $super, 'XStringNode', $XStringNode);
+        var self = $klass($base, $super, 'XStringNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $XStringNode_compile$1, $XStringNode_compile_child$3, $XStringNode_compile_single_line$4, $XStringNode_extract_last_value$6, $XStringNode_single_line$ques$7, $XStringNode_unpack_return$9, $XStringNode_strip_empty_children$10;
+        var $nesting = [self].concat($parent_nesting), $XStringNode_compile$1, $XStringNode_compile_child$3, $XStringNode_compile_single_line$4, $XStringNode_extract_last_value$6, $XStringNode_single_line$ques$7, $XStringNode_unpack_return$9, $XStringNode_strip_empty_children$10;
 
-        def.should_add_semicolon = def.returning = nil;
+        self.$$prototype.should_add_semicolon = self.$$prototype.returning = nil;
         
         self.$handle("xstr");
         
@@ -32317,22 +31855,19 @@ Opal.modules["opal/nodes/lambda"] = function(Opal) {
   
   self.$require("opal/nodes/call");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $Nodes() {};
-      var self = $Nodes = $module($base, 'Nodes', $Nodes);
+      var self = $module($base, 'Nodes');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       (function($base, $super, $parent_nesting) {
-        function $LambdaNode(){};
-        var self = $LambdaNode = $klass($base, $super, 'LambdaNode', $LambdaNode);
+        var self = $klass($base, $super, 'LambdaNode');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $LambdaNode_compile$1;
+        var $nesting = [self].concat($parent_nesting), $LambdaNode_compile$1;
 
         
         self.$handle("lambda");
@@ -32394,18 +31929,16 @@ Opal.modules["opal/eof_content"] = function(Opal) {
 
   Opal.add_stubs(['$empty?', '$[]', '$last_token_position', '$drop_while', '$lines', '$==', '$join', '$private', '$last', '$end_pos']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $super, $parent_nesting) {
-      function $EofContent(){};
-      var self = $EofContent = $klass($base, $super, 'EofContent', $EofContent);
+      var self = $klass($base, $super, 'EofContent');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $EofContent_initialize$1, $EofContent_eof$2, $EofContent_last_token_position$4;
+      var $nesting = [self].concat($parent_nesting), $EofContent_initialize$1, $EofContent_eof$2, $EofContent_last_token_position$4;
 
-      def.tokens = def.source = nil;
+      self.$$prototype.tokens = self.$$prototype.source = nil;
       
       Opal.const_set($nesting[0], 'DATA_SEPARATOR', "__END__\n");
       
@@ -32471,25 +32004,22 @@ Opal.modules["opal/errors"] = function(Opal) {
 
   Opal.add_stubs(['$attr_reader', '$attr_accessor', '$new', '$respond_to?', '$location', '$location=', '$-', '$diagnostic', '$diagnostic=', '$to_a', '$backtrace', '$unshift', '$to_s', '$set_backtrace', '$path', '$lineno', '$+', '$label', '$line', '$lineno=', '$source_line', '$label=', '$expression']);
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Opal_opal_location_from_error$2, $Opal_add_opal_location_to_error$3;
+    var $nesting = [self].concat($parent_nesting), $Opal_opal_location_from_error$2, $Opal_add_opal_location_to_error$3;
 
     
     (function($base, $super, $parent_nesting) {
-      function $Error(){};
-      var self = $Error = $klass($base, $super, 'Error', $Error);
+      var self = $klass($base, $super, 'Error');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return nil
     })($nesting[0], $$($nesting, 'StandardError'), $nesting);
     (function($base, $super, $parent_nesting) {
-      function $GemNotFound(){};
-      var self = $GemNotFound = $klass($base, $super, 'GemNotFound', $GemNotFound);
+      var self = $klass($base, $super, 'GemNotFound');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $GemNotFound_initialize$1;
+      var $nesting = [self].concat($parent_nesting), $GemNotFound_initialize$1;
 
       
       self.$attr_reader("gem_name");
@@ -32503,34 +32033,30 @@ Opal.modules["opal/errors"] = function(Opal) {
       }, $GemNotFound_initialize$1.$$arity = 1), nil) && 'initialize';
     })($nesting[0], $$($nesting, 'Error'), $nesting);
     (function($base, $super, $parent_nesting) {
-      function $CompilationError(){};
-      var self = $CompilationError = $klass($base, $super, 'CompilationError', $CompilationError);
+      var self = $klass($base, $super, 'CompilationError');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("location")
     })($nesting[0], $$($nesting, 'Error'), $nesting);
     (function($base, $super, $parent_nesting) {
-      function $ParsingError(){};
-      var self = $ParsingError = $klass($base, $super, 'ParsingError', $ParsingError);
+      var self = $klass($base, $super, 'ParsingError');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return nil
     })($nesting[0], $$($nesting, 'CompilationError'), $nesting);
     (function($base, $super, $parent_nesting) {
-      function $RewritingError(){};
-      var self = $RewritingError = $klass($base, $super, 'RewritingError', $RewritingError);
+      var self = $klass($base, $super, 'RewritingError');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return nil
     })($nesting[0], $$($nesting, 'ParsingError'), $nesting);
     (function($base, $super, $parent_nesting) {
-      function $SyntaxError(){};
-      var self = $SyntaxError = $klass($base, $super, 'SyntaxError', $SyntaxError);
+      var self = $klass($base, $super, 'SyntaxError');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       return self.$attr_accessor("location")
     })($nesting[0], $$$('::', 'SyntaxError'), $nesting);
@@ -32561,10 +32087,9 @@ Opal.modules["opal/errors"] = function(Opal) {
       return error;
     }, $Opal_add_opal_location_to_error$3.$$arity = 2);
     (function($base, $super, $parent_nesting) {
-      function $OpalBacktraceLocation(){};
-      var self = $OpalBacktraceLocation = $klass($base, $super, 'OpalBacktraceLocation', $OpalBacktraceLocation);
+      var self = $klass($base, $super, 'OpalBacktraceLocation');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $OpalBacktraceLocation_initialize$4, $OpalBacktraceLocation_to_s$5, $OpalBacktraceLocation_diagnostic$eq$6, $OpalBacktraceLocation_location$eq$7;
+      var $nesting = [self].concat($parent_nesting), $OpalBacktraceLocation_initialize$4, $OpalBacktraceLocation_to_s$5, $OpalBacktraceLocation_diagnostic$eq$6, $OpalBacktraceLocation_location$eq$7;
 
       
       self.$attr_accessor("path", "lineno", "label");
@@ -32667,10 +32192,9 @@ Opal.modules["opal/compiler"] = function(Opal) {
   self.$require("opal/eof_content");
   self.$require("opal/errors");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $Opal_compile$1;
+    var $nesting = [self].concat($parent_nesting), $Opal_compile$1;
 
     
     Opal.defs(self, '$compile', $Opal_compile$1 = function $$compile(source, options) {
@@ -32684,12 +32208,11 @@ Opal.modules["opal/compiler"] = function(Opal) {
       return $$($nesting, 'Compiler').$new(source, options).$compile();
     }, $Opal_compile$1.$$arity = -2);
     (function($base, $super, $parent_nesting) {
-      function $Compiler(){};
-      var self = $Compiler = $klass($base, $super, 'Compiler', $Compiler);
+      var self = $klass($base, $super, 'Compiler');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $Compiler_module_name$2, $Compiler_compiler_option$3, $Compiler_initialize$6, $Compiler_compile$7, $Compiler_parse$9, $Compiler_source_map$11, $Compiler_helpers$12, $Compiler_operator_helpers$13, $Compiler_method_calls$14, $Compiler_error$15, $Compiler_re_raise_with_location$16, $Compiler_warning$17, $Compiler_parser_indent$18, $Compiler_s$19, $Compiler_fragment$20, $Compiler_unique_temp$21, $Compiler_helper$22, $Compiler_indent$23, $Compiler_with_temp$24, $Compiler_in_while$25, $Compiler_in_case$27, $Compiler_in_while$ques$28, $Compiler_process$29, $Compiler_handlers$30, $Compiler_requires$31, $Compiler_required_trees$32, $Compiler_returns$33, $Compiler_handle_block_given_call$35;
+      var $nesting = [self].concat($parent_nesting), $Compiler_module_name$2, $Compiler_compiler_option$3, $Compiler_initialize$6, $Compiler_compile$7, $Compiler_parse$9, $Compiler_source_map$11, $Compiler_helpers$12, $Compiler_operator_helpers$13, $Compiler_method_calls$14, $Compiler_error$15, $Compiler_re_raise_with_location$16, $Compiler_warning$17, $Compiler_parser_indent$18, $Compiler_s$19, $Compiler_fragment$20, $Compiler_unique_temp$21, $Compiler_helper$22, $Compiler_indent$23, $Compiler_with_temp$24, $Compiler_in_while$25, $Compiler_in_case$27, $Compiler_in_while$ques$28, $Compiler_process$29, $Compiler_handlers$30, $Compiler_requires$31, $Compiler_required_trees$32, $Compiler_returns$33, $Compiler_handle_block_given_call$35;
 
-      def.fragments = def.source = def.buffer = def.helpers = def.operator_helpers = def.method_calls = def.indent = def.unique = def.scope = def.case_stmt = def.handlers = def.requires = def.required_trees = nil;
+      self.$$prototype.fragments = self.$$prototype.source = self.$$prototype.buffer = self.$$prototype.helpers = self.$$prototype.operator_helpers = self.$$prototype.method_calls = self.$$prototype.indent = self.$$prototype.unique = self.$$prototype.scope = self.$$prototype.case_stmt = self.$$prototype.handlers = self.$$prototype.requires = self.$$prototype.required_trees = nil;
       
       Opal.const_set($nesting[0], 'INDENT', "  ");
       Opal.const_set($nesting[0], 'COMPARE', ["<", ">", "<=", ">="].$freeze());
@@ -33089,16 +32612,14 @@ Opal.modules["opal/erb"] = function(Opal) {
   
   self.$require("opal/compiler");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $ERB() {};
-      var self = $ERB = $module($base, 'ERB', $ERB);
+      var self = $module($base, 'ERB');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting), $ERB_compile$1;
+      var $nesting = [self].concat($parent_nesting), $ERB_compile$1;
 
       
       Opal.defs(self, '$compile', $ERB_compile$1 = function $$compile(source, file_name) {
@@ -33112,12 +32633,11 @@ Opal.modules["opal/erb"] = function(Opal) {
         return $$($nesting, 'Compiler').$new(source, file_name).$compile();
       }, $ERB_compile$1.$$arity = -2);
       (function($base, $super, $parent_nesting) {
-        function $Compiler(){};
-        var self = $Compiler = $klass($base, $super, 'Compiler', $Compiler);
+        var self = $klass($base, $super, 'Compiler');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Compiler_initialize$2, $Compiler_prepared_source$3, $Compiler_compile$4, $Compiler_fix_quotes$5, $Compiler_require_erb$6, $Compiler_find_contents$7, $Compiler_find_code$9, $Compiler_wrap_compiled$11;
+        var $nesting = [self].concat($parent_nesting), $Compiler_initialize$2, $Compiler_prepared_source$3, $Compiler_compile$4, $Compiler_fix_quotes$5, $Compiler_require_erb$6, $Compiler_find_contents$7, $Compiler_find_code$9, $Compiler_wrap_compiled$11;
 
-        def.prepared_source = def.source = def.file_name = nil;
+        self.$$prototype.prepared_source = self.$$prototype.source = self.$$prototype.file_name = nil;
         
         Opal.const_set($nesting[0], 'BLOCK_EXPR', /\s+(do|\{)(\s*\|[^|]*\|)?\s*\Z/);
         
@@ -33203,23 +32723,20 @@ Opal.modules["opal/builder_processors"] = function(Opal) {
   self.$require("opal/compiler");
   self.$require("opal/erb");
   return (function($base, $parent_nesting) {
-    function $Opal() {};
-    var self = $Opal = $module($base, 'Opal', $Opal);
+    var self = $module($base, 'Opal');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     (function($base, $parent_nesting) {
-      function $BuilderProcessors() {};
-      var self = $BuilderProcessors = $module($base, 'BuilderProcessors', $BuilderProcessors);
+      var self = $module($base, 'BuilderProcessors');
 
-      var def = self.prototype, $nesting = [self].concat($parent_nesting);
+      var $nesting = [self].concat($parent_nesting);
 
       
       (function($base, $super, $parent_nesting) {
-        function $Processor(){};
-        var self = $Processor = $klass($base, $super, 'Processor', $Processor);
+        var self = $klass($base, $super, 'Processor');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $Processor_initialize$1, $Processor_to_s$2, $Processor_mark_as_required$6;
+        var $nesting = [self].concat($parent_nesting), $Processor_initialize$1, $Processor_to_s$2, $Processor_mark_as_required$6;
 
         
         
@@ -33247,7 +32764,7 @@ Opal.modules["opal/builder_processors"] = function(Opal) {
           return self.$source().$to_s()
         }, $Processor_to_s$2.$$arity = 0);
         (function(self, $parent_nesting) {
-          var def = self.prototype, $nesting = [self].concat($parent_nesting), $handles$3, $match$ques$4, $match_regexp$5;
+          var $nesting = [self].concat($parent_nesting), $handles$3, $match$ques$4, $match_regexp$5;
 
           
           self.$attr_reader("extensions");
@@ -33288,12 +32805,11 @@ Opal.modules["opal/builder_processors"] = function(Opal) {
         }, $Processor_mark_as_required$6.$$arity = 1), nil) && 'mark_as_required';
       })($nesting[0], null, $nesting);
       (function($base, $super, $parent_nesting) {
-        function $JsProcessor(){};
-        var self = $JsProcessor = $klass($base, $super, 'JsProcessor', $JsProcessor);
+        var self = $klass($base, $super, 'JsProcessor');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $JsProcessor_source_map$7, $JsProcessor_source$9;
+        var $nesting = [self].concat($parent_nesting), $JsProcessor_source_map$7, $JsProcessor_source$9;
 
-        def.source_map = def.source = def.filename = nil;
+        self.$$prototype.source_map = self.$$prototype.source = self.$$prototype.filename = nil;
         
         self.$handles("js");
         Opal.const_set($nesting[0], 'ManualFragment', $$($nesting, 'Struct').$new("line", "column", "code", "source_map_name"));
@@ -33323,12 +32839,11 @@ Opal.modules["opal/builder_processors"] = function(Opal) {
         }, $JsProcessor_source$9.$$arity = 0), nil) && 'source';
       })($nesting[0], $$($nesting, 'Processor'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $RubyProcessor(){};
-        var self = $RubyProcessor = $klass($base, $super, 'RubyProcessor', $RubyProcessor);
+        var self = $klass($base, $super, 'RubyProcessor');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $RubyProcessor_source$10, $RubyProcessor_source_map$11, $RubyProcessor_compiled$12, $RubyProcessor_compiler_for$13, $RubyProcessor_requires$14, $RubyProcessor_required_trees$15, $RubyProcessor_match$ques$16;
+        var $nesting = [self].concat($parent_nesting), $RubyProcessor_source$10, $RubyProcessor_source_map$11, $RubyProcessor_compiled$12, $RubyProcessor_compiler_for$13, $RubyProcessor_requires$14, $RubyProcessor_required_trees$15, $RubyProcessor_match$ques$16;
 
-        def.compiled = def.source = def.filename = def.options = nil;
+        self.$$prototype.compiled = self.$$prototype.source = self.$$prototype.filename = self.$$prototype.options = nil;
         
         self.$handles("rb", "opal");
         
@@ -33380,16 +32895,15 @@ Opal.modules["opal/builder_processors"] = function(Opal) {
           for($zuper_i = 0, $zuper_ii = arguments.length, $zuper = new Array($zuper_ii); $zuper_i < $zuper_ii; $zuper_i++) {
             $zuper[$zuper_i] = arguments[$zuper_i];
           }
-          return ($truthy($a = $send(self, Opal.find_super_dispatcher(self, 'match?', $RubyProcessor_match$ques$16, false, $RubyProcessor), $zuper, $iter)) ? $a : $$($nesting, 'File').$extname(other.$to_s())['$=='](""))
+          return ($truthy($a = $send(self, Opal.find_super_dispatcher(self, 'match?', $RubyProcessor_match$ques$16, false, self.$$class.$$prototype), $zuper, $iter)) ? $a : $$($nesting, 'File').$extname(other.$to_s())['$=='](""))
         }, $RubyProcessor_match$ques$16.$$arity = 1), nil) && 'match?';
       })($nesting[0], $$($nesting, 'Processor'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $OpalERBProcessor(){};
-        var self = $OpalERBProcessor = $klass($base, $super, 'OpalERBProcessor', $OpalERBProcessor);
+        var self = $klass($base, $super, 'OpalERBProcessor');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $OpalERBProcessor_initialize$17, $OpalERBProcessor_requires$18, $OpalERBProcessor_prepare$19;
+        var $nesting = [self].concat($parent_nesting), $OpalERBProcessor_initialize$17, $OpalERBProcessor_requires$18, $OpalERBProcessor_prepare$19;
 
-        def.source = def.filename = nil;
+        self.$$prototype.source = self.$$prototype.filename = nil;
         
         self.$handles("opalerb");
         
@@ -33428,12 +32942,11 @@ Opal.modules["opal/builder_processors"] = function(Opal) {
         }, $OpalERBProcessor_prepare$19.$$arity = 2), nil) && 'prepare';
       })($nesting[0], $$($nesting, 'RubyProcessor'), $nesting);
       (function($base, $super, $parent_nesting) {
-        function $ERBProcessor(){};
-        var self = $ERBProcessor = $klass($base, $super, 'ERBProcessor', $ERBProcessor);
+        var self = $klass($base, $super, 'ERBProcessor');
 
-        var def = self.prototype, $nesting = [self].concat($parent_nesting), $ERBProcessor_source$20;
+        var $nesting = [self].concat($parent_nesting), $ERBProcessor_source$20;
 
-        def.source = def.filename = nil;
+        self.$$prototype.source = self.$$prototype.filename = nil;
         
         self.$handles("erb");
         return (Opal.def(self, '$source', $ERBProcessor_source$20 = function $$source() {
@@ -33455,10 +32968,9 @@ Opal.modules["corelib/pack_unpack/format_string_parser"] = function(Opal) {
 
   Opal.add_stubs(['$raise']);
   return (function($base, $parent_nesting) {
-    function $PackUnpack() {};
-    var self = $PackUnpack = $module($base, 'PackUnpack', $PackUnpack);
+    var self = $module($base, 'PackUnpack');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting);
+    var $nesting = [self].concat($parent_nesting);
 
     
     var directives = [
@@ -33604,10 +33116,9 @@ Opal.modules["corelib/string/unpack"] = function(Opal) {
   
   self.$require("corelib/pack_unpack/format_string_parser");
   return (function($base, $super, $parent_nesting) {
-    function $String(){};
-    var self = $String = $klass($base, $super, 'String', $String);
+    var self = $klass($base, $super, 'String');
 
-    var def = self.prototype, $nesting = [self].concat($parent_nesting), $a, $String_unpack$1, $String_unpack1$2, expected = nil, given = nil;
+    var $nesting = [self].concat($parent_nesting), $a, $String_unpack$1, $String_unpack1$2, expected = nil, given = nil;
 
     
     
