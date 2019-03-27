@@ -35,6 +35,10 @@ Builder.prototype.build = function (path, options) {
   return this.$build(path, toHash(options));
 };
 
+Builder.prototype.buildStr = function (str, path = ".", options) {
+  return this.$build_str(str, path, toHash(options));
+};
+
 Builder.prototype.toString = function () {
   return this.$to_s();
 };
