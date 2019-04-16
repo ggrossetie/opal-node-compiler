@@ -23,6 +23,12 @@ describe('Opal Node Compiler', function () {
       expect(result.toString()).to.match(/self\.\$puts\("Hello world"\)/);
     });
 
+    it('should compile a simple inline hello world', function() {
+      var builder = Builder.create();
+      var result = builder.buildString('puts "Hello world"');
+      expect(result.toString()).to.match(/self\.\$puts\("Hello world"\)/);
+    });
+
     it('should compile a simple hello world library', function() {
       var builder = Builder.create();
       builder.appendPaths('spec/fixtures/hello-ruby/lib');
