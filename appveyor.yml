@@ -12,14 +12,14 @@ install:
   # Get the latest stable version of Node.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
-  - npm install
+  - npm ci
 
 test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
   # run tests
-  - npm test
+  - npm t
 
 # Don't actually build.
 build: off
