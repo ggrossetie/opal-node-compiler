@@ -3,6 +3,7 @@ const expect = chai.expect;
 
 const Opal = require('opal-runtime').Opal;
 const Builder = require('../src/index').Builder;
+const ERB = require('../src/index').ERB;
 
 describe('Opal Node Compiler', function () {
 
@@ -59,6 +60,13 @@ describe('Opal Node Compiler', function () {
       var sourceMap = builder.getSourceMap().source_maps[0];
       expect(sourceMap.file).to.equals('logger.rb');
       expect(sourceMap.source).to.match(/class Logger/);
+    });
+  });
+
+  describe('ERB compiler', function () {
+    it('should compile an ERB template', function() {
+      var result = ERB.compile('The value of x is: <%= x %>');
+      expect(result.toString()).to.match(/output_buffer\.\$append\("The value of x is: "\)/)
     });
   });
 });
