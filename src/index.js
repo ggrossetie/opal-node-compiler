@@ -18,6 +18,7 @@ var toHash = function (object) {
 };
 
 var Builder = Opal.const_get_qualified(Opal.const_get_relative([], 'Opal'), 'Builder');
+var ERB = Opal.const_get_qualified(Opal.const_get_relative([], 'Opal'), 'ERB');
 
 // Public API
 
@@ -49,4 +50,9 @@ Builder.prototype.getSourceMap = function () {
   return this.$source_map();
 };
 
+ERB['$$class'].prototype.compile = function (source, fileName) {
+  return this.$compile(source, fileName);
+}
+
 module.exports.Builder = Builder;
+module.exports.ERB = ERB;
