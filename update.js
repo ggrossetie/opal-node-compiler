@@ -20,7 +20,7 @@ if (process.env.SKIP_BUILD) {
 }
 
 // copy
-['opal-builder.js'].forEach((file) => {
+['opal-builder.js', 'opal-source-maps.js'].forEach((file) => {
   console.log(`Copy ${opalDirectory}/build/${file} to src/${file}`);
   fs.createReadStream(`${opalDirectory}/build/${file}`)
     .pipe(fs.createWriteStream(`src/${file}`))
