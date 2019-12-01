@@ -1,8 +1,10 @@
 var Opal = require('opal-runtime').Opal;
 require('./opal-builder.js');
+require('./opal-source-maps.js');
 
 Opal.require('nodejs');
 Opal.require('opal-builder');
+Opal.require('opal-source-maps');
 
 /**
  * Convert a JSON to an (Opal) Hash.
@@ -41,6 +43,10 @@ Builder.prototype.buildString = function (str, path = '.', options) {
 
 Builder.prototype.toString = function () {
   return this.$to_s();
+};
+
+Builder.prototype.getSourceMap = function () {
+  return this.$source_map();
 };
 
 module.exports.Builder = Builder;

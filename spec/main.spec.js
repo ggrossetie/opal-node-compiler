@@ -51,5 +51,14 @@ describe('Opal Node Compiler', function () {
       var result = builder.build('spec/fixtures/logging.rb');
       expect(result.toString()).to.match(/Opal\.modules\["logger"\]/);
     });
+
+    it('should retrieve source maps', function() {
+      var builder = Builder.create();
+      builder.appendPaths('src/stdlib');
+      builder.build('spec/fixtures/logging.rb');
+      var sourceMap = builder.getSourceMap().source_maps[0];
+      expect(sourceMap.file).to.equals('logger.rb');
+      expect(sourceMap.source).to.match(/class Logger/);
+    });
   });
 });
