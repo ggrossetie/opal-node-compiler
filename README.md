@@ -1,14 +1,12 @@
-= Opal Compiler for Node.js
+# Opal Compiler for Node.js
 
-ifdef::env-github[]
-image:https://img.shields.io/travis/Mogztter/opal-node-compiler/master.svg[Travis build status, link=https://travis-ci.org/Mogztter/opal-node-compiler]
-image:https://ci.appveyor.com/api/projects/status/i4l3eqm88rwq6m01/branch/master?svg=true[Appveyor build status, link=https://ci.appveyor.com/project/Mogztter/opal-node-compiler]
-image:http://img.shields.io/npm/v/opal-compiler.svg[npm version, link=https://www.npmjs.org/package/opal-compiler]
-endif::[]
+[![Travis build status](https://img.shields.io/travis/Mogztter/opal-node-compiler/master.svg)](https://travis-ci.org/Mogztter/opal-node-compiler)
+[![Appveyor build status](https://ci.appveyor.com/api/projects/status/i4l3eqm88rwq6m01/branch/master?svg=true)](https://ci.appveyor.com/project/Mogztter/opal-node-compiler)
+[![npm version](http://img.shields.io/npm/v/opal-compiler.svg)](https://www.npmjs.org/package/opal-compiler)
 
 Transpile Ruby code to JavaScript in JavaScript!
 
-== Usage
+## Usage
 
 Given a Ruby file named `hello.rb`:
 

@@ -22,9 +22,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha spec/**.spec.js",
-    "lint": "standard src/index.js spec npm",
-    "prepublishOnly": "node npm/prepublish.js",
-    "postpublish": "node npm/postpublish.js"
+    "lint": "standard src/index.js spec npm"
   },
   "homepage": "http://github.com/mogztter/opal-node-compiler",
   "bugs": "https://github.com/mogztter/opal-node-compiler/issues",
