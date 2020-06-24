@@ -8,7 +8,7 @@
     "ruby"
   ],
   "author": "Guillaume Grossetie",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "license": "MIT",
   "engines": {
     "node": ">=8.11"
