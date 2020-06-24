@@ -16,12 +16,12 @@ puts "Hello world"
 The following code will transpile `hello.rb` to JavaScript:
 
 ```javascript
-var Builder = require('opal-compiler').Builder;
+const Builder = require('opal-compiler').Builder
 // Opal object will be available on the global scope
 
-var builder = Builder.create();
-var result = builder.build('hello.rb').toString();
-console.log(result);
+const builder = Builder.create()
+const result = builder.build('hello.rb').toString()
+console.log(result)
 //(function(Opal) {
 //  var self = Opal.top, $scope = Opal, nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice;
 
