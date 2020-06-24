@@ -31,7 +31,7 @@
     "url": "git://github.com/mogztter/opal-node-compiler.git"
   },
   "dependencies": {
-    "opal-runtime": "2.0.0-alpha.1"
+    "opal-runtime": "2.0.0-alpha.2"
   },
   "devDependencies": {
     "chai": "4.2.0",
