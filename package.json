@@ -36,6 +36,6 @@
   "devDependencies": {
     "chai": "4.2.0",
     "standard": "15.0.0",
-    "mocha": "8.2.0"
+    "mocha": "8.2.1"
   }
 }
