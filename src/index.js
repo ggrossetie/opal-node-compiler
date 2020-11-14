@@ -1,4 +1,4 @@
-var Opal = require('opal-runtime').Opal
+const Opal = require('opal-runtime').Opal
 require('./opal-builder.js')
 require('./opal-source-maps.js')
 
@@ -10,15 +10,15 @@ Opal.require('opal-source-maps')
  * Convert a JSON to an (Opal) Hash.
  * @private
  */
-var toHash = function (object) {
+const toHash = function (object) {
   if (object && !object.smap) {
     return Opal.hash(object)
   }
   return object
 }
 
-var Builder = Opal.const_get_qualified(Opal.const_get_relative([], 'Opal'), 'Builder')
-var ERB = Opal.const_get_qualified(Opal.const_get_relative([], 'Opal'), 'ERB')
+const Builder = Opal.const_get_qualified(Opal.const_get_relative([], 'Opal'), 'Builder')
+const ERB = Opal.const_get_qualified(Opal.const_get_relative([], 'Opal'), 'ERB')
 
 // Public API
 
@@ -38,7 +38,7 @@ Builder.prototype.build = function (path, options) {
   return this.$build(path, toHash(options))
 }
 
-Builder.prototype.buildString = function (str, path = '.', options) {
+Builder.prototype.buildString = function (str, path = '.', options = {}) {
   return this.$build_str(str, path, toHash(options))
 }
 
