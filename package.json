@@ -37,6 +37,6 @@
     "chai": "4.2.0",
     "dirty-chai": "^2.0.1",
     "mocha": "8.2.1",
-    "standard": "16.0.2"
+    "standard": "16.0.3"
   }
 }
