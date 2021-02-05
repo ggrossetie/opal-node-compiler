@@ -34,7 +34,7 @@
     "opal-runtime": "2.0.0-alpha.2"
   },
   "devDependencies": {
-    "chai": "4.2.0",
+    "chai": "4.3.0",
     "dirty-chai": "^2.0.1",
     "mocha": "8.2.1",
     "standard": "16.0.3"
