@@ -1,6 +1,6 @@
 # Portions Copyright (c) 2002-2013 Akinori MUSHA <knu@iDaemons.org>
-class Set
-  include Enumerable
+class ::Set
+  include ::Enumerable
 
   def self.[](*ary)
     new(ary)
@@ -10,7 +10,7 @@ class Set
     @hash = {}
 
     return if enum.nil?
-    raise ArgumentError, 'value must be enumerable' unless Enumerable === enum
+    ::Kernel.raise ::ArgumentError, 'value must be enumerable' unless ::Enumerable === enum
 
     if block
       enum.each { |item| add yield(item) }
@@ -26,12 +26,11 @@ class Set
 
   def -(enum)
     unless enum.respond_to? :each
-      raise ArgumentError, 'value must be enumerable'
+      ::Kernel.raise ::ArgumentError, 'value must be enumerable'
     end
 
     dup.subtract(enum)
   end
-  alias difference -
 
   def inspect
     "#<Set: {#{to_a.join(',')}}>"
@@ -42,7 +41,7 @@ class Set
       true
     elsif other.instance_of?(self.class)
       @hash == other.instance_variable_get(:@hash)
-    elsif other.is_a?(Set) && size == other.size
+    elsif other.is_a?(::Set) && size == other.size
       other.all? { |o| @hash.include?(o) }
     else
       false
@@ -53,12 +52,11 @@ class Set
     @hash[o] = true
     self
   end
-  alias << add
 
   def classify(&block)
     return enum_for(:classify) unless block_given?
 
-    result = Hash.new { |h, k| h[k] = self.class.new }
+    result = ::Hash.new { |h, k| h[k] = self.class.new }
 
     each { |item| result[yield(item)].add item }
 
@@ -71,7 +69,6 @@ class Set
     each { |item| result << yield(item) }
     replace result
   end
-  alias map! collect!
 
   def delete(o)
     @hash.delete(o)
@@ -113,8 +110,6 @@ class Set
     size == before ? nil : self
   end
 
-  alias filter! select!
-
   def add?(o)
     if include?(o)
       nil
@@ -145,7 +140,6 @@ class Set
   def include?(o)
     @hash.include?(o)
   end
-  alias member? include?
 
   def merge(enum)
     enum.each { |item| add item }
@@ -162,7 +156,6 @@ class Set
   def size
     @hash.size
   end
-  alias length size
 
   def subtract(enum)
     enum.each { |item| delete item }
@@ -171,46 +164,43 @@ class Set
 
   def |(enum)
     unless enum.respond_to? :each
-      raise ArgumentError, 'value must be enumerable'
+      ::Kernel.raise ::ArgumentError, 'value must be enumerable'
     end
     dup.merge(enum)
   end
 
+  %x{
+    function is_set(set) {
+      #{`set`.is_a?(::Set) || ::Kernel.raise(::ArgumentError, 'value must be a set')}
+    }
+  }
+
   def superset?(set)
-    set.is_a?(Set) || raise(ArgumentError, 'value must be a set')
+    `is_set(set)`
     return false if size < set.size
     set.all? { |o| include?(o) }
   end
 
-  alias >= superset?
-
   def proper_superset?(set)
-    set.is_a?(Set) || raise(ArgumentError, 'value must be a set')
+    `is_set(set)`
     return false if size <= set.size
     set.all? { |o| include?(o) }
   end
 
-  alias > proper_superset?
-
   def subset?(set)
-    set.is_a?(Set) || raise(ArgumentError, 'value must be a set')
+    `is_set(set)`
     return false if set.size < size
     all? { |o| set.include?(o) }
   end
 
-  alias <= subset?
-
   def proper_subset?(set)
-    set.is_a?(Set) || raise(ArgumentError, 'value must be a set')
+    `is_set(set)`
     return false if set.size <= size
     all? { |o| set.include?(o) }
   end
 
-  alias < proper_subset?
-
   def intersect?(set)
-    raise ArgumentError, 'value must be a set' unless set.is_a?(Set)
-
+    `is_set(set)`
     if size < set.size
       any? { |o| set.include?(o) }
     else
@@ -222,15 +212,25 @@ class Set
     !intersect?(set)
   end
 
-  alias + |
-  alias union |
-
   def to_a
     @hash.keys
   end
+
+  alias + |
+  alias < proper_subset?
+  alias << add
+  alias <= subset?
+  alias > proper_superset?
+  alias >= superset?
+  alias difference -
+  alias filter! select!
+  alias length size
+  alias map! collect!
+  alias member? include?
+  alias union |
 end
 
-module Enumerable
+module ::Enumerable
   def to_set(klass = Set, *args, &block)
     klass.new(self, *args, &block)
   end
