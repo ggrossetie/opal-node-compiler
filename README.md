@@ -1,7 +1,11 @@
 # Opal Compiler for Node.js
 
-[![Build](https://github.com/Mogztter/opal-node-compiler/workflows/Build/badge.svg)](https://github.com/Mogztter/opal-node-compiler/actions?query=workflow%3ABuild)
+[![Build](https://github.com/ggrossetie/opal-node-compiler/workflows/Build/badge.svg)](https://github.com/ggrossetie/opal-node-compiler/actions?query=workflow%3ABuild)
 [![npm version](http://img.shields.io/npm/v/opal-compiler.svg)](https://www.npmjs.org/package/opal-compiler)
+
+> [!WARNING]
+> **This package is no longer maintained.**
+
 
 Transpile Ruby code to JavaScript in JavaScript!
 
